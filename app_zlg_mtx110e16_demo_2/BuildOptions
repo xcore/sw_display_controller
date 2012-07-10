@@ -1,0 +1,10 @@
+OPTIMISATION  = -O3
+COMPILEFLAGS  = $(OPTIMISATION) -Wall -g -save-temps
+LINKFLAGS     = $(OPTIMISATION) -Wcodes -lflash -Wall -g
+OBJNAMES      = sdram_server sdram_client lcd_ports lcd
+OBJNAMES     += lcd_sdram_manager lcd_sdram_manager_client transitions rgb888_to_rgb565 sdram_methods sdram_io
+OBJNAMES     += traffic demo main
+APPNAME       = app_zlg_mtx110e16_demo_2
+XNFILENAME    = ZLG_MTX110E16_400.xn
+MODULE        = module_sdram_burst_new
+MODULE1		  = module_lcd

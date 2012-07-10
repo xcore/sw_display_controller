@@ -1,0 +1,155 @@
+Overview
+========
+
+The app_zlg_display application provides the whole graphics LCD display driver built using the XMOS device XS1-L1. The application includes the LCD component, SDRAM component and top layer application. As a whole application this project will help the user get a feel of how a graphics LCD display module can be accessed using the XMOS silicon. The LCD graphics module used in this project doesn't include an in-built memory. An external SDRAM is used to store the LCD buffer content. Thus the project also shows how to access an SDRAM.
+
+Brief description of the project
+--------------------------------
+
+The project loads images from the flash and displays them on the graphics LCD screen. Transition effects between the images have been added in the application. The project uses a 480 * 272 LCD display module. The LCD module uses an external SDRAM for the LCD buffer. The project uses an 16 bit SDRAM.
+The following figure shows the flow of the project
+
+.. only:: html
+
+  .. figure:: images/zlgdisplay.png
+     :align: center
+
+     Application Flow Diagram
+
+.. only:: latex
+
+  .. figure:: images/zlgdisplay.pdf
+     :figwidth: 50 %
+     :align: center
+
+     Application Flow Diagram
+
+
+The project can be divided into
+	* LCD display component 
+	* SDRAM component 
+	* LCD SDRAM Manager
+	* Demo Application
+
+LCD Display component properties
+++++++++++++++++++++++++++++++++
+
+	* Standard component to support different LCD modules
+	* User has to configure the LCD properties and then the component can be directly used
+	* Supports 16 bit RGB color
+	* Supports upto VGA resolution (480 * 272 pixel is used in this project)
+	* Supports upto 20 fps for the resolution size (480 * 272 pixels) used in this project
+	* Uses one thread in the core for it's operation
+
+SDRAM component properties
+++++++++++++++++++++++++++
+
+	* SDRAM component can be configured for number of banks, rows and columns in the SDRAM
+	* The SDRAM used in this project supports proper packing of the data so that no space is left unused. This helps the user to effectively store more images in           the SDRAM
+	* The SDRAM component is designed to support 2 banks. The "self-refresh" mode in also supported
+	* Uses one thread in the core for its operation
+
+LCD SDRAM Manager properties
+++++++++++++++++++++++++++++
+
+	* Comes as a part of the application
+	* Handles the double buffering concept for the SDRAM so that the slower LCD writes can match the fast SDRAM updates
+	* It makes sure the LCD buffer is neither overflowing nor underflowing and has atleast one valid data to write at anytime
+	* The current code uses only 2 frame buffers
+	* Uses one thread in the core for its operation
+
+Demo Application
+++++++++++++++++
+
+	* Sample demo provided to the user for understanding the application
+	* Handles 4 images stored to the flash
+	* Images read from flash and stored to SDRAM
+	* Each image displayed for 5 seconds
+	* Transition effects like Slide, Box, Dither, Roll and Alpha Blend are supported
+	* Uses one thread in the core for its operation
+
+Project Summary
++++++++++++++++++
+
++----------------------------------------------------------------+
+| 	          ** Functionality **	            		 |
++----------------------------------------------------------------+
+|  Application driving a graphics LCD module 		         |
++----------------------------------------------------------------+
+| 		 ** Supported Device **			         |
++-------------------------------+--------------------------------+
+| | XMOS devices		| | XS1-L1                       |
+|				| | XS1-L2		         |
+| 				| | XS1-G4			 |
++-------------------------------+--------------------------------+
+|  	           ** Requirements ** 			         |
++-------------------------------+--------------------------------+
+| XMOS Desktop Tools		| V11.11.0 or later	         |
++-------------------------------+--------------------------------+
+| XMOS LCD component		| 1v0  		                 |
++-------------------------------+--------------------------------+
+| XMOS SDRAM component		| 1v0	            		 |
++-------------------------------+--------------------------------+
+|                  **Licensing and Support**                     |
++----------------------------------------------------------------+
+| Component code provided without charge from XMOS.              |
+| Component code is maintained by XMOS.                          |
++----------------------------------------------------------------+
+
+
+
+Resource requirements
+=====================
+
+The resource requirements for the LCD component alone are:
+
++--------------+-----------------------------------------------+
+| Resource     | Usage                            	       |
++==============+===============================================+
+| Channels     | 1 		                               |
++--------------+-----------------------------------------------+
+| Timers       | 1 (for deciding the LCD signal write timings) |
++--------------+-----------------------------------------------+
+| Clocks       | 1 (the LCD clock)                             |
++--------------+-----------------------------------------------+
+
+
+
+The resource requirements for the SDRAM component alone are:
+
++--------------+-----------------------------------------------+
+| Resource     | Usage                            	       |
++==============+===============================================+
+| Channels     | 1 		                               |
++--------------+-----------------------------------------------+
+| Timers       | 1 (for deciding the SDRAM setup, read,        |
+|	       |    write delays)			       |
++--------------+-----------------------------------------------+
+| Clocks       | 1 (the SDRAM clock)                           |
++--------------+-----------------------------------------------+
+
+
+The resource requirements for the whole project (including SDRAM component, LCD component, LCD SDRAM manager and demo application) are:
+
++--------------+-----------------------------------------------+
+| Resource     | Usage                            	       |
++==============+===============================================+
+| Channels     | 3 (SDRAM, LCD, Demo)                          |
++--------------+-----------------------------------------------+
+| Timers       | 3 (1 for LCD, 1 for SDRAM, 1 for the demo     | 
+|	       |    application - optional)		       |
++--------------+-----------------------------------------------+
+| Clocks       | 2 (1 for LCD, 1 for SDRAM)                    |
++--------------+-----------------------------------------------+
+
+The memory usage depends on the compile and build settings. Total memory usage of current project is
+
++--------------+-----------------------------------------------+
+| Memory       | Usage                            	       |
++==============+===============================================+
+| Stack        | 5216 bytes                                    |
++--------------+-----------------------------------------------+
+| Program      | 19980 bytes				       |
++--------------+-----------------------------------------------+
+
+The project also includes the threads for testing the SDRAM which occupies 4 threads. These test threads can be removed thereby saving 4 threads for further usage
