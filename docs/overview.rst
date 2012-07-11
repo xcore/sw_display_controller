@@ -1,7 +1,7 @@
 Overview
 ========
 
-The app_zlg_display application provides the whole graphics LCD display driver built using the XMOS device XS1-L1. The application includes the LCD component, SDRAM component and top layer application. As a whole application this project will help the user get a feel of how a graphics LCD display module can be accessed using the XMOS silicon. The LCD graphics module used in this project doesn't include an in-built memory. An external SDRAM is used to store the LCD buffer content. Thus the project also shows how to access an SDRAM.
+The app_graphics_demo application provides the whole graphics LCD display driver built using the XMOS device XS1-L1. The application includes the LCD component, SDRAM component and top layer application. As a whole application this project will help the user get a feel of how a graphics LCD display module can be accessed using the XMOS silicon. The LCD graphics module used in this project doesn't include an in-built memory. An external SDRAM is used to store the LCD buffer content. Thus the project also shows how to access an SDRAM.
 
 Brief description of the project
 --------------------------------
@@ -11,14 +11,14 @@ The following figure shows the flow of the project
 
 .. only:: html
 
-  .. figure:: images/zlgdisplay.png
+  .. figure:: images/display.png
      :align: center
 
      Application Flow Diagram
 
 .. only:: latex
 
-  .. figure:: images/zlgdisplay.pdf
+  .. figure:: images/display.pdf
      :figwidth: 50 %
      :align: center
 

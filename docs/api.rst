@@ -4,7 +4,7 @@ Project structure
 =================
 
 The project is structured into
-    * application: app_zlg_mtx110e16_demo_2 which includes the LCD-SDRAM manager and the demo application
+    * application: app_graphics_demo which includes the LCD-SDRAM manager and the demo application
     * component: module_sdram_burst_new which handles the SDRAM
     * component: module_lcd which handles the LCD
 
@@ -128,7 +128,7 @@ Please refer to the files ``lcd.xc`` and ``lcd.h`` for the list of APIs.
 Note that to enable the application use the LCD module, the user should add the module to the build options of the project. 
 To achieve that, do the following:
 
-  #. Open the file ``BuildOptions`` available in ..\app_zlg_mtx_110e16_demo_2 folder
+  #. Open the file ``BuildOptions`` available in ..\app_graphics_demo folder
   #. Add the name ``module_lcd`` to the option ``MODULE`` in the BuildOptions. This will enable the application project to use the LCD module		   
   #. Add the object names lcd and lcd_ports to the option ``OBJNAMES``
   #. Add the module ``module_lcd`` to the ``References`` option in the project settings of the application project
@@ -139,8 +139,7 @@ LCD SDRAM Manager APIs
 ++++++++++++++++++++++
 
 
-The LCD SDRAM manager handles the double buffering of the SDRAM. 
-It takes care of the write, read and the refresh commands for the SDRAM. The LCD SDRAM Manager code can be seen in
+The LCD SDRAM manager handles the double buffering of the SDRAM. It takes care of the write, read and the refresh commands for the SDRAM. The LCD SDRAM Manager code can be seen in
 
     * ``lcd_sdram_manager_client.xc``
     * ``lcd_sdram_manager_internal.h``
@@ -249,10 +248,10 @@ The SDRAM module handles the 16 bit reads, writes and refresh of the SDRAM. The 
 the commands to the SDRAM module in a queue. The SDRAM module processes the commands and returns the 
 required data. The SDRAM code can be seen as a separate module ``module_sdram_burst_new``in the project.
 
-Note that to enable the application use the SDRAM module, the user should add the module to the build options of the project. 
+Note that to enable the application use the SDRAM module, the user should add the module to the build options of the project 
 To achieve that, do the following
 
-  #. Open the file ``BuildOptions`` available in ..\app_zlg_mtx_110e16_demo_2 folder
+  #. Open the file ``BuildOptions`` available in ..\app_graphics_demo folder
   #. Add the name ``module_sdram_burst_new`` to the option ``MODULE`` in the BuildOptions. This will enable the application project to use the SDRAM module		    
   #. Add the object names sdram_server and sdram_client to the option ``OBJNAMES``   
   #. Add the module ``module_sdram_burst_new`` to the ``References`` option in the project settings of the application project
@@ -275,7 +274,7 @@ Demo Application
 ++++++++++++++++
 
 The project includes a sample demo for the user to visualize the working of the LCD, SDRAM and the LCD-SDRAM manager. The demo provided is only a skeleton and it is completely user modifiable.
-The current demo is run under the function name `demo_full_screen_image_load` and this thread name is invoked in the :c:func:`main` function in ``main.xc``.
+The current demo is run under the function name `demo_full_screen_image_load` and this thread name is invoked in the :c:func:`main` function in ``main.xc``
 
 The demo application can be seen in
 

@@ -9,18 +9,19 @@ Software Architecture
 The following Figure shows the threads running in the system
 
 .. only:: html
+
   .. figure:: images/threads.png
      :align: center
 
-  Application software architecture
-
+     Application Software Architecture 
 
 .. only:: latex
+
   .. figure:: images/threads.pdf
-     :figwidth: 50 %
+     :figwidth: 50%
      :align: center
 
-  Application software architecture
+     Application Software Architecture
 
 
 The project uses 4 threads. The remaining 4 threads are available for the user for other applications. The 3 threads
@@ -79,10 +80,10 @@ LCD component
 -------------
 
 The LCD display module controls the graphics controller which includes handling the vertical sync, horizontal sync timings etc. 
-The ZLG hardware uses a 480 * 272 pixel LCD display. The 565 RGB colour coding is used in the project.
+The provided customer hardware uses a 480 * 272 pixel LCD display. The 565 RGB colour coding is used in the project.
 The LCD module includes the main function :c:func:`lcd` which is handled in a thread.
 
-The user can use the same LCD component to drive various graphics LCD modules. The maximum resolution supported is VGA.
+The user can use the same LCD component to drive various graphics LCD modules. The maximum resolution supported is 800 * 480.
 The user can use only graphics LCD modules which do not have in-built memory support.
 The project is designed in such a way that the external SDRAM is used for storing the LCD buffer data.
 The user has to configure the LCD parameters in the files ``lcd_defines.h`` and ``lcd_ports.xc``.
@@ -141,9 +142,9 @@ Demo Application
 The demo code given in the project is a sample code for the user to understand the project. The present demo has the following features:
 
    * Handles 4 images stored to Flash:
-   * Image 1 stored at sector 9 (Image size 480 * 272 pixel)
-   * Image 2 stored at sector 107 (Image size 480 * 272 pixel)
-   * Image 3 stored at sector 205. (Image size  100 * 100 pixel to show how a 100 * 100 pixel image is displayed on a full screen)
+   * Image 1 stored at sector 9 (Image size  480 * 272 pixel)
+   * Image 2 stored at sector 107 (Image size  480 * 272 pixel)
+   * Image 3 stored at sector 205. (Image size   100 * 100 pixel to show how a 100 * 100 pixel image is displayed on a full screen)
    * Image 4 created in software
    * The images are stored in SDRAM (The project uses only 4 SDRAM image buffers)
    * Each image is displayed for 5 seconds and every new image comes with a transition effect. The transition effects shown are:

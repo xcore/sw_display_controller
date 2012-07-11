@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>app_zlg_mtx110e16_demo_2</name>
+	<name>app_graphics_demo</name>
 	<comment></comment>
 	<projects>
 		<project>module_lcd</project>

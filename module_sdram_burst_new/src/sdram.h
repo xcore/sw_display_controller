@@ -36,6 +36,11 @@ struct sdram_ports
   out port cke;
   clock cb;
 };
+/** \brief The SDRAM thread. The thread is invoked in the lcd_sdram_manager
+* 
+* \param client_hip The channel end number
+* \param ports The structure carrying the SDRAM port details
+*/
 void sdram_server(chanend client_hip, struct sdram_ports &ports);
 
 void sdram_block_write(chanend server, int bank, int start_row, int start_col, int num_rows,

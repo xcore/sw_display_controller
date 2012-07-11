@@ -2,7 +2,7 @@ Source code structure
 ---------------------
 
 The project contains:
-	* application app_zlg_mtx110e16_demo_2
+	* application app_graphics_demo
 	* module module_sdram_burst_fast
 	* module module_lcd
 
@@ -12,7 +12,7 @@ The project contains:
   * - Project
     - File
     - Description
-  * - app_zlg_mtx110e16_demo_2
+  * - app_graphics_demo
     - ``lcd_sdram_manager.h`` 
     - Header file containing the APIs for the LCD SDRAM manager
   * - 
