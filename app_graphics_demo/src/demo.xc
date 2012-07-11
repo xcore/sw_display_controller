@@ -127,7 +127,9 @@ void demo_full_screen_image_load(chanend server) {
     have_a_nap(20);
     fb_index = transition_roll(server, frame_buffer, image3, lenna, LCD_WIDTH_WORDS, fb_index);
     have_a_nap(20);
-    fb_index = transition_alpha_blend(server, frame_buffer, lenna, image0, 64, fb_index);
+    fb_index = transition_alpha_blend(server, frame_buffer, lenna, menu, 64, fb_index);
+    have_a_nap(20);
+	fb_index = transition_roll(server, frame_buffer, menu, image0, LCD_WIDTH_WORDS, fb_index);
     have_a_nap(20);
 #else
     frame_buffer_commit(server, image0);

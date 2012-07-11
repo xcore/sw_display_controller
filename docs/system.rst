@@ -1,5 +1,3 @@
-.. _sec_system:
-
 Application System Description
 ===============================
 
@@ -34,7 +32,7 @@ are called inside the function :c:func:`lcd_sdram_manager`.
 The 4th thread of the project is used by the demo application. 
 The name of the 4th thread can change as per user implementation (currently named as :c:func:`demo_full_screen_image_load` in the file ``demo.xc``)
 
-All the 4 threads run parallel (inside the 'par' statement). At any time, the user is expected to fill the LCD buffer with atleast one valid data so that the :c:func:`lcd` keeps refreshing the screen all the time.
+All the 4 threads run parallel (inside the 'par' statement). At any time, the LCD buffer expects atleast one valid data so that the :c:func:`lcd` keeps refreshing the screen all the time.
 
 Basics of Graphics LCD
 ----------------------
@@ -79,14 +77,17 @@ inbuilt frame buffer. The external SDRAM is used as the frame buffer.
 LCD component
 -------------
 
-The LCD display module controls the graphics controller which includes handling the vertical sync, horizontal sync timings etc. 
+The LCD display module controls the graphics controller which includes handling the clock and the data enable signals. 
+The Data enable signals handle the timings for the vertical and horizontal porch and hence controls the lcd data update.
+The LCD component can also be modified to support the vertical and horizontal Sync signals. 
 The provided customer hardware uses a 480 * 272 pixel LCD display. The 565 RGB colour coding is used in the project.
+The component can also be configured to use 24 bpp/ 18 bpp/ 16 bpp and so on.
 The LCD module includes the main function :c:func:`lcd` which is handled in a thread.
 
-The user can use the same LCD component to drive various graphics LCD modules. The maximum resolution supported is 800 * 480.
-The user can use only graphics LCD modules which do not have in-built memory support.
+The same LCD component can be used to drive various graphics LCD modules. The maximum resolution supported is 800 * 600.
+The component supports only LCD modules with no in-built memory.
 The project is designed in such a way that the external SDRAM is used for storing the LCD buffer data.
-The user has to configure the LCD parameters in the files ``lcd_defines.h`` and ``lcd_ports.xc``.
+The LCD parameters are configured in the files ``lcd.h`` and ``lcd_ports.xc``.
 
 
 SDRAM component
@@ -97,7 +98,7 @@ A 16 bit SDRAM module has been implemented for this project.
 The SDRAM component has the following features:
 
 	* Configurable number of banks, number of rows, size of the row, configurable signal levels depending on the SDRAM used
-	* The user can configure the SDRAM using the file ``sdram_configuration.h``
+	* Configuration of the SDRAM using the file ``sdram_configuration.h``
 	* Supports block read, block write, write a line, read a line, read a line partially and self refresh
 
 The SDRAM (IS42VS16100F) used in this project is a 16 Mb SDRAM. The SDRAM has 2 banks each supporting 512 K words.
@@ -131,25 +132,27 @@ LCD SDRAM manager
 -----------------
 
 The LCD-SDRAM Manager is main module which helps to speed up the process of writing to the SDRAM and refreshing the LCD screen. 
-The LCD SDRAM Manager does a double buffering of the LCD buffer (i.e.) when one image is being updated to the LCD screen, the user can update multiple images in the background. This double buffering concept helps the user to run SDRAM at a fast rate thereby saving the thread timings for other activities.
+The LCD SDRAM Manager does a double buffering of the LCD buffer (i.e.) when one image is being updated to the LCD screen, multiple images can be updated in the background. This double buffering concept helps to run SDRAM at a fast rate thereby saving the thread timings for other activities.
 
-The current code uses 2 frame buffers for the LCD refresh. When one frame buffer is being refreshed on the screen, the user can update the other frame buffer. The LCD-SDRAM manager will handle the buffer data. At any time, the buffer cannot be left empty or it cannot be overfilled.
+The current code uses 2 frame buffers for the LCD refresh. When one frame buffer is being refreshed on the screen, the other frame buffer can be updated simultaneously. The LCD-SDRAM manager will handle the buffer data. At any time, the buffer cannot be left empty or it cannot be overfilled.
 The main function :c:func:`manager` in the file ``lcd_sdram_manager.xc`` is handled inside thread.
 
 Demo Application
 ----------------
 
-The demo code given in the project is a sample code for the user to understand the project. The present demo has the following features:
+The demo code given in the project is a sample code with the following features:
 
-   * Handles 4 images stored to Flash:
-   * Image 1 stored at sector 9 (Image size  480 * 272 pixel)
-   * Image 2 stored at sector 107 (Image size  480 * 272 pixel)
-   * Image 3 stored at sector 205. (Image size   100 * 100 pixel to show how a 100 * 100 pixel image is displayed on a full screen)
-   * Image 4 created in software
-   * The images are stored in SDRAM (The project uses only 4 SDRAM image buffers)
+   * Handles 6 images stored to Flash. All images are of size 480 * 272 pixels.
+   * Image 1 stored at sector 9 
+   * Image 2 stored at sector 107
+   * Image 3 stored at sector 205
+   * Image 4 stored at sector 303
+   * Image 5 stored at sector 499
+   * Image 6 stores at sector 401
+   * The images are stored in SDRAM (The project uses 6 SDRAM image buffers)
    * Each image is displayed for 5 seconds and every new image comes with a transition effect. The transition effects shown are:
        * Slide
-       * Box
+       * Wipe
        * Dither
        * Roll
        * Alpha bend

@@ -16,7 +16,7 @@ Configuration Defines
 LCD component
 +++++++++++++
 
-The following defines must be configured by the user for the LCD component.
+The following defines must be configured for the LCD component based on the Graphics LCD module used.
 The defines can be seen in the file ``lcd_defines.h`` and ``lcd_ports.xc``
 
 .. list-table:: LCD Defines
@@ -59,7 +59,7 @@ The defines can be seen in the file ``lcd_defines.h`` and ``lcd_ports.xc``
 SDRAM component
 +++++++++++++++
 
-The following defines must be configured by the user for the SDRAM component.
+The following defines must be configured for the SDRAM component based on the SDRAM used.
 The defines can be seen in the file ``sdram_configuration.h``
 
 .. list-table:: SDRAM Defines
@@ -122,16 +122,16 @@ The LCD display module functionalities can be seen in
         * ``lcd_defines.h``
 
 The function :c:func:`lcd` in lcd.xc is handled in the thread.
-This sections explains only the important APIs used by the user. Other static APIs are not discussed in this section.
-Please refer to the files ``lcd.xc`` and ``lcd.h`` for the list of APIs.
+This sections explains only the important APIs that are frequently used. Other static APIs are not discussed in this section.
+The other APIs can be seen in the files ``lcd.xc`` and ``lcd.h``.
 
-Note that to enable the application use the LCD module, the user should add the module to the build options of the project. 
-To achieve that, do the following:
+Note that to enable the application use the LCD module, the module should be added to the build options of the project. 
+To achieve that, the following is done:
 
-  #. Open the file ``BuildOptions`` available in ..\app_graphics_demo folder
-  #. Add the name ``module_lcd`` to the option ``MODULE`` in the BuildOptions. This will enable the application project to use the LCD module		   
-  #. Add the object names lcd and lcd_ports to the option ``OBJNAMES``
-  #. Add the module ``module_lcd`` to the ``References`` option in the project settings of the application project
+  #. The file ``BuildOptions`` available in ..\app_graphics_demo folder is opened
+  #. The name ``module_lcd`` is added to the option ``MODULE`` in the BuildOptions. This will enable the application project to use the LCD module		   
+  #. The object names 'lcd' and 'lcd_ports' are added to the option ``OBJNAMES``
+  #. The module ``module_lcd`` is added to the ``References`` option in the project settings of the application project
 
 
 .. doxygenfunction:: lcd
@@ -146,8 +146,8 @@ The LCD SDRAM manager handles the double buffering of the SDRAM. It takes care o
     * ``lcd_sdram_manager.xc``
     * ``lcd_sdram_manager.h``
 
-This sections explains only the important APIs used by the user. Other static APIs are not discussed in this section.
-Please refer to the files mentioned above for the list of APIs.
+This sections explains only the important APIs that are frequently used. Other static APIs are not discussed in this section.
+The other APIs can be seen in the files mentioned above.
 
 .. doxygenfunction:: lcd_sdram_manager
 .. doxygenfunction:: register_image
@@ -248,13 +248,13 @@ The SDRAM module handles the 16 bit reads, writes and refresh of the SDRAM. The 
 the commands to the SDRAM module in a queue. The SDRAM module processes the commands and returns the 
 required data. The SDRAM code can be seen as a separate module ``module_sdram_burst_new``in the project.
 
-Note that to enable the application use the SDRAM module, the user should add the module to the build options of the project 
-To achieve that, do the following
+Note that to enable the application use the SDRAM module, the module should be added to the build options of the project 
+To achieve that, the following is done
 
-  #. Open the file ``BuildOptions`` available in ..\app_graphics_demo folder
-  #. Add the name ``module_sdram_burst_new`` to the option ``MODULE`` in the BuildOptions. This will enable the application project to use the SDRAM module		    
-  #. Add the object names sdram_server and sdram_client to the option ``OBJNAMES``   
-  #. Add the module ``module_sdram_burst_new`` to the ``References`` option in the project settings of the application project
+  #. The file ``BuildOptions`` available in ..\app_graphics_demo folder is opened
+  #. The name ``module_sdram_burst_new`` is added to the option ``MODULE`` in the BuildOptions. This will enable the application project to use the SDRAM module		    
+  #. The object names 'sdram_server' and 'sdram_client' are added to the option ``OBJNAMES``   
+  #. The module ``module_sdram_burst_new`` is added to the ``References`` option in the project settings of the application project
 
 The SDRAM code can be seen in
 
@@ -263,9 +263,9 @@ The SDRAM code can be seen in
     * ``sdram_client.xc``
 
 This sections explains only the important APIs used by the user. Other static APIs are not discussed in this section.
-Please refer to the files mentioned above for the list of APIs.   
+The other APIs can be found in the files mentioned above.   
 The SDRAM APIs for read, write and buffer commits are handled by the LCD-SDRAM Manager. 
-Hence the user might not directly need them. The user might need only the SDRAM thread which is invoked in the main.xc.
+Hence we don't need to call them directly. We only need to invoke the SDRAM thread in the main.xc.
 The SDRAM APIs by themselves take care of the SDRAM refresh.
 
 
@@ -273,7 +273,7 @@ The SDRAM APIs by themselves take care of the SDRAM refresh.
 Demo Application
 ++++++++++++++++
 
-The project includes a sample demo for the user to visualize the working of the LCD, SDRAM and the LCD-SDRAM manager. The demo provided is only a skeleton and it is completely user modifiable.
+The project includes a sample demo which includes the working of the LCD, SDRAM and the LCD-SDRAM manager. The demo provided is only a skeleton and can be modified when required.
 The current demo is run under the function name `demo_full_screen_image_load` and this thread name is invoked in the :c:func:`main` function in ``main.xc``
 
 The demo application can be seen in
@@ -282,12 +282,12 @@ The demo application can be seen in
     * Demo.h
     * Transitions.xc (different transitions are implemented in this file)
 
-The main aim of the supplied demo is to show the user
+The main aim of the supplied demo is 
 
     * Loading of images to flash (the images are stored to flash before running the code. The images are stored in 24 bit TGA format)
-    * Supporting reading images from flash (The 24 bit TGA image is read and the 24 bit RGB colour is converted to 16 bit (565 RGB colour) before storing to the SDRAM)
-    * Supporting 4 full screen images in the SDRAM
+    * Reading images from flash (The 24 bit TGA image is read and the 24 bit RGB colour is converted to 16 bit (565 RGB colour) before storing to the SDRAM)
+    * Supporting 6 full screen images in the SDRAM
     * Refresh rates of nearly 20 (which can be seen during different transitions between the images)
 
 
-Refer to the section `Application System Description` to understand the flow of the application.	 
+The section `Application System Description` gives a brief idea of the flow of the application.	 

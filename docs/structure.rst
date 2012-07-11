@@ -17,7 +17,7 @@ The project contains:
     - Header file containing the APIs for the LCD SDRAM manager
   * - 
     - ``lcd_sdram_manager.xc``
-    - File containing the implementation of LCD SDRAM Manager. Used calls these APIs for handling the double buffering.
+    - File containing the implementation of LCD SDRAM Manager. These APIs are used for handling the double buffering
   * - 
     - ``lcd_sdram_manager_internal.h``
     - Header file containing the defines for the internal use in LCD SDRAM Manager APIs.
