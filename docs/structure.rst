@@ -66,7 +66,7 @@ The project contains:
   * - 
     - ``lcd_ports.xc``
     - File containing the defines for the port parameters of the LCD
-  * - module_sdram_burst_fast
+  * - module_sdram_burst_new
     - ``sdram_server.h`` 
     - Header file containing the APIs for the SDRAM component
   * - 
