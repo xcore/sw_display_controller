@@ -86,6 +86,17 @@ static void load_from_flash(chanend c, unsigned image_no, unsigned sector) {
   wait_until_idle(c);
 }
 
+static void load_from_buffer(chanend c, unsigned image_no) {
+  unsigned flash_buffer[IMAGE_WIDTH_WORDS];
+  for (unsigned line = 0; line < IMAGE_HEIGHT_LINES; line++) {
+    for(unsigned i=0;i<IMAGE_WIDTH_WORDS/8;i++){
+      unpack_short(flash_buffer, i*16, flower_data[line*IMAGE_WIDTH_WORDS/8 + i], 1);
+    }
+    image_write_line_nonblocking(c, IMAGE_HEIGHT_LINES - line - 1, image_no, flash_buffer);
+  }
+  wait_until_idle(c);
+}
+
 void demo_full_screen_image_load(chanend server) {
   unsigned image0, image1, image2, image3, lenna, menu, frame_buffer[2];
   unsigned fb_index = 0;
@@ -107,7 +118,7 @@ void demo_full_screen_image_load(chanend server) {
   wait_until_idle(server);
 
   lenna = register_image(server, IMAGE_WIDTH_WORDS, IMAGE_HEIGHT_LINES);
-  load_from_flash(server, lenna, 0x1f3);
+  load_from_buffer(server, lenna);
   wait_until_idle(server);
 
   menu = register_image(server, IMAGE_WIDTH_WORDS, IMAGE_HEIGHT_LINES);
