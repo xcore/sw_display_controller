@@ -1,10 +1,10 @@
 Source code structure
 ---------------------
 
-The project contains:
-	* application app_graphics_demo
-	* module module_sdram_burst_fast
-	* module module_lcd
+The application needs the component for SDRAM (sc_sdram) and LCD (sc_lcd).
+These projects should be linked to the application for it to build.
+The following table shows the source file list for the application project.
+Please refer to the documents available in sc_sdram and sc_lcd for the list of files in the SDRAM component and LCD component respectively.
 
 .. list-table:: Project structure
   :header-rows: 1
@@ -54,27 +54,4 @@ The project contains:
   * - 
     - ``traffic.xc``
     - File containing the implementation of test functions
-  * - module_lcd
-    - ``lcd.h`` 
-    - Header file containing the APIs for the LCD component
-  * - 
-    - ``lcd.xc``
-    - File containing the implementation of the LCD component thread
-  * - 
-    - ``lcd_defines.xc``
-    - Header file containing the user configurable defines for the LCD
-  * - 
-    - ``lcd_ports.xc``
-    - File containing the defines for the port parameters of the LCD
-  * - module_sdram_burst_new
-    - ``sdram_server.h`` 
-    - Header file containing the APIs for the SDRAM component
-  * - 
-    - ``sdram_server.xc``
-    - File containing the implementation of the SDRAM component including the SDRAM threads, SDRAM reads and writes
-  * - 
-    - ``sdram_internal.h``
-    - Header file containing the internal defines used by the SDRAM component
-  * - 
-    - ``sdram_client.xc``
-    - File containing the implementation of the internal APIs used by the SDRAM component. These APIs are used by the ``sdram_server.xc``
+

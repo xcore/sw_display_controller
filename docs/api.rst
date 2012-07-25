@@ -1,140 +1,12 @@
-.. _sec_api:
-
 Project structure
 =================
 
 The project is structured into
     * application: app_graphics_demo which includes the LCD-SDRAM manager and the demo application
-    * component: module_sdram_burst_new which handles the SDRAM
-    * component: module_lcd which handles the LCD
+    * component: sc_sdram_burst which handles the SDRAM
+    * component: sc_lcd which handles the LCD
+The below section details the APIs in the application. For details about the LCD and SDRAM APIs please refer to the respective repositories.
 
-.. _sec_config_defines:
-
-Configuration Defines
----------------------
-
-LCD component
-+++++++++++++
-
-The following defines must be configured for the LCD component based on the Graphics LCD module used.
-The defines can be seen in the file ``lcd_defines.h`` and ``lcd_ports.xc``
-
-.. list-table:: LCD Defines
-   :header-rows: 1
-   :widths: 3 2 1
-  
-   * - Define
-     - Description
-     - Default
-   * - **LCD_WIDTH**
-     - The width of the LCD screen in terms of pixels.
-     - 480 
-   * - **LCD_HEIGHT**
-     - The height of the LCD screen in terms of rows.       
-     - 272
-   * - **VERT_PORCH**
-     - This is the vertical porch timing for the LCD. 
-       The value given here should include the vertical blanking period, vertical front porch and vertical back porch.
-       The user should refer to the LCD datasheet to find the values
-     - 6330
-   * - **HOR_PORCH**
-     - This is the horizontal porch timing for the LCD. 
-       The value given here should include the horizontal blanking period, horizontal front porch and horizontal back porch.
-       The user should refer to the LCD datasheet to find the values.
-     - 45
-   * - **p_lcd_clk**
-     - This is a out port defined in the ``lcd_ports.xc`` file. The user should give the port details which should be used as LCD clock.
-     - XS1_PORT_1O
-   * - **p_lcd_tim**
-     - This is a out port defined in the ``lcd_ports.xc`` file. The user should give the port details which should be used as LCD signals 
-     - XS1_PORT_4F
-   * - **p_lcd_rgb**
-     - This is a out port defined in the ``lcd_ports.xc`` file. The user should give the port details which should be used for the 32 bit    RGB lines.
-       (includes 2 data of 16 bit RGB color)
-     - XS1_PORT_32A
-   * - **clk_lcd**
-     - This is a clock defined in the ``lcd_ports.xc`` file. The user should give the clock block which can used as LCD clock
-     - XS1_CLKBLK_3
-	 
-SDRAM component
-+++++++++++++++
-
-The following defines must be configured for the SDRAM component based on the SDRAM used.
-The defines can be seen in the file ``sdram_configuration.h``
-
-.. list-table:: SDRAM Defines
-   :header-rows: 1
-   :widths: 3 2 1
-  
-   * - Define
-     - Description
-     - Default
-   * - **SDRAM_COL_BITS**
-     - The number of bits in each column. The value indicates the data width.
-     - 16
-   * - **SDRAM_ROW_LENGTH**
-     - Number of columns in each row of the SDRAM
-     - 256
-   * - **SDRAM_ROW_COUNT**
-     - Number of rows in each bank of the SDRAM
-     - 2048
-   * - **SDRAM_BANK_COUNT**
-     - Number of banks supported by the SDRAM
-     - 2
-   * - **SDRAM_REFRESH_MS**
-     - The period of refresh required for the SDRAM. The value is given in terms of milliseconds 
-     - 16
-   * - **SDRAM_REFRESH_CYCLES**
-     - Number of times the SDRAM to be refreshed for every SDRAM_REFRESH_MS
-     - 2048
-   * - **SDRAM_MODE_REGISTER**
-     - Defines the configuration of the SDRAM. The user should go through the SDRAM datasheet to find the configuration of the SDRAM
-     - 0x0027
-   * - Control words
-     - The control words is a combination of 4 lines  CS, WE, CAS, RAS. The user can change the control word values depending on the 
-       SDRAM. The control words define the operation required for the SDRAM.
-     - The below picture shows the default configuration of the SDRAM
-.. only:: html
-
-  .. figure:: images/sdram_config.png
-     :align: center
-
-     SDRAM configuration
-
-.. only:: latex
-
-  .. figure:: images/sdram_config.pdf
-     :figwidth: 50%
-     :align: center
-
-     SDRAM configuration
-
-
-API
----
-LCD APIs
-++++++++
-
-
-The LCD display module functionalities can be seen in
-        * ``lcd.xc``
-        * ``lcd.h``
-        * ``lcd_defines.h``
-
-The function :c:func:`lcd` in lcd.xc is handled in the thread.
-This sections explains only the important APIs that are frequently used. Other static APIs are not discussed in this section.
-The other APIs can be seen in the files ``lcd.xc`` and ``lcd.h``.
-
-Note that to enable the application use the LCD module, the module should be added to the build options of the project. 
-To achieve that, the following is done:
-
-  #. The file ``BuildOptions`` available in ..\app_graphics_demo folder is opened
-  #. The name ``module_lcd`` is added to the option ``MODULE`` in the BuildOptions. This will enable the application project to use the LCD module		   
-  #. The object names 'lcd' and 'lcd_ports' are added to the option ``OBJNAMES``
-  #. The module ``module_lcd`` is added to the ``References`` option in the project settings of the application project
-
-
-.. doxygenfunction:: lcd
 LCD SDRAM Manager APIs
 ++++++++++++++++++++++
 
@@ -240,36 +112,6 @@ The other APIs can be seen in the files mentioned above.
      :align: left
 
 
-SDRAM APIs
-++++++++++
-
-
-The SDRAM module handles the 16 bit reads, writes and refresh of the SDRAM. The LCD-SDRAM manager submits 
-the commands to the SDRAM module in a queue. The SDRAM module processes the commands and returns the 
-required data. The SDRAM code can be seen as a separate module ``module_sdram_burst_new``in the project.
-
-Note that to enable the application use the SDRAM module, the module should be added to the build options of the project 
-To achieve that, the following is done
-
-  #. The file ``BuildOptions`` available in ..\app_graphics_demo folder is opened
-  #. The name ``module_sdram_burst_new`` is added to the option ``MODULE`` in the BuildOptions. This will enable the application project to use the SDRAM module		    
-  #. The object names 'sdram_server' and 'sdram_client' are added to the option ``OBJNAMES``   
-  #. The module ``module_sdram_burst_new`` is added to the ``References`` option in the project settings of the application project
-
-The SDRAM code can be seen in
-
-    * ``sdram_server.xc``
-    * ``sdram.h``
-    * ``sdram_client.xc``
-
-This sections explains only the important APIs used by the user. Other static APIs are not discussed in this section.
-The other APIs can be found in the files mentioned above.   
-The SDRAM APIs for read, write and buffer commits are handled by the LCD-SDRAM Manager. 
-Hence we don't need to call them directly. We only need to invoke the SDRAM thread in the main.xc.
-The SDRAM APIs by themselves take care of the SDRAM refresh.
-
-
-.. doxygenfunction:: sdram_server
 Demo Application
 ++++++++++++++++
 
