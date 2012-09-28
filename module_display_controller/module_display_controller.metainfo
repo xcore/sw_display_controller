@@ -1,0 +1,100 @@
+-------------------------------------------------------------------------------
+-- Descriptive metadata
+-------------------------------------------------------------------------------
+
+componentName = "LCD Display Controller with SDRAM image buffer"
+componentFullName = ""
+alternativeNames = { }
+componentDescription = "Offers an LCD display controller component with SDRAM image buffer"
+componentVersion = "1v0"
+
+-------------------------------------------------------------------------------
+-- Parameter descriptions.
+-------------------------------------------------------------------------------
+
+configPoints =
+{
+  display_controller_max_images =
+  {
+    short   = "Display controller max images",
+    long    = ""
+    help    = "This defines the maximum number of images supported by the display contoller."
+    units   = "images",
+    define  = "DISPLAY_CONTROLLER_MAX_IMAGES",
+    type    = "int",
+    min     = 2,
+    max     = 1000,
+    resourceUsageFlags = {"noeffect"},
+    default = "10"
+  },
+  display_controller_verbose =
+  {
+    short   = "Display controller enable verbose",
+    long    = ""
+    help    = "This define switchs on the error checking for memory overflows and causes verbose error warnings to be emitted in the event of an error."
+    units   = "",
+    define  = "DISPLAY_CONTROLLER_VERBOSE",
+    type    = "bool",
+    resourceUsageFlags = {"noeffect"},
+    default = "false"
+  },
+}
+
+ports = {}
+
+channels = {
+  c_lcd = {
+    short = "LCD Server channel",
+    long  = "Channel for the display controller to exchange commands with the LCD server.
+    help  = "",
+  },
+  c_sdram = {
+    short = "SDRAM Server channel",
+    long  = "Channel for the display controller to exchange commands with the SDRAM server.
+    help  = "",
+  },
+  c_client = {
+    short = "Client channel",
+    long  = "Channel for the client to exchange commands with the display controller.
+    help  = "",
+  },
+}    
+
+function getConfigStatus()
+  local status = "Trusted Configuration"
+  local issues = {}
+  return status, issues
+end
+            
+-------------------------------------------------------------------------------
+-- Source generation functions
+-------------------------------------------------------------------------------
+
+generatedCode = {
+  includes = {"display_controller.h"},
+  globals = [[ ]],
+  body = [[
+    display_controller( ${swblock.channels.c_client}, ${swblock.channels.c_lcd}, ${swblock.channels.c_sdram});
+  ]]
+}
+
+api = {
+	'display_controller',
+	'image_read_line',
+	'image_read_line_p',
+	'image_write_line',
+	'image_write_line_p',
+	'image_read_partial_line',
+	'image_read_partial_line_p',
+	'register_image',
+	'wait_until_idle',
+	'wait_until_idle_p',
+	'frame_buffer_commit',
+	'frame_buffer_init',
+	'transition_wipe',
+	'transition_slide',
+	'transition_roll',
+	'transition_dither',
+	'transition_alpha_blend'
+}
+

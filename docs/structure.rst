@@ -1,57 +1,27 @@
 Source code structure
 ---------------------
-
-The application needs the component for SDRAM (sc_sdram) and LCD (sc_lcd).
-These projects should be linked to the application for it to build.
-The following table shows the source file list for the application project.
-Please refer to the documents available in sc_sdram and sc_lcd for the list of files in the SDRAM component and LCD component respectively.
-
 .. list-table:: Project structure
   :header-rows: 1
   
   * - Project
     - File
     - Description
-  * - app_graphics_demo
-    - ``lcd_sdram_manager.h`` 
-    - Header file containing the APIs for the LCD SDRAM manager
+  * - module_display_controller
+    - ``display_controller.h`` 
+    - Header file containing the APIs for the display controller component.
   * - 
-    - ``lcd_sdram_manager.xc``
-    - File containing the implementation of LCD SDRAM Manager. These APIs are used for handling the double buffering
+    - ``display_controller.xc``
+    - File containing the implementation of the display controller component.
   * - 
-    - ``lcd_sdram_manager_internal.h``
-    - Header file containing the defines for the internal use in LCD SDRAM Manager APIs.
+    - ``display_controller_client.xc``
+    - File containing the implementation of the display controller client functions.
   * - 
-    - ``lcd_sdram_manager_client.xc``
-    - File containing the internal implementation of the LCD SDRAM Manager. These APIs are internally used in the ``lcd_sdram_manager.xc``
-  * - 
-    - ``rgb888_to_rgb565.h``
-    - Header file containing the prototype for :c:func::`rgb888_to_rgb565`
-  * - 
-    - ``rgb888_to_rgb565.c``
-    - File containing the implementation of color conversion - i.e: converting 24 bit RGB to 16 bit RGB color.
-  * - 
-    - ``sdram_configurations.h``
-    - Header file containing the user configurable SDRAM parameters.	
-  * - 
-    - ``main.xc``
-    - File containing the implementation of the main function. This function handles the invokation of the threads in a "par" statement.
-  * - 
-    - ``demo.h``
-    - Header file containing the prototype for user defined demo application	
-  * - 
-    - ``demo.xc``
-    - File containing the implementation of the user specific demo functionality	
+    - ``display_controller_internal.h``
+    - Header file containing the user configurable defines for the display controller component.
   * - 
     - ``transitions.h``
-    - Header file containing the prototypes for the transition functions
+    - Header file containing the APIs for the display controller transitions.
   * - 
     - ``transitions.xc``
-    - File containing the implementation of the transition functions like slide, wipe, roll, box, dither and alpha blend
-  * - 
-    - ``traffic.h``
-    - Header file containing the prototype for test functions
-  * - 
-    - ``traffic.xc``
-    - File containing the implementation of test functions
+    - File containing the implementation of the display controller transitions.
 

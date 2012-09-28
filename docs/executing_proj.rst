@@ -1,9 +1,9 @@
 Executing The Project
 ---------------------
-Once the code and images are flashed
+The module by itself cannot be build or executed separately. It must be linked in to an application. Once the module is linked to the application, the application can be built and tested for driving a LCD screen.
 
-    a. The XTAG2 connector is removed from the hardware,
-	Note: This is done because the XTAG2 pulls the reset line and hence the board is unable to reset,
-    b. The hardware is powered down,
-    c. The hardware is powered up. Now the code runs from the flash,
-    d. We can see 6 images with multiple transition effects on the LCD screen.
+The following should be done in order to link the component to the application project
+  #. The module name ``module_display_controller`` should be added to the list of MODULES in the application project build options. 
+  #. The module name ``module_lcd`` should be added to the list of MODULES in the application project build options. 
+  #. The module name ``module_sdram`` should be added to the list of MODULES in the application project build options. 
+  #. Now the module is linked to the application and can be directly used

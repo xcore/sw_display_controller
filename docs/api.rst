@@ -1,135 +1,55 @@
 Project structure
 =================
 
-The project is structured into
-    * application: app_graphics_demo which includes the LCD-SDRAM manager and the demo application
+To build a project including the ``module_display_controller`` the following components are required:
     * component: sc_sdram_burst which handles the SDRAM
     * component: sc_lcd which handles the LCD
 The below section details the APIs in the application. For details about the LCD and SDRAM APIs please refer to the respective repositories.
 
-LCD SDRAM Manager APIs
-++++++++++++++++++++++
+Configuration Defines
+---------------------
 
+The ``module_display_controller`` can be configured via the header ``display_controller_conf.h``. The module requires nothing to be additionally defined however any of the defines can be overridden by adding the header ``display_controller_conf.h`` to the application project and adding the define that needs overridding. The possible defines are:
 
-The LCD SDRAM manager handles the double buffering of the SDRAM. It takes care of the write, read and the refresh commands for the SDRAM. The LCD SDRAM Manager code can be seen in
+**DISPLAY_CONTROLLER_MAX_IMAGES**
+	This defines the storage space allocated to the display controller for it to store image metadata. When an image is registered with the display controller its dimensions and location in SDRAM address space are storred in a table. The define specifice how any entries are allowed in that table. Note, there is no overflow checking by default.
 
-    * ``lcd_sdram_manager_client.xc``
-    * ``lcd_sdram_manager_internal.h``
-    * ``lcd_sdram_manager.xc``
-    * ``lcd_sdram_manager.h``
+**DISPLAY_CONTROLLER_VERBOSE**
+	This define switchs on the error checking for memory overflows and causes verbose error warnings to be emitted in the event of an error.
 
-This sections explains only the important APIs that are frequently used. Other static APIs are not discussed in this section.
-The other APIs can be seen in the files mentioned above.
+API
+---
 
-.. doxygenfunction:: lcd_sdram_manager
+The``module_display_controller`` functionality is defined in
+    * ``display_controller_client.xc``
+    * ``display_controller_internal.h``
+    * ``display_controller.xc``
+    * ``display_controller.h``
+    * ``transitions.h``
+    * ``transitions.xc``
+
+The display controller handles the double buffering of the image data to the LCD as real time service and manages the I/O to the SDRAM as a non-real time service. 
+
+The display controller API is as follows:
+.. doxygenfunction:: display_controller
+.. doxygenfunction:: image_read_line
+.. doxygenfunction:: image_read_line_p
+.. doxygenfunction:: image_write_line
+.. doxygenfunction:: image_write_line_p
+.. doxygenfunction:: image_read_partial_line
+.. doxygenfunction:: image_read_partial_line_p
 .. doxygenfunction:: register_image
-.. only:: html
-
-  .. figure:: images/register.png
-     :align: left
-
-     
-.. only:: latex
-
-  .. figure:: images/register.pdf
-     :figwidth: 50%
-     :align: left
-
-.. doxygenfunction:: image_write_line_nonblocking
-.. only:: html
-
-  .. figure:: images/sdram_write.png
-     :align: left
-
-     
-.. only:: latex
-
-  .. figure:: images/sdram_write.pdf
-     :figwidth: 50%
-     :align: left
-
-.. doxygenfunction:: image_read_line_nonblocking
-.. only:: html
-
-  .. figure:: images/sdram_read.png
-     :align: left
-
-     
-.. only:: latex
-
-  .. figure:: images/sdram_read.pdf
-     :figwidth: 50%
-     :align: left
-
-.. doxygenfunction:: image_read_partial_line_nonblocking
-.. only:: html
-
-  .. figure:: images/sdram_read_partial_1.png
-     :align: left
-
-     
-.. only:: latex
-
-  .. figure:: images/sdram_read_partial_1.pdf
-     :figwidth: 50%
-     :align: left
-
-.. only:: html
-
-  .. figure:: images/sdram_read_partial_2.png
-     :align: left
-
-     
-.. only:: latex
-
-  .. figure:: images/sdram_read_partial_2.pdf
-     :figwidth: 50%
-     :align: left
-
+.. doxygenfunction:: wait_until_idle
+.. doxygenfunction:: wait_until_idle_p
 .. doxygenfunction:: frame_buffer_commit
-.. only:: html
+.. doxygenfunction:: frame_buffer_init
 
-  .. figure:: images/sdram_buffer_1.png
-     :align: left
+The transition API is as follows:
+.. doxygenfunction:: transition_wipe
+.. doxygenfunction:: transition_slide
+.. doxygenfunction:: transition_roll
+.. doxygenfunction:: transition_dither
+.. doxygenfunction:: transition_alpha_blend
 
-     
-.. only:: latex
+The transitions use the display controller API.
 
-  .. figure:: images/sdram_buffer_1.pdf
-     :figwidth: 50%
-     :align: left
-
-.. only:: html
-
-  .. figure:: images/sdram_buffer_2.png
-     :align: left
-
-     
-.. only:: latex
-
-  .. figure:: images/sdram_buffer_2.pdf
-     :figwidth: 50%
-     :align: left
-
-
-Demo Application
-++++++++++++++++
-
-The project includes a sample demo which includes the working of the LCD, SDRAM and the LCD-SDRAM manager. The demo provided is only a skeleton and can be modified when required.
-The current demo is run under the function name `demo_full_screen_image_load` and this thread name is invoked in the :c:func:`main` function in ``main.xc``
-
-The demo application can be seen in
-
-    * Demo.xc
-    * Demo.h
-    * Transitions.xc (different transitions are implemented in this file)
-
-The main aim of the supplied demo is 
-
-    * Loading of images to flash (the images are stored to flash before running the code. The images are stored in 24 bit TGA format)
-    * Reading images from flash (The 24 bit TGA image is read and the 24 bit RGB colour is converted to 16 bit (565 RGB colour) before storing to the SDRAM)
-    * Supporting 6 full screen images in the SDRAM
-    * Refresh rates of nearly 20 (which can be seen during different transitions between the images)
-
-
-The section `Application System Description` gives a brief idea of the flow of the application.	 

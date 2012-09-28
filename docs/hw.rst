@@ -1,24 +1,34 @@
-H/W Development Platforms
-=========================
 
-Both the components graphics LCD and SDRAM need separate hardware modules for testing.
-Hence the project cannot be run on any XMOS specific kits available currently. The project was developed on the hardware provided by the customer. 
-The supplied hardware looks like as shown in the below figure.
+Evaluation Platforms
+====================
 
-.. only:: html
+.. _sec_hardware_platforms:
 
-  .. figure:: images/custHw.png
-     :align: center
+Recommended Hardware
+--------------------
 
-     Customer Hardware used for testing
+Slicekit
+++++++++
 
-.. only:: latex
+This module may be evaluated using the Slicekit Modular Development Platform, available from digikey. Required board SKUs are:
 
-  .. figure:: images/custHw.pdf
-     :figwidth: 50%
-     :align: center
+   * XP-SKC-L2 (Slicekit L2 Core Board) 
+   * XA-SK-SCR480 plus XA-SK-XTAG2 (Slicekit XTAG adaptor) 
 
-     Customer Hardware used for testing
+Demonstration Applications
+--------------------------
 
-The supplied hardware includes the graphics LCD module (part number: TM04NDH02) and the SDRAM module (part number : IS42S16100F-7TLI).
-In order to run the code, separate hardware (similar to one shown above) with LCD and SDRAM should be designed.
+Display Controller Application
+++++++++++++++++++++++++++++++
+
+This combination demo employs the ``module_lcd`` along with the ``module_sdram`` and the ``module_display_controller`` framebuffer framework component to implement a 480x272 display controller.
+
+Required board SKUs for this demo are:
+
+   * XP-SKC-L2 (Slicekit L2 Core Board) plus XA-SK-SDRAM plus XA-SK-SCR480 plus XA-SK-XTAG2 (Slicekit XTAG adaptor) 
+   * LCD //FIXME
+   * SDRAM //FIXME
+
+   * Package: sw_display_controller
+   * Application: app_display_controller
+

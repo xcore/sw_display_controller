@@ -5,5 +5,5 @@
 #ifndef __XC__
 #include "xccompat.h"
 #endif
-void loader(chanend c);
+void loader(chanend c, char images[][30], unsigned image_count);
 #endif /* LOADER_H_ */

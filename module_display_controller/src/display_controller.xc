@@ -1,13 +1,10 @@
 #include <assert.h>
-#include <stdio.h>
 #include "lcd.h"
 #include "sdram.h"
 #include "display_controller_internal.h"
 
-//#define VERBOSE
-#define MAX_IMAGES 20
 #define NONE (-1)
-#define LCD_BUFFER_DEPTH (8)
+#define LCD_BUFFER_DEPTH (4)
 
 struct image_properties {
   //sdram location
@@ -29,7 +26,7 @@ struct state {
   unsigned next_fb_image_index, next_next_fb_image_index;
 
   unsigned registered_images;
-  struct image_properties IP[MAX_IMAGES];
+  struct image_properties IP[DISPLAY_CONTROLLER_MAX_IMAGES];
   unsigned current_bank;
   unsigned current_bank_used_words;
 };
@@ -41,12 +38,20 @@ static unsigned register_image(unsigned img_width_words,
 
   unsigned next_start_row = (s.current_bank_used_words + words_required)
       / SDRAM_ROW_WORDS;
+
+#if (DISPLAY_CONTROLLER_VERBOSE)
+  if(s.registered_images == DISPLAY_CONTROLLER_MAX_IMAGES) {
+    printf("Error: Maximum number of images exceeded in display controller\n");
+    assert(0); //Out of image_properties space
+  }
+#endif
+
   if (next_start_row > SDRAM_ROW_COUNT) {
     //if the image wont fix in the current bank then start the next
     s.current_bank++;
     s.current_bank_used_words = 0;
     if (s.current_bank == SDRAM_BANK_COUNT) {
-#ifdef VERBOSE
+#if (DISPLAY_CONTROLLER_VERBOSE)
       printf("Error: Cannot allocate enough memory\n");
 #endif
       assert(0); //Out of SDRAM
@@ -63,43 +68,46 @@ static unsigned register_image(unsigned img_width_words,
   return s.registered_images - 1;
 }
 
-static inline void next_lcd_line(chanend client, chanend c_lcd, chanend c_sdram, struct state &s) {
+static inline void next_lcd_line(chanend client, chanend c_lcd,
+    chanend c_sdram, struct state &s) {
   unsigned bank, start_row, start_col, word_count;
 
   lcd_update(c_lcd, s.lcd_buffer_pointers[s.tail]);
-  s.tail = (s.tail+1)%LCD_BUFFER_DEPTH;
+  s.tail = (s.tail + 1) % LCD_BUFFER_DEPTH;
 
   bank = s.IP[s.current_fb_image_index].bank;
-  start_row = (s.IP[s.current_fb_image_index].start_used_words + s.current_fb_image_line *
-      s.IP[s.current_fb_image_index].line_width_words) / SDRAM_ROW_WORDS;
-  start_col = ((s.IP[s.current_fb_image_index].start_used_words + s.current_fb_image_line *
-      s.IP[s.current_fb_image_index].line_width_words)*2) % SDRAM_COL_COUNT;
+  start_row = (s.IP[s.current_fb_image_index].start_used_words +
+      s.current_fb_image_line * s.IP[s.current_fb_image_index].line_width_words)
+      / SDRAM_ROW_WORDS;
+  start_col = ((s.IP[s.current_fb_image_index].start_used_words +
+      s.current_fb_image_line * s.IP[s.current_fb_image_index].line_width_words) * 2)
+      % SDRAM_COL_COUNT;
   word_count = s.IP[s.current_fb_image_index].line_width_words;
 
   s.current_fb_image_line++;
-  if(s.current_fb_image_line == LCD_HEIGHT) {
+  if (s.current_fb_image_line == LCD_HEIGHT) {
     s.current_fb_image_line = 0;
 
-    if(s.next_fb_image_index !=NONE){
+    if (s.next_fb_image_index != NONE) {
       s.current_fb_image_index = s.next_fb_image_index;
-      if(s.next_next_fb_image_index != NONE){
+      if (s.next_next_fb_image_index != NONE) {
         s.next_fb_image_index = s.next_next_fb_image_index;
         s.next_next_fb_image_index = NONE;
         client <: 0;
       } else {
         s.next_fb_image_index = NONE;
       }
-    }
   }
-  if(s.sdram_in_use){
-    //TODO pass the correct buffer
-    sdram_wait_until_idle(c_sdram, s.lcd_buffer_pointers[s.head]);
-  }
+}
+if(s.sdram_in_use) {
+  //TODO pass the correct buffer
+  sdram_wait_until_idle(c_sdram, s.lcd_buffer_pointers[s.head]);
+}
 
-  sdram_buffer_read(c_sdram, bank, start_row, start_col, word_count, s.lcd_buffer_pointers[s.head]);
-  s.sdram_in_use = 1;
+sdram_buffer_read(c_sdram, bank, start_row, start_col, word_count, s.lcd_buffer_pointers[s.head]);
+s.sdram_in_use = 1;
 
-  s.head = (s.head+1)%LCD_BUFFER_DEPTH;
+s.head = (s.head+1)%LCD_BUFFER_DEPTH;
 }
 
 static void client_command(char cmd, chanend client, chanend c_lcd,
@@ -162,7 +170,11 @@ static void client_command(char cmd, chanend client, chanend c_lcd,
       slave {
         client :> image_index;
       }
-      if(s.next_fb_image_index == NONE){
+#if (DISPLAY_CONTROLLER_VERBOSE)
+      if(image_index >= s.registered_images)
+        printf("Error: Frame buffer commit image(%d) is out of range(%d)\n", image_index, s.registered_images);
+#endif
+      if(s.next_fb_image_index == NONE) {
         s.next_fb_image_index = image_index;
         client <: 0;
       } else {
@@ -178,9 +190,14 @@ static void client_command(char cmd, chanend client, chanend c_lcd,
         client :> image_index;
       }
       assert(s.current_fb_image_index == NONE);
-      assert(image_index < s.registered_images);
-
-
+#if (DISPLAY_CONTROLLER_VERBOSE)
+      if(s.current_fb_image_index != NONE)
+        printf("Error: Frame buffer commit before frame buffer init\n");
+#endif
+#if (DISPLAY_CONTROLLER_VERBOSE)
+      if(image_index >= s.registered_images)
+        printf("Error: Frame buffer commit image(%d) is out of range(%d)\n", image_index, s.registered_images);
+#endif
       s.current_fb_image_index = image_index;
       s.next_fb_image_index = NONE;
       s.next_next_fb_image_index = NONE;
@@ -192,7 +209,7 @@ static void client_command(char cmd, chanend client, chanend c_lcd,
         start_row = (s.IP[s.current_fb_image_index].start_used_words + s.current_fb_image_line *
             s.IP[s.current_fb_image_index].line_width_words) / SDRAM_ROW_WORDS;
         start_col = ((s.IP[s.current_fb_image_index].start_used_words + s.current_fb_image_line *
-            s.IP[s.current_fb_image_index].line_width_words)*2) % SDRAM_COL_COUNT;
+                s.IP[s.current_fb_image_index].line_width_words)*2) % SDRAM_COL_COUNT;
         word_count = s.IP[s.current_fb_image_index].line_width_words;
 
         s.current_fb_image_line++;
@@ -215,8 +232,10 @@ static void client_command(char cmd, chanend client, chanend c_lcd,
       break;
     }
     default: {
-    	__builtin_unreachable();
-    	break;
+#if (XCC_VERSION_MAJOR >= 12)
+      __builtin_unreachable();
+#endif
+    break;
     }
   }
   return;
@@ -233,15 +252,15 @@ void display_controller(chanend client, chanend c_lcd, chanend c_sdram) {
 #pragma ordered
     select {
       case lcd_req(c_lcd): {
-        next_lcd_line(client, c_lcd, c_sdram,  s);
+        next_lcd_line(client, c_lcd, c_sdram, s);
         break;
       }
-      case chkct(c_sdram, XS1_CT_END): {
+      case chkct(c_sdram, XS1_CT_END):{
         s.sdram_in_use = 0;
         break;
       }
       case (!s.sdram_in_use) => client :> char cmd: {
-        client_command(cmd, client, c_lcd, c_sdram,  s);
+        client_command(cmd, client, c_lcd, c_sdram, s);
         break;
       }
     }
