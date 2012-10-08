@@ -51,4 +51,19 @@ Now that the application has been compiled, the next step is to run it on the Sl
    #. Click on the ``Run`` icon (the white arrow in the green circle). 
    #. Wait until the images have loaded over the XTAG connector from the host.
    #. There should be a series of 6 images the transition from one to another.
+
+Next Steps
+++++++++++
+
+  #. Trying changing the files that are loaded form the host. 
+  #. Each transition has a frame count that depecits the speed of the transition, try adjusting them.
+
+Look at the Code
+................
+
+   #. Examine the application code. In xTIMEcomposer navigate to the ``src`` directory under app_sdram_demo and double click on the ``app_sdram_demo.xc`` file within it. The file will open in the central editor window.
+   #. Find the main function and note that it runs the ``app()`` function on a single logical core. 
+
+
+
     
