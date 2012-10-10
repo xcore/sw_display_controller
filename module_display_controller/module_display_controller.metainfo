@@ -76,10 +76,14 @@ generatedCode = {
   includes = {"display_controller.h"},
   globals = [[ ]],
   body = [[
-    display_controller( ${swblock.channels.c_client}, ${swblock.channels.c_lcd}, ${swblock.channels.c_sdram});
+    display_controller( ${swblock.chanends.c_client}, ${swblock.chanends.c_lcd}, ${swblock.chanends.c_sdram});
   ]]
 }
 
+files = {
+  ["module_display_controller/sdram_conf_example.h"] = "src/sdram_conf.h",
+  ["module_display_controller/lcd_conf_example.h"] = "src/lcd_conf.h",
+}
 api = {
 	'display_controller',
 	'image_read_line',
