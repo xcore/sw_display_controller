@@ -1,9 +1,10 @@
 Display Controller Repository
 .............................
 
-:Latest release: 1.0.0
+:Latest release: 1.0.0alpha0
 :Maintainer: andrewstanfordjason
-:Description: The display controller component is used to drive a single graphics LCD screen incorporating a managed double buffer. 
+:Description: Modules for driving parallel RGB displays in conjunction with sdram and lcd c omponents. The main module here takes care of framebuffer management.
+
 
 Key Features
 ============
@@ -33,6 +34,7 @@ Issues may be submitted via the Issues tab in this github repo. Response to any 
 Required software (dependencies)
 ================================
 
-  * sc_i2c (git@github.com:xcore/sc_sdram_burst.git)
-  * sc_uart (git@github.com:xcore/sc_lcd.git)
+  * sc_lcd (git@github.com:xcore/sc_lcd.git)
+  * sc_sdram_burst (git@github.com:xcore/sc_sdram_burst.git)
+  * sc_util (git@github.com:xcore/sc_util)
 
