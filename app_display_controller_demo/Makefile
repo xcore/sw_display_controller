@@ -9,7 +9,7 @@ TARGET = SLICEKIT-L2
 APP_NAME = app_display_controller_demo
 
 # The USED_MODULES variable lists other module used by the application.
-USED_MODULES = module_display_controller module_lcd module_sdram
+USED_MODULES = module_display_controller module_lcd module_sdram module_slicekit_support
 
 # The flags passed to xcc when building the application
 # You can also set the following to override flags for a particular language:

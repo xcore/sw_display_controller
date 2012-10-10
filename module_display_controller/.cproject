@@ -161,62 +161,162 @@ targetID="org.eclipse.cdt.build.MakeTargetBuilder">
                                     <listOptionValue builtIn="false" value='&quot;${XMOS_DOC_PATH}/../target/include/gcc&quot;' />
                                     <listOptionValue builtIn="false" value='&quot;${XMOS_DOC_PATH}/../target/include/c++/4.2.1&quot;' />
                                     <listOptionValue builtIn="false" value='&quot;${XMOS_DOC_PATH}/../target/include/c++/4.2.1/xcore-xmos-elf&quot;' />
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16400F}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16160D}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src/devices}&quot;' />
 
                                 </option>
                                 <inputType id = "com.xmos.cdt.xc.compiler.input.35927862" name="XC Sources" superClass="com.xmos.cdt.xc.compiler.input" />
                                 <option id = "gnu.c.compiler.option.include.paths.29395022" valueType="includePath" superClass="gnu.c.compiler.option.include.paths">
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16400F}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16160D}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src/devices}&quot;' />
 
                                 </option>
                             </tool>
                             <tool id = "com.xmos.cdt.xc.compiler.base.24394644" name="com.xmos.cdt.xc.compiler.base" superClass="com.xmos.cdt.xc.compiler.base">
                                 <option id = "gnu.c.compiler.option.include.paths.75579354" valueType="includePath" superClass="gnu.c.compiler.option.include.paths">
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16400F}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16160D}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src/devices}&quot;' />
 
                                 </option>
                                 <option id = "com.xmos.c.compiler.option.include.paths.68861606" valueType="includePath" superClass="com.xmos.c.compiler.option.include.paths">
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16400F}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16160D}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src/devices}&quot;' />
 
                                 </option>
                             </tool>
                             <tool id = "com.xmos.cdt.c.compiler.base.82887686" name="com.xmos.cdt.c.compiler.base" superClass="com.xmos.cdt.c.compiler.base">
                                 <option id = "gnu.c.compiler.option.include.paths.8915643" valueType="includePath" superClass="gnu.c.compiler.option.include.paths">
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16400F}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16160D}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src/devices}&quot;' />
 
                                 </option>
                                 <option id = "com.xmos.c.compiler.option.include.paths.87594547" valueType="includePath" superClass="com.xmos.c.compiler.option.include.paths">
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16400F}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16160D}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src/devices}&quot;' />
 
                                 </option>
                             </tool>
                             <tool id = "com.xmos.cdt.cpp.compiler.base.80374370" name="com.xmos.cdt.cpp.compiler.base" superClass="com.xmos.cdt.cpp.compiler.base">
                                 <option id = "gnu.c.compiler.option.include.paths.87931699" valueType="includePath" superClass="gnu.c.compiler.option.include.paths">
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16400F}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16160D}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src/devices}&quot;' />
 
                                 </option>
                                 <option id = "com.xmos.c.compiler.option.include.paths.74606084" valueType="includePath" superClass="com.xmos.c.compiler.option.include.paths">
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16400F}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16160D}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src/devices}&quot;' />
 
                                 </option>
                             </tool>
                             <tool id = "com.xmos.cdt.core.assembler.base.18271750" name="com.xmos.cdt.core.assembler.base" superClass="com.xmos.cdt.core.assembler.base">
                                 <option id = "gnu.c.compiler.option.include.paths.20801554" valueType="includePath" superClass="gnu.c.compiler.option.include.paths">
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16400F}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16160D}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src/devices}&quot;' />
 
                                 </option>
                                 <option id = "com.xmos.c.compiler.option.include.paths.54799116" valueType="includePath" superClass="com.xmos.c.compiler.option.include.paths">
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16400F}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16160D}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/.settings}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src/devices}&quot;' />
 
                                 </option>
                             </tool>
