@@ -38,7 +38,9 @@
         <githash>afbba103d8b5ed3378eaa3832b8f694dec2844bc</githash>
         <uri>git@github.com:xcore/sc_util</uri>
     </dependency>
-    <description>Modules for driving parallel RGB displays in conjunction with sdram and lcd c omponents. The main module here takes care of framebuffer management.</description>
+    <description>Modules for driving parallel RGB displays in conjunction with sdram and lcd components. The main module here takes care of framebuffer management.</description>
+    <docdir>doc</docdir>
+    <docdir>app_display_controller_demo/doc_quickstart</docdir>
     <location>git@github.com:xcore/sw_display_controller.git</location>
     <name>sw_display_controller</name>
     <maintainer>andrewstanfordjason</maintainer>
