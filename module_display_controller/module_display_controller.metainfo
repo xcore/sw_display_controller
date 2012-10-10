@@ -17,8 +17,8 @@ configPoints =
   display_controller_max_images =
   {
     short   = "Display controller max images",
-    long    = ""
-    help    = "This defines the maximum number of images supported by the display contoller."
+    long    = "",
+    help    = "This defines the maximum number of images supported by the display contoller",
     units   = "images",
     define  = "DISPLAY_CONTROLLER_MAX_IMAGES",
     type    = "int",
@@ -30,8 +30,8 @@ configPoints =
   display_controller_verbose =
   {
     short   = "Display controller enable verbose",
-    long    = ""
-    help    = "This define switchs on the error checking for memory overflows and causes verbose error warnings to be emitted in the event of an error."
+    long    = "",
+    help    = "This define switchs on the error checking for memory overflows and causes verbose error warnings to be emitted in the event of an error",
     units   = "",
     define  = "DISPLAY_CONTROLLER_VERBOSE",
     type    = "bool",
@@ -40,22 +40,24 @@ configPoints =
   },
 }
 
+derivedValues = {}
+
 ports = {}
 
 channels = {
   c_lcd = {
     short = "LCD Server channel",
-    long  = "Channel for the display controller to exchange commands with the LCD server.
+    long  = "Channel for the display controller to exchange commands with the LCD server",
     help  = "",
   },
   c_sdram = {
     short = "SDRAM Server channel",
-    long  = "Channel for the display controller to exchange commands with the SDRAM server.
+    long  = "Channel for the display controller to exchange commands with the SDRAM server",
     help  = "",
   },
   c_client = {
     short = "Client channel",
-    long  = "Channel for the client to exchange commands with the display controller.
+    long  = "Channel for the client to exchange commands with the display controller",
     help  = "",
   },
 }    
