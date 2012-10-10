@@ -43,7 +43,8 @@
     <name>sw_display_controller</name>
     <maintainer>andrewstanfordjason</maintainer>
     <partnumber>XM-002024-DH</partnumber>
-    <release parenthash = "c237157d4560876677ebec1841e53580da4e9236" version = "1.0.0alpha0"></release>
+    <release parenthash = "c237157d4560876677ebec1841e53580da4e9236" version = "1.0.0alpha0" githash = "c4f687578d0a0856d5b2f560dbd8ae73ea5ed1f6"></release>
+    <release parenthash = "7aa3820504cdafd1a5576e7c8754529bb9231765" version = "1.0.0alpha1"></release>
     <subpartnumber>XM-002025-SM</subpartnumber>
     <vendor>XMOS</vendor>
     <xcore_repo>sw_display_controller.git</xcore_repo>
