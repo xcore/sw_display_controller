@@ -6,6 +6,8 @@ To build a project including the ``module_display_controller`` the following com
     * component: sc_lcd which handles the LCD
 The below section details the APIs in the application. For details about the LCD and SDRAM APIs please refer to the respective repositories.
 
+.. _sec_display_controller_api:
+
 Configuration Defines
 ---------------------
 
