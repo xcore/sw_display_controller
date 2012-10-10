@@ -58,10 +58,11 @@ Now that the application has been compiled, the next step is to run it on the Sl
 Next Steps
 ++++++++++
 
- #. Trying changing the files that are loaded form the host. To do this, produce an image of 480 by 272 pixels, save it in ``tga`` format uncompresses and in "top left" format ("bottom left" will also work but the image will have be upside-down).
+ #. Trying changing the files that are loaded form the host. To do this, produce an image of 480 by 272 pixels, save it in ``tga`` format uncompressed in "top left" format ("bottom left" will also work but the image will have to be upside-down). Save the file(s) into ``the app_display_controller_demo`` directory within your workspace.
  #. Each transition has a frame count that depecits the speed of the transition, try adjusting them and observe the results.
- #. Try writing an exciting transition effect. To do this begin with the template shown below::
+ #. Try writing an exciting transition effect. To do this begin with the template shown below, and refer to the Display Controller API documentation at :ref:`sec_display_controller_api`:
 
+::
       static void transition_exciting_impl(chanend server, unsigned next_image_fb,
          unsigned image_from, unsigned image_to, unsigned line) {
          //insert code here
