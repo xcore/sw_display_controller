@@ -32,5 +32,3 @@ Required board SKUs for this demo are:
    * XA-SK-SDRAM
    * XA-SK-SCR480 (which includes a 480x272 colour touch screen)  
 
-
-

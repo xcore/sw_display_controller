@@ -1,4 +1,4 @@
-SPHINX_PROJECT_NAME=Graphics LCD Display
+SPHINX_PROJECT_NAME=Display Controller
 VERSION=1.0
 DOXYGEN_DIRS= ../app_graphics_demo/src 
 SOURCE_INCLUDE_DIRS= ../app_graphics_demo/src 
