@@ -1,12 +1,12 @@
 Example Applications
 ====================
 
-This tutorial describes the demo applications included in the XMOS Dispaly Controller software component. :ref:`sec_hardware_platforms` describes the required hardware setups to run the demos.
+This tutorial describes the demo applications included in the XMOS Display Controller software component. :ref:`sec_hardware_platforms` describes the required hardware setup to run the demos.
 
 app_display_controller_demo
 ---------------------------
 
-This application demonstrates how the module is used write image data to the LCD screen whilst the the application has no real time constraints imposed on it by the ``lcd_module``. The purpose of this application is to show how data is passed to the ``display_controller``. 
+This application demonstrates how the ``lcd_module`` is used to write image data to the LCD screen whilst imposing no real time constraints on the application. The purpose of this demonstration is to show how data is passed to the ``display_controller``. 
 
 Application Notes
 -----------------
