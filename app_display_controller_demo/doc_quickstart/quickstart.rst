@@ -1,5 +1,8 @@
 .. _Display_Controller_Demo_Quickstart:
 
+Display Controller Demo Quickstart Guide
+========================================
+
 sw_display_controller demo : Quick Start Guide
 ----------------------------------------------
 
@@ -42,7 +45,8 @@ Import and Build the Application
    #. Locate the ``'Display Controller Demo'`` item in the xSOFTip pane on the bottom left of the window and drag it into the Project Explorer window in the xTIMEcomposer. This will also cause the modules on which this application depends to be imported as well. 
    #. Click on the app_display_controller_demo item in the Explorer pane then click on the build icon (hammer) in xTIMEcomposer. Check the console window to verify that the application has built successfully.
    #. There will be quite a number of warnings that ``bidirectional buffered port not supported in hardware``. These can be safely ignored for this component.
-For help in using xTIMEcomposer, try the xTIMEcomposer tutorial.
+
+For help in using xTIMEcomposer, try the xTIMEcomposer tutorial, which you can find by selecting Help->Tutorials from the xTIMEcomposer menu.
 
 Note that the Developer Column in the xTIMEcomposer on the right hand side of your screen provides information on the xSOFTip components you are using. Select the module_display_controller component in the Project Explorer, and you will see its description together with API documentation. Having done this, click the `back` icon until you return to this quickstart guide within the Developer Column.
 
@@ -53,7 +57,7 @@ Now that the application has been compiled, the next step is to run it on the Sl
 
    #. Select the file ``app_display_controller_demo.xc`` in the ``app_display_controller_demo`` project from the Project Explorer.
    #. Click on the ``Run`` icon (the white arrow in the green circle). 
-   #. Select "XCore Application", click "Run".
+   #. At the ``Select Device`` dialog select ``XMOS XTAG-2 connect to L1[0..1]`` and click ``OK``.
    #. Wait until the images have loaded over the XTAG connector from the host, this should take approximatly 21 seconds.
    #. There should be a series of 6 images the transition from one to another.
 
