@@ -66,9 +66,9 @@ Next Steps
 
  #. Trying changing the files that are loaded form the host. To do this, produce an image of 480 by 272 pixels, save it in ``tga`` format uncompressed in "top left" format ("bottom left" will also work but the image will have to be upside-down). Save the file(s) into ``the app_display_controller_demo`` directory within your workspace. Now, increment the ``IMAGE_COUNT`` define to 7 and add the name of your new image to the array ``images``. Ensure the filename is less than 30 characters long.
  #. Each transition has a frame count that configures the speed of the transition, try adjusting them and observe the results. To do this take a look at the API for the display controller. Note how each of the transition effects have a ``frame_count`` parameter. This parameter specifies over how many frames the transition should take.
- #. Try writing an exciting transition effect. To do this begin with the template shown below, and refer to the Display Controller API documentation at :ref:`sec_api`:
+ #. Try writing an exciting transition effect. To do this begin with the template shown below, and refer to the Display Controller API documentation.
+    ::
 
-::
       static void transition_exciting_impl(chanend server, unsigned next_image_fb,
          unsigned image_from, unsigned image_to, unsigned line) {
          //insert code here
@@ -85,6 +85,7 @@ Next Steps
         }
         return cur_fb_index;
       }
+
 
 
     
