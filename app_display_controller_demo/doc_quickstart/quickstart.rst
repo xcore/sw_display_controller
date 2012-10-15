@@ -14,12 +14,12 @@ In this demonstration we use the following hardware and software:
   * module_display_controller,
   * module_slicekit_support,
 
-together to create a double buffered LCD controller. This application showcases some of the key software features and serves as an example on how to use an LCD without the real-time contraint of having to update the LCD line buffer. 
+together to create a double buffered LCD controller. This application showcases some of the key software features and serves as an example on how to use an LCD without the real-time constraint of having to update the LCD line buffer. 
 
 Hardware Setup
 ++++++++++++++
 
-The XP-SKC-L2 Slicekit Core board has four slots with edge conectors: ``SQUARE``, ``CIRCLE``, ``TRIANGLE`` and ``STAR``. 
+The XP-SKC-L2 Slicekit Core board has four slots with edge connectors: ``SQUARE``, ``CIRCLE``, ``TRIANGLE`` and ``STAR``. 
 
 To setup up the system:
 
@@ -53,19 +53,19 @@ Note that the Developer Column in the xTIMEcomposer on the right hand side of yo
 Run the Application
 +++++++++++++++++++
 
-Now that the application has been compiled, the next step is to run it on the Slicekit Core Board using the tools to load the application over JTAG (via the XTAG2 and Xtag Adaptor card) into the xCORE multicore microcontroller.
+Now that the application has been compiled, the next step is to run it on the Slicekit Core Board using the tools to load the application over JTAG (via the XTAG2 and Xtag Adapter card) into the xCORE multicore microcontroller.
 
    #. Select the file ``app_display_controller_demo.xc`` in the ``app_display_controller_demo`` project from the Project Explorer.
    #. Click on the ``Run`` icon (the white arrow in the green circle). 
    #. At the ``Select Device`` dialog select ``XMOS XTAG-2 connect to L1[0..1]`` and click ``OK``.
-   #. Wait until the images have loaded over the XTAG connector from the host, this should take approximatly 21 seconds.
+   #. Wait until the images have loaded over the XTAG connector from the host, this should take approximately 21 seconds.
    #. There should be a series of 6 images the transition from one to another.
 
 Next Steps
 ++++++++++
 
  #. Trying changing the files that are loaded form the host. To do this, produce an image of 480 by 272 pixels, save it in ``tga`` format uncompressed in "top left" format ("bottom left" will also work but the image will have to be upside-down). Save the file(s) into ``the app_display_controller_demo`` directory within your workspace. Now, increment the ``IMAGE_COUNT`` define to 7 and add the name of your new image to the array ``images``. Ensure the filename is less than 30 characters long.
- #. Each transition has a frame count that configures the speed of the transition, try adjusting them and observe the results. To do this take a look at the API for the display controller. Note how each of the transistion effects have a ``frame_count`` parameter. This parameter specifies over how many frames the transition should take.
+ #. Each transition has a frame count that configures the speed of the transition, try adjusting them and observe the results. To do this take a look at the API for the display controller. Note how each of the transition effects have a ``frame_count`` parameter. This parameter specifies over how many frames the transition should take.
  #. Try writing an exciting transition effect. To do this begin with the template shown below, and refer to the Display Controller API documentation at :ref:`sec_api`:
 
 ::
