@@ -30,5 +30,5 @@ Required board SKUs for this demo are:
 
    * XP-SKC-L2 (Slicekit L2 Core Board) plus XA-SK-XTAG2 (Slicekit XTAG adaptor) 
    * XA-SK-SDRAM
-   * XA-SK-SCR480 (which includes a 480x272 colour touch screen)  
+   * XA-SK-SCR480 (which includes a 480x272 color touch screen)  
 
