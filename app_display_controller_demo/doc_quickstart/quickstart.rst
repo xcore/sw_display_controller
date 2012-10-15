@@ -32,7 +32,7 @@ To setup up the system:
    :width: 400px
    :align: center
 
-   Hardware Setup for Simple GPIO Demo
+   Hardware Setup for Display Controller Demo
    
 	
 Import and Build the Application
