@@ -16,9 +16,9 @@ Memory requirements
 +------------------+---------------+
 | Resource         | Usage         |
 +==================+===============+
-| Stack            | X bytes       |
+| Stack            | 6198 bytes    |
 +------------------+---------------+
-| Program          | X bytes       |
+| Program          | 11306 bytes   |
 +------------------+---------------+
 
 Resource requirements
@@ -38,5 +38,5 @@ Resource requirements
 Performance
 ----------- 
 
-The achievable effective bandwidth varies according to the avaliable XCore MIPS. The maximum pixel clock supported is 35MHz.
+The achievable effective bandwidth varies according to the avaliable XCore MIPS. The maximum pixel clock supported is 25MHz.
 
