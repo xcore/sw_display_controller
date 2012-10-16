@@ -15,10 +15,10 @@ Configuration Defines
 The ``module_display_controller`` can be configured via the header ``display_controller_conf.h``. The module requires nothing to be additionally defined however any of the defines can be overridden by adding the header ``display_controller_conf.h`` to the application project and adding the define that needs overridding. The possible defines are:
 
 **DISPLAY_CONTROLLER_MAX_IMAGES**
-	This defines the storage space allocated to the display controller for it to store image metadata. When an image is registered with the display controller its dimensions and location in SDRAM address space are storred in a table. The define specifice how any entries are allowed in that table. Note, there is no overflow checking by default.
+	This defines the storage space allocated to the display controller for it to store image metadata. When an image is registered with the display controller its dimensions and location in SDRAM address space are stored in a table. The define specifies how many entries are allowed in that table. Note, there is no overflow checking by default.
 
 **DISPLAY_CONTROLLER_VERBOSE**
-	This define switchs on the error checking for memory overflows and causes verbose error warnings to be emitted in the event of an error.
+	This define switches on the error checking for memory overflows and causes verbose error warnings to be emitted in the event of an error.
 
 API
 ---
@@ -31,7 +31,7 @@ The``module_display_controller`` functionality is defined in
     * ``transitions.h``
     * ``transitions.xc``
 
-The display controller handles the double buffering of the image data to the LCD as real time service and manages the I/O to the SDRAM as a non-real time service. 
+The display controller handles the double buffering of the image data to the LCD as a real time service and manages the I/O to the SDRAM as a non-real time service. 
 
 The display controller API is as follows:
 .. doxygenfunction:: display_controller
