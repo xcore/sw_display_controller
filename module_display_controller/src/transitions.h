@@ -7,7 +7,7 @@
 /** \brief Transition effect: A -> B as a wipe, i.e. B wipes to A from the right.
  *
  * \param server The channel from the client application to the display_controller.
- * \param frame_buffer[2] An array of the frame buffer image handles.
+ * \param frame_buffer An array of the frame buffer image handles.
  * \param image_from  The image handle of the image to transition from.
  * \param image_to The image handle of the image to transition to.
  * \param frames The number of frame to take over the course of the transisiton.
@@ -21,7 +21,7 @@ unsigned transition_wipe(chanend server, unsigned frame_buffer[2],
 /** \brief Transition effect: A -> B as a slide, i.e. B slides over A from the right.
  *
  * \param server The channel from the client application to the display_controller.
- * \param frame_buffer[2] An array of the frame buffer image handles.
+ * \param frame_buffer An array of the frame buffer image handles.
  * \param image_from  The image handle of the image to transition from.
  * \param image_to The image handle of the image to transition to.
  * \param frames The number of frame to take over the course of the transisiton.
@@ -36,7 +36,7 @@ unsigned transition_slide(chanend server, unsigned frame_buffer[2],
  * off to the right.
  *
  * \param server The channel from the client application to the display_controller.
- * \param frame_buffer[2] An array of the frame buffer image handles.
+ * \param frame_buffer An array of the frame buffer image handles.
  * \param image_from  The image handle of the image to transition from.
  * \param image_to The image handle of the image to transition to.
  * \param frames The number of frame to take over the course of the transisiton.
@@ -51,7 +51,7 @@ unsigned transition_roll(chanend server, unsigned frame_buffer[2],
  * until A is gone.
  *
  * \param server The channel from the client application to the display_controller.
- * \param frame_buffer[2] An array of the frame buffer image handles.
+ * \param frame_buffer An array of the frame buffer image handles.
  * \param image_from  The image handle of the image to transition from.
  * \param image_to The image handle of the image to transition to.
  * \param frames The number of frame to take over the course of the transisiton.
@@ -65,7 +65,7 @@ unsigned transition_dither(chanend server, unsigned frame_buffer[2],
 /** \brief Transition effect: A -> B as a fade, i.e. A fades away as B fades in.
  *
  * \param server The channel from the client application to the display_controller.
- * \param frame_buffer[2] An array of the frame buffer image handles.
+ * \param frame_buffer An array of the frame buffer image handles.
  * \param image_from  The image handle of the image to transition from.
  * \param image_to The image handle of the image to transition to.
  * \param frames The number of frame to take over the course of the transisiton.
