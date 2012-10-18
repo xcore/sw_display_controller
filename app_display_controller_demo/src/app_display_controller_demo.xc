@@ -6,9 +6,9 @@
 #include <stdio.h>
 #include "loader.h"
 
-lcd_ports lcdports = {
+on stdcore[0] : lcd_ports lcdports = {
   XS1_PORT_1G, XS1_PORT_1F, XS1_PORT_16A, XS1_PORT_1B, XS1_PORT_1C, XS1_CLKBLK_1 };
-sdram_ports sdramports = {
+on stdcore[0] : sdram_ports sdramports = {
   XS1_PORT_16B, XS1_PORT_1J, XS1_PORT_1I, XS1_PORT_1K, XS1_PORT_1L, XS1_CLKBLK_2 };
 
 #define IMAGE_COUNT (6)
