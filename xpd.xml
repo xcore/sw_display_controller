@@ -30,9 +30,9 @@
         <version>1.0.1rc0</version>
     </dependency>
     <dependency repo = "sc_sdram_burst">
-        <githash>8f163f1be80da7a6f119d647d557faba7f41e161</githash>
+        <githash>f0821a9a917a4ea8178714aa9ff384f587dbd5e4</githash>
         <uri>git@github.com:xcore/sc_sdram_burst.git</uri>
-        <version>1.0.1rc0</version>
+        <version>1.0.1rc1</version>
     </dependency>
     <dependency repo = "sc_util">
         <githash>3f82b846395c07e8dd32ad9951afc209b6ed7efc</githash>
@@ -49,7 +49,8 @@
     <release parenthash = "7aa3820504cdafd1a5576e7c8754529bb9231765" version = "1.0.0alpha1" githash = "3dd79f8960f8c01c7fb87a39621e6358bf33f8d7"></release>
     <release parenthash = "b97d474dfcfd92bb05980162fd0ec8424aff01d2" version = "1.0.0alpha2" githash = "e5dafee33c4d1c45bf3c75362bf121a8067332c9"></release>
     <release parenthash = "cec4b08c761319fbb2bb3e5fa745e23d6df52507" version = "1.0.0rc0" githash = "6be87c408b658b4e52a66fb75576cd788b0cdaff"></release>
-    <release parenthash = "2f931424660e2cad588abf28be9c4ea3fd00b2a7" version = "1.0.1rc0"></release>
+    <release parenthash = "2f931424660e2cad588abf28be9c4ea3fd00b2a7" version = "1.0.1rc0" githash = "f1939ee45943d470dbb8cc0e3c9a6c2353281f72"></release>
+    <release parenthash = "f1939ee45943d470dbb8cc0e3c9a6c2353281f72" version = "1.0.1rc1"></release>
     <subpartnumber>XM-002025-SM</subpartnumber>
     <vendor>XMOS</vendor>
     <xcore_repo>sw_display_controller.git</xcore_repo>
