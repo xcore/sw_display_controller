@@ -6,15 +6,15 @@
 #include <stdio.h>
 #include "loader.h"
 
-on stdcore[0] : lcd_ports lcdports = {
+on tile[0] : lcd_ports lcdports = {
   XS1_PORT_1G, XS1_PORT_1F, XS1_PORT_16A, XS1_PORT_1B, XS1_PORT_1C, XS1_CLKBLK_1 };
-on stdcore[0] : sdram_ports sdramports = {
+on tile[0] : sdram_ports sdramports = {
   XS1_PORT_16B, XS1_PORT_1J, XS1_PORT_1I, XS1_PORT_1K, XS1_PORT_1L, XS1_CLKBLK_2 };
 
 #define IMAGE_COUNT (6)
 char images[IMAGE_COUNT][30] = { "audio2.tga", "audio.tga","audio3.tga","deck.tga","sofas.tga","usb-chips.tga"};
 
-on stdcore[0]:out port p = XS1_PORT_8D;
+on tile[0]:out port p = XS1_PORT_8D;
 
 static void disable_flash(){
   p <:0x80;
@@ -70,12 +70,12 @@ void app(chanend server, chanend c_loader){
 int main() {
   chan c_sdram, c_lcd, client, c_loader;
   par {
-	  on stdcore[0]:app(client, c_loader);
-	  on stdcore[0]:display_controller(client, c_lcd, c_sdram);
-	  on stdcore[0]:sdram_server(c_sdram, sdramports);
-	  on stdcore[0]:lcd_server(c_lcd, lcdports);
-	  on stdcore[0]:par(int i=0;i<4;i++) while(1);
-	  on stdcore[1]:loader(c_loader, images, IMAGE_COUNT);
+	  on tile[0]:app(client, c_loader);
+	  on tile[0]:display_controller(client, c_lcd, c_sdram);
+	  on tile[0]:sdram_server(c_sdram, sdramports);
+	  on tile[0]:lcd_server(c_lcd, lcdports);
+	  on tile[0]:par(int i=0;i<4;i++) while(1);
+	  on tile[1]:loader(c_loader, images, IMAGE_COUNT);
   }
   return 0;
 }
