@@ -35,7 +35,7 @@
         <version>1.0.1rc1</version>
     </dependency>
     <dependency repo = "sc_util">
-        <githash>3f82b846395c07e8dd32ad9951afc209b6ed7efc</githash>
+        <githash>afbba103d8b5ed3378eaa3832b8f694dec2844bc</githash>
         <uri>git@github.com:xcore/sc_util</uri>
     </dependency>
     <description>Modules for driving parallel RGB displays in conjunction with sdram and lcd components. The main module here takes care of framebuffer management.</description>
@@ -50,7 +50,8 @@
     <release parenthash = "b97d474dfcfd92bb05980162fd0ec8424aff01d2" version = "1.0.0alpha2" githash = "e5dafee33c4d1c45bf3c75362bf121a8067332c9"></release>
     <release parenthash = "cec4b08c761319fbb2bb3e5fa745e23d6df52507" version = "1.0.0rc0" githash = "6be87c408b658b4e52a66fb75576cd788b0cdaff"></release>
     <release parenthash = "2f931424660e2cad588abf28be9c4ea3fd00b2a7" version = "1.0.1rc0" githash = "f1939ee45943d470dbb8cc0e3c9a6c2353281f72"></release>
-    <release parenthash = "f1939ee45943d470dbb8cc0e3c9a6c2353281f72" version = "1.0.1rc1"></release>
+    <release parenthash = "f1939ee45943d470dbb8cc0e3c9a6c2353281f72" version = "1.0.1rc1" githash = "0dcff79492709785ad417a4edc4db4c14efeafb6"></release>
+    <release parenthash = "77fe9cb281f60f3deef6f46301d1f6045b2700fe" version = "1.0.2alpha0"></release>
     <subpartnumber>XM-002025-SM</subpartnumber>
     <vendor>XMOS</vendor>
     <xcore_repo>sw_display_controller.git</xcore_repo>
