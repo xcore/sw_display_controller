@@ -16,12 +16,12 @@ void loader(chanend c, char images[][30], unsigned image_count){
 
     int fp =_open(images[k], O_RDONLY, 0644);
     if(fp < 0){
-      printf("Error: Couldn't open %s\n", images[k]);
+      iprintf("Error: Couldn't open %s\n", images[k]);
     }
     _lseek(fp, 18, SEEK_SET);
     for(j=0;j<8;j++){
       if(_read(fp, buf, SIZE)!= SIZE){
-        printf("Error: Couldn't read all of %s\n", images[k]);
+        iprintf("Error: Couldn't read all of %s\n", images[k]);
       }
       for(i=0;i<SIZE;i+=3){
         short rgb = rgb888_to_rgb565(buf[i], buf[i+1], buf[i+2]);
