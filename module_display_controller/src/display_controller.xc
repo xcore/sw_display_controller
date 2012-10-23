@@ -1,4 +1,5 @@
 #include <assert.h>
+#include <print.h>
 #include "lcd.h"
 #include "sdram.h"
 #include "display_controller_internal.h"
@@ -39,12 +40,12 @@ static unsigned register_image(unsigned img_width_words,
   unsigned next_start_row = (s.current_bank_used_words + words_required)
       / SDRAM_ROW_WORDS;
 
-#if (DISPLAY_CONTROLLER_VERBOSE)
   if(s.registered_images == DISPLAY_CONTROLLER_MAX_IMAGES) {
-    printf("Error: Maximum number of images exceeded in display controller\n");
+#if (DISPLAY_CONTROLLER_VERBOSE)
+    printstrln("Error: Maximum number of images exceeded in display controller");
+#endif
     assert(0); //Out of image_properties space
   }
-#endif
 
   if (next_start_row > SDRAM_ROW_COUNT) {
     //if the image wont fix in the current bank then start the next
@@ -52,7 +53,7 @@ static unsigned register_image(unsigned img_width_words,
     s.current_bank_used_words = 0;
     if (s.current_bank == SDRAM_BANK_COUNT) {
 #if (DISPLAY_CONTROLLER_VERBOSE)
-      printf("Error: Cannot allocate enough memory\n");
+      printstrln("Error: Cannot allocate enough memory");
 #endif
       assert(0); //Out of SDRAM
     }
@@ -171,8 +172,13 @@ static void client_command(char cmd, chanend client, chanend c_lcd,
         client :> image_index;
       }
 #if (DISPLAY_CONTROLLER_VERBOSE)
-      if(image_index >= s.registered_images)
-        printf("Error: Frame buffer commit image(%d) is out of range(%d)\n", image_index, s.registered_images);
+      if(image_index >= s.registered_images) {
+        printstr("Error: Frame buffer commit image(");
+	printint(image_index);
+        printstr(") is out of range(");
+	printint(s.registered_images);
+        printstrln(")");
+      }
 #endif
       if(s.next_fb_image_index == NONE) {
         s.next_fb_image_index = image_index;
@@ -192,11 +198,16 @@ static void client_command(char cmd, chanend client, chanend c_lcd,
       assert(s.current_fb_image_index == NONE);
 #if (DISPLAY_CONTROLLER_VERBOSE)
       if(s.current_fb_image_index != NONE)
-        printf("Error: Frame buffer commit before frame buffer init\n");
+        printstrln("Error: Frame buffer commit before frame buffer init");
 #endif
 #if (DISPLAY_CONTROLLER_VERBOSE)
-      if(image_index >= s.registered_images)
-        printf("Error: Frame buffer commit image(%d) is out of range(%d)\n", image_index, s.registered_images);
+      if(image_index >= s.registered_images) {
+        printstr("Error: Frame buffer commit image(");
+	printint(image_index);
+        printstr(") is out of range(");
+	printint(s.registered_images);
+        printstrln(")");
+      }
 #endif
       s.current_fb_image_index = image_index;
       s.next_fb_image_index = NONE;
