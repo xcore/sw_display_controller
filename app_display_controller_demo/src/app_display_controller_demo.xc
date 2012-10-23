@@ -14,15 +14,6 @@ on tile[0] : sdram_ports sdramports = {
 #define IMAGE_COUNT (6)
 char images[IMAGE_COUNT][30] = { "audio2.tga", "audio.tga","audio3.tga","deck.tga","sofas.tga","usb-chips.tga"};
 
-on tile[0]:out port p = XS1_PORT_8D;
-
-static void disable_flash(){
-  p <:0x80;
-  p <:0xc0;
-  p <:0x80;
-  set_port_use_off(p);
-}
-
 static void load_image(chanend c_server, chanend c_loader, unsigned image_no) {
   unsigned buffer[LCD_ROW_WORDS];
   for (unsigned line = 0; line < LCD_HEIGHT; line++){
@@ -38,7 +29,6 @@ void app(chanend server, chanend c_loader){
   unsigned fb_index = 0, frame_buffer[2];
   unsigned current_image=0;
 
-  disable_flash();
   for(unsigned i=0;i<IMAGE_COUNT;i++){
     image[i] = register_image(server, LCD_ROW_WORDS, LCD_HEIGHT);
     load_image(server, c_loader, image[i]);
