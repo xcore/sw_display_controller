@@ -14,7 +14,7 @@ void loader(chanend c, char images[][30], unsigned image_count){
   unsigned i, j, k=0;
   while(k<image_count){
 
-    int fp =_open(images[k], O_RDONLY, 0644);
+    int fp =_open(images[k], O_RDONLY | O_BINARY, 0644);
     if(fp < 0){
       iprintf("Error: Couldn't open %s\n", images[k]);
     }
