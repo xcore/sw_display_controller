@@ -12,9 +12,11 @@ In this demonstration we use the following hardware and software:
   * module_sdram,
   * module_lcd,
   * module_display_controller,
+  * module_i2c_master,
+  * module_touch_controller_lib,
   * module_slicekit_support,
 
-together to create a double buffered LCD controller. This application showcases some of the key software features and serves as an example on how to use an LCD without the real-time constraint of having to update the LCD line buffer. 
+together to create an interactive display on LCD. This application showcases some of the key software features and serves as an example on how to use an LCD without the real-time constraint of having to update the LCD line buffer and how to use the touch screen for interactive display. 
 
 Hardware Setup
 ++++++++++++++
@@ -23,11 +25,11 @@ The XP-SKC-L2 Slicekit Core board has four slots with edge connectors: ``SQUARE`
 
 To setup up the system:
 
-   #. Connect XA-SK-SDRAM Slice Card to the XP-SKC-L2 Slicekit Core board using the connector marked with the ``TRIANGLE``.
-   #. Connect XA-SK-SCR480 Slice Card to the XP-SKC-L2 Slicekit Core board using the connector marked with the ``STAR``.
+   #. Connect XA-SK-SDRAM Slice Card to the XP-SKC-L2 Slicekit Core board using the connector marked with the ``STAR``.
+   #. Connect XA-SK-SCR480 Slice Card to the XP-SKC-L2 Slicekit Core board using the connector marked with the ``TRIANGLE``.
    #. Connect the XTAG Adapter to Slicekit Core board, and connect XTAG-2 to the adapter. 
    #. Connect the XTAG-2 to host PC. Note that the USB cable is not provided with the Slicekit starter kit.
-   #. Set the ``XMOS LINK`` on the to ``OFF`` on the XTAG Adapter(XA-SK-XTAG2).
+   #. Set the ``XMOS LINK`` to ``OFF`` on the XTAG Adapter(XA-SK-XTAG2).
    #. Ensure the jumper on the XA-SK-SCR480 is bridged if the back light is required.
    #. Switch on the power supply to the Slicekit Core board.
 
@@ -59,14 +61,18 @@ Now that the application has been compiled, the next step is to run it on the Sl
    #. Click on the ``Run`` icon (the white arrow in the green circle). 
    #. At the ``Select Device`` dialog select ``XMOS XTAG-2 connect to L1[0..1]`` and click ``OK``.
    #. Wait until the images have loaded over the XTAG connector from the host, this should take approximately 21 seconds.
-   #. There should be a series of 6 images the transition from one to another.
+   #. There should be a series of 6 images for transition from one to another.
+   #. Once the first image is displayed, a message is displayed on the console to prompt the user to touch any of the corners or the center of LCD screen for watching different transition effects.
+   #. If the user touches any other part of the screen, then the user is informed to touch again.
+   #. If there is no touch event for a period of time (``TOUCH_LIB_TIME_OUT`` currently set to 10 seconds in ``touch_lib_conf.h``), a ``No activity`` message is printed and the program continues to wait for a touch event. The ``No activity`` message is printed every 10 seconds. 
+   
 
 Next Steps
 ++++++++++
 
- #. Trying changing the files that are loaded form the host. To do this, produce an image of 480 by 272 pixels, save it in ``tga`` format uncompressed in "top left" format ("bottom left" will also work but the image will have to be upside-down). Save the file(s) into ``the app_display_controller_demo`` directory within your workspace. Now, increment the ``IMAGE_COUNT`` define to 7 and add the name of your new image to the array ``images``. Ensure the filename is less than 30 characters long.
- #. Each transition has a frame count that configures the speed of the transition, try adjusting them and observe the results. To do this take a look at the API for the display controller. Note how each of the transition effects have a ``frame_count`` parameter. This parameter specifies over how many frames the transition should take.
- #. Try writing an exciting transition effect. To do this begin with the template shown below, and refer to the Display Controller API documentation.
+ #. Try changing the files that are loaded from the host. To do this, generate an image of 480 by 272 pixels, save it in ``tga`` format uncompressed in "top left" format ("bottom left" will also work but the image will have to be upside-down). Save the file(s) into ``the app_display_controller_demo`` directory within your workspace. Now, increment the ``IMAGE_COUNT`` define to 7 and add the name of your new image to the array ``images``. Ensure the filename is less than 30 characters long.
+ #. Each transition has a frame count that configures the speed of the transition, try adjusting them and observe the results. To do this take a look at the API for the display controller. Note how each of the transition effects have a ``frame_count`` parameter. This parameter specifies how many frames the transition should take.
+ #. Try writing an exciting transition effect. To do this, begin with the template shown below and refer to the Display Controller API documentation.
     ::
 
       static void transition_exciting_impl(chanend server, unsigned next_image_fb,
