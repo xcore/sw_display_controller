@@ -3,11 +3,9 @@
 #include "lcd.h"
 #include "display_controller.h"
 #include "transitions.h"
-#include <stdio.h>
 #include "loader.h"
-#include <print.h>
 #include "touch_controller_lib.h"
-#include "touch_controller_impl.h"
+#include <print.h>
 
 
 on tile[0] : lcd_ports lcdports = {
@@ -19,7 +17,8 @@ on tile[0] : touch_controller_ports touchports = {
 
 
 #define IMAGE_COUNT (6)
-char images[IMAGE_COUNT][30] = { "audio2.tga", "audio.tga","audio3.tga","deck.tga","sofas.tga","usb-chips.tga"};
+char images[IMAGE_COUNT][30] = { "audio2.tga", "audio.tga","audio3.tga",
+		"deck.tga","sofas.tga","usb-chips.tga"};
 
 static void load_image(chanend c_server, chanend c_loader, unsigned image_no) {
   unsigned buffer[LCD_ROW_WORDS];
