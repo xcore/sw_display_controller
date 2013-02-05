@@ -63,9 +63,7 @@ Now that the application has been compiled, the next step is to run it on the Sl
    #. Wait until the images have loaded over the XTAG connector from the host, this should take approximately 21 seconds.
    #. There should be a series of 6 images for transition from one to another.
    #. Once the first image is displayed, a message is displayed on the console to prompt the user to touch any of the corners or the center of LCD screen for watching different transition effects.
-   #. If the user touches any other part of the screen, then the user is informed to touch again.
-   #. If there is no touch event for a period of time (``TOUCH_LIB_TIME_OUT`` currently set to 10 seconds in ``touch_lib_conf.h``), a ``No activity`` message is printed and the program continues to wait for a touch event. The ``No activity`` message is printed every 10 seconds. 
-   
+
 
 Next Steps
 ++++++++++

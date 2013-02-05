@@ -50,10 +50,9 @@ void app(chanend server, chanend c_loader){
 
   while(1){
     unsigned next_image = (current_image+1)%IMAGE_COUNT;
-    unsigned x=0,y=0,time;
-    timer t;
+    unsigned x=0,y=0;
 
-    touch_lib_req_next_coord_timed(touchports,x,y,time,t);
+    touch_lib_req_next_coord(touchports,x,y);
     if (x<LCD_WIDTH/3 && y<LCD_HEIGHT/3){
     	fb_index = transition_slide(server, frame_buffer, image[current_image], image[next_image],LCD_ROW_WORDS, fb_index);
     	current_image = next_image;
@@ -79,7 +78,6 @@ void app(chanend server, chanend c_loader){
     	current_image = next_image;
     	next_image = (current_image+1)%IMAGE_COUNT;
     }
-    else printstrln("Please touch again .....");
   }
 }
 
