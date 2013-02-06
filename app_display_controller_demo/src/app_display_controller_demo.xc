@@ -3,11 +3,9 @@
 #include "lcd.h"
 #include "display_controller.h"
 #include "transitions.h"
-#include <stdio.h>
 #include "loader.h"
-#include <print.h>
 #include "touch_controller_lib.h"
-#include "touch_controller_impl.h"
+#include <print.h>
 
 
 on tile[0] : lcd_ports lcdports = {
@@ -19,7 +17,8 @@ on tile[0] : touch_controller_ports touchports = {
 
 
 #define IMAGE_COUNT (6)
-char images[IMAGE_COUNT][30] = { "audio2.tga", "audio.tga","audio3.tga","deck.tga","sofas.tga","usb-chips.tga"};
+char images[IMAGE_COUNT][30] = { "audio2.tga", "audio.tga","audio3.tga",
+		"deck.tga","sofas.tga","usb-chips.tga"};
 
 static void load_image(chanend c_server, chanend c_loader, unsigned image_no) {
   unsigned buffer[LCD_ROW_WORDS];
@@ -50,34 +49,26 @@ void app(chanend server, chanend c_loader){
 
   while(1){
     unsigned next_image = (current_image+1)%IMAGE_COUNT;
-    unsigned x=0,y=0;
+    unsigned x,y;
 
     touch_lib_req_next_coord(touchports,x,y);
     if (x<LCD_WIDTH/3 && y<LCD_HEIGHT/3){
-    	fb_index = transition_slide(server, frame_buffer, image[current_image], image[next_image],LCD_ROW_WORDS, fb_index);
-    	current_image = next_image;
-    	next_image = (current_image+1)%IMAGE_COUNT;
+    	fb_index = transition_slide(server, frame_buffer, image[current_image],
+    			image[next_image],LCD_ROW_WORDS, fb_index);
+    } else if (x>2*LCD_WIDTH/3 && y<LCD_HEIGHT/3){
+    	fb_index = transition_dither(server, frame_buffer, image[current_image],
+    			image[next_image], 256, fb_index);
+    } else if (x>2*LCD_WIDTH/3 && y>2*LCD_HEIGHT/3){
+    	fb_index = transition_wipe(server, frame_buffer, image[current_image],
+    			image[next_image], LCD_ROW_WORDS, fb_index);
+    } else if (x<LCD_WIDTH/3 && y>2*LCD_HEIGHT/3){
+    	fb_index = transition_roll(server, frame_buffer, image[current_image],
+    			image[next_image], LCD_ROW_WORDS, fb_index);
+    } else if (x>LCD_WIDTH/3 && x<2*LCD_WIDTH/3 && y>LCD_HEIGHT/3 && y<2*LCD_HEIGHT/3){
+    	fb_index = transition_alpha_blend(server, frame_buffer, image[current_image],
+    			image[next_image], 64, fb_index);
     }
-    else if (x>2*LCD_WIDTH/3 && y<LCD_HEIGHT/3){
-    	fb_index = transition_dither(server, frame_buffer, image[current_image], image[next_image], 256, fb_index);
-    	current_image = next_image;
-    	next_image = (current_image+1)%IMAGE_COUNT;
-    }
-    else if (x>2*LCD_WIDTH/3 && y>2*LCD_HEIGHT/3){
-    	fb_index = transition_wipe(server, frame_buffer, image[current_image], image[next_image], LCD_ROW_WORDS, fb_index);
-    	current_image = next_image;
-    	next_image = (current_image+1)%IMAGE_COUNT;
-    }
-    else if (x<LCD_WIDTH/3 && y>2*LCD_HEIGHT/3){
-    	fb_index = transition_roll(server, frame_buffer, image[current_image], image[next_image], LCD_ROW_WORDS, fb_index);
-    	current_image = next_image;
-    	next_image = (current_image+1)%IMAGE_COUNT;
-    }
-    else if (x>LCD_WIDTH/3 && x<2*LCD_WIDTH/3 && y>LCD_HEIGHT/3 && y<2*LCD_HEIGHT/3){
-    	fb_index = transition_alpha_blend(server, frame_buffer, image[current_image], image[next_image], 64, fb_index);
-    	current_image = next_image;
-    	next_image = (current_image+1)%IMAGE_COUNT;
-    }
+    current_image = next_image;
   }
 }
 
@@ -88,7 +79,6 @@ int main() {
 	  on tile[0]:display_controller(client, c_lcd, c_sdram);
 	  on tile[0]:sdram_server(c_sdram, sdramports);
 	  on tile[0]:lcd_server(c_lcd, lcdports);
-	  on tile[0]:par(int i=0;i<4;i++) while(1);
 	  on tile[1]:loader(c_loader, images, IMAGE_COUNT);
   }
   return 0;
