@@ -8,6 +8,7 @@ Features
 
   * Non-blocking SDRAM management.
   * Real time servicing of the LCD.
+  * Touch interactive display
   * Image memory manager to simplify handling of images.
   * No real time constraints on the application.
 
@@ -16,9 +17,9 @@ Memory requirements
 +------------------+---------------+
 | Resource         | Usage         |
 +==================+===============+
-| Stack            | 6198 bytes    |
+| Stack            | 60596 bytes    |
 +------------------+---------------+
-| Program          | 11306 bytes   |
+| Program          | 24172 bytes   |
 +------------------+---------------+
 
 Resource requirements

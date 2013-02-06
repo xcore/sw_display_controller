@@ -24,7 +24,7 @@ Display Controller Application
    * Package: sw_display_controller
    * Application: app_display_controller
 
-This combination demo employs the ``module_lcd`` along with the ``module_sdram`` and the ``module_display_controller`` framebuffer framework component to implement a 480x272 display controller.
+This combination demo employs the ``module_lcd`` along with the ``module_sdram``, ``module_touch_controller_lib``, ``module_i2c_master`` and the ``module_display_controller`` framebuffer framework component to implement a 480x272 display controller.
 
 Required board SKUs for this demo are:
 
