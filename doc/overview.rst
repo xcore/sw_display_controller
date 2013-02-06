@@ -17,9 +17,9 @@ Memory requirements
 +------------------+---------------+
 | Resource         | Usage         |
 +==================+===============+
-| Stack            | 60596 bytes    |
+| Stack            | 6198 bytes    |
 +------------------+---------------+
-| Program          | 24172 bytes   |
+| Program          | 11306 bytes   |
 +------------------+---------------+
 
 Resource requirements

@@ -5,9 +5,9 @@ Project structure
 
 To build a project including the ``module_display_controller`` the following components are required:
     * component: sc_sdram_burst which handles the SDRAM
-    * component: sc_lcd which handles the LCD and touch screen
+    * component: sc_lcd which handles the LCD
 
-The section below details the APIs in the application. For details about the LCD, touch screen and SDRAM APIs please refer to the respective repositories.
+The below section details the APIs in the application. For details about the LCD and SDRAM APIs please refer to the respective repositories.
 
 Configuration Defines
 ---------------------
