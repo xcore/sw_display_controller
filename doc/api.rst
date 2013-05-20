@@ -35,17 +35,17 @@ The display controller handles the double buffering of the image data to the LCD
 
 The display controller API is as follows:
 .. doxygenfunction:: display_controller
-.. doxygenfunction:: image_read_line
-.. doxygenfunction:: image_read_line_p
-.. doxygenfunction:: image_write_line
-.. doxygenfunction:: image_write_line_p
-.. doxygenfunction:: image_read_partial_line
-.. doxygenfunction:: image_read_partial_line_p
-.. doxygenfunction:: register_image
-.. doxygenfunction:: wait_until_idle
-.. doxygenfunction:: wait_until_idle_p
-.. doxygenfunction:: frame_buffer_commit
-.. doxygenfunction:: frame_buffer_init
+.. doxygenfunction:: display_controller_image_read_line
+.. doxygenfunction:: display_controller_image_read_line_p
+.. doxygenfunction:: display_controller_image_write_line
+.. doxygenfunction:: display_controller_image_write_line_p
+.. doxygenfunction:: display_controller_image_read_partial_line
+.. doxygenfunction:: display_controller_image_read_partial_line_p
+.. doxygenfunction:: display_controller_register_image
+.. doxygenfunction:: display_controller_wait_until_idle
+.. doxygenfunction:: display_controller_wait_until_idle_p
+.. doxygenfunction:: display_controller_frame_buffer_commit
+.. doxygenfunction:: display_controller_frame_buffer_init
 
 The transition API is as follows:
 .. doxygenfunction:: transition_wipe

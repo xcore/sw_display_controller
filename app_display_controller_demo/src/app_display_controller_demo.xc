@@ -7,7 +7,6 @@
 #include "touch_controller_lib.h"
 #include <print.h>
 
-
 on tile[0] : lcd_ports lcdports = {
   XS1_PORT_1I, XS1_PORT_1L, XS1_PORT_16B, XS1_PORT_1J, XS1_PORT_1K, XS1_CLKBLK_1 };
 on tile[0] : sdram_ports sdramports = {
@@ -25,8 +24,8 @@ static void load_image(chanend c_server, chanend c_loader, unsigned image_no) {
   for (unsigned line = 0; line < LCD_HEIGHT; line++){
     for(unsigned i=0;i<LCD_ROW_WORDS*2;i++)
       c_loader :> (buffer, short[])[i];
-	  image_write_line(c_server, line, image_no, buffer);
-	  wait_until_idle(c_server, buffer);
+    display_controller_image_write_line(c_server, line, image_no, buffer);
+    display_controller_wait_until_idle(c_server, buffer);
   }
 }
 
@@ -36,13 +35,13 @@ void app(chanend server, chanend c_loader){
   unsigned current_image=0;
 
   for(unsigned i=0;i<IMAGE_COUNT;i++){
-    image[i] = register_image(server, LCD_ROW_WORDS, LCD_HEIGHT);
+    image[i] = display_controller_register_image(server, LCD_ROW_WORDS, LCD_HEIGHT);
     load_image(server, c_loader, image[i]);
   }
 
-  frame_buffer[0] = register_image(server, LCD_ROW_WORDS, LCD_HEIGHT);
-  frame_buffer[1] = register_image(server, LCD_ROW_WORDS, LCD_HEIGHT);
-  frame_buffer_init(server, image[0]);
+  frame_buffer[0] = display_controller_register_image(server, LCD_ROW_WORDS, LCD_HEIGHT);
+  frame_buffer[1] = display_controller_register_image(server, LCD_ROW_WORDS, LCD_HEIGHT);
+  display_controller_frame_buffer_init(server, image[0]);
   touch_lib_init(touchports);
   printstrln("****** Please touch any of the corners or the center of LCD screen ******");
   printstrln("******              to see different transition effects            ******");

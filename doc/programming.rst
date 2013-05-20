@@ -1,6 +1,11 @@
 Programming Guide
 =================
 
+Shared Memory Interface
+-----------------------
+The display controller uses a shared memory interface to move the large amount of data around from tile to tile efficiently. This means that the ``display_controller``, ``sdram_server`` and ``lcd_server`` must be one the same tile.
+
+
 Source code structure
 ---------------------
 .. list-table:: Project structure
