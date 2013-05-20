@@ -4,6 +4,7 @@ Display Controller Change Log
 1.0.3
 -----
   * Minor fix to demo app (added "O_BINARY" to _open() for correctness)
+  * Added touch controller to main demo app
 
 1.0.2
 -----
