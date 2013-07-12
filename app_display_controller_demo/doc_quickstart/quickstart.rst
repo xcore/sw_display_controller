@@ -7,6 +7,7 @@ sw_display_controller demo : Quick Start Guide
 ----------------------------------------------
 
 In this demonstration we use the following hardware and software:
+  * XP-SKC-L2 Slicekit 
   * XA-SK-SCR480 Slice Card,
   * XA-SK-SDRAM Slice Card,
   * module_sdram,
@@ -16,12 +17,15 @@ In this demonstration we use the following hardware and software:
   * module_touch_controller_lib,
   * module_slicekit_support,
 
-together to create an interactive display on LCD. This application showcases some of the key software features and serves as an example on how to use an LCD without the real-time constraint of having to update the LCD line buffer and how to use the touch screen for interactive display. 
+together to create an interactive display on LCD. This application showcases some of the key software 
+features and serves as an example on how to use an LCD without the real-time constraint of having to 
+update the LCD line buffer and how to use the touch screen for interactive display. 
 
 Hardware Setup
 ++++++++++++++
 
-The XP-SKC-L2 Slicekit Core board has four slots with edge connectors: ``SQUARE``, ``CIRCLE``, ``TRIANGLE`` and ``STAR``. 
+The XP-SKC-L2 Slicekit Core board has four slots with edge connectors: ``SQUARE``, ``CIRCLE``, ``TRIANGLE`` 
+and ``STAR``. 
 
 To setup up the system:
 

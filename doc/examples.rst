@@ -6,7 +6,7 @@ This tutorial describes the demo applications included in the XMOS Display Contr
 app_display_controller_demo
 ---------------------------
 
-This application demonstrates how the ``lcd_module`` is used to write image data to the LCD screen whilst imposing no real time constraints on the application. The purpose of this demonstration is to show how data is passed to the ``display_controller``. This application also demonstrates an interactive display using ``touch_controller`` module.
+This application demonstrates how the ``lcd_module`` is used to write image data to the LCD screen whilst imposing no real time constraints on the application. The purpose of this demonstration is to show how data is passed to the ``display_controller``. This application also demonstrates an interactive display using ``touch_controller_lib`` module.
 
 Application Notes
 -----------------

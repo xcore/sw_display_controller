@@ -4,10 +4,10 @@
 #include <stdint.h>
 
 /**
- * \brief Function to manage the LCD server and SDRAM server whilst maintaining image buffers.
+ * \brief Function to manage the LCd c_server and SDRAM server whilst maintaining image buffers.
  *
  * \param c_client The channel from the display_controller to the client application.
- * \param c_lcd The channel from the display_controller to the LCD server.
+ * \param c_lcd The channel from the display_controller to the LCd c_server.
  * \param c_sdram The channel from the display_controller to the SDRAM server.
  */
 void display_controller(chanend c_client, chanend c_lcd, chanend c_sdram);
@@ -23,7 +23,7 @@ void display_controller(chanend c_client, chanend c_lcd, chanend c_sdram);
  * \sa image_read_partial_line
  * \sa image_read_partial_line_p
  */
-void display_controller_image_read_line(chanend server, unsigned line, unsigned image_no,
+void display_controller_image_read_line(chanend c_server, unsigned line, unsigned image_no,
     unsigned buffer[]);
 
 /** \brief The function reads a line of pixel data from the SDRAM.
@@ -37,7 +37,7 @@ void display_controller_image_read_line(chanend server, unsigned line, unsigned 
  * \sa image_read_partial_line
  * \sa image_read_partial_line_p
  */
-void display_controller_image_read_line_p(chanend server, unsigned line, unsigned image_no,
+void display_controller_image_read_line_p(chanend c_server, unsigned line, unsigned image_no,
     intptr_t buffer);
 
 /** \brief The function writes a line of pixel data to the registered image in SDRAM.
@@ -51,7 +51,7 @@ void display_controller_image_read_line_p(chanend server, unsigned line, unsigne
  *  \sa image_read_partial_line
  *  \sa image_read_partial_line_p
  */
-void display_controller_image_write_line(chanend server, unsigned line, unsigned image_no,
+void display_controller_image_write_line(chanend c_server, unsigned line, unsigned image_no,
     unsigned buffer[]);
 
 /** \brief The function writes a line of pixel data to the registered image in SDRAM.
@@ -65,7 +65,7 @@ void display_controller_image_write_line(chanend server, unsigned line, unsigned
  *  \sa image_read_partial_line
  *  \sa image_read_partial_line_p
  */
-void display_controller_image_write_line_p(chanend server, unsigned line, unsigned image_no,
+void display_controller_image_write_line_p(chanend c_server, unsigned line, unsigned image_no,
     intptr_t buffer);
 
 /** \brief The function writes a partial line of pixel data to the registered image in SDRAM.
@@ -82,7 +82,7 @@ void display_controller_image_write_line_p(chanend server, unsigned line, unsign
  * \sa image_write_line
  * \sa image_write_line_p
  */
-void display_controller_image_read_partial_line(chanend server, unsigned line, unsigned image_no,
+void display_controller_image_read_partial_line(chanend c_server, unsigned line, unsigned image_no,
     unsigned buffer[], unsigned line_offset, unsigned word_count,
     unsigned buffer_offset);
 
@@ -100,7 +100,7 @@ void display_controller_image_read_partial_line(chanend server, unsigned line, u
  * \sa image_write_line
  * \sa image_write_line_p
  */
-void display_controller_image_read_partial_line_p(chanend server, unsigned line,
+void display_controller_image_read_partial_line_p(chanend c_server, unsigned line,
     unsigned image_no, intptr_t buffer, unsigned line_offset,
     unsigned word_count, unsigned buffer_offset);
 
@@ -111,7 +111,7 @@ void display_controller_image_read_partial_line_p(chanend server, unsigned line,
  * \param img_width_words The width of the image in words.
  * \param img_height_lines The height of the image in lines(pixels).
  */
-unsigned display_controller_register_image(chanend server, unsigned img_width_words,
+unsigned display_controller_register_image(chanend c_server, unsigned img_width_words,
     unsigned img_height_lines);
 
 /** \brief Makes the display controller wait until the current SDRAM service has completed.
@@ -120,7 +120,7 @@ unsigned display_controller_register_image(chanend server, unsigned img_width_wo
  * \param buffer A pointer to the buffer which is to be written to the image.
  * \sa wait_until_idle
  */
-void display_controller_wait_until_idle_p(chanend server, intptr_t buffer);
+void display_controller_wait_until_idle_p(chanend c_server, intptr_t buffer);
 
 /** \brief Makes the display controller wait until the current SDRAM service has completed.
  *
@@ -128,7 +128,7 @@ void display_controller_wait_until_idle_p(chanend server, intptr_t buffer);
  * \param buffer The buffer which is to be written to the image.
  * \sa wait_until_idle_p
  */
-void display_controller_wait_until_idle(chanend server, unsigned buffer[]);
+void display_controller_wait_until_idle(chanend c_server, unsigned buffer[]);
 
 /** \brief Commits the image to the display controller to be displayed on the LCD screen when the
  * current image is completly displayed. The display controller contains a single next image number
@@ -140,7 +140,7 @@ void display_controller_wait_until_idle(chanend server, unsigned buffer[]);
  * \param server The channel from the client application to the display_controller.
  * \param image_no The image handle of the image to be displayed as per the described behaviour.
  */
-void display_controller_frame_buffer_commit(chanend server, unsigned image_no);
+void display_controller_frame_buffer_commit(chanend c_server, unsigned image_no);
 
 /** \brief Commits the image to the display controller to be displayed on the LCD screen and
  * initialises the display controller. This must only be called once at the begining of the
@@ -149,6 +149,6 @@ void display_controller_frame_buffer_commit(chanend server, unsigned image_no);
  * \param server The channel from the client application to the display_controller.
  * \param image_no The image handle of the image to be displayed as per the described behaviour.
  */
-void display_controller_frame_buffer_init(chanend server, unsigned image_no);
+void display_controller_frame_buffer_init(chanend c_server, unsigned image_no);
 
 #endif

@@ -1,6 +1,17 @@
 <?xml version="1.0" ?>
 <xpd>
     <components>
+        <component name = "Display Controller" type = "component" buildresults_path = "module_display_controller/.module_display_controller.buildinfo" scope = "General Use" path = "module_display_controller" metainfo_path = "module_display_controller/module_display_controller.metainfo" local = "false" id = "module_display_controller" description = "Display Controller component for driving LCDs with an RGB 565 interface up to 800x600 pixels with a managed SDRAM image buffer.">
+            <board>XA-SK-SCR480</board>
+            <board>XA-SK-SDRAM</board>
+            <componentDependency>module_sdram</componentDependency>
+            <componentDependency>module_lcd</componentDependency>
+            <keyword>LCD</keyword>
+            <keyword>TFT</keyword>
+            <keyword>RGB565</keyword>
+            <keyword>Display</keyword>
+            <keyword>SDRAM</keyword>
+        </component>
         <component description = "A full Display Controller application for driving the XA-Sk-480 LCD in conjunction with the SDRAM Controller and LCD Driver components." type = "demoCode" scope = "Example" path = "app_display_controller_demo" local = "false" id = "app_display_controller_demo" name = "Display Controller Demo">
             <board>XA-SK-SCR480</board>
             <board>XA-SK-SDRAM</board>
@@ -15,35 +26,28 @@
             <keyword>Framebuffer</keyword>
             <keyword>Touch Controller</keyword>
         </component>
-        <component name = "Display Controller" type = "component" buildresults_path = "module_display_controller/.module_display_controller.buildinfo" scope = "General Use" path = "module_display_controller" metainfo_path = "module_display_controller/module_display_controller.metainfo" local = "false" id = "module_display_controller" description = "Display Controller component for driving LCDs with an RGB 565 interface up to 800x600 pixels with a managed SDRAM image buffer.">
-            <board>XA-SK-SCR480</board>
-            <board>XA-SK-SDRAM</board>
-            <componentDependency>module_sdram</componentDependency>
-            <componentDependency>module_lcd</componentDependency>
-            <keyword>LCD</keyword>
-            <keyword>TFT</keyword>
-            <keyword>RGB565</keyword>
-            <keyword>Display</keyword>
-            <keyword>SDRAM</keyword>
-        </component>
     </components>
     <dependency repo = "sc_lcd">
-        <githash>5db094b21dc868589d4f0ff37711d2df30a642e9</githash>
+        <githash>b388b108ace3bbbd2ff380c9ad6c9db9168121fd</githash>
         <uri>git@github.com:xcore/sc_lcd.git</uri>
-        <version>1.1.0rc0</version>
     </dependency>
     <dependency repo = "sc_sdram_burst">
-        <githash>1d11e2ccfb37955d882619a4c8fefcab77c1af8b</githash>
+        <githash>930b5d5a705f09e3ff32fc56dc62057d3f550bdc</githash>
         <uri>git@github.com:xcore/sc_sdram_burst.git</uri>
-        <version>1.0.1rc1</version>
     </dependency>
     <dependency repo = "sc_util">
-        <githash>84c4a06e1d75e12fc0e607a4d60b434e69ed1a71</githash>
+        <githash>d0531d7c68ab67334582c324828e36d617baf8b3</githash>
         <uri>git@github.com:xcore/sc_util</uri>
+        <version>1.0.3rc0</version>
     </dependency>
     <dependency repo = "sc_i2c">
-        <githash>dedfa4dee858af88769705fbae8929c458d7c20b</githash>
+        <githash>d266213a4d5c4956f3d5980ba42611e24d129a39</githash>
         <uri>git@github.com:xcore/sc_i2c.git</uri>
+    </dependency>
+    <dependency repo = "sc_slicekit_support">
+        <githash>7920fc4235a96585274d73d25d275ea63b4cd285</githash>
+        <uri>https://github.com/xcore/sc_slicekit_support.git</uri>
+        <version>1.0.3rc0</version>
     </dependency>
     <description>Modules for driving parallel RGB displays in conjunction with sdram and lcd components. The main module here takes care of framebuffer management.</description>
     <docdir>doc</docdir>
@@ -62,7 +66,7 @@
     <release parenthash = "ba96ead8d5b656d709c8ec6983f5d45ed3080139" version = "1.0.2rc0" githash = "11d8a9e1cc0d771f1920dca05236dd6c66de2c63"></release>
     <release parenthash = "73bcfe462a1e08add9462686c53c7bdfcb4f3bf1" version = "1.0.3beta0" githash = "35cca0ad0dc6595bd23640d6be9ff3c0f1935642"></release>
     <release parenthash = "9aead4cd2dbfa76b9a8cb765866e087a477ff855" version = "1.0.3rc0" githash = "87d50465e6e2509687a19a170267e9ede2857df0"></release>
-    <release parenthash = "35cca0ad0dc6595bd23640d6be9ff3c0f1935642" version = "1.0.3rc1"></release>
+    <release parenthash = "35cca0ad0dc6595bd23640d6be9ff3c0f1935642" version = "1.0.3rc1" githash = "d1c0b79439c03ab24944af508d770242ad934c73"></release>
     <subpartnumber>XM-002025-SM</subpartnumber>
     <vendor>XMOS</vendor>
     <xcore_repo>sw_display_controller.git</xcore_repo>

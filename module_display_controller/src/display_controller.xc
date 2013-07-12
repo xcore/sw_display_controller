@@ -69,7 +69,7 @@ static unsigned register_image(unsigned img_width_words,
   return s.registered_images - 1;
 }
 
-static inline void next_lcd_line(chanend client, chanend c_lcd,
+static inline void next_lcd_line(chanend c_client, chanend c_lcd,
     chanend c_sdram, struct state &s) {
   unsigned bank, start_row, start_col, word_count;
 
@@ -94,33 +94,33 @@ static inline void next_lcd_line(chanend client, chanend c_lcd,
       if (s.next_next_fb_image_index != NONE) {
         s.next_fb_image_index = s.next_next_fb_image_index;
         s.next_next_fb_image_index = NONE;
-        client <: 0;
+        c_client <: 0;
       } else {
         s.next_fb_image_index = NONE;
       }
+    }
   }
-}
-if(s.sdram_in_use) {
-  //TODO pass the correct buffer
-  sdram_wait_until_idle(c_sdram, s.lcd_buffer_pointers[s.head]);
+  if(s.sdram_in_use) {
+    //TODO pass the correct buffer
+    sdram_wait_until_idle(c_sdram, s.lcd_buffer_pointers[s.head]);
+  }
+
+  sdram_buffer_read(c_sdram, bank, start_row, start_col, word_count, s.lcd_buffer_pointers[s.head]);
+  s.sdram_in_use = 1;
+
+  s.head = (s.head+1)%LCD_BUFFER_DEPTH;
 }
 
-sdram_buffer_read(c_sdram, bank, start_row, start_col, word_count, s.lcd_buffer_pointers[s.head]);
-s.sdram_in_use = 1;
-
-s.head = (s.head+1)%LCD_BUFFER_DEPTH;
-}
-
-static void client_command(char cmd, chanend client, chanend c_lcd,
+static void client_command(char cmd, chanend c_client, chanend c_lcd,
     chanend c_sdram, struct state &s) {
   switch (cmd) {
     case  CMD_WRITE_LINE: {
       unsigned image_no, line, buffer_pointer;
       unsigned bank, start_row, start_col, word_count;
       slave {
-        client :> image_no;
-        client :> line;
-        client :> buffer_pointer;
+        c_client :> image_no;
+        c_client :> line;
+        c_client :> buffer_pointer;
       }
       bank = s.IP[image_no].bank;
       start_row = (s.IP[image_no].start_used_words + line * s.IP[image_no].line_width_words) / SDRAM_ROW_WORDS;
@@ -134,9 +134,9 @@ static void client_command(char cmd, chanend client, chanend c_lcd,
       unsigned image_no, line, buffer_pointer;
       unsigned bank, start_row, start_col, word_count;
       slave {
-        client :> image_no;
-        client :> line;
-        client :> buffer_pointer;
+        c_client :> image_no;
+        c_client :> line;
+        c_client :> buffer_pointer;
       }
       bank = s.IP[image_no].bank;
       start_row = (s.IP[image_no].start_used_words + line * s.IP[image_no].line_width_words) / SDRAM_ROW_WORDS;
@@ -150,11 +150,11 @@ static void client_command(char cmd, chanend client, chanend c_lcd,
       unsigned image_no, line, buffer_pointer, line_offset, word_count;
       unsigned bank, start_row, start_col;
       slave {
-        client :> image_no;
-        client :> line;
-        client :> buffer_pointer;
-        client :> line_offset;
-        client :> word_count;
+        c_client :> image_no;
+        c_client :> line;
+        c_client :> buffer_pointer;
+        c_client :> line_offset;
+        c_client :> word_count;
       }
       bank = s.IP[image_no].bank;
       start_row = (s.IP[image_no].start_used_words + line * s.IP[image_no].line_width_words + line_offset) / SDRAM_ROW_WORDS;
@@ -169,7 +169,7 @@ static void client_command(char cmd, chanend client, chanend c_lcd,
     case CMD_SET_FRAME_BUFFER: {
       unsigned image_index;
       slave {
-        client :> image_index;
+        c_client :> image_index;
       }
 #if (DISPLAY_CONTROLLER_VERBOSE)
       if(image_index >= s.registered_images) {
@@ -182,7 +182,7 @@ static void client_command(char cmd, chanend client, chanend c_lcd,
 #endif
       if(s.next_fb_image_index == NONE) {
         s.next_fb_image_index = image_index;
-        client <: 0;
+        c_client <: 0;
       } else {
         s.next_next_fb_image_index = image_index;
       }
@@ -193,7 +193,7 @@ static void client_command(char cmd, chanend client, chanend c_lcd,
       unsigned image_no, line, buffer_pointer;
       unsigned bank, start_row, start_col, word_count;
       slave {
-        client :> image_index;
+        c_client :> image_index;
       }
       assert(s.current_fb_image_index == NONE);
 #if (DISPLAY_CONTROLLER_VERBOSE)
@@ -236,10 +236,10 @@ static void client_command(char cmd, chanend client, chanend c_lcd,
     case CMD_REGISTER_IMAGE: {
       unsigned img_width_words, img_height_lines;
       slave {
-        client :> img_width_words;
-        client :> img_height_lines;
+        c_client :> img_width_words;
+        c_client :> img_height_lines;
       }
-      client <: register_image(img_width_words, img_height_lines, s);
+      c_client <: register_image(img_width_words, img_height_lines, s);
       break;
     }
     default: {
@@ -252,7 +252,7 @@ static void client_command(char cmd, chanend client, chanend c_lcd,
   return;
 }
 
-void display_controller(chanend client, chanend c_lcd, chanend c_sdram) {
+void display_controller(chanend c_client, chanend c_lcd, chanend c_sdram) {
   struct state s;
   s.sdram_in_use = 0;
   s.registered_images = 0;
@@ -263,15 +263,15 @@ void display_controller(chanend client, chanend c_lcd, chanend c_sdram) {
 #pragma ordered
     select {
       case lcd_req(c_lcd): {
-        next_lcd_line(client, c_lcd, c_sdram, s);
+        next_lcd_line(c_client, c_lcd, c_sdram, s);
         break;
       }
       case chkct(c_sdram, XS1_CT_END):{
         s.sdram_in_use = 0;
         break;
       }
-      case (!s.sdram_in_use) => client :> char cmd: {
-        client_command(cmd, client, c_lcd, c_sdram, s);
+      case (!s.sdram_in_use) => c_client :> char cmd: {
+        client_command(cmd, c_client, c_lcd, c_sdram, s);
         break;
       }
     }

@@ -37,13 +37,14 @@ Executing The Project
 ---------------------
 The module by itself cannot be built or executed separately - it must be linked in to an application. Once the module is linked to the application, the application can be built and tested for driving a LCD screen.
 
-The following should be done in order to link the component to the application project
-  #. The module name ``module_display_controller`` should be added to the list of MODULES in the application project build options. 
-  #. The module name ``module_lcd`` should be added to the list of MODULES in the application project build options. 
-  #. The module name ``module_sdram`` should be added to the list of MODULES in the application project build options. 
-  #. The module name ``module_touch_controller_lib`` should be added to the list of MODULES in the application project build options. 
-  #. The module name ``module_i2c_master`` should be added to the list of MODULES in the application project build options. 
-  #. Now the module is linked to the application and can be used directly
+The following modules should be added to the list of MODULES in order to link the component to the application project
+  #. ``module_display_controller`` 
+  #. ``module_lcd``
+  #. ``module_sdram``
+Now the module is linked to the application and can be used directly. Additionally, if the use of the touch controller is nessessary then
+  #. ``module_touch_controller_lib`` or ``module_touch_controller_server``
+  #. ``module_i2c_master``
+should be added to the list of MODULES.
 
 Software Requirements
 ---------------------
