@@ -19,8 +19,10 @@ RED = 0x001F
  * \param[in]    data   array containing magnitude spectrum values. 
  *
  * \param[in]  N   number of data values to be displayed as bars.
+ *
+ * \param[in] maxData Maximum possible data value
  */
 
-void level_meter(chanend c_dc, unsigned frBufNo, unsigned data[], unsigned N);
+void level_meter(chanend c_dc, unsigned frBufNo, unsigned data[], unsigned N, unsigned maxData);
 
 #endif /* LEVEL_METER_H_ */

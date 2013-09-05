@@ -18,9 +18,9 @@ on tile[1] : sdram_ports sdramports = {	// on square slot of U16
 on tile[0] : out port p_adc_trig = PORT_ADC_TRIGGER;
 
 #define SAMP_FREQ 50000		// sampling frequency for ADC inputs
-#define FFT_UPDATE_DELAY XS1_TIMER_HZ/2	// Delay for FFT update on the display
 #define FFT_POINTS 64	// Number of data points chosen for FFT computation. It is double the level meter bands.
 #define FFT_SINE sine_64	// Sine wave selected for FFT computation
+#define MAX_FFT 500		// FFT limit on the display
 
 void magnitude_spectrum(int sig1[], int sig2[], unsigned magSpectrum[])
 {
@@ -43,14 +43,47 @@ void magnitude_spectrum(int sig1[], int sig2[], unsigned magSpectrum[])
 
 }
 
-
-void app(chanend c_dc, chanend c_adc)
+enum command {GET_SIG};
+void app(chanend c_dc, chanend c_samp)
 {
-  timer t;
-  unsigned plotTime, sampleTime;
-  unsigned frBufIndex=0, frBuf[2], data[2];
+  unsigned frBufIndex=0, frBuf[2];
   int sig1[FFT_POINTS], sig2[FFT_POINTS];
   unsigned magSpec[FFT_POINTS];
+
+   // Create frame buffers
+  frBuf[0] = display_controller_register_image(c_dc, LCD_ROW_WORDS, LCD_HEIGHT);
+  frBuf[1] = display_controller_register_image(c_dc, LCD_ROW_WORDS, LCD_HEIGHT);
+  display_controller_frame_buffer_init(c_dc, frBuf[0]);
+
+  // Get signal segment from ADC and Display spectrum periodically
+  while (1){
+
+	  frBufIndex = 1-frBufIndex;
+
+	  // Get signal samples from ADC
+	  c_samp <: (unsigned)GET_SIG;
+	  slave {
+		  for (int i=0; i<FFT_POINTS; i++){
+			  c_samp :> sig1[i];
+			  c_samp :> sig2[i];
+		  }
+	  }
+
+	  // Take magnitude spectrum of mixed signal and display it
+	  magnitude_spectrum(sig1, sig2, magSpec);
+	  magSpec[0] = 0;	// Set DC component to 0
+	  level_meter(c_dc, frBuf[frBufIndex], magSpec, FFT_POINTS/2, MAX_FFT);
+	  display_controller_frame_buffer_commit(c_dc,frBuf[frBufIndex]);
+  }
+
+}
+
+
+void signal_sampler(chanend c_adc, chanend c_samp)
+{
+  timer t;
+  unsigned sampleTime;
+  unsigned data[2], circBuf[2][FFT_POINTS], circBufPtr=0;
 
   // Configure and enable ADC
   adc_config_t adc_config = { { 0, 0, 0, 0, 0, 0, 0, 0 }, 0, 0, 0 };
@@ -62,45 +95,45 @@ void app(chanend c_dc, chanend c_adc)
 
   adc_enable(usb_tile, c_adc, p_adc_trig, adc_config);
 
-  // Create frame buffers
-  frBuf[0] = display_controller_register_image(c_dc, LCD_ROW_WORDS, LCD_HEIGHT);
-  frBuf[1] = display_controller_register_image(c_dc, LCD_ROW_WORDS, LCD_HEIGHT);
-  display_controller_frame_buffer_init(c_dc, frBuf[0]);
+  t :> sampleTime;
+  while (1) {
+	  select {
 
-  // Display spectrum periodically
-  t :> plotTime;
-  while (1){
+		  // Get signal samples from ADC at sampling time
+		  case t when timerafter(sampleTime+(XS1_TIMER_HZ/SAMP_FREQ)):> sampleTime:
+			  adc_trigger_packet(p_adc_trig, adc_config);
+			  adc_read_packet(c_adc, adc_config, data);
+			  circBuf[0][circBufPtr] = data[0]; circBuf[1][circBufPtr] = data[1];
+			  circBufPtr = (circBufPtr+1)%FFT_POINTS;
+		  break;
 
-	  frBufIndex = 1-frBufIndex;
+		  // Send signal samples
+		  case c_samp :> unsigned:
+			  master {
+				  for (int i=0; i<FFT_POINTS; i++){
+					  c_samp <: circBuf[0][circBufPtr];
+					  c_samp <: circBuf[1][circBufPtr];
+					  circBufPtr = (circBufPtr+1)%FFT_POINTS;
+				  }
+			  }
+		  break;
 
-	  // Get signal samples from ADC
-	  t :> sampleTime;
-	  for (int i=0; i<FFT_POINTS; i++){
-		  adc_trigger_packet(p_adc_trig, adc_config);
- 		  adc_read_packet(c_adc, adc_config, data);
-		  sig1[i] = data[0]; sig2[i] = data[1];
-		  t when timerafter(sampleTime+(XS1_TIMER_HZ/SAMP_FREQ)):> sampleTime;
 	  }
-
-	  magnitude_spectrum(sig1, sig2, magSpec);
-	  magSpec[0] = 0;	// Set DC component to 0
-	  level_meter(c_dc, frBuf[frBufIndex], magSpec, FFT_POINTS/2);
-	  t when timerafter(plotTime+FFT_UPDATE_DELAY):> plotTime;
-	  display_controller_frame_buffer_commit(c_dc,frBuf[frBufIndex]);
   }
-
 }
 
 
 int main(){
-	chan c_dc, c_lcd, c_sdram, c_adc;
+	chan c_dc, c_lcd, c_sdram, c_adc, c_samp;
 
 	par {
 
-		on tile[0]: app(c_dc, c_adc);
+		on tile[1]: app(c_dc, c_samp);
 		on tile[1]: display_controller(c_dc,c_lcd,c_sdram);
 		on tile[1]: lcd_server(c_lcd,lcdports);
 		on tile[1]: sdram_server(c_sdram,sdramports);
+
+		on tile[0]: signal_sampler(c_adc,c_samp);
         xs1_su_adc_service(c_adc);
 
 	}

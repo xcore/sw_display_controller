@@ -6,7 +6,7 @@ TARGET = XP-SKC-U16
 # The APP_NAME variable determines the name of the final .xe file. It should
 # not include the .xe postfix. If left blank the name will default to
 # the project name
-APP_NAME = app_display_spectrum
+APP_NAME = app_display_spectrum_from_adc
 
 # The USED_MODULES variable lists other module used by the application.
 USED_MODULES = module_display_controller module_fft_simple module_level_meter module_usb_tile_support

@@ -48,7 +48,7 @@ void magnitude_spectrum(streaming chanend c_sig1, streaming chanend c_sig2, unsi
 void app(chanend c_dc, streaming chanend c_sig1, streaming chanend c_sig2)
 {
   unsigned frBufIndex=0, frBuf[2];
-  unsigned magSpec[FFT_POINTS];
+  unsigned magSpec[FFT_POINTS], maxSpec;
 
   // Create frame buffers
   frBuf[0] = display_controller_register_image(c_dc, LCD_ROW_WORDS, LCD_HEIGHT);
@@ -59,7 +59,11 @@ void app(chanend c_dc, streaming chanend c_sig1, streaming chanend c_sig2)
   while (1){
 	  frBufIndex = 1-frBufIndex;
 	  magnitude_spectrum(c_sig1, c_sig2, magSpec);
-	  level_meter(c_dc, frBuf[frBufIndex], magSpec, FFT_POINTS/2);
+
+	  maxSpec = 0;
+	  for (int i=0; i<FFT_POINTS/2; i++)
+		  maxSpec = (magSpec[i]>maxSpec)? magSpec[i]:maxSpec;
+	  level_meter(c_dc, frBuf[frBufIndex], magSpec, FFT_POINTS/2, maxSpec);
 	  display_controller_frame_buffer_commit(c_dc,frBuf[frBufIndex]);
   }
 

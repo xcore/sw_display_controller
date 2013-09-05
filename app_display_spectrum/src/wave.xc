@@ -1,9 +1,8 @@
 #include <xs1.h>
 #include <math.h>
-
+#include "wave.h"
 
 #define PI 3.14159265
-#define SAMP_FREQ 50000
 
 void sine_wave(streaming chanend c_sine, short maxSampPerCyc)
 {

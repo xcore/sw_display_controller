@@ -2,15 +2,17 @@
 #include "lcd.h"
 #include "level_meter.h"
 
-void level_meter(chanend c_dc, unsigned frBufNo, unsigned data[], unsigned N)
+#include <stdio.h>	// TODO: remove later
+
+void level_meter(chanend c_dc, unsigned frBufNo, unsigned data[], unsigned N, unsigned maxData)
 {
-	unsigned maxData=1;
 	unsigned buf[LCD_ROW_WORDS];
 	unsigned short color;
 
-	// Find max of data values
+	// Clip data values
+	if (maxData==0) maxData = 1; 	// To avoid div by 0
 	for (int i=0; i<N; i++)
-		if (data[i]>maxData) maxData = data[i];
+		if (data[i]>maxData) data[i] = maxData;
 
 	// Init row buffer
 	for (int i=0; i<LCD_ROW_WORDS; i++)
