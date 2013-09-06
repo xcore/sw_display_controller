@@ -1,13 +1,13 @@
 #include "display_controller.h"
 #include "lcd.h"
 #include "level_meter.h"
+#include "level_meter_conf.h"
 
-#include <stdio.h>	// TODO: remove later
 
 void level_meter(chanend c_dc, unsigned frBufNo, unsigned data[], unsigned N, unsigned maxData)
 {
 	unsigned buf[LCD_ROW_WORDS];
-	unsigned short color;
+	unsigned short color, colorIndex, divFact;
 
 	// Clip data values
 	if (maxData==0) maxData = 1; 	// To avoid div by 0
@@ -19,13 +19,13 @@ void level_meter(chanend c_dc, unsigned frBufNo, unsigned data[], unsigned N, un
 		buf[i] = 0;
 
 	// Find pixel values for level meter display
+	divFact = LCD_HEIGHT/NCOLORS;
 	for (unsigned r=0; r<LCD_HEIGHT; r++) {
 
 		// Get the color for this row
-		if (r<LCD_HEIGHT/4) color = RED;
-		else if (r<LCD_HEIGHT/2) color = YELLOW;
-		else if (r<LCD_HEIGHT*3/4) color = GREEN;
-		else color = BLUE;
+		colorIndex = r/divFact;
+		if (colorIndex==NCOLORS) colorIndex--;
+		color = colors[colorIndex];
 
 		for (unsigned c=0; c<LCD_WIDTH; c++){
 			int dataIndex = c*N/LCD_WIDTH;

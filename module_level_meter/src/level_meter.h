@@ -2,11 +2,23 @@
 #ifndef LEVEL_METER_H_
 #define LEVEL_METER_H_
 
-enum colors{
+enum colors_rgb565{		// Entered in BGR565
 BLUE = 0xF800,
 GREEN = 0x07E0,
 YELLOW = 0x07FF,
-RED = 0x001F
+RED = 0x001F,
+TEAL = 0xFFE0,
+WHITE = 0xFFFF,
+CYAN = 0xFFE0,
+MAGENTA = 0xF81F,
+GOLD = 0x06BF,
+SALMON = 0x741F,
+CORAL = 0x53FF,
+TURQUOISE = 0xD708,
+VIOLET = 0xEC1D,
+CHOCOLATE = 0x1B5A,
+PEACH = 0xBEDF,
+LAVENDER = 0xFF3C
 };
 
 /** This function renders the level meter display of a given data sequence.

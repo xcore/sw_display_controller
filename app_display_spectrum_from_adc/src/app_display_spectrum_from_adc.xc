@@ -2,6 +2,7 @@
 #include <platform.h>
 #include <xs1.h>
 #include <xs1_su.h>
+#include <math.h>
 
 #include "usb_tile_support.h"
 #include "lcd.h"
@@ -17,10 +18,17 @@ on tile[1] : sdram_ports sdramports = {	// on square slot of U16
   XS1_PORT_16A, XS1_PORT_1B, XS1_PORT_1G, XS1_PORT_1C, XS1_PORT_1F, XS1_CLKBLK_2 };
 on tile[0] : out port p_adc_trig = PORT_ADC_TRIGGER;
 
-#define SAMP_FREQ 50000		// sampling frequency for ADC inputs
-#define FFT_POINTS 64	// Number of data points chosen for FFT computation. It is double the level meter bands.
-#define FFT_SINE sine_64	// Sine wave selected for FFT computation
-#define MAX_FFT 500		// FFT limit on the display
+#define SAMP_FREQ 40000		// sampling frequency for ADC inputs
+#define FFT_POINTS 256	// Number of data points chosen for FFT computation. It is double the level meter bands.
+#define FFT_SINE sine_256	// Sine wave selected for FFT computation
+#define LEV_METER_POINTS FFT_POINTS/4 	// Number of FFT points to be displayed
+#define LOG_SPEC
+
+#ifdef LOG_SPEC
+#define MAX_FFT 70		// FFT limit on the display
+#else
+#define MAX_FFT 500
+#endif
 
 void magnitude_spectrum(int sig1[], int sig2[], unsigned magSpectrum[])
 {
@@ -38,8 +46,12 @@ void magnitude_spectrum(int sig1[], int sig2[], unsigned magSpectrum[])
 	fftForward(sig1, im, FFT_POINTS, FFT_SINE);
 
 	// Magnitude spectrum
-	for (int i=0; i<FFT_POINTS; i++)
+	for (int i=0; i<FFT_POINTS; i++){
 		magSpectrum[i] = sig1[i]*sig1[i] + im[i]*im[i];
+#ifdef LOG_SPEC
+		magSpectrum[i] = (magSpectrum[i]>0)? 10*log(magSpectrum[i]):0;
+#endif
+	}
 
 }
 
@@ -72,7 +84,7 @@ void app(chanend c_dc, chanend c_samp)
 	  // Take magnitude spectrum of mixed signal and display it
 	  magnitude_spectrum(sig1, sig2, magSpec);
 	  magSpec[0] = 0;	// Set DC component to 0
-	  level_meter(c_dc, frBuf[frBufIndex], magSpec, FFT_POINTS/2, MAX_FFT);
+	  level_meter(c_dc, frBuf[frBufIndex], magSpec, LEV_METER_POINTS, MAX_FFT);
 	  display_controller_frame_buffer_commit(c_dc,frBuf[frBufIndex]);
   }
 
