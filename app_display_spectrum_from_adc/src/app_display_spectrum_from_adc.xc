@@ -22,12 +22,17 @@ on tile[0] : out port p_adc_trig = PORT_ADC_TRIGGER;
 #define FFT_POINTS 256	// Number of data points chosen for FFT computation. It is double the level meter bands.
 #define FFT_SINE sine_256	// Sine wave selected for FFT computation
 #define LEV_METER_POINTS FFT_POINTS/4 	// Number of FFT points to be displayed
-#define LOG_SPEC
 
-#ifdef LOG_SPEC
+#define LOG_SPEC 0	// Set to 1 if log spectrum is taken; 0 otherwise
+#if LOG_SPEC
 #define MAX_FFT 70		// FFT limit on the display
 #else
-#define MAX_FFT 500
+#define MAX_FFT 100
+#endif
+
+#define FFT_FULL_USE 0	// FFT computation in full use
+#if (!FFT_FULL_USE)
+#define FFT_UPDATE_FREQ 10 	// Number of time FFT computation is done per second
 #endif
 
 void magnitude_spectrum(int sig1[], int sig2[], unsigned magSpectrum[])
@@ -48,7 +53,7 @@ void magnitude_spectrum(int sig1[], int sig2[], unsigned magSpectrum[])
 	// Magnitude spectrum
 	for (int i=0; i<FFT_POINTS; i++){
 		magSpectrum[i] = sig1[i]*sig1[i] + im[i]*im[i];
-#ifdef LOG_SPEC
+#if LOG_SPEC
 		magSpectrum[i] = (magSpectrum[i]>0)? 10*log(magSpectrum[i]):0;
 #endif
 	}
@@ -61,6 +66,8 @@ void app(chanend c_dc, chanend c_samp)
   unsigned frBufIndex=0, frBuf[2];
   int sig1[FFT_POINTS], sig2[FFT_POINTS];
   unsigned magSpec[FFT_POINTS];
+  unsigned plotTime;
+  timer t;
 
    // Create frame buffers
   frBuf[0] = display_controller_register_image(c_dc, LCD_ROW_WORDS, LCD_HEIGHT);
@@ -68,6 +75,7 @@ void app(chanend c_dc, chanend c_samp)
   display_controller_frame_buffer_init(c_dc, frBuf[0]);
 
   // Get signal segment from ADC and Display spectrum periodically
+  t :> plotTime;
   while (1){
 
 	  frBufIndex = 1-frBufIndex;
@@ -85,6 +93,9 @@ void app(chanend c_dc, chanend c_samp)
 	  magnitude_spectrum(sig1, sig2, magSpec);
 	  magSpec[0] = 0;	// Set DC component to 0
 	  level_meter(c_dc, frBuf[frBufIndex], magSpec, LEV_METER_POINTS, MAX_FFT);
+#if (!FFT_FULL_USE)
+	  t when timerafter(plotTime+(XS1_TIMER_HZ/FFT_UPDATE_FREQ)):> plotTime;
+#endif
 	  display_controller_frame_buffer_commit(c_dc,frBuf[frBufIndex]);
   }
 
