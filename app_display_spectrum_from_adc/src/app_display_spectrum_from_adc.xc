@@ -19,7 +19,7 @@ on tile[1] : sdram_ports sdramports = {	// on square slot of U16
 on tile[0] : out port p_adc_trig = PORT_ADC_TRIGGER;
 
 #define SAMP_FREQ 40000		// sampling frequency for ADC inputs
-#define FFT_POINTS 256	// Number of data points chosen for FFT computation. It is double the level meter bands.
+#define FFT_POINTS 256	// Number of signal samples chosen for FFT computation. It is double the level meter bands.
 #define FFT_SINE sine_256	// Sine wave selected for FFT computation
 #define LEV_METER_POINTS FFT_POINTS/4 	// Number of FFT points to be displayed
 
