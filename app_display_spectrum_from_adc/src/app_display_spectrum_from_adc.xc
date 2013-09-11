@@ -21,7 +21,7 @@ on tile[0] : out port p_adc_trig = PORT_ADC_TRIGGER;
 #define SAMP_FREQ 40000		// sampling frequency for ADC inputs
 #define FFT_POINTS 256	// Number of signal samples chosen for FFT computation. It is double the level meter bands.
 #define FFT_SINE sine_256	// Sine wave selected for FFT computation
-#define LEV_METER_POINTS FFT_POINTS/4 	// Number of FFT points to be displayed
+#define LEV_METER_BANDS FFT_POINTS/4 	// Number of FFT points to be displayed
 
 #define LOG_SPEC 1	// Set to 1 if log spectrum is taken; 0 otherwise
 #if LOG_SPEC
@@ -92,7 +92,7 @@ void app(chanend c_dc, chanend c_samp)
 	  // Take magnitude spectrum of mixed signal and display it
 	  magnitude_spectrum(sig1, sig2, magSpec);
 	  magSpec[0] = 0;	// Set DC component to 0
-	  level_meter(c_dc, frBuf[frBufIndex], magSpec, LEV_METER_POINTS, MAX_FFT);
+	  level_meter(c_dc, frBuf[frBufIndex], magSpec, LEV_METER_BANDS, MAX_FFT);
 #if (!FFT_FULL_USE)
 	  t when timerafter(plotTime+(XS1_TIMER_HZ/FFT_UPDATE_RATE)):> plotTime;
 #endif
