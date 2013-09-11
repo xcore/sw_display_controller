@@ -23,7 +23,7 @@ on tile[0] : out port p_adc_trig = PORT_ADC_TRIGGER;
 #define FFT_SINE sine_256	// Sine wave selected for FFT computation
 #define LEV_METER_POINTS FFT_POINTS/4 	// Number of FFT points to be displayed
 
-#define LOG_SPEC 0	// Set to 1 if log spectrum is taken; 0 otherwise
+#define LOG_SPEC 1	// Set to 1 if log spectrum is taken; 0 otherwise
 #if LOG_SPEC
 #define MAX_FFT 70		// FFT limit on the display
 #else
@@ -32,7 +32,7 @@ on tile[0] : out port p_adc_trig = PORT_ADC_TRIGGER;
 
 #define FFT_FULL_USE 0	// FFT computation in full use
 #if (!FFT_FULL_USE)
-#define FFT_UPDATE_FREQ 10 	// Number of time FFT computation is done per second
+#define FFT_UPDATE_RATE 10 	// Number of times FFT computation is done in a second
 #endif
 
 void magnitude_spectrum(int sig1[], int sig2[], unsigned magSpectrum[])
@@ -94,7 +94,7 @@ void app(chanend c_dc, chanend c_samp)
 	  magSpec[0] = 0;	// Set DC component to 0
 	  level_meter(c_dc, frBuf[frBufIndex], magSpec, LEV_METER_POINTS, MAX_FFT);
 #if (!FFT_FULL_USE)
-	  t when timerafter(plotTime+(XS1_TIMER_HZ/FFT_UPDATE_FREQ)):> plotTime;
+	  t when timerafter(plotTime+(XS1_TIMER_HZ/FFT_UPDATE_RATE)):> plotTime;
 #endif
 	  display_controller_frame_buffer_commit(c_dc,frBuf[frBufIndex]);
   }
