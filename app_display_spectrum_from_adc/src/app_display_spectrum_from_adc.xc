@@ -60,8 +60,13 @@ void magnitude_spectrum(int sig1[], int sig2[], unsigned magSpectrum[])
 
 }
 
+
 enum command {GET_SIG};
-void app(chanend c_dc, chanend c_samp)
+interface app_sigSamp_interface {
+	void get_signal(unsigned cmd, int sig1[], int sig2[]);
+};
+
+void app(chanend c_dc, interface app_sigSamp_interface client c)
 {
   unsigned frBufIndex=0, frBuf[2];
   int sig1[FFT_POINTS], sig2[FFT_POINTS];
@@ -81,13 +86,7 @@ void app(chanend c_dc, chanend c_samp)
 	  frBufIndex = 1-frBufIndex;
 
 	  // Get signal samples from ADC
-	  c_samp <: (unsigned)GET_SIG;
-	  slave {
-		  for (int i=0; i<FFT_POINTS; i++){
-			  c_samp :> sig1[i];
-			  c_samp :> sig2[i];
-		  }
-	  }
+	  c.get_signal(GET_SIG, sig1, sig2);
 
 	  // Take magnitude spectrum of mixed signal and display it
 	  magnitude_spectrum(sig1, sig2, magSpec);
@@ -102,7 +101,7 @@ void app(chanend c_dc, chanend c_samp)
 }
 
 
-void signal_sampler(chanend c_adc, chanend c_samp)
+void signal_sampler(chanend c_adc, interface app_sigSamp_interface server c)
 {
   timer t;
   unsigned sampleTime;
@@ -131,13 +130,11 @@ void signal_sampler(chanend c_adc, chanend c_samp)
 		  break;
 
 		  // Send signal samples
-		  case c_samp :> unsigned:
-			  master {
-				  for (int i=0; i<FFT_POINTS; i++){
-					  c_samp <: circBuf[0][circBufPtr];
-					  c_samp <: circBuf[1][circBufPtr];
-					  circBufPtr = (circBufPtr+1)%FFT_POINTS;
-				  }
+		  case c.get_signal(unsigned cmd, int sig1[], int sig2[]):
+			  for (int i=0; i<FFT_POINTS; i++){
+				  sig1[i] = circBuf[0][circBufPtr];
+				  sig2[i] = circBuf[1][circBufPtr];
+				  circBufPtr = (circBufPtr+1)%FFT_POINTS;
 			  }
 		  break;
 
@@ -147,16 +144,17 @@ void signal_sampler(chanend c_adc, chanend c_samp)
 
 
 int main(){
-	chan c_dc, c_lcd, c_sdram, c_adc, c_samp;
+	chan c_dc, c_lcd, c_sdram, c_adc;
+	interface app_sigSamp_interface c;
 
 	par {
 
-		on tile[1]: app(c_dc, c_samp);
+		on tile[1]: app(c_dc, c);
 		on tile[1]: display_controller(c_dc,c_lcd,c_sdram);
 		on tile[1]: lcd_server(c_lcd,lcdports);
 		on tile[1]: sdram_server(c_sdram,sdramports);
 
-		on tile[0]: signal_sampler(c_adc,c_samp);
+		on tile[0]: signal_sampler(c_adc,c);
         xs1_su_adc_service(c_adc);
 
 	}
