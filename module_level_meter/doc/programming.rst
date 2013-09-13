@@ -6,7 +6,7 @@ This section provides information on how to create an application using ``level_
 Includes
 --------
 
-The application needs to include ``level_meter.h``.
+The application needs to include ``level_meter.h`` and the configuration file ``level_meter_conf.h``. The color palette for the level meter display is defined in the configuration file.
 
 Programming
 -----------

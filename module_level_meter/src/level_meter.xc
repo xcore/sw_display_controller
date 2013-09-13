@@ -19,13 +19,13 @@ void level_meter(chanend c_dc, unsigned frBufNo, unsigned data[], unsigned N, un
 		buf[i] = 0;
 
 	// Find pixel values for level meter display
-	divFact = LCD_HEIGHT/NCOLORS;
+	divFact = LCD_HEIGHT/LEVEL_METER_NCOLORS;
 	for (unsigned r=0; r<LCD_HEIGHT; r++) {
 
 		// Get the color for this row
 		colorIndex = r/divFact;
-		if (colorIndex==NCOLORS) colorIndex--;
-		color = colors[colorIndex];
+		if (colorIndex==LEVEL_METER_NCOLORS) colorIndex--;
+		color = level_meter_colors[colorIndex];
 
 		for (unsigned c=0; c<LCD_WIDTH; c++){
 			int dataIndex = c*N/LCD_WIDTH;
