@@ -1,7 +1,7 @@
-Example Applications
-====================
+Example Application
+===================
 
-This tutorial describes the demo applications included in the XMOS Display Controller software component. :ref:`sec_hardware_platforms` describes the required hardware setup to run the demos.
+This tutorial describes a demo application that uses the display controller module. :ref:`sec_hardware_platforms` describes the required hardware setup to run the demos.
 
 app_display_controller_demo
 ---------------------------

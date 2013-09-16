@@ -27,7 +27,7 @@ The XP-SKC-U16 Slicekit Core board has four slots with edge connectors: ``DIAMON
 To setup up the system:
 
    #. Connect XA-SK-SDRAM Slice Card to the XP-SKC-U16 Slicekit Core board using the connector marked with ``SQUARE``.
-   #. Connect XA-SK-SCR480 Slice Card to the XP-SKC-U16 Slicekit Core board using the connector marked with ``DIAMOND``.
+   #. Connect XA-SK-SCR480 Slice Card with LCD to the XP-SKC-U16 Slicekit Core board using the connector marked with ``DIAMOND``.
    #. Connect XA-SK-MIXED SIGNAL Slice Card to the XP-SKC-U16 Slicekit Core board using the connector marked with ``A``.
    #. Give the two channels of audio input from a PC or a mobile to pins 1 and 2 of J2 on the mixed signal slice card using a suitable cable. The ground is connected to pin 4 of J3.
    #. Connect the XTAG-2 to Slicekit Core board. 

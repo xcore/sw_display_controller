@@ -1,7 +1,7 @@
 Overview
 ========
 
-The display controller component is used to drive a single graphics LCD screen up to 800 * 600 pixels incorporating a managed double buffer. 
+The display controller module is used to drive a single graphics LCD screen up to 800 * 600 pixels incorporating a managed double buffer. 
 
 Features
 --------
