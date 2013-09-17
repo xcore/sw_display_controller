@@ -1,53 +1,86 @@
 <?xml version="1.0" ?>
 <xpd>
     <components>
-        <component name = "Display Controller" type = "component" buildresults_path = "module_display_controller/.module_display_controller.buildinfo" scope = "General Use" path = "module_display_controller" metainfo_path = "module_display_controller/module_display_controller.metainfo" local = "false" id = "module_display_controller" description = "Display Controller component for driving LCDs with an RGB 565 interface up to 800x600 pixels with a managed SDRAM image buffer.">
+        <component description = "A full Display Controller application for driving the XA-Sk-480 LCD in conjunction with the SDRAM Controller and LCD Driver components." type = "demoCode" scope = "Example" path = "app_display_controller_demo" local = "false" id = "app_display_controller_demo" name = "Display Controller Demo">
             <board>XA-SK-SCR480</board>
             <board>XA-SK-SDRAM</board>
-            <componentDependency>module_sdram</componentDependency>
-            <componentDependency>module_lcd</componentDependency>
+            <componentDependency version = "1.1.0">module_touch_controller_lib</componentDependency>
+            <componentDependency version = "2.1.0">module_i2c_master</componentDependency>
+            <componentDependency version = "1.0.1">module_sdram</componentDependency>
+            <componentDependency version = "1.1.0">module_lcd</componentDependency>
+            <componentDependency version = "1.0.1">module_sdram</componentDependency>
+            <componentDependency version = "2.1.0">module_i2c_master</componentDependency>
+            <componentDependency version = "1.1.0">module_lcd</componentDependency>
+            <componentDependency version = "1.0.3">module_display_controller</componentDependency>
+            <componentDependency version = "1.0.3">module_slicekit_support</componentDependency>
+            <keyword>LCD</keyword>
+            <keyword>Display</keyword>
+            <keyword>Framebuffer</keyword>
+            <keyword>Touch Controller</keyword>
+        </component>
+        <component description = "A demonstration of basic machine vision techniques on xCore multicore microcontrollers" type = "demoCode" scope = "Example" path = "app_display_spectrum" local = "false" id = "app_display_spectrum" name = "Object Localisation Demo">
+            <board>XA-SK-SCR480</board>
+            <board>XA-SK-SDRAM</board>
+            <componentDependency version = "1.0.3">module_display_controller</componentDependency>
+            <componentDependency version = "1.0.3">module_display_controller</componentDependency>
+            <componentDependency version = "1.1.0">module_lcd</componentDependency>
+            <componentDependency version = "1.0.3">module_level_meter</componentDependency>
+            <componentDependency>module_fft_simple</componentDependency>
+            <componentDependency version = "1.0.1">module_sdram</componentDependency>
+            <keyword>Machine Vision</keyword>
+            <keyword>Image Processing</keyword>
+            <keyword>LCD</keyword>
+        </component>
+        <component name = "Display Controller" type = "component" buildresults_path = "module_display_controller\.module_display_controller.buildinfo" scope = "General Use" path = "module_display_controller" metainfo_path = "module_display_controller\module_display_controller.metainfo" local = "false" id = "module_display_controller" description = "Display Controller component for driving LCDs with an RGB 565 interface up to 800x600 pixels with a managed SDRAM image buffer.">
+            <board>XA-SK-SCR480</board>
+            <board>XA-SK-SDRAM</board>
+            <componentDependency version = "1.1.0">module_lcd</componentDependency>
+            <componentDependency version = "1.0.1">module_sdram</componentDependency>
             <keyword>LCD</keyword>
             <keyword>TFT</keyword>
             <keyword>RGB565</keyword>
             <keyword>Display</keyword>
             <keyword>SDRAM</keyword>
         </component>
-        <component description = "A full Display Controller application for driving the XA-Sk-480 LCD in conjunction with the SDRAM Controller and LCD Driver components." type = "demoCode" scope = "Example" path = "app_display_controller_demo" local = "false" id = "app_display_controller_demo" name = "Display Controller Demo">
+        <component name = "Level Meter Display" type = "component" buildresults_path = "module_level_meter\.module_level_meter.buildinfo" scope = "General Use" path = "module_level_meter" metainfo_path = "module_level_meter\module_level_meter.metainfo" local = "false" id = "module_level_meter" description = "Level meter display component.">
             <board>XA-SK-SCR480</board>
             <board>XA-SK-SDRAM</board>
-            <componentDependency>module_i2c_master</componentDependency>
-            <componentDependency>module_slicekit_support</componentDependency>
-            <componentDependency>module_sdram</componentDependency>
-            <componentDependency>module_display_controller</componentDependency>
-            <componentDependency>module_lcd</componentDependency>
-            <componentDependency>module_touch_controller_lib</componentDependency>
+            <componentDependency version = "1.0.3">module_display_controller</componentDependency>
+            <componentDependency version = "1.1.0">module_lcd</componentDependency>
+            <componentDependency version = "1.0.1">module_sdram</componentDependency>
             <keyword>LCD</keyword>
+            <keyword>RGB565</keyword>
             <keyword>Display</keyword>
-            <keyword>Framebuffer</keyword>
-            <keyword>Touch Controller</keyword>
+            <keyword>SDRAM</keyword>
         </component>
     </components>
     <dependency repo = "sc_lcd">
-        <githash>b388b108ace3bbbd2ff380c9ad6c9db9168121fd</githash>
+        <githash>67e86e076aa9a26d8dd0360aa053072c46d46ee1</githash>
         <uri>git@github.com:xcore/sc_lcd.git</uri>
+        <version>1.1.0beta0</version>
     </dependency>
     <dependency repo = "sc_sdram_burst">
-        <githash>930b5d5a705f09e3ff32fc56dc62057d3f550bdc</githash>
+        <githash>3952d3c6f90c6a9d3d4d545ee32220358622d097</githash>
         <uri>git@github.com:xcore/sc_sdram_burst.git</uri>
     </dependency>
-    <dependency repo = "sc_util">
-        <githash>d0531d7c68ab67334582c324828e36d617baf8b3</githash>
-        <uri>git@github.com:xcore/sc_util</uri>
-        <version>1.0.3rc0</version>
-    </dependency>
     <dependency repo = "sc_i2c">
-        <githash>d266213a4d5c4956f3d5980ba42611e24d129a39</githash>
+        <githash>576de5f72f10954ce0eed83acb418890ed636bb8</githash>
         <uri>git@github.com:xcore/sc_i2c.git</uri>
+        <version>2.1.0rc0</version>
     </dependency>
     <dependency repo = "sc_slicekit_support">
         <githash>7920fc4235a96585274d73d25d275ea63b4cd285</githash>
         <uri>https://github.com/xcore/sc_slicekit_support.git</uri>
         <version>1.0.3rc0</version>
+    </dependency>
+    <dependency repo = "sc_periph">
+        <githash>28460a6d9ed5dbd31d420b321d56c68d52f9ed8c</githash>
+        <uri>git://github.com/xcore/sc_periph</uri>
+        <version>1.0.0rc1</version>
+    </dependency>
+    <dependency repo = "sc_dsp_transforms">
+        <githash>43641fba3bf6d34bff33cf403c4b1ffc3c00259a</githash>
+        <uri>https://github.com/xcore/sc_dsp_transforms.git</uri>
     </dependency>
     <description>Modules for driving parallel RGB displays in conjunction with sdram and lcd components. The main module here takes care of framebuffer management.</description>
     <docdir>doc</docdir>
@@ -69,6 +102,7 @@
     <release parenthash = "35cca0ad0dc6595bd23640d6be9ff3c0f1935642" version = "1.0.3rc1" githash = "d1c0b79439c03ab24944af508d770242ad934c73"></release>
     <subpartnumber>XM-002025-SM</subpartnumber>
     <vendor>XMOS</vendor>
+    <version_defines></version_defines>
     <xcore_repo>sw_display_controller.git</xcore_repo>
     <xpd_version>1.0</xpd_version>
 </xpd>
