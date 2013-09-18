@@ -17,7 +17,7 @@ In this demonstration we use the following hardware and software:
   * module_logging,
   * module_xassert,
 
-together to create a level-meter kind of spectral display on an LCD for an analog audio input. This application showcases the use of multichannel ADC in an xCORE-USB series XMOS device to sample the analog input and real-time rendering and display of spectrum by taking short-time fourier transform.
+together to create a level-meter kind of spectral display on an LCD for an analog audio input. This application showcases the use of multichannel ADC in an xCORE-USB series XMOS device to sample the analog input, and real-time rendering and display of spectrum by taking short-time fourier transform.
 
 Hardware Setup
 ++++++++++++++
