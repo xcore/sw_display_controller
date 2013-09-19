@@ -1,0 +1,82 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Programming Guide &mdash; Level Meter Module v documentation</title>
+
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/globals.css"  type="text/css" />
+    <link rel="stylesheet" href="_static/ui.css" type="text/css" />
+    <link rel="stylesheet" href="_static/app.css"  type="text/css" />
+    <link rel="stylesheet" href="_static/mobile.css"  type="text/css" />
+    <link rel="stylesheet" href="_static/xde.css"
+    type="text/css" /><script type="text/javascript" src="_static/scripts.js"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Level Meter Module v documentation" href="index.html" />
+    <link rel="next" title="Example Applications" href="page0.html" />
+    <link rel="prev" title="Configuration Defines" href="page0.html" /> 
+  </head>
+  <body class="xde indented-content" onload="prepareContents();">  
+          <div id="body">
+             <div id="content">
+             <h1>Programming Guide</h1>
+
+             <div class='columns'>
+            
+  <p>This section provides information on how to create an application using <tt class="docutils literal"><span class="pre">level_meter</span></tt> API.</p>
+<h2 class="topic" id="includes">Includes</h2>
+<div><p>The application needs to include <tt class="docutils literal"><span class="pre">level_meter.h</span></tt> and the configuration file <tt class="docutils literal"><span class="pre">level_meter_conf.h</span></tt>. The color palette for the level meter display is defined in the configuration file.</p>
+</div><h2 class="topic" id="programming">Programming</h2>
+<div><p>The level meter module uses the APIs of display controller module. A simple application function that uses <tt class="docutils literal"><span class="pre">level_meter</span></tt> API is given below.</p>
+<pre class="snip-multi-inline">
+void app(c_dc, data, N)
+{
+  unsigned frBuf;
+
+  // Create frame buffer
+  frBuf = display_controller_register_image(c_dc, LCD_ROW_WORDS, LCD_HEIGHT);
+
+  // Render level meter display frame and commit
+  level_meter(c_dc, frBuf, data, N);
+  display_controller_frame_buffer_commit(c_dc, frBuf);
+}
+</pre>
+<p><tt class="docutils literal"><span class="pre">c_dc</span></tt> is the channel connecting display controller. <tt class="docutils literal"><span class="pre">data</span></tt> is the array of unsigned data values to be displayed. <tt class="docutils literal"><span class="pre">N</span></tt> is the number of data values.</p>
+</div>
+
+             </div>
+             </div>
+
+
+          </div>
+
+          <div>
+             <!--seealsos-->
+          </div><div id="local_seealso">
+             <h1>See Also</h1>
+             <ul class="iconmenu">
+             <li><a href="#">Overview</a></li>
+             <li><a href="#">Recommended Hardware</a></li>
+             <li><a href="#">Configuration Defines</a></li>
+             <li><a href="#">Example Applications</a></li>
+             </ul>
+          </div>
+    <div class="footer">
+    </div>
+  </body>
+</html>

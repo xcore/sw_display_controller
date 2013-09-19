@@ -1,0 +1,14 @@
+\BOOKMARK [0][-]{chapter.1}{Overview}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Features}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Memory requirements}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Resource requirements}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{Hardware Requirements}{}% 5
+\BOOKMARK [0][-]{chapter.3}{API}{}% 6
+\BOOKMARK [0][-]{chapter.4}{API}{}% 7
+\BOOKMARK [0][-]{chapter.5}{Programming Guide}{}% 8
+\BOOKMARK [1][-]{section.5.1}{Includes}{chapter.5}% 9
+\BOOKMARK [1][-]{section.5.2}{Programming}{chapter.5}% 10
+\BOOKMARK [0][-]{chapter.6}{Example Applications}{}% 11
+\BOOKMARK [1][-]{section.6.1}{app\137display\137spectrum}{chapter.6}% 12
+\BOOKMARK [2][-]{subsection.6.1.1}{Getting Started}{section.6.1}% 13
+\BOOKMARK [1][-]{section.6.2}{app\137display\137spectrum\137from\137adc}{chapter.6}% 14

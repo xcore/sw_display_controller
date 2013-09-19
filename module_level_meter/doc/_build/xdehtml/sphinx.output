@@ -1,0 +1,36 @@
+Running Sphinx v1.0.7
+Running XMOS Documentation setup:xdehtml
+loading pickled environment... not yet created
+building [xdehtml]: all documents
+updating environment: 6 added, 0 changed, 0 removed
+reading sources... [ 16%] api
+reading sources... [ 33%] examples
+reading sources... [ 50%] hw
+reading sources... [ 66%] index
+reading sources... [ 83%] overview
+reading sources... [100%] programming
+
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+['index', 'overview', 'programming', 'hw', 'api', 'examples']
+writing output... [ 16%] api
+Adding scope descriptions
+writing output... [ 33%] examples
+WARNING: Invalid xref file doc_snippets__Instrumentation & XSCOPE__Event Examples__continuous___build__gen__xscope_continuous.xml
+WARNING: Unknown reference target: sec_hardware
+Adding scope descriptions
+writing output... [ 50%] hw
+Adding scope descriptions
+writing output... [ 66%] index
+Adding scope descriptions
+writing output... [ 83%] overview
+Adding scope descriptions
+writing output... [100%] programming
+Adding scope descriptions
+
+writing additional files...
+copying static files... done
+dumping object inventory... done
+build succeeded.

@@ -23,7 +23,7 @@ configPoints =
     help    = "This selects the number of colors used.",
     units   = "",
     define  = "LEVEL_METER_NCOLORS",
-    type    = "unsigned",
+    type    = "int",
     min		= 1,
     resourceUsageFlags = {"noeffect"},
     default = 1
@@ -36,8 +36,9 @@ configPoints =
     help    = "This lists the colors used for level meter display.",
     units   = "",
     define  = "level_meter_colors",
-    type    = "unsigned short",
+    type    = "int",
     resourceUsageFlags = {"noeffect"},
+    default = 0xFFFF
   },
 
 }
