@@ -1,6 +1,10 @@
 Display Controller Change Log
 =============================
 
+1.1.0
+-----
+  * Added module_level_meter and two apps on spectral display
+
 1.0.3
 -----
   * Minor fix to demo app (added "O_BINARY" to _open() for correctness)
