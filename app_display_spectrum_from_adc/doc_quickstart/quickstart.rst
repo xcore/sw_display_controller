@@ -37,7 +37,7 @@ To setup up the system:
    #. Switch on the power supply to the Slicekit Core board.
 
 .. figure:: images/hardware_setup.jpg
-   :width: 5cm
+   :width: 10cm
    :align: center
 
    Hardware Setup for Display Spectrum from ADC Demo

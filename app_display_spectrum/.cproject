@@ -170,6 +170,10 @@
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/.settings}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16160D}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16400F}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V2_IS42S16400F}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram}&quot;' />
 
@@ -297,6 +301,10 @@
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/.settings}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16160D}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16400F}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V2_IS42S16400F}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram}&quot;' />
 
@@ -430,6 +438,10 @@
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/.settings}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16160D}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16400F}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V2_IS42S16400F}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram}&quot;' />
 
@@ -699,6 +711,10 @@
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/.settings}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16160D}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16400F}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V2_IS42S16400F}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram}&quot;' />
 
@@ -826,6 +842,10 @@
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/.settings}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16160D}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16400F}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V2_IS42S16400F}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram}&quot;' />
 
@@ -959,6 +979,10 @@
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/.settings}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16160D}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V1_IS42S16400F}&quot;' />
+<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V2_IS42S16400F}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram}&quot;' />
 

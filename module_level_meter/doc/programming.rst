@@ -3,10 +3,10 @@ Programming Guide
 
 This section provides information on how to create an application using ``level_meter`` API.
 
-Includes
---------
+Includes and Configuration
+--------------------------
 
-The application needs to include ``level_meter.h`` and the configuration file ``level_meter_conf.h``. The color palette for the level meter display is defined in the configuration file.
+The application needs to include ``level_meter.h``. A configuration file ``level_meter_conf.h`` should be placed in the application directory. The color palette for the level meter display is defined in the configuration file.
 
 Programming
 -----------

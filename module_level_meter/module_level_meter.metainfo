@@ -35,10 +35,10 @@ configPoints =
     long    = "",
     help    = "This lists the colors used for level meter display.",
     units   = "",
-    define  = "level_meter_colors",
-    type    = "int",
+    define  = "LEVEL_METER_COLORS",
+    type    = "string",
     resourceUsageFlags = {"noeffect"},
-    default = 0xFFFF
+    default = "{WHITE}"
   },
 
 }
@@ -67,18 +67,22 @@ end
 
 
 generatedCode = {
-  includes = {"level_meter.h","level_meter_conf.h"},
+  includes = {"level_meter.h"},
 
-  globals = [[  ]],
+  globals = [[ 
+	#define N 64 
+  ]],
 
   body = [[
-	unsigned frBufNo, data[], N, maxData;
+	unsigned frBufNo, data[N], maxData;
 	level_meter(${swblock.chanends.c_dc}, frBufNo, data, N, maxData);
   ]]
 }
 
 files = {
   ["module_level_meter/level_meter_conf_example.h"] = "src/level_meter_conf.h",
+  ["module_display_controller/sdram_conf_example.h"] = "src/sdram_conf.h",
+  ["module_display_controller/lcd_conf_example.h"] = "src/lcd_conf.h",
 }
 
 api = {

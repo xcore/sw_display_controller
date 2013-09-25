@@ -1,7 +1,7 @@
 Example Applications
 ====================
 
-This tutorial describes the demo applications that uses the level meter module. :ref:`sec_hardware` describes the required hardware setup to run the demos.
+This tutorial describes the demo applications that uses the level meter module. Section :ref:`sec_hardware` describes the required hardware setup to run the demos.
 
 app_display_spectrum
 --------------------

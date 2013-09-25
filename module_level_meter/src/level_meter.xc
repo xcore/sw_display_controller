@@ -7,6 +7,7 @@
 void level_meter(chanend c_dc, unsigned frBufNo, unsigned data[], unsigned N, unsigned maxData)
 {
 	unsigned buf[LCD_ROW_WORDS];
+	unsigned short colors[LEVEL_METER_NCOLORS] = LEVEL_METER_COLORS;
 	unsigned short color, colorIndex, divFact;
 
 	// Clip data values
@@ -25,7 +26,7 @@ void level_meter(chanend c_dc, unsigned frBufNo, unsigned data[], unsigned N, un
 		// Get the color for this row
 		colorIndex = r/divFact;
 		if (colorIndex==LEVEL_METER_NCOLORS) colorIndex--;
-		color = level_meter_colors[colorIndex];
+		color = colors[colorIndex];
 
 		for (unsigned c=0; c<LCD_WIDTH; c++){
 			int dataIndex = c*N/LCD_WIDTH;
