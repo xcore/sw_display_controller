@@ -1,8 +1,8 @@
+.. _sec_hardware:
+
 
 Recommended Hardware
 ====================
-
-.. _sec_hardware:
 
 
 This module may be evaluated using the Slicekit Modular Development Platform, available from digikey. Required board SKUs are:

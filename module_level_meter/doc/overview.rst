@@ -16,9 +16,9 @@ Memory requirements
 +------------------+---------------+
 | Resource         | Usage         |
 +==================+===============+
-| Stack            |      bytes    |
+| Data             |  1520 bytes   |
 +------------------+---------------+
-| Program          |       bytes   |
+| Program          |  2160 bytes   |
 +------------------+---------------+
 
 Resource requirements
@@ -26,13 +26,13 @@ Resource requirements
 +--------------+-------+
 | Resource     | Usage |
 +==============+=======+
-| Channels     |       |
+| Channels     |   1   |
 +--------------+-------+
-| Timers       |       |
+| Timers       |   0   |
 +--------------+-------+
-| Clocks       |       |
+| Clocks       |   0   |
 +--------------+-------+
-| Threads      |       |
+| Cores        |   1   |
 +--------------+-------+
 
 

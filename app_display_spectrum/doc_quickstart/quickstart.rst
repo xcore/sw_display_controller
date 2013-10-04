@@ -4,6 +4,7 @@ Display Spectrum Quickstart Guide
 ==========================================
 
 In this demonstration we use the following hardware and software:
+
   * XP-SKC-U16 Slicekit 
   * XA-SK-SCR480 Slice Card,
   * XA-SK-SDRAM Slice Card,

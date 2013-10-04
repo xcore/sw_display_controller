@@ -156,8 +156,7 @@
 								<option id = "com.xmos.xc.compiler.option.include.paths.72128596" name="com.xmos.xc.compiler.option.include.paths" superClass="com.xmos.xc.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include/gcc&quot;"/>
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/.settings}&quot;' />
-<listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
@@ -167,7 +166,6 @@
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src/devices}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd}&quot;' />
-<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/.settings}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
@@ -287,8 +285,7 @@
 								<option id = "com.xmos.c.compiler.option.include.paths.83785375" name="com.xmos.c.compiler.option.include.paths" superClass="com.xmos.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include/gcc&quot;"/>
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/.settings}&quot;' />
-<listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
@@ -298,7 +295,6 @@
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src/devices}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd}&quot;' />
-<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/.settings}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
@@ -424,8 +420,7 @@
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include/gcc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include/c++/4.2.1&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include/c++/4.2.1/xcore-xmos-elf&quot;"/>
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/.settings}&quot;' />
-<listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
@@ -435,7 +430,6 @@
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src/devices}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd}&quot;' />
-<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/.settings}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
@@ -697,8 +691,7 @@
 								<option id = "com.xmos.xc.compiler.option.include.paths.81903775" name="com.xmos.xc.compiler.option.include.paths" superClass="com.xmos.xc.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include/gcc&quot;"/>
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/.settings}&quot;' />
-<listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
@@ -708,7 +701,6 @@
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src/devices}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd}&quot;' />
-<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/.settings}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
@@ -828,8 +820,7 @@
 								<option id = "com.xmos.c.compiler.option.include.paths.27053677" name="com.xmos.c.compiler.option.include.paths" superClass="com.xmos.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include/gcc&quot;"/>
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/.settings}&quot;' />
-<listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
@@ -839,7 +830,6 @@
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src/devices}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd}&quot;' />
-<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/.settings}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
@@ -965,8 +955,7 @@
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include/gcc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include/c++/4.2.1&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include/c++/4.2.1/xcore-xmos-elf&quot;"/>
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/.settings}&quot;' />
-<listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_spectrum}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
@@ -976,7 +965,6 @@
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src/devices}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_lcd}&quot;' />
-<listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/.settings}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_level_meter}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_sdram/src/PINOUT_V0}&quot;' />
