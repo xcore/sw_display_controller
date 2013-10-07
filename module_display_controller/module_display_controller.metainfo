@@ -97,10 +97,10 @@ api = {
 	'display_controller_wait_until_idle_p',
 	'display_controller_frame_buffer_commit',
 	'display_controller_frame_buffer_init',
-	'display_controller_transition_wipe',
-	'display_controller_transition_slide',
-	'display_controller_transition_roll',
-	'display_controller_transition_dither',
-	'display_controller_transition_alpha_blend'
+	'transition_wipe',
+	'transition_slide',
+	'transition_roll',
+	'transition_dither',
+	'transition_alpha_blend'
 }
 

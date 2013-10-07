@@ -4,15 +4,15 @@
         <component description = "A full Display Controller application for driving the XA-Sk-480 LCD in conjunction with the SDRAM Controller and LCD Driver components." type = "demoCode" scope = "Example" path = "app_display_controller_demo" local = "false" id = "app_display_controller_demo" name = "Display Controller Demo">
             <board>XA-SK-SCR480</board>
             <board>XA-SK-SDRAM</board>
-            <componentDependency version = "1.0.1">module_sdram</componentDependency>
-            <componentDependency version = "1.1.0">module_lcd</componentDependency>
-            <componentDependency version = "2.2.0">module_i2c_master</componentDependency>
-            <componentDependency version = "2.2.0">module_i2c_master</componentDependency>
-            <componentDependency version = "1.0.1">module_sdram</componentDependency>
-            <componentDependency version = "1.1.0">module_lcd</componentDependency>
-            <componentDependency version = "1.0.3">module_display_controller</componentDependency>
-            <componentDependency version = "1.1.0">module_touch_controller_lib</componentDependency>
             <componentDependency version = "1.0.3">module_slicekit_support</componentDependency>
+            <componentDependency version = "1.1.0">module_touch_controller_lib</componentDependency>
+            <componentDependency version = "1.0.1">module_sdram</componentDependency>
+            <componentDependency version = "2.2.0">module_i2c_master</componentDependency>
+            <componentDependency version = "1.0.3">module_display_controller</componentDependency>
+            <componentDependency version = "1.1.0">module_lcd</componentDependency>
+            <componentDependency version = "1.0.1">module_sdram</componentDependency>
+            <componentDependency version = "1.1.0">module_lcd</componentDependency>
+            <componentDependency version = "2.2.0">module_i2c_master</componentDependency>
             <keyword>LCD</keyword>
             <keyword>Display</keyword>
             <keyword>Framebuffer</keyword>
@@ -21,12 +21,12 @@
         <component description = "A demonstration of displaying spectrum of simulated signal on LCD" type = "demoCode" scope = "Example" path = "app_display_spectrum" local = "false" id = "app_display_spectrum" name = "Display Spectrum Demo">
             <board>XA-SK-SCR480</board>
             <board>XA-SK-SDRAM</board>
-            <componentDependency version = "1.0.1">module_sdram</componentDependency>
-            <componentDependency>module_fft_simple</componentDependency>
             <componentDependency version = "1.0.3">module_display_controller</componentDependency>
             <componentDependency version = "1.0.3">module_level_meter</componentDependency>
             <componentDependency version = "1.0.3">module_display_controller</componentDependency>
+            <componentDependency>module_fft_simple</componentDependency>
             <componentDependency version = "1.1.0">module_lcd</componentDependency>
+            <componentDependency version = "1.0.1">module_sdram</componentDependency>
             <keyword>FFT</keyword>
             <keyword>signal</keyword>
             <keyword>LCD</keyword>
@@ -35,15 +35,15 @@
         <component description = "A demonstration of displaying spectrum of an analog signal fed to the ADC of xCORE-USB series XMOS device on LCD" type = "demoCode" scope = "Example" path = "app_display_spectrum_from_adc" local = "false" id = "app_display_spectrum_from_adc" name = "Display Spectrum from ADC Demo">
             <board>XA-SK-SCR480</board>
             <board>XA-SK-SDRAM</board>
-            <componentDependency version = "1.1.0">module_lcd</componentDependency>
-            <componentDependency version = "1.0.3">module_level_meter</componentDependency>
-            <componentDependency version = "1.0.3">module_display_controller</componentDependency>
             <componentDependency>module_fft_simple</componentDependency>
-            <componentDependency version = "1.0.1">module_sdram</componentDependency>
-            <componentDependency version = "1.0.0">module_usb_tile_support</componentDependency>
+            <componentDependency version = "1.0.3">module_level_meter</componentDependency>
             <componentDependency version = "1.0.3">module_logging</componentDependency>
             <componentDependency version = "1.0.3">module_display_controller</componentDependency>
             <componentDependency version = "1.0.3">module_xassert</componentDependency>
+            <componentDependency version = "1.0.0">module_usb_tile_support</componentDependency>
+            <componentDependency version = "1.0.3">module_display_controller</componentDependency>
+            <componentDependency version = "1.1.0">module_lcd</componentDependency>
+            <componentDependency version = "1.0.1">module_sdram</componentDependency>
             <keyword>FFT</keyword>
             <keyword>signal</keyword>
             <keyword>LCD</keyword>
@@ -52,8 +52,8 @@
         <component name = "Display Controller" type = "component" buildresults_path = "module_display_controller/.module_display_controller.buildinfo" scope = "General Use" path = "module_display_controller" metainfo_path = "module_display_controller/module_display_controller.metainfo" local = "false" id = "module_display_controller" description = "Display Controller component for driving LCDs with an RGB 565 interface up to 800x600 pixels with a managed SDRAM image buffer.">
             <board>XA-SK-SCR480</board>
             <board>XA-SK-SDRAM</board>
-            <componentDependency version = "1.0.1">module_sdram</componentDependency>
             <componentDependency version = "1.1.0">module_lcd</componentDependency>
+            <componentDependency version = "1.0.1">module_sdram</componentDependency>
             <keyword>LCD</keyword>
             <keyword>TFT</keyword>
             <keyword>RGB565</keyword>
@@ -63,9 +63,9 @@
         <component name = "Level Meter Display" type = "component" buildresults_path = "module_level_meter/.module_level_meter.buildinfo" scope = "General Use" path = "module_level_meter" metainfo_path = "module_level_meter/module_level_meter.metainfo" local = "false" id = "module_level_meter" description = "Level meter display component.">
             <board>XA-SK-SCR480</board>
             <board>XA-SK-SDRAM</board>
-            <componentDependency version = "1.0.1">module_sdram</componentDependency>
             <componentDependency version = "1.0.3">module_display_controller</componentDependency>
             <componentDependency version = "1.1.0">module_lcd</componentDependency>
+            <componentDependency version = "1.0.1">module_sdram</componentDependency>
             <keyword>LCD</keyword>
             <keyword>RGB565</keyword>
             <keyword>Display</keyword>
