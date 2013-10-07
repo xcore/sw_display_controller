@@ -1,7 +1,7 @@
 .. _Display_Spectrum_Quickstart:
 
 Display Spectrum Quickstart Guide
-==========================================
+=================================
 
 In this demonstration we use the following hardware and software:
 
