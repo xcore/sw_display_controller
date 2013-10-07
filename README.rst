@@ -1,7 +1,7 @@
 Display Controller Repository
 .............................
 
-:Latest release: 1.0.3rc1
+:Latest release: 1.1.0beta0
 :Maintainer: andrewstanfordjason
 :Description: Modules for driving parallel RGB displays in conjunction with sdram and lcd components. The main module here takes care of framebuffer management.
 
@@ -34,8 +34,11 @@ Issues may be submitted via the Issues tab in this github repo. Response to any 
 Required software (dependencies)
 ================================
 
+  * sc_i2c (git@github.com:xcore/sc_i2c.git)
+  * sc_periph (git://github.com/xcore/sc_periph)
+  * sc_slicekit_support (https://github.com/xcore/sc_slicekit_support.git)
   * sc_lcd (git@github.com:xcore/sc_lcd.git)
   * sc_sdram_burst (git@github.com:xcore/sc_sdram_burst.git)
   * sc_util (git@github.com:xcore/sc_util)
-  * sc_i2c (git@github.com:xcore/sc_i2c.git)
+  * sc_dsp_transforms (https://github.com/xcore/sc_dsp_transforms.git)
 
