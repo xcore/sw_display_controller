@@ -86,21 +86,21 @@ files = {
 }
 api = {
 	'display_controller',
-	'image_read_line',
-	'image_read_line_p',
-	'image_write_line',
-	'image_write_line_p',
-	'image_read_partial_line',
-	'image_read_partial_line_p',
-	'register_image',
-	'wait_until_idle',
-	'wait_until_idle_p',
-	'frame_buffer_commit',
-	'frame_buffer_init',
-	'transition_wipe',
-	'transition_slide',
-	'transition_roll',
-	'transition_dither',
-	'transition_alpha_blend'
+	'display_controller_image_read_line',
+	'display_controller_image_read_line_p',
+	'display_controller_image_write_line',
+	'display_controller_image_write_line_p',
+	'display_controller_image_read_partial_line',
+	'display_controller_image_read_partial_line_p',
+	'display_controller_register_image',
+	'display_controller_wait_until_idle',
+	'display_controller_wait_until_idle_p',
+	'display_controller_frame_buffer_commit',
+	'display_controller_frame_buffer_init',
+	'display_controller_transition_wipe',
+	'display_controller_transition_slide',
+	'display_controller_transition_roll',
+	'display_controller_transition_dither',
+	'display_controller_transition_alpha_blend'
 }
 

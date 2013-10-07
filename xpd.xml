@@ -5,14 +5,14 @@
             <board>XA-SK-SCR480</board>
             <board>XA-SK-SDRAM</board>
             <componentDependency version = "1.0.1">module_sdram</componentDependency>
-            <componentDependency version = "1.0.3">module_display_controller</componentDependency>
+            <componentDependency version = "1.1.0">module_lcd</componentDependency>
             <componentDependency version = "2.2.0">module_i2c_master</componentDependency>
             <componentDependency version = "2.2.0">module_i2c_master</componentDependency>
-            <componentDependency version = "1.1.0">module_lcd</componentDependency>
-            <componentDependency version = "1.1.0">module_lcd</componentDependency>
-            <componentDependency version = "1.0.3">module_slicekit_support</componentDependency>
-            <componentDependency version = "1.1.0">module_touch_controller_lib</componentDependency>
             <componentDependency version = "1.0.1">module_sdram</componentDependency>
+            <componentDependency version = "1.1.0">module_lcd</componentDependency>
+            <componentDependency version = "1.0.3">module_display_controller</componentDependency>
+            <componentDependency version = "1.1.0">module_touch_controller_lib</componentDependency>
+            <componentDependency version = "1.0.3">module_slicekit_support</componentDependency>
             <keyword>LCD</keyword>
             <keyword>Display</keyword>
             <keyword>Framebuffer</keyword>
@@ -22,10 +22,10 @@
             <board>XA-SK-SCR480</board>
             <board>XA-SK-SDRAM</board>
             <componentDependency version = "1.0.1">module_sdram</componentDependency>
-            <componentDependency version = "1.0.3">module_display_controller</componentDependency>
             <componentDependency>module_fft_simple</componentDependency>
             <componentDependency version = "1.0.3">module_display_controller</componentDependency>
             <componentDependency version = "1.0.3">module_level_meter</componentDependency>
+            <componentDependency version = "1.0.3">module_display_controller</componentDependency>
             <componentDependency version = "1.1.0">module_lcd</componentDependency>
             <keyword>FFT</keyword>
             <keyword>signal</keyword>
@@ -35,15 +35,15 @@
         <component description = "A demonstration of displaying spectrum of an analog signal fed to the ADC of xCORE-USB series XMOS device on LCD" type = "demoCode" scope = "Example" path = "app_display_spectrum_from_adc" local = "false" id = "app_display_spectrum_from_adc" name = "Display Spectrum from ADC Demo">
             <board>XA-SK-SCR480</board>
             <board>XA-SK-SDRAM</board>
-            <componentDependency version = "1.0.3">module_xassert</componentDependency>
             <componentDependency version = "1.1.0">module_lcd</componentDependency>
-            <componentDependency version = "1.0.3">module_display_controller</componentDependency>
-            <componentDependency version = "1.0.1">module_sdram</componentDependency>
-            <componentDependency version = "1.0.3">module_display_controller</componentDependency>
             <componentDependency version = "1.0.3">module_level_meter</componentDependency>
-            <componentDependency version = "1.0.3">module_logging</componentDependency>
+            <componentDependency version = "1.0.3">module_display_controller</componentDependency>
             <componentDependency>module_fft_simple</componentDependency>
+            <componentDependency version = "1.0.1">module_sdram</componentDependency>
             <componentDependency version = "1.0.0">module_usb_tile_support</componentDependency>
+            <componentDependency version = "1.0.3">module_logging</componentDependency>
+            <componentDependency version = "1.0.3">module_display_controller</componentDependency>
+            <componentDependency version = "1.0.3">module_xassert</componentDependency>
             <keyword>FFT</keyword>
             <keyword>signal</keyword>
             <keyword>LCD</keyword>
@@ -97,7 +97,7 @@
         <version>1.0.0rc1</version>
     </dependency>
     <dependency repo = "sc_dsp_transforms">
-        <githash>f801f4b8e8a9f243ddb266b5d101917935569008</githash>
+        <githash>919b6cfa2b3d14654d667a6c0fde174bd6a57205</githash>
         <uri>https://github.com/xcore/sc_dsp_transforms.git</uri>
     </dependency>
     <description>Modules for driving parallel RGB displays in conjunction with sdram and lcd components. The main module here takes care of framebuffer management.</description>
