@@ -22,13 +22,13 @@ LAVENDER = 0xFF3C
 };
 
 /** This function renders the level meter display of a given data sequence.
- * It connects to  display controller for storing the rendered image frame. 
+ * It connects to  display controller for storing the rendered image frame.
  *
- * \param c_dc    channel connecting display controller. 
+ * \param c_dc    channel connecting display controller.
  *
- * \param[in] frBufNo    index of frame buffer to be updated. 
+ * \param[in] frBufNo    index of frame buffer to be updated.
  *
- * \param[in]    data   array containing magnitude spectrum values. 
+ * \param[in]    data   array containing magnitude spectrum values.
  *
  * \param[in]  N   number of data values to be displayed as bars.
  *

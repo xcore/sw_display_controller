@@ -97,7 +97,7 @@
         <version>1.0.0rc1</version>
     </dependency>
     <dependency repo = "sc_dsp_transforms">
-        <githash>43641fba3bf6d34bff33cf403c4b1ffc3c00259a</githash>
+        <githash>f801f4b8e8a9f243ddb266b5d101917935569008</githash>
         <uri>https://github.com/xcore/sc_dsp_transforms.git</uri>
     </dependency>
     <description>Modules for driving parallel RGB displays in conjunction with sdram and lcd components. The main module here takes care of framebuffer management.</description>
