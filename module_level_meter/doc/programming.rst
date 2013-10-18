@@ -1,9 +1,9 @@
-Programming Guide
+Programming guide
 =================
 
 This section provides information on how to create an application using ``level_meter`` API.
 
-Includes and Configuration
+Includes and configuration
 --------------------------
 
 The application needs to include ``level_meter.h``. A configuration file ``level_meter_conf.h`` should be placed in the application directory. The color palette for the level meter display is defined in the configuration file.
@@ -28,3 +28,9 @@ The level meter module uses the APIs of display controller module. A simple appl
   }
 
 ``c_dc`` is the channel connecting display controller. ``data`` is the array of unsigned data values to be displayed. ``N`` is the number of data values.
+
+Software requirements
+---------------------
+
+The module is built on xTIMEcomposer version 13
+The module can be used in version 13 or any higher version of xTIMEcomposer.

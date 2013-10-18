@@ -1,10 +1,10 @@
-Display Controller Component
+Display controller component
 ============================
 
 .. toctree::
 
    Overview <overview>
-   Hardware Requirements <hw>
+   Hardware requirements <hw>
    API <api>
-   Programming Guide <programming>
-   Example Applications <examples>
+   Programming guide <programming>
+   Example applications <examples>

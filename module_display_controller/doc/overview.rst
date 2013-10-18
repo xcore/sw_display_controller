@@ -39,5 +39,5 @@ Resource requirements
 Performance
 ----------- 
 
-The achievable effective bandwidth varies according to the avaliable XCore MIPS. The maximum pixel clock supported is 25MHz.
+The achievable effective bandwidth varies according to the available xCORE MIPS. The maximum pixel clock supported is 25MHz.
 

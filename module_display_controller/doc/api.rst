@@ -9,7 +9,7 @@ To build a project including the ``module_display_controller`` the following com
 
 The below section details the APIs in the application. For details about the LCD and SDRAM APIs please refer to the respective repositories.
 
-Configuration Defines
+Configuration defines
 ---------------------
 
 The ``module_display_controller`` can be configured via the header ``display_controller_conf.h``. The module requires nothing to be additionally defined however any of the defines can be overridden by adding the header ``display_controller_conf.h`` to the application project and adding the define that needs overridding. The possible defines are:
@@ -34,6 +34,7 @@ The``module_display_controller`` functionality is defined in
 The display controller handles the double buffering of the image data to the LCD as a real time service and manages the I/O to the SDRAM as a non-real time service. 
 
 The display controller API is as follows:
+
 .. doxygenfunction:: display_controller
 .. doxygenfunction:: display_controller_image_read_line
 .. doxygenfunction:: display_controller_image_read_line_p
@@ -48,6 +49,7 @@ The display controller API is as follows:
 .. doxygenfunction:: display_controller_frame_buffer_init
 
 The transition API is as follows:
+
 .. doxygenfunction:: transition_wipe
 .. doxygenfunction:: transition_slide
 .. doxygenfunction:: transition_roll

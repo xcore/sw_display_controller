@@ -10,7 +10,7 @@ the following modules are required:
 	
 The section below details the configuration defines and the APIs used in the application.
 
-Configuration Defines
+Configuration defines
 ---------------------
 
 The color palette to be used for the level meter display can be
