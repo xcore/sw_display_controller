@@ -1,7 +1,7 @@
 Display Controller Repository
 .............................
 
-:Latest release: 1.1.0beta4
+:Latest release: 1.1.0beta5
 :Maintainer: andrewstanfordjason
 :Description: Modules for driving parallel RGB displays in conjunction with sdram and lcd components. The main module here takes care of framebuffer management.
 
