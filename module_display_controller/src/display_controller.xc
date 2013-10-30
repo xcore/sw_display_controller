@@ -98,17 +98,17 @@ static inline void next_lcd_line(chanend c_client, chanend c_lcd,
       } else {
         s.next_fb_image_index = NONE;
       }
-    }
   }
-  if(s.sdram_in_use) {
-    //TODO pass the correct buffer
-    sdram_wait_until_idle(c_sdram, s.lcd_buffer_pointers[s.head]);
-  }
+}
+if(s.sdram_in_use) {
+  //TODO pass the correct buffer
+  sdram_wait_until_idle(c_sdram, s.lcd_buffer_pointers[s.head]);
+}
 
-  sdram_buffer_read(c_sdram, bank, start_row, start_col, word_count, s.lcd_buffer_pointers[s.head]);
-  s.sdram_in_use = 1;
+sdram_buffer_read(c_sdram, bank, start_row, start_col, word_count, s.lcd_buffer_pointers[s.head]);
+s.sdram_in_use = 1;
 
-  s.head = (s.head+1)%LCD_BUFFER_DEPTH;
+s.head = (s.head+1)%LCD_BUFFER_DEPTH;
 }
 
 static void client_command(char cmd, chanend c_client, chanend c_lcd,
