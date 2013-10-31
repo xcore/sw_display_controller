@@ -7,7 +7,7 @@ sw_display_controller demo : Quick Start Guide
 ----------------------------------------------
 
 In this demonstration we use the following hardware and software:
-  * XP-SKC-L2 Slicekit 
+  * XP-SKC-L16 sliceKIT 
   * XA-SK-SCR480 Slice Card,
   * XA-SK-SDRAM Slice Card,
   * module_sdram,
@@ -24,18 +24,18 @@ update the LCD line buffer and how to use the touch screen for interactive displ
 Hardware Setup
 ++++++++++++++
 
-The XP-SKC-L2 Slicekit Core board has four slots with edge connectors: ``SQUARE``, ``CIRCLE``, ``TRIANGLE`` 
+The XP-SKC-L16 sliceKIT Core board has four slots with edge connectors: ``SQUARE``, ``CIRCLE``, ``TRIANGLE`` 
 and ``STAR``. 
 
 To setup up the system:
 
-   #. Connect XA-SK-SDRAM Slice Card to the XP-SKC-L2 Slicekit Core board using the connector marked with the ``STAR``.
-   #. Connect XA-SK-SCR480 Slice Card to the XP-SKC-L2 Slicekit Core board using the connector marked with the ``TRIANGLE``.
-   #. Connect the XTAG Adapter to Slicekit Core board, and connect XTAG-2 to the adapter. 
-   #. Connect the XTAG-2 to host PC. Note that the USB cable is not provided with the Slicekit starter kit.
-   #. Set the ``XMOS LINK`` to ``OFF`` on the XTAG Adapter(XA-SK-XTAG2).
+   #. Connect XA-SK-SDRAM Slice Card to the XP-SKC-L16 sliceKIT Core board using the connector marked with the ``STAR``.
+   #. Connect XA-SK-SCR480 Slice Card to the XP-SKC-L16 sliceKIT Core board using the connector marked with the ``TRIANGLE``.
+   #. Connect the xTAG Adapter to sliceKIT Core board, and connect xTAG-2 to the adapter. 
+   #. Connect the xTAG-2 to host PC. Note that the USB cable is not provided with the sliceKIT starter kit.
+   #. Set the ``xCONNECT LINK`` to ``OFF`` on the xTAG Adapter(XA-SK-XTAG2).
    #. Ensure the jumper on the XA-SK-SCR480 is bridged if the back light is required.
-   #. Switch on the power supply to the Slicekit Core board.
+   #. Switch on the power supply to the sliceKIT Core board.
 
 .. figure:: images/hardware_setup.jpg
    :width: 400px
@@ -59,12 +59,12 @@ Note that the Developer Column in the xTIMEcomposer on the right hand side of yo
 Run the Application
 +++++++++++++++++++
 
-Now that the application has been compiled, the next step is to run it on the Slicekit Core Board using the tools to load the application over JTAG (via the XTAG2 and Xtag Adapter card) into the xCORE multicore microcontroller.
+Now that the application has been compiled, the next step is to run it on the sliceKIT Core Board using the tools to load the application over JTAG (via the xTAG-2 and xTAG Adapter card) into the xCORE multicore microcontroller.
 
    #. Select the file ``app_display_controller_demo.xc`` in the ``app_display_controller_demo`` project from the Project Explorer.
    #. Click on the ``Run`` icon (the white arrow in the green circle). 
-   #. At the ``Select Device`` dialog select ``XMOS XTAG-2 connect to L1[0..1]`` and click ``OK``.
-   #. Wait until the images have loaded over the XTAG connector from the host, this should take approximately 21 seconds.
+   #. At the ``Select Device`` dialog select ``XMOS xTAG-2 connect to L1[0..1]`` and click ``OK``.
+   #. Wait until the images have loaded over the xTAG connector from the host, this should take approximately 21 seconds.
    #. There should be a series of 6 images for transition from one to another.
    #. Once the first image is displayed, a message is displayed on the console to prompt the user to touch any of the corners or the center of LCD screen for watching different transition effects.
 

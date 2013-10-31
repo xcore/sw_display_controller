@@ -7,13 +7,13 @@ Evaluation platforms
 Recommended hardware
 --------------------
 
-SliceKIT
+sliceKIT
 ++++++++
 
 This module may be evaluated using the sliceKIT modular development platform, available from digikey. Required board SKUs are:
 
    * XP-SKC-L2 (SliceKIT L2 Core Board) 
-   * XA-SK-SCR480 plus XA-SK-XTAG2 (SliceKIT xTAG adaptor) 
+   * XA-SK-SCR480 plus XA-SK-XTAG2 (sliceKIT xTAG adaptor) 
 
 Demonstration applications
 --------------------------
@@ -28,7 +28,7 @@ This combination demo employs the ``module_lcd`` along with the ``module_sdram``
 
 Required board SKUs for this demo are:
 
-   * XP-SKC-L2 (SliceKIT L2 Core Board) plus XA-SK-XTAG2 (SliceKIT xTAG adaptor) 
+   * XP-SKC-L16 (sliceKIT L16 Core Board) plus XA-SK-XTAG2 (sliceKIT xTAG adaptor) 
    * XA-SK-SDRAM
    * XA-SK-SCR480 (which includes a 480x272 color touch screen)  
 

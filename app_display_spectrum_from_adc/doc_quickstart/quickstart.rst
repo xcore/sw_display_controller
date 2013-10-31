@@ -5,7 +5,7 @@ Display Spectrum from ADC Quickstart Guide
 
 In this demonstration we use the following hardware and software:
 
-  * XP-SKC-U16 Slicekit 
+  * XP-SKC-U16 sliceKIT 
   * XA-SK-SCR480 Slice Card,
   * XA-SK-SDRAM Slice Card,
   * XA-SK-MIXED SIGNAL Slice Card,
@@ -23,19 +23,19 @@ together to create a level-meter kind of spectral display on an LCD for an analo
 Hardware Setup
 ++++++++++++++
 
-The XP-SKC-U16 Slicekit Core board has four slots with edge connectors: ``DIAMOND``, ``SQUARE``, ``A`` and ``U``. 
+The XP-SKC-U16 sliceKIT Core board has four slots with edge connectors: ``DIAMOND``, ``SQUARE``, ``A`` and ``U``. 
 
 To setup up the system:
 
-   #. Connect XA-SK-SDRAM Slice Card to the XP-SKC-U16 Slicekit Core board using the connector marked with ``SQUARE``.
-   #. Connect XA-SK-SCR480 Slice Card with LCD to the XP-SKC-U16 Slicekit Core board using the connector marked with ``DIAMOND``.
-   #. Connect XA-SK-MIXED SIGNAL Slice Card to the XP-SKC-U16 Slicekit Core board using the connector marked with ``A``.
+   #. Connect XA-SK-SDRAM Slice Card to the XP-SKC-U16 sliceKIT Core board using the connector marked with ``SQUARE``.
+   #. Connect XA-SK-SCR480 Slice Card with LCD to the XP-SKC-U16 sliceKIT Core board using the connector marked with ``DIAMOND``.
+   #. Connect XA-SK-MIXED SIGNAL Slice Card to the XP-SKC-U16 sliceKIT Core board using the connector marked with ``A``.
    #. Give the two channels of audio input from a PC or a mobile to pins 1 and 2 of J2 on the mixed signal slice card using a suitable cable. The ground is connected to pin 4 of J3.
-   #. Connect the XTAG-2 to Slicekit Core board. 
-   #. Connect the XTAG-2 to host PC. Note that the USB cable is not provided with the Slicekit starter kit.
-   #. Set the ``XMOS LINK`` to ``OFF`` on the Slicekit Core board.
+   #. Connect the xTAG-2 to sliceKIT Core board. 
+   #. Connect the xTAG-2 to host PC. Note that the USB cable is not provided with the sliceKIT starter kit.
+   #. Set the ``xCONNECT LINK`` to ``OFF`` on the sliceKIT Core board.
    #. Ensure the jumper on the XA-SK-SCR480 is bridged if the back light is required.
-   #. Switch on the power supply to the Slicekit Core board.
+   #. Switch on the power supply to the sliceKIT Core board.
 
 .. figure:: images/hardware_setup.jpg
    :width: 10cm
@@ -59,11 +59,11 @@ Note that the Developer Column in the xTIMEcomposer on the right hand side of yo
 Run the Application
 +++++++++++++++++++
 
-Now that the application has been compiled, the next step is to run it on the Slicekit Core Board using the tools to load the application over JTAG (via the XTAG2) into the xCORE multicore microcontroller.
+Now that the application has been compiled, the next step is to run it on the sliceKIT Core Board using the tools to load the application over JTAG (via the xTAG-2) into the xCORE multicore microcontroller.
 
    #. Select ``app_display_spectrum_from_adc`` project from the Project Explorer.
    #. Click on the ``Run`` icon (the white arrow in the green circle). 
-   #. At the ``Select Device`` dialog select ``XMOS XTAG-2 connect to L1[0..1]`` and click ``OK``.
+   #. At the ``Select Device`` dialog select ``XMOS xTAG-2 connect to L1[0..1]`` and click ``OK``.
    #. Play an audio in the PC or mobile. A test audio file containing a sine sweep from 20 to 20kHz is available in ``app_display_spectrum_from_adc/test_data``.
    #. The spectra of segments of mixed signal of two audio channels are displayed on LCD. 
    #. Try changing the volume of the audio input and notice the change in the height of spectral components. 

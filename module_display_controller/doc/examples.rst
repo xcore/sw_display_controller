@@ -14,8 +14,8 @@ Application notes
 Getting started
 +++++++++++++++
 
-   #. Plug the XA-SK-LCD Slice Card into the 'TRIANGLE' slot of the Slicekit Core Board 
-   #. Plug the XA-SK-SDRAM Slice Card into the 'STAR' slot of the SliceKIT Core Board 
+   #. Plug the XA-SK-LCD Slice Card into the 'TRIANGLE' slot of the sliceKIT Core Board 
+   #. Plug the XA-SK-SDRAM Slice Card into the 'STAR' slot of the sliceKIT Core Board 
    #. Open ``app_display_controller_demo.xc`` and build the project.
    #. Run the program ensuring that it is run from the project directory where the TGA images are.
 
