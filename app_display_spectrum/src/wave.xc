@@ -14,7 +14,7 @@ void sine_wave(streaming chanend c_sine, short maxSampPerCyc)
 	while (1){
 		for (int i=1; i<=maxSampPerCyc; i++){
 			data = 2048*sin(2*PI*i/maxSampPerCyc);
-			t when timerafter(time+(XS1_TIMER_HZ/SAMP_FR.EQ)):> time;
+			t when timerafter(time+(XS1_TIMER_HZ/SAMP_FREQ)):> time;
 			c_sine <: data;
 		}
 	}
