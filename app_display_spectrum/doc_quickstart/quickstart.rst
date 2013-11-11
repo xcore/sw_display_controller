@@ -44,6 +44,7 @@ Import and Build the Application
 
    #. Open xTIMEcomposer and check that it is operating in online mode. Open the edit perspective (Window->Open Perspective->XMOS Edit).
    #. Locate the ``Display Spectrum Demo`` item in the xSOFTip pane on the bottom left of the window and drag it into the Project Explorer window in the xTIMEcomposer. This will also cause the modules on which this application depends to be imported as well. 
+   #. Include ``#define LCD_USE_32_BIT_DATA_PORT 1`` in ``lcd.xc`` located in ``module_lcd``.
    #. Click on the ``app_display_spectrum`` item in the Explorer pane then click on the build icon (hammer) in xTIMEcomposer. Check the console window to verify that the application has built successfully.
    #. There will be quite a number of warnings that ``bidirectional buffered port not supported in hardware``. These can be safely ignored for this component.
 
