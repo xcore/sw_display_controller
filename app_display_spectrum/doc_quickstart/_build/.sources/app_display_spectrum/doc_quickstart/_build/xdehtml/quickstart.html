@@ -1,0 +1,116 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Display Spectrum Quickstart Guide &mdash; Display Spectrum Quickstart Guide v documentation</title>
+
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/globals.css"  type="text/css" />
+    <link rel="stylesheet" href="_static/ui.css" type="text/css" />
+    <link rel="stylesheet" href="_static/app.css"  type="text/css" />
+    <link rel="stylesheet" href="_static/mobile.css"  type="text/css" />
+    <link rel="stylesheet" href="_static/xde.css"
+    type="text/css" /><script type="text/javascript" src="_static/scripts.js"></script>
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Display Spectrum Quickstart Guide v documentation" href="index.html" /> 
+  </head>
+  <body class="xde indented-content" onload="prepareContents();">  
+          <div id="body">
+             <div id="content">
+             <h1>Display Spectrum Quickstart Guide</h1>
+
+             <div class='columns'>
+            
+  <p>In this demonstration we use the following hardware and software:</p>
+<blockquote>
+<div><ul>
+<li>XP-SKC-U16 sliceKIT</li>
+<li>XA-SK-SCR480 Slice Card,</li>
+<li>XA-SK-SDRAM Slice Card,</li>
+<li>XA-SK-MIXED SIGNAL Slice Card,</li>
+<li>module_level_meter,</li>
+<li>module_fft_simple,</li>
+<li>module_display_controller,</li>
+<li>module_sdram,</li>
+<li>module_lcd,</li>
+</ul>
+</div></blockquote>
+<p>together to create a level-meter kind of spectral display on an LCD for a simulated signal. This application demonstrates real-time rendering and display of spectrum by taking short-time fourier transform.</p>
+<h2 class="topic" id="hardware-setup">Hardware Setup</h2>
+<div><p>The XP-SKC-U16 sliceKIT Core board has four slots with edge connectors: <tt class="docutils literal"><span class="pre">DIAMOND</span></tt>, <tt class="docutils literal"><span class="pre">SQUARE</span></tt>, <tt class="docutils literal"><span class="pre">A</span></tt> and <tt class="docutils literal"><span class="pre">U</span></tt>.</p>
+<p>To setup up the system:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Connect XA-SK-SDRAM Slice Card to the XP-SKC-U16 sliceKIT Core board using the connector marked with <tt class="docutils literal"><span class="pre">SQUARE</span></tt>.</li>
+<li>Connect XA-SK-SCR480 Slice Card with LCD to the XP-SKC-U16 sliceKIT Core board using the connector marked with <tt class="docutils literal"><span class="pre">DIAMOND</span></tt>.</li>
+<li>Connect the xTAG-2 to sliceKIT Core board.</li>
+<li>Connect the xTAG-2 to host PC. Note that the USB cable is not provided with the sliceKIT starter kit.</li>
+<li>Set the <tt class="docutils literal"><span class="pre">xCONNECT</span> <span class="pre">LINK</span></tt> to <tt class="docutils literal"><span class="pre">OFF</span></tt> on the sliceKIT Core board.</li>
+<li>Ensure the jumper on the XA-SK-SCR480 is bridged if the back light is required.</li>
+<li>Switch on the power supply to the sliceKIT Core board.</li>
+</ol>
+</div></blockquote>
+<div align="center" class="figure">
+<div class="caption"><span>Hardware Setup for Display Spectrum Demo</span></div>
+<img alt="_images/hardware_setup.jpg" src="_images/hardware_setup.jpg" style="width: 10cm;" />
+</div>
+</div><h2 class="topic" id="import-and-build-the-application">Import and Build the Application</h2>
+<div><blockquote>
+<div><ol class="arabic simple">
+<li>Open xTIMEcomposer and check that it is operating in online mode. Open the edit perspective (Window-&gt;Open Perspective-&gt;XMOS Edit).</li>
+<li>Locate the <tt class="docutils literal"><span class="pre">Display</span> <span class="pre">Spectrum</span> <span class="pre">Demo</span></tt> item in the xSOFTip pane on the bottom left of the window and drag it into the Project Explorer window in the xTIMEcomposer. This will also cause the modules on which this application depends to be imported as well.</li>
+<li>Include <tt class="docutils literal"><span class="pre">#define</span> <span class="pre">LCD_USE_32_BIT_DATA_PORT</span> <span class="pre">1</span></tt> in <tt class="docutils literal"><span class="pre">lcd.xc</span></tt> located in <tt class="docutils literal"><span class="pre">module_lcd</span></tt>.</li>
+<li>Click on the <tt class="docutils literal"><span class="pre">app_display_spectrum</span></tt> item in the Explorer pane then click on the build icon (hammer) in xTIMEcomposer. Check the console window to verify that the application has built successfully.</li>
+<li>There will be quite a number of warnings that <tt class="docutils literal"><span class="pre">bidirectional</span> <span class="pre">buffered</span> <span class="pre">port</span> <span class="pre">not</span> <span class="pre">supported</span> <span class="pre">in</span> <span class="pre">hardware</span></tt>. These can be safely ignored for this component.</li>
+</ol>
+</div></blockquote>
+<p>For help in using xTIMEcomposer, try the xTIMEcomposer tutorial, which you can find by selecting Help-&gt;Tutorials from the xTIMEcomposer menu.</p>
+<p>Note that the Developer Column in the xTIMEcomposer on the right hand side of your screen provides information on the xSOFTip components you are using.</p>
+</div><h2 class="topic" id="run-the-application">Run the Application</h2>
+<div><p>Now that the application has been compiled, the next step is to run it on the sliceKIT Core Board using the tools to load the application over JTAG (via the xTAG-2) into the xCORE multicore microcontroller.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Select <tt class="docutils literal"><span class="pre">app_display_spectrum</span></tt> project from the Project Explorer.</li>
+<li>Click on the <tt class="docutils literal"><span class="pre">Run</span></tt> icon (the white arrow in the green circle).</li>
+<li>At the <tt class="docutils literal"><span class="pre">Select</span> <span class="pre">Device</span></tt> dialog select <tt class="docutils literal"><span class="pre">XMOS</span> <span class="pre">xTAG-2</span> <span class="pre">connect</span> <span class="pre">to</span> <span class="pre">L1[0..1]</span></tt> and click <tt class="docutils literal"><span class="pre">OK</span></tt>.</li>
+<li>The spectra of segments of mixed signal of two simulated chirp waveforms are displayed on LCD.</li>
+</ol>
+</div></blockquote>
+</div><h2 class="topic" id="next-steps">Next Steps</h2>
+<div><blockquote>
+<div><ol class="arabic simple">
+<li><tt class="docutils literal"><span class="pre">FFT_POINTS</span></tt> gives the number of signal samples taken for FFT computation. This decides the number of level meter bands which can be varied by varying <tt class="docutils literal"><span class="pre">FFT_POINTS</span></tt>. <tt class="docutils literal"><span class="pre">FFT_SINE</span></tt> is also varied accordingly.</li>
+<li>The colors of the level-meter display of spectrum can be changed in <tt class="docutils literal"><span class="pre">level_meter_conf.h</span></tt>.</li>
+<li>Different choices of simulated waveforms are available in <tt class="docutils literal"><span class="pre">main()</span></tt> function. Uncomment to try them.</li>
+</ol>
+</div></blockquote>
+</div>
+
+             </div>
+             </div>
+
+
+          </div>
+
+          <div>
+             <!--seealsos-->
+          </div>
+    <div class="footer">
+    </div>
+  </body>
+</html>

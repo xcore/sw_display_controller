@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <allbuildresults>
-<buildresults component="module_level_meter" packagename="xm-local-sw_display_controller(7c2908c4)" packageversion="7c2908c4" toolsversion="latest">
+<buildresults component="module_level_meter" packagename="xm-local-sw_display_controller(1d274ee1)" packageversion="1d274ee1" toolsversion="latest">
 <buildresult>
 <configuration>
 <parameter id="number_of_colors" value="1"/>
