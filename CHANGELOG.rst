@@ -1,9 +1,17 @@
-Display Controller Change Log
-=============================
+sw_display_controller Change Log
+================================
 
 1.1.0
 -----
   * Added module_level_meter and two apps on spectral display
+
+  * Changes to dependencies:
+
+    - sc_lcd: 1.1.0rc0 -> 1.1.1rc0
+
+      + Removed touch server
+      + Code clean up
+      + Renamed channels
 
 1.0.3
 -----
