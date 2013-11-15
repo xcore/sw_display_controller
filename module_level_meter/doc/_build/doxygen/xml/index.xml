@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.5.8">
+  <compound refid="level__meter_8h" kind="file"><name>level_meter.h</name>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed938370" kind="enum"><name>colors_rgb565</name></member>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed93837035d6719cb4d7577c031b3d79057a1b79" kind="enumvalue"><name>BLUE</name></member>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed938370a60bd322f93178d68184e30e162571ca" kind="enumvalue"><name>GREEN</name></member>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed938370e735a848bf82163a19236ead1c3ef2d2" kind="enumvalue"><name>YELLOW</name></member>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed938370f80f9a890089d211842d59625e561f88" kind="enumvalue"><name>RED</name></member>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed938370cb3539cc3e2dc09edbbd2a6f6ea002a0" kind="enumvalue"><name>TEAL</name></member>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed938370283fc479650da98250635b9c3c0e7e50" kind="enumvalue"><name>WHITE</name></member>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed938370afe71cad474c15ce63b300c470eef8cc" kind="enumvalue"><name>CYAN</name></member>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed93837056926c820ad72d0977e7ee44d9916e62" kind="enumvalue"><name>MAGENTA</name></member>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed938370a7790837e9c1f7cb78b55743b9a67623" kind="enumvalue"><name>GOLD</name></member>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed93837050ed784e75cbb9847f63059f10c85026" kind="enumvalue"><name>SALMON</name></member>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed938370f00022d1f7175a39f5db71641b8a0e31" kind="enumvalue"><name>CORAL</name></member>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed938370e0f2e5c3ef4074a8868c55d3b828a7da" kind="enumvalue"><name>TURQUOISE</name></member>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed9383707088400e4fa72e2239115e7c0b294ea4" kind="enumvalue"><name>VIOLET</name></member>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed938370bf9a8773f7a18577508f3dc1ccfb18f5" kind="enumvalue"><name>CHOCOLATE</name></member>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed938370bb3906da37f7294ab14276e3ddfabb13" kind="enumvalue"><name>PEACH</name></member>
+    <member refid="level__meter_8h_124bda008a71bc25425385565ed938370570ac6c18c76593b02fe5cfe17cd34cf" kind="enumvalue"><name>LAVENDER</name></member>
+    <member refid="level__meter_8h_1520420015e4b4764e7d8188eb2603d19" kind="function"><name>level_meter</name></member>
+  </compound>
+  <compound refid="dir_c7711acde031b422e964584af9e5c673" kind="dir"><name>_build/.doxygen/</name>
+  </compound>
+  <compound refid="dir_dcf76bd69efb90632747dc8a45de30f0" kind="dir"><name>_build/</name>
+  </compound>
+  <compound refid="dir_f4efc117eaf4bd310fc094277dec651c" kind="dir"><name>_build/.doxygen/src/</name>
+  </compound>
+</doxygenindex>

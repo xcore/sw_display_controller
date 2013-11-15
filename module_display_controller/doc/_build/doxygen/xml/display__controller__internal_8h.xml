@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="display__controller__internal_8h" kind="file">
+    <compoundname>display_controller_internal.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="display__controller__internal_8h_13ec9aaa3db10d3f78ec27167d1ae1124" prot="public" static="no">
+        <name>DISPLAY_CONTROLLER_VERBOSE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Sudha/Git/sw_display_controller/module_display_controller/doc/_build/.doxygen/src/display_controller_internal.h" line="16" bodyfile="D:/Sudha/Git/sw_display_controller/module_display_controller/doc/_build/.doxygen/src/display_controller_internal.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="display__controller__internal_8h_147aa32651c2667bd22e8a5752e966472" prot="public" static="no">
+        <name>DISPLAY_CONTROLLER_MAX_IMAGES</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Sudha/Git/sw_display_controller/module_display_controller/doc/_build/.doxygen/src/display_controller_internal.h" line="24" bodyfile="D:/Sudha/Git/sw_display_controller/module_display_controller/doc/_build/.doxygen/src/display_controller_internal.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec" prot="public" static="no">
+        <name>Server_Command</name>
+        <enumvalue id="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec2ba336d0f0efc4f89a6aa6c9bc09f15c" prot="public">
+          <name>CMD_WRITE_LINE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ecc995699e0339064a7209c3167c013578" prot="public">
+          <name>CMD_READ_LINE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec2152e8b20e89efccd585e07a6a307470" prot="public">
+          <name>CMD_READ_PARTIAL_LINE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec82454251bc4a06793218b7d22639c87b" prot="public">
+          <name>CMD_SDRAM_WAIT_UNTIL_IDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec3d1957c5fc4b4edecea13fcc5eed706d" prot="public">
+          <name>CMD_SET_FRAME_BUFFER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec2dac0d89da0b6a50dde7f114e289c431" prot="public">
+          <name>CMD_INIT_FRAME_BUFFER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec12f2acd20e4598daa606dca036182e22" prot="public">
+          <name>CMD_REGISTER_IMAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Sudha/Git/sw_display_controller/module_display_controller/doc/_build/.doxygen/src/display_controller_internal.h" line="27" bodyfile="D:/Sudha/Git/sw_display_controller/module_display_controller/doc/_build/.doxygen/src/display_controller_internal.h" bodystart="27" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_display_controller_internal_h_</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_display_controller_internal_h_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__display_controller_conf_h_exists__</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;display_controller_conf.h&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>from<sp/>the<sp/>application</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>This<sp/>defines<sp/>the<sp/>storage<sp/>space<sp/>allocated<sp/>to<sp/>the<sp/>display<sp/>controller</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>for<sp/>it<sp/>to<sp/>store<sp/>image<sp/>metadata.<sp/>When<sp/>an<sp/>image<sp/>is<sp/>registered<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>display<sp/>controller<sp/>its<sp/>dimensions<sp/>and<sp/>location<sp/>in<sp/>SDRAM<sp/>address</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>space<sp/>are<sp/>storred<sp/>in<sp/>a<sp/>table.<sp/>The<sp/>define<sp/>specifice<sp/>how<sp/>any<sp/>entries</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>are<sp/>allowed<sp/>in<sp/>that<sp/>table.<sp/>Note,<sp/>there<sp/>is<sp/>no<sp/>overflow<sp/>checking<sp/>by<sp/>default.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DISPLAY_CONTROLLER_VERBOSE</highlight></codeline>
+<codeline lineno="16" refid="display__controller__internal_8h_13ec9aaa3db10d3f78ec27167d1ae1124" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DISPLAY_CONTROLLER_VERBOSE<sp/>0</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>This<sp/>define<sp/>switchs<sp/>on<sp/>the<sp/>error<sp/>checking<sp/>for<sp/>memory<sp/>overflows<sp/>and</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>causes<sp/>verbose<sp/>error<sp/>warnings<sp/>to<sp/>be<sp/>emitted<sp/>in<sp/>the<sp/>event<sp/>of<sp/>an<sp/>error.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DISPLAY_CONTROLLER_MAX_IMAGES</highlight></codeline>
+<codeline lineno="24" refid="display__controller__internal_8h_147aa32651c2667bd22e8a5752e966472" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DISPLAY_CONTROLLER_MAX_IMAGES<sp/>20</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec" kindref="member">Server_Command</ref><sp/>{</highlight></codeline>
+<codeline lineno="28" refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec2ba336d0f0efc4f89a6aa6c9bc09f15c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec2ba336d0f0efc4f89a6aa6c9bc09f15c" kindref="member">CMD_WRITE_LINE</ref>,</highlight></codeline>
+<codeline lineno="29" refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ecc995699e0339064a7209c3167c013578" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ecc995699e0339064a7209c3167c013578" kindref="member">CMD_READ_LINE</ref>,</highlight></codeline>
+<codeline lineno="30" refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec2152e8b20e89efccd585e07a6a307470" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec2152e8b20e89efccd585e07a6a307470" kindref="member">CMD_READ_PARTIAL_LINE</ref>,</highlight></codeline>
+<codeline lineno="31" refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec82454251bc4a06793218b7d22639c87b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec82454251bc4a06793218b7d22639c87b" kindref="member">CMD_SDRAM_WAIT_UNTIL_IDLE</ref>,</highlight></codeline>
+<codeline lineno="32" refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec3d1957c5fc4b4edecea13fcc5eed706d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec3d1957c5fc4b4edecea13fcc5eed706d" kindref="member">CMD_SET_FRAME_BUFFER</ref>,</highlight></codeline>
+<codeline lineno="33" refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec2dac0d89da0b6a50dde7f114e289c431" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec2dac0d89da0b6a50dde7f114e289c431" kindref="member">CMD_INIT_FRAME_BUFFER</ref>,</highlight></codeline>
+<codeline lineno="34" refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec12f2acd20e4598daa606dca036182e22" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec12f2acd20e4598daa606dca036182e22" kindref="member">CMD_REGISTER_IMAGE</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Sudha/Git/sw_display_controller/module_display_controller/doc/_build/.doxygen/src/display_controller_internal.h"/>
+  </compounddef>
+</doxygen>
