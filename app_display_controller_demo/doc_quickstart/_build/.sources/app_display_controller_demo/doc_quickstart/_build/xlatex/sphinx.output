@@ -1,0 +1,18 @@
+Running Sphinx v1.0.7
+Running XMOS Documentation setup:xlatex
+Using XMOS Styled LaTeX
+loading pickled environment... not yet created
+building [xlatex]: all documents
+updating environment: 1 added, 0 changed, 0 removed
+reading sources... [100%] quickstart
+
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+processing quickstart.tex... quickstart 
+resolving references...
+Adding scope descriptions
+writing... done
+copying images... images\hardware_setup.jpg
+copying TeX support files... done
+build succeeded.

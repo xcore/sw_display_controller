@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.5.8">
+  <compound refid="display__controller_8h" kind="file"><name>display_controller.h</name>
+    <member refid="display__controller_8h_19a869657380d654adf785e3243415c48" kind="function"><name>display_controller</name></member>
+    <member refid="display__controller_8h_1f999a7195740d507983d3ec1ebdb96a3" kind="function"><name>display_controller_image_read_line</name></member>
+    <member refid="display__controller_8h_12f4117dfd8a9649e55190ccf7d66095b" kind="function"><name>display_controller_image_read_line_p</name></member>
+    <member refid="display__controller_8h_11de198f2df96c4008ec16c8932c89893" kind="function"><name>display_controller_image_write_line</name></member>
+    <member refid="display__controller_8h_10ea67be65bf549b28c4fc758575ee9a7" kind="function"><name>display_controller_image_write_line_p</name></member>
+    <member refid="display__controller_8h_19860cfdc5715facabbd0e7450dd8e92f" kind="function"><name>display_controller_image_read_partial_line</name></member>
+    <member refid="display__controller_8h_13874bc61173c6566f3cc58c8c97dd39c" kind="function"><name>display_controller_image_read_partial_line_p</name></member>
+    <member refid="display__controller_8h_15406cb6f407e02b4db51c43fb286c99a" kind="function"><name>display_controller_register_image</name></member>
+    <member refid="display__controller_8h_1bb3aa2a30ac4b3c01bd09369032ca260" kind="function"><name>display_controller_wait_until_idle_p</name></member>
+    <member refid="display__controller_8h_165727bfc4a571599a918bd5a2c50c264" kind="function"><name>display_controller_wait_until_idle</name></member>
+    <member refid="display__controller_8h_1cb018a453a5884280fdd9307cff2df37" kind="function"><name>display_controller_frame_buffer_commit</name></member>
+    <member refid="display__controller_8h_16a00bd3920c3083b723f59c47b9a59a0" kind="function"><name>display_controller_frame_buffer_init</name></member>
+  </compound>
+  <compound refid="display__controller__internal_8h" kind="file"><name>display_controller_internal.h</name>
+    <member refid="display__controller__internal_8h_13ec9aaa3db10d3f78ec27167d1ae1124" kind="define"><name>DISPLAY_CONTROLLER_VERBOSE</name></member>
+    <member refid="display__controller__internal_8h_147aa32651c2667bd22e8a5752e966472" kind="define"><name>DISPLAY_CONTROLLER_MAX_IMAGES</name></member>
+    <member refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec" kind="enum"><name>Server_Command</name></member>
+    <member refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec2ba336d0f0efc4f89a6aa6c9bc09f15c" kind="enumvalue"><name>CMD_WRITE_LINE</name></member>
+    <member refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ecc995699e0339064a7209c3167c013578" kind="enumvalue"><name>CMD_READ_LINE</name></member>
+    <member refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec2152e8b20e89efccd585e07a6a307470" kind="enumvalue"><name>CMD_READ_PARTIAL_LINE</name></member>
+    <member refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec82454251bc4a06793218b7d22639c87b" kind="enumvalue"><name>CMD_SDRAM_WAIT_UNTIL_IDLE</name></member>
+    <member refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec3d1957c5fc4b4edecea13fcc5eed706d" kind="enumvalue"><name>CMD_SET_FRAME_BUFFER</name></member>
+    <member refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec2dac0d89da0b6a50dde7f114e289c431" kind="enumvalue"><name>CMD_INIT_FRAME_BUFFER</name></member>
+    <member refid="display__controller__internal_8h_1208f7dc64b80a1bc14abafc1358cc5ec12f2acd20e4598daa606dca036182e22" kind="enumvalue"><name>CMD_REGISTER_IMAGE</name></member>
+  </compound>
+  <compound refid="transitions_8h" kind="file"><name>transitions.h</name>
+    <member refid="transitions_8h_10aa0fac68c1132c078abe31e90a0211e" kind="define"><name>MAX_DITHER</name></member>
+    <member refid="transitions_8h_145b70c59d1d73c0b236e9c28e6674052" kind="define"><name>MAX_ALPHA_BLEND</name></member>
+    <member refid="transitions_8h_10787c17544632a1eaf38a74c3b878222" kind="function"><name>transition_wipe</name></member>
+    <member refid="transitions_8h_10a7d2048b81b2e67d67b70951079740f" kind="function"><name>transition_slide</name></member>
+    <member refid="transitions_8h_126889fcceef7591bc5a4985a829dcf2c" kind="function"><name>transition_roll</name></member>
+    <member refid="transitions_8h_15111988944a5e7fcf378676d1ebb70cd" kind="function"><name>transition_dither</name></member>
+    <member refid="transitions_8h_1542d0fc3132f4356e31ceb7b70a21c30" kind="function"><name>transition_alpha_blend</name></member>
+  </compound>
+  <compound refid="dir_ebfb87e0d88d58db9e79324648375892" kind="dir"><name>_build/.doxygen/</name>
+  </compound>
+  <compound refid="dir_68d83fbfd2cc7705016372290012fc95" kind="dir"><name>_build/</name>
+  </compound>
+  <compound refid="dir_4f4a3739f6b6cada518cf57b3f75ac06" kind="dir"><name>_build/.doxygen/src/</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.8">
+  <compounddef id="level__meter_8h" kind="file">
+    <compoundname>level_meter.h</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="level__meter_8h_124bda008a71bc25425385565ed938370" prot="public" static="no">
+        <name>colors_rgb565</name>
+        <enumvalue id="level__meter_8h_124bda008a71bc25425385565ed93837035d6719cb4d7577c031b3d79057a1b79" prot="public">
+          <name>BLUE</name>
+          <initializer> 0xF800</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="level__meter_8h_124bda008a71bc25425385565ed938370a60bd322f93178d68184e30e162571ca" prot="public">
+          <name>GREEN</name>
+          <initializer> 0x07E0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="level__meter_8h_124bda008a71bc25425385565ed938370e735a848bf82163a19236ead1c3ef2d2" prot="public">
+          <name>YELLOW</name>
+          <initializer> 0x07FF</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="level__meter_8h_124bda008a71bc25425385565ed938370f80f9a890089d211842d59625e561f88" prot="public">
+          <name>RED</name>
+          <initializer> 0x001F</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="level__meter_8h_124bda008a71bc25425385565ed938370cb3539cc3e2dc09edbbd2a6f6ea002a0" prot="public">
+          <name>TEAL</name>
+          <initializer> 0xFFE0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="level__meter_8h_124bda008a71bc25425385565ed938370283fc479650da98250635b9c3c0e7e50" prot="public">
+          <name>WHITE</name>
+          <initializer> 0xFFFF</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="level__meter_8h_124bda008a71bc25425385565ed938370afe71cad474c15ce63b300c470eef8cc" prot="public">
+          <name>CYAN</name>
+          <initializer> 0xFFE0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="level__meter_8h_124bda008a71bc25425385565ed93837056926c820ad72d0977e7ee44d9916e62" prot="public">
+          <name>MAGENTA</name>
+          <initializer> 0xF81F</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="level__meter_8h_124bda008a71bc25425385565ed938370a7790837e9c1f7cb78b55743b9a67623" prot="public">
+          <name>GOLD</name>
+          <initializer> 0x06BF</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="level__meter_8h_124bda008a71bc25425385565ed93837050ed784e75cbb9847f63059f10c85026" prot="public">
+          <name>SALMON</name>
+          <initializer> 0x741F</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="level__meter_8h_124bda008a71bc25425385565ed938370f00022d1f7175a39f5db71641b8a0e31" prot="public">
+          <name>CORAL</name>
+          <initializer> 0x53FF</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="level__meter_8h_124bda008a71bc25425385565ed938370e0f2e5c3ef4074a8868c55d3b828a7da" prot="public">
+          <name>TURQUOISE</name>
+          <initializer> 0xD708</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="level__meter_8h_124bda008a71bc25425385565ed9383707088400e4fa72e2239115e7c0b294ea4" prot="public">
+          <name>VIOLET</name>
+          <initializer> 0xEC1D</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="level__meter_8h_124bda008a71bc25425385565ed938370bf9a8773f7a18577508f3dc1ccfb18f5" prot="public">
+          <name>CHOCOLATE</name>
+          <initializer> 0x1B5A</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="level__meter_8h_124bda008a71bc25425385565ed938370bb3906da37f7294ab14276e3ddfabb13" prot="public">
+          <name>PEACH</name>
+          <initializer> 0xBEDF</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="level__meter_8h_124bda008a71bc25425385565ed938370570ac6c18c76593b02fe5cfe17cd34cf" prot="public">
+          <name>LAVENDER</name>
+          <initializer> 0xFF3C</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Sudha/Git/sw_display_controller/module_level_meter/doc/_build/.doxygen/src/level_meter.h" line="5" bodyfile="D:/Sudha/Git/sw_display_controller/module_level_meter/doc/_build/.doxygen/src/level_meter.h" bodystart="5" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="level__meter_8h_1520420015e4b4764e7d8188eb2603d19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void level_meter</definition>
+        <argsstring>(chanend c_dc, unsigned frBufNo, unsigned data[], unsigned N, unsigned maxData)</argsstring>
+        <name>level_meter</name>
+        <param>
+          <type>chanend</type>
+          <declname>c_dc</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>frBufNo</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>data</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>maxData</declname>
+        </param>
+        <briefdescription>
+<para>This function renders the level meter display of a given data sequence. </para>        </briefdescription>
+        <detaileddescription>
+<para>It connects to display controller for storing the rendered image frame.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c_dc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel connecting display controller.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">frBufNo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of frame buffer to be updated.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array containing magnitude spectrum values.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of data values to be displayed as bars.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">maxData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum possible data value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Sudha/Git/sw_display_controller/module_level_meter/doc/_build/.doxygen/src/level_meter.h" line="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LEVEL_METER_H_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LEVEL_METER_H_</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="level__meter_8h_124bda008a71bc25425385565ed938370" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="level__meter_8h_124bda008a71bc25425385565ed938370" kindref="member">colors_rgb565</ref>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Entered<sp/>in<sp/>BGR565</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="level__meter_8h_124bda008a71bc25425385565ed93837035d6719cb4d7577c031b3d79057a1b79" refkind="member"><highlight class="normal"><ref refid="level__meter_8h_124bda008a71bc25425385565ed93837035d6719cb4d7577c031b3d79057a1b79" kindref="member">BLUE</ref><sp/>=<sp/>0xF800,</highlight></codeline>
+<codeline lineno="7" refid="level__meter_8h_124bda008a71bc25425385565ed938370a60bd322f93178d68184e30e162571ca" refkind="member"><highlight class="normal"><ref refid="level__meter_8h_124bda008a71bc25425385565ed938370a60bd322f93178d68184e30e162571ca" kindref="member">GREEN</ref><sp/>=<sp/>0x07E0,</highlight></codeline>
+<codeline lineno="8" refid="level__meter_8h_124bda008a71bc25425385565ed938370e735a848bf82163a19236ead1c3ef2d2" refkind="member"><highlight class="normal"><ref refid="level__meter_8h_124bda008a71bc25425385565ed938370e735a848bf82163a19236ead1c3ef2d2" kindref="member">YELLOW</ref><sp/>=<sp/>0x07FF,</highlight></codeline>
+<codeline lineno="9" refid="level__meter_8h_124bda008a71bc25425385565ed938370f80f9a890089d211842d59625e561f88" refkind="member"><highlight class="normal"><ref refid="level__meter_8h_124bda008a71bc25425385565ed938370f80f9a890089d211842d59625e561f88" kindref="member">RED</ref><sp/>=<sp/>0x001F,</highlight></codeline>
+<codeline lineno="10" refid="level__meter_8h_124bda008a71bc25425385565ed938370cb3539cc3e2dc09edbbd2a6f6ea002a0" refkind="member"><highlight class="normal"><ref refid="level__meter_8h_124bda008a71bc25425385565ed938370cb3539cc3e2dc09edbbd2a6f6ea002a0" kindref="member">TEAL</ref><sp/>=<sp/>0xFFE0,</highlight></codeline>
+<codeline lineno="11" refid="level__meter_8h_124bda008a71bc25425385565ed938370283fc479650da98250635b9c3c0e7e50" refkind="member"><highlight class="normal"><ref refid="level__meter_8h_124bda008a71bc25425385565ed938370283fc479650da98250635b9c3c0e7e50" kindref="member">WHITE</ref><sp/>=<sp/>0xFFFF,</highlight></codeline>
+<codeline lineno="12" refid="level__meter_8h_124bda008a71bc25425385565ed938370afe71cad474c15ce63b300c470eef8cc" refkind="member"><highlight class="normal"><ref refid="level__meter_8h_124bda008a71bc25425385565ed938370afe71cad474c15ce63b300c470eef8cc" kindref="member">CYAN</ref><sp/>=<sp/>0xFFE0,</highlight></codeline>
+<codeline lineno="13" refid="level__meter_8h_124bda008a71bc25425385565ed93837056926c820ad72d0977e7ee44d9916e62" refkind="member"><highlight class="normal"><ref refid="level__meter_8h_124bda008a71bc25425385565ed93837056926c820ad72d0977e7ee44d9916e62" kindref="member">MAGENTA</ref><sp/>=<sp/>0xF81F,</highlight></codeline>
+<codeline lineno="14" refid="level__meter_8h_124bda008a71bc25425385565ed938370a7790837e9c1f7cb78b55743b9a67623" refkind="member"><highlight class="normal"><ref refid="level__meter_8h_124bda008a71bc25425385565ed938370a7790837e9c1f7cb78b55743b9a67623" kindref="member">GOLD</ref><sp/>=<sp/>0x06BF,</highlight></codeline>
+<codeline lineno="15" refid="level__meter_8h_124bda008a71bc25425385565ed93837050ed784e75cbb9847f63059f10c85026" refkind="member"><highlight class="normal"><ref refid="level__meter_8h_124bda008a71bc25425385565ed93837050ed784e75cbb9847f63059f10c85026" kindref="member">SALMON</ref><sp/>=<sp/>0x741F,</highlight></codeline>
+<codeline lineno="16" refid="level__meter_8h_124bda008a71bc25425385565ed938370f00022d1f7175a39f5db71641b8a0e31" refkind="member"><highlight class="normal"><ref refid="level__meter_8h_124bda008a71bc25425385565ed938370f00022d1f7175a39f5db71641b8a0e31" kindref="member">CORAL</ref><sp/>=<sp/>0x53FF,</highlight></codeline>
+<codeline lineno="17" refid="level__meter_8h_124bda008a71bc25425385565ed938370e0f2e5c3ef4074a8868c55d3b828a7da" refkind="member"><highlight class="normal"><ref refid="level__meter_8h_124bda008a71bc25425385565ed938370e0f2e5c3ef4074a8868c55d3b828a7da" kindref="member">TURQUOISE</ref><sp/>=<sp/>0xD708,</highlight></codeline>
+<codeline lineno="18" refid="level__meter_8h_124bda008a71bc25425385565ed9383707088400e4fa72e2239115e7c0b294ea4" refkind="member"><highlight class="normal"><ref refid="level__meter_8h_124bda008a71bc25425385565ed9383707088400e4fa72e2239115e7c0b294ea4" kindref="member">VIOLET</ref><sp/>=<sp/>0xEC1D,</highlight></codeline>
+<codeline lineno="19" refid="level__meter_8h_124bda008a71bc25425385565ed938370bf9a8773f7a18577508f3dc1ccfb18f5" refkind="member"><highlight class="normal"><ref refid="level__meter_8h_124bda008a71bc25425385565ed938370bf9a8773f7a18577508f3dc1ccfb18f5" kindref="member">CHOCOLATE</ref><sp/>=<sp/>0x1B5A,</highlight></codeline>
+<codeline lineno="20" refid="level__meter_8h_124bda008a71bc25425385565ed938370bb3906da37f7294ab14276e3ddfabb13" refkind="member"><highlight class="normal"><ref refid="level__meter_8h_124bda008a71bc25425385565ed938370bb3906da37f7294ab14276e3ddfabb13" kindref="member">PEACH</ref><sp/>=<sp/>0xBEDF,</highlight></codeline>
+<codeline lineno="21" refid="level__meter_8h_124bda008a71bc25425385565ed938370570ac6c18c76593b02fe5cfe17cd34cf" refkind="member"><highlight class="normal"><ref refid="level__meter_8h_124bda008a71bc25425385565ed938370570ac6c18c76593b02fe5cfe17cd34cf" kindref="member">LAVENDER</ref><sp/>=<sp/>0xFF3C</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="level__meter_8h_1520420015e4b4764e7d8188eb2603d19" kindref="member" tooltip="This function renders the level meter display of a given data sequence.">level_meter</ref>(chanend<sp/>c_dc,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>frBufNo,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>data[],<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>N,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>maxData);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LEVEL_METER_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Sudha/Git/sw_display_controller/module_level_meter/doc/_build/.doxygen/src/level_meter.h"/>
+  </compounddef>
+</doxygen>
