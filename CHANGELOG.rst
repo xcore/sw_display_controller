@@ -3,7 +3,7 @@ sw_display_controller Change Log
 
 1.1.0
 -----
-  * Added module_level_meter and two apps on spectral display
+  * Added module_level_meter and an app on spectral display
 
   * Changes to dependencies:
 
