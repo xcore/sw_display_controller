@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <allbuildresults>
-<buildresults component="module_display_controller" packagename="xm-local-sw_display_controller(0438903d)" packageversion="0438903d" toolsversion="latest">
+<buildresults component="module_display_controller" packagename="xm-local-sw_display_controller(3492b1ab)" packageversion="3492b1ab" toolsversion="latest">
 <buildresult>
 <configuration>
 <parameter id="display_controller_max_images" value="10"/>
