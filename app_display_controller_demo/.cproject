@@ -156,8 +156,7 @@
 								<option id = "com.xmos.xc.compiler.option.include.paths.41289541" name="com.xmos.xc.compiler.option.include.paths" superClass="com.xmos.xc.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include/gcc&quot;"/>
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_controller_demo/.settings}&quot;' />
-<listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_controller_demo/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_controller_demo/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_controller_demo}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
@@ -292,8 +291,7 @@
 								<option id = "com.xmos.c.compiler.option.include.paths.35367203" name="com.xmos.c.compiler.option.include.paths" superClass="com.xmos.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include/gcc&quot;"/>
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_controller_demo/.settings}&quot;' />
-<listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_controller_demo/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_controller_demo/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_controller_demo}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
@@ -434,8 +432,7 @@
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include/gcc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include/c++/4.2.1&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${XMOS_TOOL_PATH}/target/include/c++/4.2.1/xcore-xmos-elf&quot;"/>
-                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_controller_demo/.settings}&quot;' />
-<listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_controller_demo/src}&quot;' />
+                                    <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_controller_demo/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/app_display_controller_demo}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller/src}&quot;' />
 <listOptionValue builtIn="false" value='&quot;${workspace_loc:/module_display_controller}&quot;' />
