@@ -15,7 +15,7 @@ In this demonstration we use the following hardware and software:
   * module_slicekit_support,
   * module_lcd,
 
-together to create a level-meter kind of spectral display on an LCD for a simulated signal. This application demonstrates real-time rendering and display of spectrum by taking short-time fourier transform.
+together to create a level-meter kind of spectral display on an LCD for a simulated signal. This application demonstrates the real-time rendering and the display of spectrum by taking short-time fourier transform.
 
 Hardware Setup
 ++++++++++++++
@@ -28,7 +28,7 @@ To setup up the system:
    #. Connect XA-SK-SCR480 Slice Card with LCD to the XP-SKC-L16 sliceKIT Core board using the connector marked with ``TRIANGLE``.
    #. Connect the xTAG-2 to sliceKIT Core board. 
    #. Connect the xTAG-2 to host PC. Note that the USB cable is not provided with the sliceKIT starter kit.
-   #. Set the ``xCONNECT LINK`` to ``OFF`` on the sliceKIT Core board.
+   #. Set the ``XMOS LINK`` to ``OFF`` on the xTAG adapter.
    #. Ensure the jumper on the XA-SK-SCR480 is bridged if the back light is required.
    #. Switch on the power supply to the sliceKIT Core board.
 
@@ -65,6 +65,6 @@ Now that the application has been compiled, the next step is to run it on the sl
 Next Steps
 ++++++++++
 
-   #. ``FFT_POINTS`` gives the number of signal samples taken for FFT computation. This decides the number of level meter bands which can be varied by varying ``FFT_POINTS``. ``FFT_SINE`` is also varied accordingly.
-   #. The colors of the level-meter display of spectrum can be changed in ``level_meter_conf.h``.
+   #. Change the number of level meter bands by varying ``FFT_POINTS``. ``FFT_SINE`` is also varied accordingly.
+   #. Change the colors of the level-meter display of spectrum listed in ``level_meter_conf.h``.
    #. Different choices of simulated waveforms are available in ``main()`` function. Uncomment to try them. 
