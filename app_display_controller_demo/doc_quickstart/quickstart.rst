@@ -33,7 +33,7 @@ To setup up the system:
    #. Connect XA-SK-SCR480 Slice Card to the XP-SKC-L16 sliceKIT Core board using the connector marked with the ``TRIANGLE``.
    #. Connect the xTAG Adapter to sliceKIT Core board, and connect xTAG-2 to the adapter. 
    #. Connect the xTAG-2 to host PC. Note that the USB cable is not provided with the sliceKIT starter kit.
-   #. Set the ``xCONNECT LINK`` to ``OFF`` on the xTAG Adapter(XA-SK-XTAG2).
+   #. Set the ``XMOS LINK`` to ``OFF`` on the xTAG Adapter(XA-SK-XTAG2).
    #. Ensure the jumper on the XA-SK-SCR480 is bridged if the back light is required.
    #. Switch on the power supply to the sliceKIT Core board.
 
