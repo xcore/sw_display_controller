@@ -81,10 +81,6 @@
         <uri>https://github.com/xcore/sc_dsp_transforms.git</uri>
         <version>1.0.0rc2</version>
     </dependency>
-    <dependency repo = "sw_final-demo">
-        <githash>49d78027138681623c0997b8b57c34a8da44dd38</githash>
-        <uri>git@github.com:xcore/sc_jpeg.git</uri>
-    </dependency>
     <description>Modules for driving parallel RGB displays in conjunction with sdram and lcd components. The main module here takes care of framebuffer management.</description>
     <docdir>module_display_controller/doc</docdir>
     <docdir>module_level_meter/doc</docdir>
