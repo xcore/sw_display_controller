@@ -4,15 +4,15 @@
         <component description = "A full Display Controller application for driving the XA-Sk-480 LCD in conjunction with the SDRAM Controller and LCD Driver components." type = "demoCode" scope = "Example" path = "app_display_controller_demo" local = "false" id = "app_display_controller_demo" name = "Display Controller Demo">
             <board>XA-SK-SCR480</board>
             <board>XA-SK-SDRAM</board>
+            <componentDependency repo = "git://github.com/xcore/sw_display_controller.git" version = "1.1.0">module_display_controller</componentDependency>
+            <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.1">module_i2c_master</componentDependency>
             <componentDependency repo = "git://github.com/xcore/sc_sdram_burst.git" version = "1.1.0">module_sdram</componentDependency>
             <componentDependency repo = "git://github.com/xcore/sc_sdram_burst.git" version = "1.1.0">module_sdram</componentDependency>
             <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.1">module_i2c_master</componentDependency>
             <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_lcd</componentDependency>
-            <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.1">module_i2c_master</componentDependency>
-            <componentDependency repo = "origin" version = "1.0.3">module_slicekit_support</componentDependency>
-            <componentDependency repo = "git://github.com/xcore/sw_display_controller.git" version = "1.1.0">module_display_controller</componentDependency>
             <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_lcd</componentDependency>
             <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_touch_controller_lib</componentDependency>
+            <componentDependency repo = "origin" version = "1.0.3">module_slicekit_support</componentDependency>
             <keyword>LCD</keyword>
             <keyword>Display</keyword>
             <keyword>Framebuffer</keyword>
@@ -21,13 +21,13 @@
         <component description = "A demonstration of displaying spectrum of simulated signal on LCD" type = "demoCode" scope = "Example" path = "app_display_spectrum_demo" local = "false" id = "app_display_spectrum_demo" name = "Display Spectrum Demo">
             <board>XA-SK-SCR480</board>
             <board>XA-SK-SDRAM</board>
-            <componentDependency repo = "git://github.com/xcore/sw_display_controller.git" version = "1.1.0">module_display_controller</componentDependency>
-            <componentDependency repo = "origin" version = "1.0.3">module_slicekit_support</componentDependency>
             <componentDependency repo = "git://github.com/xcore/sc_sdram_burst.git" version = "1.1.0">module_sdram</componentDependency>
             <componentDependency repo = "git://github.com/xcore/sc_dsp_transforms.git" version = "1.0.0">module_fft_simple</componentDependency>
             <componentDependency repo = "git://github.com/xcore/sw_display_controller.git" version = "1.1.0">module_level_meter</componentDependency>
             <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_lcd</componentDependency>
             <componentDependency repo = "git://github.com/xcore/sw_display_controller.git" version = "1.1.0">module_display_controller</componentDependency>
+            <componentDependency repo = "git://github.com/xcore/sw_display_controller.git" version = "1.1.0">module_display_controller</componentDependency>
+            <componentDependency repo = "origin" version = "1.0.3">module_slicekit_support</componentDependency>
             <keyword>FFT</keyword>
             <keyword>signal</keyword>
             <keyword>LCD</keyword>
@@ -36,8 +36,8 @@
         <component name = "Display Controller" type = "component" buildresults_path = "module_display_controller/.module_display_controller.buildinfo" scope = "General Use" path = "module_display_controller" metainfo_path = "module_display_controller/module_display_controller.metainfo" local = "false" id = "module_display_controller" description = "Display Controller component for driving LCDs with an RGB 565 interface up to 800x600 pixels with a managed SDRAM image buffer.">
             <board>XA-SK-SCR480</board>
             <board>XA-SK-SDRAM</board>
-            <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_lcd</componentDependency>
             <componentDependency repo = "git://github.com/xcore/sc_sdram_burst.git" version = "1.1.0">module_sdram</componentDependency>
+            <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_lcd</componentDependency>
             <keyword>LCD</keyword>
             <keyword>TFT</keyword>
             <keyword>RGB565</keyword>
@@ -48,8 +48,8 @@
             <board>XA-SK-SCR480</board>
             <board>XA-SK-SDRAM</board>
             <componentDependency repo = "git://github.com/xcore/sc_sdram_burst.git" version = "1.1.0">module_sdram</componentDependency>
-            <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_lcd</componentDependency>
             <componentDependency repo = "git://github.com/xcore/sw_display_controller.git" version = "1.1.0">module_display_controller</componentDependency>
+            <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_lcd</componentDependency>
             <keyword>LCD</keyword>
             <keyword>RGB565</keyword>
             <keyword>Display</keyword>
@@ -86,7 +86,6 @@
     <docdir>module_level_meter/doc</docdir>
     <docdir>app_display_controller_demo/doc_quickstart</docdir>
     <docdir>app_display_spectrum_demo/doc_quickstart</docdir>
-	<exclude_dir>app_display_spectrum_from_adc</exclude_dir>
     <location>git@github.com:xcore/sw_display_controller.git</location>
     <name>sw_display_controller</name>
     <maintainer>andrewstanfordjason</maintainer>
@@ -110,7 +109,7 @@
     <release parenthash = "a01f0183a6cfcf006bbabea1011125b2242cc7ea" version = "1.1.0beta5" githash = "0de1a390f245206ea6a50c05dabd4c5aaae95a35"></release>
     <release parenthash = "0de1a390f245206ea6a50c05dabd4c5aaae95a35" version = "1.1.0beta6" githash = "35fbeca9e32ad1481bd594aaecaa84b4cf42cf59"></release>
     <release parenthash = "3ecc05a749aea9b3f61f708c4f54555715da962b" version = "1.1.0beta7" githash = "71c5164157e6cb7a319342a6ca81f9782956c18c"></release>
-    <release parenthash = "1edaeb226672bf3509675dae1c188e12867506d8" version = "1.1.0beta8"></release>
+    <release parenthash = "1edaeb226672bf3509675dae1c188e12867506d8" version = "1.1.0beta8" githash = "e883b4faf4d3d56474afeba0043036034adebcb7"></release>
     <subpartnumber>XM-002025-SM</subpartnumber>
     <vendor>XMOS</vendor>
     <version_defines></version_defines>
