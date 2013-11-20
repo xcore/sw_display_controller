@@ -57,9 +57,9 @@
         </component>
     </components>
     <dependency repo = "sc_lcd">
-        <githash>f4e03fa27a9fcf827eb8afcc4830867474255475</githash>
+        <githash>cc994baa391725020b3c6237b5bb2705e47d1e94</githash>
         <uri>git@github.com:xcore/sc_lcd.git</uri>
-        <version>1.1.1rc0</version>
+        <version>1.1.2rc0</version>
     </dependency>
     <dependency repo = "sc_sdram_burst">
         <githash>b8b1ed0df922799f4540e890dcfc083d6a5c416e</githash>
@@ -67,9 +67,9 @@
         <version>1.1.0rc0</version>
     </dependency>
     <dependency repo = "sc_i2c">
-        <githash>53349e8bd6493701b1ec462187b14c9e74bdc6bd</githash>
+        <githash>d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0</githash>
         <uri>git@github.com:xcore/sc_i2c.git</uri>
-        <version>2.2.0rc0</version>
+        <version>2.2.1rc0</version>
     </dependency>
     <dependency repo = "sc_slicekit_support">
         <githash>7920fc4235a96585274d73d25d275ea63b4cd285</githash>
@@ -80,6 +80,10 @@
         <githash>ef55e6b7f07e12d5963072e64dfb9702916eebfc</githash>
         <uri>https://github.com/xcore/sc_dsp_transforms.git</uri>
         <version>1.0.0rc2</version>
+    </dependency>
+    <dependency repo = "sw_final-demo">
+        <githash>49d78027138681623c0997b8b57c34a8da44dd38</githash>
+        <uri>git@github.com:xcore/sc_jpeg.git</uri>
     </dependency>
     <description>Modules for driving parallel RGB displays in conjunction with sdram and lcd components. The main module here takes care of framebuffer management.</description>
     <docdir>module_display_controller/doc</docdir>

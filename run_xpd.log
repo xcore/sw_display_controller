@@ -1,12 +1,18 @@
 Run 'git rev-parse --show-cdup' in .
      
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sw_display_controller
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sw_display_controller
      
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_lcd
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_lcd
      
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_i2c
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_i2c
+     4badede1af2f30c110dd28ea8a2cb1849d9d4b0f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a c645b6fe23a98b5f4054047a0c44c0d7698d458f
+     c645b6fe23a98b5f4054047a0c44c0d7698d458f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a
      ddedf2cbc4d8fc5295f79a258f6953d394e8f21a 5cf19c07e0b47adfac832589982e5e8553283563 969664c2670b7540e095abe70e1998bc6b822478
      969664c2670b7540e095abe70e1998bc6b822478 5cf19c07e0b47adfac832589982e5e8553283563
      5cf19c07e0b47adfac832589982e5e8553283563 d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0
@@ -223,11 +229,15 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
      2d98a403a5c5729159a7ab89e8f157d5af1378f1 bac11d0c0fa6d2e575c10fb6b4619a5c69433243
      bac11d0c0fa6d2e575c10fb6b4619a5c69433243 224afbc3ae34ac58479e56c81d0b1c4e775f04b9
      224afbc3ae34ac58479e56c81d0b1c4e775f04b9
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_i2c
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_i2c
+     ?? sc_i2c_2.2.1rc0.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_i2c
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_i2c
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -273,7 +283,10 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_i2c
          <xsoftip_exclude>module_i2c_simple</xsoftip_exclude>
          <xsoftip_exclude>app_xdk_xai_i2c_test</xsoftip_exclude>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_i2c
+     4badede1af2f30c110dd28ea8a2cb1849d9d4b0f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a c645b6fe23a98b5f4054047a0c44c0d7698d458f
+     c645b6fe23a98b5f4054047a0c44c0d7698d458f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a
      ddedf2cbc4d8fc5295f79a258f6953d394e8f21a 5cf19c07e0b47adfac832589982e5e8553283563 969664c2670b7540e095abe70e1998bc6b822478
      969664c2670b7540e095abe70e1998bc6b822478 5cf19c07e0b47adfac832589982e5e8553283563
      5cf19c07e0b47adfac832589982e5e8553283563 d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0
@@ -490,11 +503,15 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
      2d98a403a5c5729159a7ab89e8f157d5af1378f1 bac11d0c0fa6d2e575c10fb6b4619a5c69433243
      bac11d0c0fa6d2e575c10fb6b4619a5c69433243 224afbc3ae34ac58479e56c81d0b1c4e775f04b9
      224afbc3ae34ac58479e56c81d0b1c4e775f04b9
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_i2c
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     ?? sc_i2c_2.2.1rc0.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -502,13 +519,13 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_slicekit_support
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -526,7 +543,8 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
          <vendor>XMOS</vendor>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -534,11 +552,12 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_lcd
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_lcd
+     cc994baa391725020b3c6237b5bb2705e47d1e94 ac8fc37c2fa5aa3e5f1143927cee91b28543d151
+     ac8fc37c2fa5aa3e5f1143927cee91b28543d151 f4e03fa27a9fcf827eb8afcc4830867474255475
      f4e03fa27a9fcf827eb8afcc4830867474255475 08d3a07c2740b6b44557a59143ba5ad83040d96e
      08d3a07c2740b6b44557a59143ba5ad83040d96e 4205dfbd66456c457d3916d42a6609f4b8e967fe
      4205dfbd66456c457d3916d42a6609f4b8e967fe 6874e4761000fc958c1fdac196f51cfd98fc1979
@@ -687,18 +706,32 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_lcd
      9d317b190c86842895471295e3733d006d22869c a785522a1ae484386663e123926063f369d88097
      a785522a1ae484386663e123926063f369d88097 8af663d89e76c50ea225270d5bda9a4729cc431e
      8af663d89e76c50ea225270d5bda9a4729cc431e
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_lcd
-      M app_touch_controller_lib_demo/.cproject
-      M app_touch_controller_lib_demo/.project
-      M module_lcd/.cproject
-      M module_lcd/.project
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_lcd
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_lcd
+     ?? sc_lcd_1.1.2rc0.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_lcd
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_lcd
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_lcd
      <?xml version="1.0" ?>
      <xpd>
          <components>
+             <component name = "Touch Screen Driver Function Library" type = "component" buildresults_path = "module_touch_controller_lib/.module_touch_controller_lib.buildinfo" scope = "General Use" path = "module_touch_controller_lib" metainfo_path = "module_touch_controller_lib/module_touch_controller_lib.metainfo" local = "false" id = "module_touch_controller_lib" description = "Function Library for driving touch screen with low voltage controller">
+                 <board>XA-SK-SCR480</board>
+                 <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.1">module_i2c_master</componentDependency>
+                 <keyword>Touch screen</keyword>
+                 <keyword>Controller</keyword>
+                 <keyword>I2C</keyword>
+             </component>
+             <component description = "Demonstrates how the module is used to write to an LCD screen." type = "demoCode" scope = "Example" path = "app_lcd_demo" local = "false" id = "app_lcd_demo" name = "LCD Demo">
+                 <board>XA-SK-SCR480</board>
+                 <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_lcd</componentDependency>
+                 <componentDependency repo = "origin" version = "1.0.3">module_slicekit_support</componentDependency>
+                 <keyword>LCD</keyword>
+                 <keyword>Screen</keyword>
+             </component>
              <component name = "Parallel RGB LCD Driver" type = "component" buildresults_path = "module_lcd/.module_lcd.buildinfo" scope = "General Use" path = "module_lcd" metainfo_path = "module_lcd/module_lcd.metainfo" local = "false" id = "module_lcd" description = "Server component for driving LCDs with an RGB 565 interface up to 800x600 pixels">
                  <board>XA-SK-SCR480</board>
                  <keyword>LCD</keyword>
@@ -706,33 +739,19 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_lcd
                  <keyword>RGB565</keyword>
                  <keyword>Display</keyword>
              </component>
-             <component description = "Demonstrates how the module is used to write to an LCD screen." type = "demoCode" scope = "Example" path = "app_lcd_demo" local = "false" id = "app_lcd_demo" name = "LCD Demo">
-                 <board>XA-SK-SCR480</board>
-                 <componentDependency repo = "origin" version = "1.0.3">module_slicekit_support</componentDependency>
-                 <componentDependency version = "1.1.0">module_lcd</componentDependency>
-                 <keyword>LCD</keyword>
-                 <keyword>Screen</keyword>
-             </component>
-             <component name = "Touch Screen Driver Function Library" type = "component" buildresults_path = "module_touch_controller_lib/.module_touch_controller_lib.buildinfo" scope = "General Use" path = "module_touch_controller_lib" metainfo_path = "module_touch_controller_lib/module_touch_controller_lib.metainfo" local = "false" id = "module_touch_controller_lib" description = "Function Library for driving touch screen with low voltage controller">
-                 <board>XA-SK-SCR480</board>
-                 <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.0">module_i2c_master</componentDependency>
-                 <keyword>Touch screen</keyword>
-                 <keyword>Controller</keyword>
-                 <keyword>I2C</keyword>
-             </component>
              <component description = "Demonstrates how the module is used to read the touch coordinates when the touch screen is touched." type = "demoCode" scope = "Example" path = "app_touch_controller_lib_demo" local = "false" id = "app_touch_controller_lib_demo" name = "Touch Screen Demo">
                  <board>XA-SK-SCR480</board>
-                 <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.0">module_i2c_master</componentDependency>
-                 <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.0">module_i2c_master</componentDependency>
-                 <componentDependency version = "1.1.0">module_touch_controller_lib</componentDependency>
+                 <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_touch_controller_lib</componentDependency>
+                 <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.1">module_i2c_master</componentDependency>
+                 <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.1">module_i2c_master</componentDependency>
                  <keyword>Touch screen</keyword>
                  <keyword>Touch controller</keyword>
              </component>
          </components>
          <dependency repo = "sc_i2c">
-             <githash>53349e8bd6493701b1ec462187b14c9e74bdc6bd</githash>
+             <githash>d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0</githash>
              <uri>git@github.com:xcore/sc_i2c.git</uri>
-             <version>2.2.0rc0</version>
+             <version>2.2.1rc0</version>
          </dependency>
          <dependency repo = "sc_slicekit_support">
              <githash>7920fc4235a96585274d73d25d275ea63b4cd285</githash>
@@ -757,16 +776,21 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_lcd
          <release parenthash = "587eb35c576339fa427b2838b3660974677ae8a9" version = "1.1.0beta0" githash = "67e86e076aa9a26d8dd0360aa053072c46d46ee1"></release>
          <release parenthash = "67e86e076aa9a26d8dd0360aa053072c46d46ee1" version = "1.1.0rc0" githash = "5db094b21dc868589d4f0ff37711d2df30a642e9"></release>
          <release parenthash = "c697fdbad3609b02b2306387c5d738072cd29fef" version = "1.1.0rc1" githash = "72d8c1f11adb9e6a07fe5f389f34c1bc1514fbf5"></release>
-         <release parenthash = "08d3a07c2740b6b44557a59143ba5ad83040d96e" version = "1.1.1rc0"></release>
+         <release parenthash = "08d3a07c2740b6b44557a59143ba5ad83040d96e" version = "1.1.1rc0" githash = "f4e03fa27a9fcf827eb8afcc4830867474255475"></release>
+         <release parenthash = "ac8fc37c2fa5aa3e5f1143927cee91b28543d151" version = "1.1.2rc0"></release>
          <subpartnumber>XM-001961-SM</subpartnumber>
          <vendor>XMOS</vendor>
          <version_defines></version_defines>
          <xcore_repo>sc_lcd.git</xcore_repo>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_i2c
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_i2c
+     4badede1af2f30c110dd28ea8a2cb1849d9d4b0f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a c645b6fe23a98b5f4054047a0c44c0d7698d458f
+     c645b6fe23a98b5f4054047a0c44c0d7698d458f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a
      ddedf2cbc4d8fc5295f79a258f6953d394e8f21a 5cf19c07e0b47adfac832589982e5e8553283563 969664c2670b7540e095abe70e1998bc6b822478
      969664c2670b7540e095abe70e1998bc6b822478 5cf19c07e0b47adfac832589982e5e8553283563
      5cf19c07e0b47adfac832589982e5e8553283563 d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0
@@ -983,11 +1007,15 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
      2d98a403a5c5729159a7ab89e8f157d5af1378f1 bac11d0c0fa6d2e575c10fb6b4619a5c69433243
      bac11d0c0fa6d2e575c10fb6b4619a5c69433243 224afbc3ae34ac58479e56c81d0b1c4e775f04b9
      224afbc3ae34ac58479e56c81d0b1c4e775f04b9
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_i2c
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_i2c
+     ?? sc_i2c_2.2.1rc0.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_i2c
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_i2c
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -1033,7 +1061,10 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_i2c
          <xsoftip_exclude>module_i2c_simple</xsoftip_exclude>
          <xsoftip_exclude>app_xdk_xai_i2c_test</xsoftip_exclude>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_i2c
+     4badede1af2f30c110dd28ea8a2cb1849d9d4b0f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a c645b6fe23a98b5f4054047a0c44c0d7698d458f
+     c645b6fe23a98b5f4054047a0c44c0d7698d458f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a
      ddedf2cbc4d8fc5295f79a258f6953d394e8f21a 5cf19c07e0b47adfac832589982e5e8553283563 969664c2670b7540e095abe70e1998bc6b822478
      969664c2670b7540e095abe70e1998bc6b822478 5cf19c07e0b47adfac832589982e5e8553283563
      5cf19c07e0b47adfac832589982e5e8553283563 d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0
@@ -1250,11 +1281,15 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
      2d98a403a5c5729159a7ab89e8f157d5af1378f1 bac11d0c0fa6d2e575c10fb6b4619a5c69433243
      bac11d0c0fa6d2e575c10fb6b4619a5c69433243 224afbc3ae34ac58479e56c81d0b1c4e775f04b9
      224afbc3ae34ac58479e56c81d0b1c4e775f04b9
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_i2c
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     ?? sc_i2c_2.2.1rc0.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -1262,13 +1297,13 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_slicekit_support
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -1286,7 +1321,8 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
          <vendor>XMOS</vendor>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -1294,11 +1330,12 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_lcd
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_lcd
+     cc994baa391725020b3c6237b5bb2705e47d1e94 ac8fc37c2fa5aa3e5f1143927cee91b28543d151
+     ac8fc37c2fa5aa3e5f1143927cee91b28543d151 f4e03fa27a9fcf827eb8afcc4830867474255475
      f4e03fa27a9fcf827eb8afcc4830867474255475 08d3a07c2740b6b44557a59143ba5ad83040d96e
      08d3a07c2740b6b44557a59143ba5ad83040d96e 4205dfbd66456c457d3916d42a6609f4b8e967fe
      4205dfbd66456c457d3916d42a6609f4b8e967fe 6874e4761000fc958c1fdac196f51cfd98fc1979
@@ -1447,17 +1484,18 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_lcd
      9d317b190c86842895471295e3733d006d22869c a785522a1ae484386663e123926063f369d88097
      a785522a1ae484386663e123926063f369d88097 8af663d89e76c50ea225270d5bda9a4729cc431e
      8af663d89e76c50ea225270d5bda9a4729cc431e
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_lcd
-      M app_touch_controller_lib_demo/.cproject
-      M app_touch_controller_lib_demo/.project
-      M module_lcd/.cproject
-      M module_lcd/.project
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_lcd
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_sdram_burst
+     ?? sc_lcd_1.1.2rc0.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_sdram_burst
      
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -1465,13 +1503,13 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_slicekit_support
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -1489,7 +1527,8 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
          <vendor>XMOS</vendor>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -1497,11 +1536,10 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_sdram_burst
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_sdram_burst
      b8b1ed0df922799f4540e890dcfc083d6a5c416e 433ac93c930c3e86ddef97f957cb1b4a5c2bd114
      433ac93c930c3e86ddef97f957cb1b4a5c2bd114 cc1e1214779a2061d1be5cbe0ce20caf527fd947 559455ec42289659083054a80bbf42b9e50f2d9a
      cc1e1214779a2061d1be5cbe0ce20caf527fd947 56ee63beeebc3ef5945c5d0d097e25b68b6b26ae
@@ -1665,12 +1703,26 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_sdram_burst
      835a6db83a16d93931e51484b0f10edb6a2795f2 4d5c1d8423d4633076e435a5472e96de26119172
      f31d625ea3b177a0e2c14dd77f04819d2c0ce215 4d5c1d8423d4633076e435a5472e96de26119172
      4d5c1d8423d4633076e435a5472e96de26119172
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_sdram_burst
-      M module_sdram/.cproject
-      M module_sdram/.project
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_sdram_burst
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_sdram_burst
+     ?? _build/
+     ?? app_sdram_benchmark/_build/
+     ?? app_sdram_demo/_build/
+     ?? app_sdram_demo/bin/
+     ?? app_sdram_demo/doc_quickstart/_build/
+     ?? app_sdram_demo/doc_quickstart/run_xdoc.log
+     ?? app_sdram_testbench/_build/
+     ?? doc/#api.rst#
+     ?? doc/_build/
+     ?? module_sdram/_build/
+     ?? module_sdram_memory_mapper/_build/
+     ?? run_xpd.log
+     !! app_sdram_demo/.build/
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_sdram_burst
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_sdram_burst
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_sdram_burst
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -1743,9 +1795,11 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_sdram_burst
          <xcore_repo>sc_sdram_burst.git</xcore_repo>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -1753,13 +1807,13 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_slicekit_support
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -1777,7 +1831,8 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
          <vendor>XMOS</vendor>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -1785,11 +1840,10 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_sdram_burst
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_sdram_burst
      b8b1ed0df922799f4540e890dcfc083d6a5c416e 433ac93c930c3e86ddef97f957cb1b4a5c2bd114
      433ac93c930c3e86ddef97f957cb1b4a5c2bd114 cc1e1214779a2061d1be5cbe0ce20caf527fd947 559455ec42289659083054a80bbf42b9e50f2d9a
      cc1e1214779a2061d1be5cbe0ce20caf527fd947 56ee63beeebc3ef5945c5d0d097e25b68b6b26ae
@@ -1953,12 +2007,28 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_sdram_burst
      835a6db83a16d93931e51484b0f10edb6a2795f2 4d5c1d8423d4633076e435a5472e96de26119172
      f31d625ea3b177a0e2c14dd77f04819d2c0ce215 4d5c1d8423d4633076e435a5472e96de26119172
      4d5c1d8423d4633076e435a5472e96de26119172
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_sdram_burst
-      M module_sdram/.cproject
-      M module_sdram/.project
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_sdram_burst
+     ?? _build/
+     ?? app_sdram_benchmark/_build/
+     ?? app_sdram_demo/_build/
+     ?? app_sdram_demo/bin/
+     ?? app_sdram_demo/doc_quickstart/_build/
+     ?? app_sdram_demo/doc_quickstart/run_xdoc.log
+     ?? app_sdram_testbench/_build/
+     ?? doc/#api.rst#
+     ?? doc/_build/
+     ?? module_sdram/_build/
+     ?? module_sdram_memory_mapper/_build/
+     ?? run_xpd.log
+     !! app_sdram_demo/.build/
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_i2c
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_i2c
+     4badede1af2f30c110dd28ea8a2cb1849d9d4b0f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a c645b6fe23a98b5f4054047a0c44c0d7698d458f
+     c645b6fe23a98b5f4054047a0c44c0d7698d458f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a
      ddedf2cbc4d8fc5295f79a258f6953d394e8f21a 5cf19c07e0b47adfac832589982e5e8553283563 969664c2670b7540e095abe70e1998bc6b822478
      969664c2670b7540e095abe70e1998bc6b822478 5cf19c07e0b47adfac832589982e5e8553283563
      5cf19c07e0b47adfac832589982e5e8553283563 d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0
@@ -2175,11 +2245,15 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
      2d98a403a5c5729159a7ab89e8f157d5af1378f1 bac11d0c0fa6d2e575c10fb6b4619a5c69433243
      bac11d0c0fa6d2e575c10fb6b4619a5c69433243 224afbc3ae34ac58479e56c81d0b1c4e775f04b9
      224afbc3ae34ac58479e56c81d0b1c4e775f04b9
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_i2c
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_i2c
+     ?? sc_i2c_2.2.1rc0.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_i2c
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_i2c
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -2225,7 +2299,10 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_i2c
          <xsoftip_exclude>module_i2c_simple</xsoftip_exclude>
          <xsoftip_exclude>app_xdk_xai_i2c_test</xsoftip_exclude>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_i2c
+     4badede1af2f30c110dd28ea8a2cb1849d9d4b0f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a c645b6fe23a98b5f4054047a0c44c0d7698d458f
+     c645b6fe23a98b5f4054047a0c44c0d7698d458f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a
      ddedf2cbc4d8fc5295f79a258f6953d394e8f21a 5cf19c07e0b47adfac832589982e5e8553283563 969664c2670b7540e095abe70e1998bc6b822478
      969664c2670b7540e095abe70e1998bc6b822478 5cf19c07e0b47adfac832589982e5e8553283563
      5cf19c07e0b47adfac832589982e5e8553283563 d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0
@@ -2442,11 +2519,15 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
      2d98a403a5c5729159a7ab89e8f157d5af1378f1 bac11d0c0fa6d2e575c10fb6b4619a5c69433243
      bac11d0c0fa6d2e575c10fb6b4619a5c69433243 224afbc3ae34ac58479e56c81d0b1c4e775f04b9
      224afbc3ae34ac58479e56c81d0b1c4e775f04b9
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_i2c
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     ?? sc_i2c_2.2.1rc0.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -2454,13 +2535,13 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_slicekit_support
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -2478,7 +2559,8 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
          <vendor>XMOS</vendor>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -2486,13 +2568,13 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_dsp_transforms
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_dsp_transforms
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_dsp_transforms
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_dsp_transforms
      ef55e6b7f07e12d5963072e64dfb9702916eebfc db356c45aeb389a6819da6415a174d8d1cc18e0e
      db356c45aeb389a6819da6415a174d8d1cc18e0e 11ac3c8dc62a9eba32782af0272bed99d39afd12
      11ac3c8dc62a9eba32782af0272bed99d39afd12 838ae44f0035c8d6a348c15631567522e400d182
@@ -2556,13 +2638,23 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_dsp_transforms
      ac051c7bcbc395f168697bb17ac326247f232694 1a138a5dfa957af6efa48815ce184f9e2678ca8e
      1a138a5dfa957af6efa48815ce184f9e2678ca8e e5f2fc6887f7e9e604c906a321fbf203576394ee
      e5f2fc6887f7e9e604c906a321fbf203576394ee
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_dsp_transforms
-      M module_fft_simple/.cproject
-      M module_fft_simple/.project
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_dsp_transforms
+     ?? _build/
+     ?? app_fft_test/_build/
+     ?? app_fft_test/doc_quickstart/_build/
+     ?? app_fft_test/doc_quickstart/run_xdoc.log
+     ?? module_fft_simple/_build/
+     ?? module_fft_simple/doc/_build/
+     ?? module_fft_simple/doc/run_xdoc.log
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_dsp_transforms
+     ?? sc_dsp_transforms_1.0.0beta0.zip
+     ?? sc_dsp_transforms_1.0.0rc2.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_dsp_transforms
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_dsp_transforms
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_dsp_transforms
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -2603,7 +2695,8 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_dsp_transforms
          <xcore_repo>git://github.com/xcore/sc_dsp_transforms.git</xcore_repo>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_dsp_transforms
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_dsp_transforms
      ef55e6b7f07e12d5963072e64dfb9702916eebfc db356c45aeb389a6819da6415a174d8d1cc18e0e
      db356c45aeb389a6819da6415a174d8d1cc18e0e 11ac3c8dc62a9eba32782af0272bed99d39afd12
      11ac3c8dc62a9eba32782af0272bed99d39afd12 838ae44f0035c8d6a348c15631567522e400d182
@@ -2667,75 +2760,41 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_dsp_transforms
      ac051c7bcbc395f168697bb17ac326247f232694 1a138a5dfa957af6efa48815ce184f9e2678ca8e
      1a138a5dfa957af6efa48815ce184f9e2678ca8e e5f2fc6887f7e9e604c906a321fbf203576394ee
      e5f2fc6887f7e9e604c906a321fbf203576394ee
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_dsp_transforms
-      M module_fft_simple/.cproject
-      M module_fft_simple/.project
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_dsp_transforms
+     ?? _build/
+     ?? app_fft_test/_build/
+     ?? app_fft_test/doc_quickstart/_build/
+     ?? app_fft_test/doc_quickstart/run_xdoc.log
+     ?? module_fft_simple/_build/
+     ?? module_fft_simple/doc/_build/
+     ?? module_fft_simple/doc/run_xdoc.log
      ?? run_xpd.log
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sw_display_controller
-     M  app_display_controller_demo/.cproject
-     M  app_display_controller_demo/.project
-      D app_display_spectrum_from_adc/.cproject
-      D app_display_spectrum_from_adc/.project
-      D app_display_spectrum_from_adc/.xproject
-      D app_display_spectrum_from_adc/Makefile
-      D app_display_spectrum_from_adc/README.rst
-      D app_display_spectrum_from_adc/XP-SKC-U16.xn
-      D app_display_spectrum_from_adc/doc_quickstart/Makefile
-      D app_display_spectrum_from_adc/doc_quickstart/images/hardware_setup.jpg
-      D app_display_spectrum_from_adc/doc_quickstart/quickstart.rst
-      D app_display_spectrum_from_adc/src/app_display_spectrum_from_adc.xc
-      D app_display_spectrum_from_adc/src/lcd_conf.h
-      D app_display_spectrum_from_adc/src/level_meter_conf.h
-      D app_display_spectrum_from_adc/src/sdram_conf.h
-      D app_display_spectrum_from_adc/test_data/audiocheck.net_sweep20-20klin.mp3
-     M  module_display_controller/.cproject
-     M  module_display_controller/.project
-     M  module_level_meter/.cproject
-     M  module_level_meter/.project
-      M xpd.xml
-     ?? run_xpd.log
-     err:warning: LF will be replaced by CRLF in app_display_controller_demo/.cproject.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in app_display_controller_demo/.project.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in module_display_controller/.cproject.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in module_display_controller/.project.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in module_level_meter/.cproject.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in module_level_meter/.project.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in app_display_controller_demo/.cproject.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in app_display_controller_demo/.project.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in module_display_controller/.cproject.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in module_display_controller/.project.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in module_level_meter/.cproject.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in module_level_meter/.project.
-     err:The file will have its original line endings in your working directory.
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sw_display_controller
+     ?? sc_dsp_transforms_1.0.0beta0.zip
+     ?? sc_dsp_transforms_1.0.0rc2.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sw_display_controller
+      M run_xpd.log
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sw_display_controller
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sw_display_controller
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sw_display_controller
      <?xml version="1.0" ?>
      <xpd>
          <components>
              <component description = "A full Display Controller application for driving the XA-Sk-480 LCD in conjunction with the SDRAM Controller and LCD Driver components." type = "demoCode" scope = "Example" path = "app_display_controller_demo" local = "false" id = "app_display_controller_demo" name = "Display Controller Demo">
                  <board>XA-SK-SCR480</board>
                  <board>XA-SK-SDRAM</board>
+                 <componentDependency repo = "git://github.com/xcore/sw_display_controller.git" version = "1.1.0">module_display_controller</componentDependency>
+                 <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.1">module_i2c_master</componentDependency>
                  <componentDependency repo = "git://github.com/xcore/sc_sdram_burst.git" version = "1.1.0">module_sdram</componentDependency>
                  <componentDependency repo = "git://github.com/xcore/sc_sdram_burst.git" version = "1.1.0">module_sdram</componentDependency>
                  <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.1">module_i2c_master</componentDependency>
                  <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_lcd</componentDependency>
-                 <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.1">module_i2c_master</componentDependency>
-                 <componentDependency repo = "origin" version = "1.0.3">module_slicekit_support</componentDependency>
-                 <componentDependency repo = "git://github.com/xcore/sw_display_controller.git" version = "1.1.0">module_display_controller</componentDependency>
                  <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_lcd</componentDependency>
                  <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_touch_controller_lib</componentDependency>
+                 <componentDependency repo = "origin" version = "1.0.3">module_slicekit_support</componentDependency>
                  <keyword>LCD</keyword>
                  <keyword>Display</keyword>
                  <keyword>Framebuffer</keyword>
@@ -2744,13 +2803,13 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sw_display_controller
              <component description = "A demonstration of displaying spectrum of simulated signal on LCD" type = "demoCode" scope = "Example" path = "app_display_spectrum_demo" local = "false" id = "app_display_spectrum_demo" name = "Display Spectrum Demo">
                  <board>XA-SK-SCR480</board>
                  <board>XA-SK-SDRAM</board>
-                 <componentDependency repo = "git://github.com/xcore/sw_display_controller.git" version = "1.1.0">module_display_controller</componentDependency>
-                 <componentDependency repo = "origin" version = "1.0.3">module_slicekit_support</componentDependency>
                  <componentDependency repo = "git://github.com/xcore/sc_sdram_burst.git" version = "1.1.0">module_sdram</componentDependency>
                  <componentDependency repo = "git://github.com/xcore/sc_dsp_transforms.git" version = "1.0.0">module_fft_simple</componentDependency>
                  <componentDependency repo = "git://github.com/xcore/sw_display_controller.git" version = "1.1.0">module_level_meter</componentDependency>
                  <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_lcd</componentDependency>
                  <componentDependency repo = "git://github.com/xcore/sw_display_controller.git" version = "1.1.0">module_display_controller</componentDependency>
+                 <componentDependency repo = "git://github.com/xcore/sw_display_controller.git" version = "1.1.0">module_display_controller</componentDependency>
+                 <componentDependency repo = "origin" version = "1.0.3">module_slicekit_support</componentDependency>
                  <keyword>FFT</keyword>
                  <keyword>signal</keyword>
                  <keyword>LCD</keyword>
@@ -2759,8 +2818,8 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sw_display_controller
              <component name = "Display Controller" type = "component" buildresults_path = "module_display_controller/.module_display_controller.buildinfo" scope = "General Use" path = "module_display_controller" metainfo_path = "module_display_controller/module_display_controller.metainfo" local = "false" id = "module_display_controller" description = "Display Controller component for driving LCDs with an RGB 565 interface up to 800x600 pixels with a managed SDRAM image buffer.">
                  <board>XA-SK-SCR480</board>
                  <board>XA-SK-SDRAM</board>
-                 <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_lcd</componentDependency>
                  <componentDependency repo = "git://github.com/xcore/sc_sdram_burst.git" version = "1.1.0">module_sdram</componentDependency>
+                 <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_lcd</componentDependency>
                  <keyword>LCD</keyword>
                  <keyword>TFT</keyword>
                  <keyword>RGB565</keyword>
@@ -2771,8 +2830,8 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sw_display_controller
                  <board>XA-SK-SCR480</board>
                  <board>XA-SK-SDRAM</board>
                  <componentDependency repo = "git://github.com/xcore/sc_sdram_burst.git" version = "1.1.0">module_sdram</componentDependency>
-                 <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_lcd</componentDependency>
                  <componentDependency repo = "git://github.com/xcore/sw_display_controller.git" version = "1.1.0">module_display_controller</componentDependency>
+                 <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_lcd</componentDependency>
                  <keyword>LCD</keyword>
                  <keyword>RGB565</keyword>
                  <keyword>Display</keyword>
@@ -2809,7 +2868,6 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sw_display_controller
          <docdir>module_level_meter/doc</docdir>
          <docdir>app_display_controller_demo/doc_quickstart</docdir>
          <docdir>app_display_spectrum_demo/doc_quickstart</docdir>
-     	<exclude_dir>app_display_spectrum_from_adc</exclude_dir>
          <location>git@github.com:xcore/sw_display_controller.git</location>
          <name>sw_display_controller</name>
          <maintainer>andrewstanfordjason</maintainer>
@@ -2833,18 +2891,23 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sw_display_controller
          <release parenthash = "a01f0183a6cfcf006bbabea1011125b2242cc7ea" version = "1.1.0beta5" githash = "0de1a390f245206ea6a50c05dabd4c5aaae95a35"></release>
          <release parenthash = "0de1a390f245206ea6a50c05dabd4c5aaae95a35" version = "1.1.0beta6" githash = "35fbeca9e32ad1481bd594aaecaa84b4cf42cf59"></release>
          <release parenthash = "3ecc05a749aea9b3f61f708c4f54555715da962b" version = "1.1.0beta7" githash = "71c5164157e6cb7a319342a6ca81f9782956c18c"></release>
-         <release parenthash = "1edaeb226672bf3509675dae1c188e12867506d8" version = "1.1.0beta8"></release>
+         <release parenthash = "1edaeb226672bf3509675dae1c188e12867506d8" version = "1.1.0beta8" githash = "e883b4faf4d3d56474afeba0043036034adebcb7"></release>
          <subpartnumber>XM-002025-SM</subpartnumber>
          <vendor>XMOS</vendor>
          <version_defines></version_defines>
          <xcore_repo>sw_display_controller.git</xcore_repo>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_lcd
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_lcd
      
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_i2c
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_i2c
+     4badede1af2f30c110dd28ea8a2cb1849d9d4b0f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a c645b6fe23a98b5f4054047a0c44c0d7698d458f
+     c645b6fe23a98b5f4054047a0c44c0d7698d458f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a
      ddedf2cbc4d8fc5295f79a258f6953d394e8f21a 5cf19c07e0b47adfac832589982e5e8553283563 969664c2670b7540e095abe70e1998bc6b822478
      969664c2670b7540e095abe70e1998bc6b822478 5cf19c07e0b47adfac832589982e5e8553283563
      5cf19c07e0b47adfac832589982e5e8553283563 d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0
@@ -3061,11 +3124,15 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
      2d98a403a5c5729159a7ab89e8f157d5af1378f1 bac11d0c0fa6d2e575c10fb6b4619a5c69433243
      bac11d0c0fa6d2e575c10fb6b4619a5c69433243 224afbc3ae34ac58479e56c81d0b1c4e775f04b9
      224afbc3ae34ac58479e56c81d0b1c4e775f04b9
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_i2c
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_i2c
+     ?? sc_i2c_2.2.1rc0.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_i2c
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_i2c
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -3111,7 +3178,10 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_i2c
          <xsoftip_exclude>module_i2c_simple</xsoftip_exclude>
          <xsoftip_exclude>app_xdk_xai_i2c_test</xsoftip_exclude>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_i2c
+     4badede1af2f30c110dd28ea8a2cb1849d9d4b0f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a c645b6fe23a98b5f4054047a0c44c0d7698d458f
+     c645b6fe23a98b5f4054047a0c44c0d7698d458f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a
      ddedf2cbc4d8fc5295f79a258f6953d394e8f21a 5cf19c07e0b47adfac832589982e5e8553283563 969664c2670b7540e095abe70e1998bc6b822478
      969664c2670b7540e095abe70e1998bc6b822478 5cf19c07e0b47adfac832589982e5e8553283563
      5cf19c07e0b47adfac832589982e5e8553283563 d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0
@@ -3328,11 +3398,15 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
      2d98a403a5c5729159a7ab89e8f157d5af1378f1 bac11d0c0fa6d2e575c10fb6b4619a5c69433243
      bac11d0c0fa6d2e575c10fb6b4619a5c69433243 224afbc3ae34ac58479e56c81d0b1c4e775f04b9
      224afbc3ae34ac58479e56c81d0b1c4e775f04b9
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_i2c
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     ?? sc_i2c_2.2.1rc0.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -3340,13 +3414,13 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_slicekit_support
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -3364,7 +3438,8 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
          <vendor>XMOS</vendor>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -3372,11 +3447,12 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_lcd
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_lcd
+     cc994baa391725020b3c6237b5bb2705e47d1e94 ac8fc37c2fa5aa3e5f1143927cee91b28543d151
+     ac8fc37c2fa5aa3e5f1143927cee91b28543d151 f4e03fa27a9fcf827eb8afcc4830867474255475
      f4e03fa27a9fcf827eb8afcc4830867474255475 08d3a07c2740b6b44557a59143ba5ad83040d96e
      08d3a07c2740b6b44557a59143ba5ad83040d96e 4205dfbd66456c457d3916d42a6609f4b8e967fe
      4205dfbd66456c457d3916d42a6609f4b8e967fe 6874e4761000fc958c1fdac196f51cfd98fc1979
@@ -3525,18 +3601,32 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_lcd
      9d317b190c86842895471295e3733d006d22869c a785522a1ae484386663e123926063f369d88097
      a785522a1ae484386663e123926063f369d88097 8af663d89e76c50ea225270d5bda9a4729cc431e
      8af663d89e76c50ea225270d5bda9a4729cc431e
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_lcd
-      M app_touch_controller_lib_demo/.cproject
-      M app_touch_controller_lib_demo/.project
-      M module_lcd/.cproject
-      M module_lcd/.project
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_lcd
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_lcd
+     ?? sc_lcd_1.1.2rc0.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_lcd
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_lcd
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_lcd
      <?xml version="1.0" ?>
      <xpd>
          <components>
+             <component name = "Touch Screen Driver Function Library" type = "component" buildresults_path = "module_touch_controller_lib/.module_touch_controller_lib.buildinfo" scope = "General Use" path = "module_touch_controller_lib" metainfo_path = "module_touch_controller_lib/module_touch_controller_lib.metainfo" local = "false" id = "module_touch_controller_lib" description = "Function Library for driving touch screen with low voltage controller">
+                 <board>XA-SK-SCR480</board>
+                 <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.1">module_i2c_master</componentDependency>
+                 <keyword>Touch screen</keyword>
+                 <keyword>Controller</keyword>
+                 <keyword>I2C</keyword>
+             </component>
+             <component description = "Demonstrates how the module is used to write to an LCD screen." type = "demoCode" scope = "Example" path = "app_lcd_demo" local = "false" id = "app_lcd_demo" name = "LCD Demo">
+                 <board>XA-SK-SCR480</board>
+                 <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_lcd</componentDependency>
+                 <componentDependency repo = "origin" version = "1.0.3">module_slicekit_support</componentDependency>
+                 <keyword>LCD</keyword>
+                 <keyword>Screen</keyword>
+             </component>
              <component name = "Parallel RGB LCD Driver" type = "component" buildresults_path = "module_lcd/.module_lcd.buildinfo" scope = "General Use" path = "module_lcd" metainfo_path = "module_lcd/module_lcd.metainfo" local = "false" id = "module_lcd" description = "Server component for driving LCDs with an RGB 565 interface up to 800x600 pixels">
                  <board>XA-SK-SCR480</board>
                  <keyword>LCD</keyword>
@@ -3544,33 +3634,19 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_lcd
                  <keyword>RGB565</keyword>
                  <keyword>Display</keyword>
              </component>
-             <component description = "Demonstrates how the module is used to write to an LCD screen." type = "demoCode" scope = "Example" path = "app_lcd_demo" local = "false" id = "app_lcd_demo" name = "LCD Demo">
-                 <board>XA-SK-SCR480</board>
-                 <componentDependency repo = "origin" version = "1.0.3">module_slicekit_support</componentDependency>
-                 <componentDependency version = "1.1.0">module_lcd</componentDependency>
-                 <keyword>LCD</keyword>
-                 <keyword>Screen</keyword>
-             </component>
-             <component name = "Touch Screen Driver Function Library" type = "component" buildresults_path = "module_touch_controller_lib/.module_touch_controller_lib.buildinfo" scope = "General Use" path = "module_touch_controller_lib" metainfo_path = "module_touch_controller_lib/module_touch_controller_lib.metainfo" local = "false" id = "module_touch_controller_lib" description = "Function Library for driving touch screen with low voltage controller">
-                 <board>XA-SK-SCR480</board>
-                 <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.0">module_i2c_master</componentDependency>
-                 <keyword>Touch screen</keyword>
-                 <keyword>Controller</keyword>
-                 <keyword>I2C</keyword>
-             </component>
              <component description = "Demonstrates how the module is used to read the touch coordinates when the touch screen is touched." type = "demoCode" scope = "Example" path = "app_touch_controller_lib_demo" local = "false" id = "app_touch_controller_lib_demo" name = "Touch Screen Demo">
                  <board>XA-SK-SCR480</board>
-                 <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.0">module_i2c_master</componentDependency>
-                 <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.0">module_i2c_master</componentDependency>
-                 <componentDependency version = "1.1.0">module_touch_controller_lib</componentDependency>
+                 <componentDependency repo = "git://github.com/xcore/sc_lcd.git" version = "1.1.1">module_touch_controller_lib</componentDependency>
+                 <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.1">module_i2c_master</componentDependency>
+                 <componentDependency repo = "git://github.com/xcore/sc_i2c" version = "2.2.1">module_i2c_master</componentDependency>
                  <keyword>Touch screen</keyword>
                  <keyword>Touch controller</keyword>
              </component>
          </components>
          <dependency repo = "sc_i2c">
-             <githash>53349e8bd6493701b1ec462187b14c9e74bdc6bd</githash>
+             <githash>d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0</githash>
              <uri>git@github.com:xcore/sc_i2c.git</uri>
-             <version>2.2.0rc0</version>
+             <version>2.2.1rc0</version>
          </dependency>
          <dependency repo = "sc_slicekit_support">
              <githash>7920fc4235a96585274d73d25d275ea63b4cd285</githash>
@@ -3595,16 +3671,21 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_lcd
          <release parenthash = "587eb35c576339fa427b2838b3660974677ae8a9" version = "1.1.0beta0" githash = "67e86e076aa9a26d8dd0360aa053072c46d46ee1"></release>
          <release parenthash = "67e86e076aa9a26d8dd0360aa053072c46d46ee1" version = "1.1.0rc0" githash = "5db094b21dc868589d4f0ff37711d2df30a642e9"></release>
          <release parenthash = "c697fdbad3609b02b2306387c5d738072cd29fef" version = "1.1.0rc1" githash = "72d8c1f11adb9e6a07fe5f389f34c1bc1514fbf5"></release>
-         <release parenthash = "08d3a07c2740b6b44557a59143ba5ad83040d96e" version = "1.1.1rc0"></release>
+         <release parenthash = "08d3a07c2740b6b44557a59143ba5ad83040d96e" version = "1.1.1rc0" githash = "f4e03fa27a9fcf827eb8afcc4830867474255475"></release>
+         <release parenthash = "ac8fc37c2fa5aa3e5f1143927cee91b28543d151" version = "1.1.2rc0"></release>
          <subpartnumber>XM-001961-SM</subpartnumber>
          <vendor>XMOS</vendor>
          <version_defines></version_defines>
          <xcore_repo>sc_lcd.git</xcore_repo>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_i2c
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_i2c
+     4badede1af2f30c110dd28ea8a2cb1849d9d4b0f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a c645b6fe23a98b5f4054047a0c44c0d7698d458f
+     c645b6fe23a98b5f4054047a0c44c0d7698d458f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a
      ddedf2cbc4d8fc5295f79a258f6953d394e8f21a 5cf19c07e0b47adfac832589982e5e8553283563 969664c2670b7540e095abe70e1998bc6b822478
      969664c2670b7540e095abe70e1998bc6b822478 5cf19c07e0b47adfac832589982e5e8553283563
      5cf19c07e0b47adfac832589982e5e8553283563 d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0
@@ -3821,11 +3902,15 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
      2d98a403a5c5729159a7ab89e8f157d5af1378f1 bac11d0c0fa6d2e575c10fb6b4619a5c69433243
      bac11d0c0fa6d2e575c10fb6b4619a5c69433243 224afbc3ae34ac58479e56c81d0b1c4e775f04b9
      224afbc3ae34ac58479e56c81d0b1c4e775f04b9
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_i2c
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_i2c
+     ?? sc_i2c_2.2.1rc0.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_i2c
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_i2c
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -3871,7 +3956,10 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_i2c
          <xsoftip_exclude>module_i2c_simple</xsoftip_exclude>
          <xsoftip_exclude>app_xdk_xai_i2c_test</xsoftip_exclude>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_i2c
+     4badede1af2f30c110dd28ea8a2cb1849d9d4b0f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a c645b6fe23a98b5f4054047a0c44c0d7698d458f
+     c645b6fe23a98b5f4054047a0c44c0d7698d458f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a
      ddedf2cbc4d8fc5295f79a258f6953d394e8f21a 5cf19c07e0b47adfac832589982e5e8553283563 969664c2670b7540e095abe70e1998bc6b822478
      969664c2670b7540e095abe70e1998bc6b822478 5cf19c07e0b47adfac832589982e5e8553283563
      5cf19c07e0b47adfac832589982e5e8553283563 d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0
@@ -4088,11 +4176,15 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
      2d98a403a5c5729159a7ab89e8f157d5af1378f1 bac11d0c0fa6d2e575c10fb6b4619a5c69433243
      bac11d0c0fa6d2e575c10fb6b4619a5c69433243 224afbc3ae34ac58479e56c81d0b1c4e775f04b9
      224afbc3ae34ac58479e56c81d0b1c4e775f04b9
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_i2c
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     ?? sc_i2c_2.2.1rc0.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -4100,13 +4192,13 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_slicekit_support
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -4124,7 +4216,8 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
          <vendor>XMOS</vendor>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -4132,11 +4225,12 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_lcd
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_lcd
+     cc994baa391725020b3c6237b5bb2705e47d1e94 ac8fc37c2fa5aa3e5f1143927cee91b28543d151
+     ac8fc37c2fa5aa3e5f1143927cee91b28543d151 f4e03fa27a9fcf827eb8afcc4830867474255475
      f4e03fa27a9fcf827eb8afcc4830867474255475 08d3a07c2740b6b44557a59143ba5ad83040d96e
      08d3a07c2740b6b44557a59143ba5ad83040d96e 4205dfbd66456c457d3916d42a6609f4b8e967fe
      4205dfbd66456c457d3916d42a6609f4b8e967fe 6874e4761000fc958c1fdac196f51cfd98fc1979
@@ -4285,17 +4379,18 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_lcd
      9d317b190c86842895471295e3733d006d22869c a785522a1ae484386663e123926063f369d88097
      a785522a1ae484386663e123926063f369d88097 8af663d89e76c50ea225270d5bda9a4729cc431e
      8af663d89e76c50ea225270d5bda9a4729cc431e
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_lcd
-      M app_touch_controller_lib_demo/.cproject
-      M app_touch_controller_lib_demo/.project
-      M module_lcd/.cproject
-      M module_lcd/.project
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_lcd
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_sdram_burst
+     ?? sc_lcd_1.1.2rc0.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_sdram_burst
      
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -4303,13 +4398,13 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_slicekit_support
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -4327,7 +4422,8 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
          <vendor>XMOS</vendor>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -4335,11 +4431,10 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_sdram_burst
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_sdram_burst
      b8b1ed0df922799f4540e890dcfc083d6a5c416e 433ac93c930c3e86ddef97f957cb1b4a5c2bd114
      433ac93c930c3e86ddef97f957cb1b4a5c2bd114 cc1e1214779a2061d1be5cbe0ce20caf527fd947 559455ec42289659083054a80bbf42b9e50f2d9a
      cc1e1214779a2061d1be5cbe0ce20caf527fd947 56ee63beeebc3ef5945c5d0d097e25b68b6b26ae
@@ -4503,12 +4598,26 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_sdram_burst
      835a6db83a16d93931e51484b0f10edb6a2795f2 4d5c1d8423d4633076e435a5472e96de26119172
      f31d625ea3b177a0e2c14dd77f04819d2c0ce215 4d5c1d8423d4633076e435a5472e96de26119172
      4d5c1d8423d4633076e435a5472e96de26119172
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_sdram_burst
-      M module_sdram/.cproject
-      M module_sdram/.project
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_sdram_burst
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_sdram_burst
+     ?? _build/
+     ?? app_sdram_benchmark/_build/
+     ?? app_sdram_demo/_build/
+     ?? app_sdram_demo/bin/
+     ?? app_sdram_demo/doc_quickstart/_build/
+     ?? app_sdram_demo/doc_quickstart/run_xdoc.log
+     ?? app_sdram_testbench/_build/
+     ?? doc/#api.rst#
+     ?? doc/_build/
+     ?? module_sdram/_build/
+     ?? module_sdram_memory_mapper/_build/
+     ?? run_xpd.log
+     !! app_sdram_demo/.build/
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_sdram_burst
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_sdram_burst
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_sdram_burst
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -4581,9 +4690,11 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_sdram_burst
          <xcore_repo>sc_sdram_burst.git</xcore_repo>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -4591,13 +4702,13 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_slicekit_support
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -4615,7 +4726,8 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
          <vendor>XMOS</vendor>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -4623,11 +4735,10 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_sdram_burst
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_sdram_burst
      b8b1ed0df922799f4540e890dcfc083d6a5c416e 433ac93c930c3e86ddef97f957cb1b4a5c2bd114
      433ac93c930c3e86ddef97f957cb1b4a5c2bd114 cc1e1214779a2061d1be5cbe0ce20caf527fd947 559455ec42289659083054a80bbf42b9e50f2d9a
      cc1e1214779a2061d1be5cbe0ce20caf527fd947 56ee63beeebc3ef5945c5d0d097e25b68b6b26ae
@@ -4791,12 +4902,28 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_sdram_burst
      835a6db83a16d93931e51484b0f10edb6a2795f2 4d5c1d8423d4633076e435a5472e96de26119172
      f31d625ea3b177a0e2c14dd77f04819d2c0ce215 4d5c1d8423d4633076e435a5472e96de26119172
      4d5c1d8423d4633076e435a5472e96de26119172
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_sdram_burst
-      M module_sdram/.cproject
-      M module_sdram/.project
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_sdram_burst
+     ?? _build/
+     ?? app_sdram_benchmark/_build/
+     ?? app_sdram_demo/_build/
+     ?? app_sdram_demo/bin/
+     ?? app_sdram_demo/doc_quickstart/_build/
+     ?? app_sdram_demo/doc_quickstart/run_xdoc.log
+     ?? app_sdram_testbench/_build/
+     ?? doc/#api.rst#
+     ?? doc/_build/
+     ?? module_sdram/_build/
+     ?? module_sdram_memory_mapper/_build/
+     ?? run_xpd.log
+     !! app_sdram_demo/.build/
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_i2c
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_i2c
+     4badede1af2f30c110dd28ea8a2cb1849d9d4b0f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a c645b6fe23a98b5f4054047a0c44c0d7698d458f
+     c645b6fe23a98b5f4054047a0c44c0d7698d458f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a
      ddedf2cbc4d8fc5295f79a258f6953d394e8f21a 5cf19c07e0b47adfac832589982e5e8553283563 969664c2670b7540e095abe70e1998bc6b822478
      969664c2670b7540e095abe70e1998bc6b822478 5cf19c07e0b47adfac832589982e5e8553283563
      5cf19c07e0b47adfac832589982e5e8553283563 d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0
@@ -5013,11 +5140,15 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
      2d98a403a5c5729159a7ab89e8f157d5af1378f1 bac11d0c0fa6d2e575c10fb6b4619a5c69433243
      bac11d0c0fa6d2e575c10fb6b4619a5c69433243 224afbc3ae34ac58479e56c81d0b1c4e775f04b9
      224afbc3ae34ac58479e56c81d0b1c4e775f04b9
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_i2c
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_i2c
+     ?? sc_i2c_2.2.1rc0.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_i2c
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_i2c
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -5063,7 +5194,10 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_i2c
          <xsoftip_exclude>module_i2c_simple</xsoftip_exclude>
          <xsoftip_exclude>app_xdk_xai_i2c_test</xsoftip_exclude>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_i2c
+     4badede1af2f30c110dd28ea8a2cb1849d9d4b0f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a c645b6fe23a98b5f4054047a0c44c0d7698d458f
+     c645b6fe23a98b5f4054047a0c44c0d7698d458f ddedf2cbc4d8fc5295f79a258f6953d394e8f21a
      ddedf2cbc4d8fc5295f79a258f6953d394e8f21a 5cf19c07e0b47adfac832589982e5e8553283563 969664c2670b7540e095abe70e1998bc6b822478
      969664c2670b7540e095abe70e1998bc6b822478 5cf19c07e0b47adfac832589982e5e8553283563
      5cf19c07e0b47adfac832589982e5e8553283563 d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0
@@ -5280,11 +5414,15 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_i2c
      2d98a403a5c5729159a7ab89e8f157d5af1378f1 bac11d0c0fa6d2e575c10fb6b4619a5c69433243
      bac11d0c0fa6d2e575c10fb6b4619a5c69433243 224afbc3ae34ac58479e56c81d0b1c4e775f04b9
      224afbc3ae34ac58479e56c81d0b1c4e775f04b9
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_i2c
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     ?? sc_i2c_2.2.1rc0.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -5292,13 +5430,13 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_slicekit_support
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_slicekit_support
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -5316,7 +5454,8 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_slicekit_support
          <vendor>XMOS</vendor>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_slicekit_support
      7920fc4235a96585274d73d25d275ea63b4cd285 2fc3fc597c9d9d2bbe7073d760078a299fd9b572
      2fc3fc597c9d9d2bbe7073d760078a299fd9b572 7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21
      7a05c790c61bb29c2d4ffb0d1c5782c342cf0c21 65849485a1e0e5a2180263c24593bc47745adb1a
@@ -5324,13 +5463,13 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_slicekit_support
      a432375d409305cf3a4316fa94ad824118de5ba7 a2c6a6431ace10103958692970f7902e7d106761
      a2c6a6431ace10103958692970f7902e7d106761 bbd9ad427eda446a26c6b96fcc131009c3d41697
      bbd9ad427eda446a26c6b96fcc131009c3d41697
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_slicekit_support
-      M module_slicekit_support/.cproject
-      M module_slicekit_support/.project
-     ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_dsp_transforms
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_dsp_transforms
      
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_dsp_transforms
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_dsp_transforms
      ef55e6b7f07e12d5963072e64dfb9702916eebfc db356c45aeb389a6819da6415a174d8d1cc18e0e
      db356c45aeb389a6819da6415a174d8d1cc18e0e 11ac3c8dc62a9eba32782af0272bed99d39afd12
      11ac3c8dc62a9eba32782af0272bed99d39afd12 838ae44f0035c8d6a348c15631567522e400d182
@@ -5394,13 +5533,23 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_dsp_transforms
      ac051c7bcbc395f168697bb17ac326247f232694 1a138a5dfa957af6efa48815ce184f9e2678ca8e
      1a138a5dfa957af6efa48815ce184f9e2678ca8e e5f2fc6887f7e9e604c906a321fbf203576394ee
      e5f2fc6887f7e9e604c906a321fbf203576394ee
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_dsp_transforms
-      M module_fft_simple/.cproject
-      M module_fft_simple/.project
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_dsp_transforms
+     ?? _build/
+     ?? app_fft_test/_build/
+     ?? app_fft_test/doc_quickstart/_build/
+     ?? app_fft_test/doc_quickstart/run_xdoc.log
+     ?? module_fft_simple/_build/
+     ?? module_fft_simple/doc/_build/
+     ?? module_fft_simple/doc/run_xdoc.log
      ?? run_xpd.log
-Run 'git rev-parse --show-cdup' in D:\Sudha\Git\sc_dsp_transforms
+     ?? sc_dsp_transforms_1.0.0beta0.zip
+     ?? sc_dsp_transforms_1.0.0rc2.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sc_dsp_transforms
      
-Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_dsp_transforms
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sc_dsp_transforms
      <?xml version="1.0" ?>
      <xpd>
          <components>
@@ -5441,7 +5590,8 @@ Run 'git show master:xpd.xml' in D:\Sudha\Git\sc_dsp_transforms
          <xcore_repo>git://github.com/xcore/sc_dsp_transforms.git</xcore_repo>
          <xpd_version>1.0</xpd_version>
      </xpd>
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_dsp_transforms
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-list --parents --all' in /scratch/dan/OSS/sc_dsp_transforms
      ef55e6b7f07e12d5963072e64dfb9702916eebfc db356c45aeb389a6819da6415a174d8d1cc18e0e
      db356c45aeb389a6819da6415a174d8d1cc18e0e 11ac3c8dc62a9eba32782af0272bed99d39afd12
      11ac3c8dc62a9eba32782af0272bed99d39afd12 838ae44f0035c8d6a348c15631567522e400d182
@@ -5505,278 +5655,348 @@ Run 'git rev-list --parents --all' in D:\Sudha\Git\sc_dsp_transforms
      ac051c7bcbc395f168697bb17ac326247f232694 1a138a5dfa957af6efa48815ce184f9e2678ca8e
      1a138a5dfa957af6efa48815ce184f9e2678ca8e e5f2fc6887f7e9e604c906a321fbf203576394ee
      e5f2fc6887f7e9e604c906a321fbf203576394ee
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sc_dsp_transforms
-      M module_fft_simple/.cproject
-      M module_fft_simple/.project
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sc_dsp_transforms
+     ?? _build/
+     ?? app_fft_test/_build/
+     ?? app_fft_test/doc_quickstart/_build/
+     ?? app_fft_test/doc_quickstart/run_xdoc.log
+     ?? module_fft_simple/_build/
+     ?? module_fft_simple/doc/_build/
+     ?? module_fft_simple/doc/run_xdoc.log
      ?? run_xpd.log
-Run 'git rev-list --parents --all' in D:\Sudha\Git\sw_display_controller
-     a3435419a6829c0730f02bbd5217afd2dbddf9b4 4edb04a0252c3c84a03cb1380decb3bb6065ad9d
-     4edb04a0252c3c84a03cb1380decb3bb6065ad9d 64762b09360576a4e9fe6dd44d4cf7374cdf12f4
-     64762b09360576a4e9fe6dd44d4cf7374cdf12f4 75a00bea51fe55d668edb2d94888f6f1ffd07f74
-     75a00bea51fe55d668edb2d94888f6f1ffd07f74 e883b4faf4d3d56474afeba0043036034adebcb7
-     e883b4faf4d3d56474afeba0043036034adebcb7 1edaeb226672bf3509675dae1c188e12867506d8
-     1edaeb226672bf3509675dae1c188e12867506d8 160c0e434f746c2a4a122927343b896084fc43cd
-     160c0e434f746c2a4a122927343b896084fc43cd 87fb244931a5f2792267ac80393253881a58b1d7
-     87fb244931a5f2792267ac80393253881a58b1d7 f90f6891b5fb7b95fffced38d29f57be1d828ff8
-     f90f6891b5fb7b95fffced38d29f57be1d828ff8 388471d6df05c758bc20dfe72e77c30ded1887b3
-     388471d6df05c758bc20dfe72e77c30ded1887b3 de57f166c3de60397f1c3503670d7e810acab9b4
-     de57f166c3de60397f1c3503670d7e810acab9b4 3492b1ab6ae15d342e05b54d4892356928db4fad
-     3492b1ab6ae15d342e05b54d4892356928db4fad a384d53185f156af82e2337beee542f21aaa41fb
-     a384d53185f156af82e2337beee542f21aaa41fb d84ea2f39d2119b3c761f69913011a0a1759154f
-     d84ea2f39d2119b3c761f69913011a0a1759154f 0438903df5d06b64e99770b131082b7fc853850f
-     0438903df5d06b64e99770b131082b7fc853850f 88358b48a71538bb254279375294f9218e50b3bc
-     88358b48a71538bb254279375294f9218e50b3bc b586c66279c7f4fefc08493879295889205378a9
-     b586c66279c7f4fefc08493879295889205378a9 71c5164157e6cb7a319342a6ca81f9782956c18c
-     71c5164157e6cb7a319342a6ca81f9782956c18c 3ecc05a749aea9b3f61f708c4f54555715da962b
-     3ecc05a749aea9b3f61f708c4f54555715da962b b4cfcaf8bf83bb7d34d8d4e1ee5ed9def92fa713
-     b4cfcaf8bf83bb7d34d8d4e1ee5ed9def92fa713 1d274ee1d08fe5bc332919a530ee39d81eae4d7f
-     1d274ee1d08fe5bc332919a530ee39d81eae4d7f 28df5b5c7c87fe0071b7d20acf9caf4903df7987
-     28df5b5c7c87fe0071b7d20acf9caf4903df7987 e1be4a19a4012c5e318c159faa8f75320613ce77
-     e1be4a19a4012c5e318c159faa8f75320613ce77 bfb57de2602e8dbc0f61bdc923f8b7ce13166b53
-     bfb57de2602e8dbc0f61bdc923f8b7ce13166b53 06d50802f723d2f2a250738b7aae39368c6c0add
-     06d50802f723d2f2a250738b7aae39368c6c0add c77ee8e241d6055d4a937db44805b15689baffa5
-     c77ee8e241d6055d4a937db44805b15689baffa5 35fbeca9e32ad1481bd594aaecaa84b4cf42cf59
-     35fbeca9e32ad1481bd594aaecaa84b4cf42cf59 0de1a390f245206ea6a50c05dabd4c5aaae95a35
-     0de1a390f245206ea6a50c05dabd4c5aaae95a35 a01f0183a6cfcf006bbabea1011125b2242cc7ea
-     a01f0183a6cfcf006bbabea1011125b2242cc7ea 9784b2ed9099b1efd5e4041e1a8d1764d0c73e21
-     9784b2ed9099b1efd5e4041e1a8d1764d0c73e21 ead646d8e8bb49472be34fbd4d8028b70b0cb896
-     ead646d8e8bb49472be34fbd4d8028b70b0cb896 e8e78195896e3481b5e3bfe93b6f663282596246
-     e8e78195896e3481b5e3bfe93b6f663282596246 53380d7381cd7fec3333614fd8e217d00980da52
-     53380d7381cd7fec3333614fd8e217d00980da52 b4da987fdb62dfd56256b9b2b336d86570602816
-     b4da987fdb62dfd56256b9b2b336d86570602816 045cd70acd0a12ca55726668419337c26d99c31c
-     045cd70acd0a12ca55726668419337c26d99c31c b23683caf01ed35a2bb9d49420536090f814470c
-     b23683caf01ed35a2bb9d49420536090f814470c 04f3fd6aa84d870d758b2164278b8e07e54b75b8
-     04f3fd6aa84d870d758b2164278b8e07e54b75b8 bd1828914410f70442f01641a0614e227328c9a2
-     bd1828914410f70442f01641a0614e227328c9a2 8a6de9777e8bfce14164497452c0193dd96da51f
-     8a6de9777e8bfce14164497452c0193dd96da51f 7c2908c41660633f0569d61b5bae973ea823ac3a
-     7c2908c41660633f0569d61b5bae973ea823ac3a bab26bcfcc30dd9ff9339fda2d311e4ff86f750f
-     bab26bcfcc30dd9ff9339fda2d311e4ff86f750f 035e59045a007f3c030125f1b118a4f95714a567
-     035e59045a007f3c030125f1b118a4f95714a567 c6be3887424479f1e5f3fea0708bb3da9abebfb0
-     c6be3887424479f1e5f3fea0708bb3da9abebfb0 e65d1df553fcd81eae09b6ed6ac72e9b83a4397b
-     e65d1df553fcd81eae09b6ed6ac72e9b83a4397b 4c2faf466a8a558dfe5c049639f4c8aa17bf4d1e
-     4c2faf466a8a558dfe5c049639f4c8aa17bf4d1e 4bfdd97c83c87ab8a67b72e629cb1e225751aec1
-     4bfdd97c83c87ab8a67b72e629cb1e225751aec1 f7cf04c8c5799dea777e1c9e97961f7a61cfac12
-     f7cf04c8c5799dea777e1c9e97961f7a61cfac12 76abd060e4c805fa0ee5af79f61442d1598433c1
-     76abd060e4c805fa0ee5af79f61442d1598433c1 7e8053cf618ba536d7e56a1fe2c12fabbe1127ee
-     7e8053cf618ba536d7e56a1fe2c12fabbe1127ee a4d7f306fced3d30f5dc149c7d675a19ec50f560
-     a4d7f306fced3d30f5dc149c7d675a19ec50f560 b9a3b435270487f0b3192e9abdc32a4e7b68e364
-     b9a3b435270487f0b3192e9abdc32a4e7b68e364 eaf1c4606bc152a5bdd9fde298366a31aee1c141
-     eaf1c4606bc152a5bdd9fde298366a31aee1c141 4fe3cd9652274c63914af5cff6d5dfc5fd2fa715
-     4fe3cd9652274c63914af5cff6d5dfc5fd2fa715 85b69e94d9ea6cca294ae438d8e32fb90f0dea94
-     85b69e94d9ea6cca294ae438d8e32fb90f0dea94 b277ba186134ded030b01fdec01562f48a29f254
-     b277ba186134ded030b01fdec01562f48a29f254 718e95fdb3d63b614c94f9cbb11fb1ba29dc2da7
-     718e95fdb3d63b614c94f9cbb11fb1ba29dc2da7 b134b2e3d85eca90389687cbfed956149f7ffed3
-     b134b2e3d85eca90389687cbfed956149f7ffed3 9ea6d848893d63bd7b7756857c4b05bb5df63366
-     9ea6d848893d63bd7b7756857c4b05bb5df63366 df24d646561434735ff9b8264170e09e27aece64
-     df24d646561434735ff9b8264170e09e27aece64 81a85bf98c14445e1f9d23629e8ded49d5c0461b
-     81a85bf98c14445e1f9d23629e8ded49d5c0461b 967ec5fa75eccde25a12e3b31cac106c05364fe6
-     967ec5fa75eccde25a12e3b31cac106c05364fe6 29c98284d62abfe090375f7abebb1fafe0ac08b1
-     29c98284d62abfe090375f7abebb1fafe0ac08b1 1d1a44ee63a5f198697b62ff7109b0576087dedf d1c0b79439c03ab24944af508d770242ad934c73
-     1d1a44ee63a5f198697b62ff7109b0576087dedf 153e0c3488e214ba3cf2f4c4ee52de68c8d582e0
-     d1c0b79439c03ab24944af508d770242ad934c73 35cca0ad0dc6595bd23640d6be9ff3c0f1935642
-     35cca0ad0dc6595bd23640d6be9ff3c0f1935642 73bcfe462a1e08add9462686c53c7bdfcb4f3bf1
-     73bcfe462a1e08add9462686c53c7bdfcb4f3bf1 8e038188a2fc7ef0176f70045eb75c7a427e7afb
-     8e038188a2fc7ef0176f70045eb75c7a427e7afb 153e0c3488e214ba3cf2f4c4ee52de68c8d582e0
-     153e0c3488e214ba3cf2f4c4ee52de68c8d582e0 2720952e56d21a565d43c266b065914743121724
-     2720952e56d21a565d43c266b065914743121724 2100110b9fdeb4a365148a8ccdfe16abfc0c777b 7822267839df47140cef9bd99515f86607057aeb
-     2100110b9fdeb4a365148a8ccdfe16abfc0c777b 0fcf285ce95582750531456f6fa46b98567c3cdd
-     0fcf285ce95582750531456f6fa46b98567c3cdd 15cfe48c9e8f92422845ca8bafd71cb9b4c204ec
-     7822267839df47140cef9bd99515f86607057aeb bff0a41940e25db8bbbfa768237130bf81b50409
-     bff0a41940e25db8bbbfa768237130bf81b50409 0fcf285ce95582750531456f6fa46b98567c3cdd
-     15cfe48c9e8f92422845ca8bafd71cb9b4c204ec 1b4df40b0e6e03f015f0b1d682d8f62573f0f751 37d6b4f34465c43c069122107cd4310cd5c09123
-     1b4df40b0e6e03f015f0b1d682d8f62573f0f751 198592dfe33653c73aca6984643ecacc6959eae7
-     37d6b4f34465c43c069122107cd4310cd5c09123 132f51d97008baf7cd93feb95798f218ba9e9112
-     198592dfe33653c73aca6984643ecacc6959eae7 87d50465e6e2509687a19a170267e9ede2857df0
-     132f51d97008baf7cd93feb95798f218ba9e9112 f6591ff47112a8e63f25821856b7af1e44a58122
-     87d50465e6e2509687a19a170267e9ede2857df0 9aead4cd2dbfa76b9a8cb765866e087a477ff855
-     f6591ff47112a8e63f25821856b7af1e44a58122 0b15064d859a9f64cea210b4997751edae08ed5c
-     9aead4cd2dbfa76b9a8cb765866e087a477ff855 6dff2695828320cab4a6c83782112dff202e5895
-     0b15064d859a9f64cea210b4997751edae08ed5c e38f62edba872f52a4db976375a37df96ab48397
-     6dff2695828320cab4a6c83782112dff202e5895 11d8a9e1cc0d771f1920dca05236dd6c66de2c63
-     e38f62edba872f52a4db976375a37df96ab48397 dca15f2d50b1aaaf00192d6ab8a77d6a3678da27
-     11d8a9e1cc0d771f1920dca05236dd6c66de2c63 ba96ead8d5b656d709c8ec6983f5d45ed3080139
-     dca15f2d50b1aaaf00192d6ab8a77d6a3678da27 818f4cfb0bf01d0078dfcafcc83d296f49d220fa
-     ba96ead8d5b656d709c8ec6983f5d45ed3080139 77fe9cb281f60f3deef6f46301d1f6045b2700fe
-     818f4cfb0bf01d0078dfcafcc83d296f49d220fa 03c42df0ff238d6afb08e4880b27643b352f475d
-     77fe9cb281f60f3deef6f46301d1f6045b2700fe 178faf4a322edc8645d1b52414ac7d8603a548ea
-     03c42df0ff238d6afb08e4880b27643b352f475d 422732db7c6d20e8cfac247a85c773c226d2a758
-     178faf4a322edc8645d1b52414ac7d8603a548ea e1c78affd86630e0eb756d6c8e3acf396c47269f
-     422732db7c6d20e8cfac247a85c773c226d2a758 08b9c1bc2bb5e2f9e2e66756663ae68bad4428c7
-     e1c78affd86630e0eb756d6c8e3acf396c47269f fc36e02b8279521a395a37abc98cc7903731ca6f
-     08b9c1bc2bb5e2f9e2e66756663ae68bad4428c7 2067acf1cdb34e440657ba1486b3afc89eba70d3
-     fc36e02b8279521a395a37abc98cc7903731ca6f 418ae9f2aeb60b920d4a74a4c7c653dec75cd975
-     2067acf1cdb34e440657ba1486b3afc89eba70d3 a8eb5aed7bc73cfc0064d097b24244795925685a
-     418ae9f2aeb60b920d4a74a4c7c653dec75cd975 0dcff79492709785ad417a4edc4db4c14efeafb6
-     a8eb5aed7bc73cfc0064d097b24244795925685a 4d6b50d9ad8baee6d3a59bfbbfb3f32794df772f
-     0dcff79492709785ad417a4edc4db4c14efeafb6 f1939ee45943d470dbb8cc0e3c9a6c2353281f72
-     4d6b50d9ad8baee6d3a59bfbbfb3f32794df772f ba924cc583e6e9ac0af145a7d64f5121cdd811c5
-     f1939ee45943d470dbb8cc0e3c9a6c2353281f72 2f931424660e2cad588abf28be9c4ea3fd00b2a7
-     ba924cc583e6e9ac0af145a7d64f5121cdd811c5 2a57bc0e36a4a77246e0ab3bff492eb5e0a5fc12
-     2f931424660e2cad588abf28be9c4ea3fd00b2a7 5c7fd5e0e207072ed22e4b5d1f7f92f74abbd966
-     2a57bc0e36a4a77246e0ab3bff492eb5e0a5fc12 e3641334595046c53a0b74fcff514d421df24a7c bfcd90ec324a8cccd9e0e60f272198eced368f90
-     5c7fd5e0e207072ed22e4b5d1f7f92f74abbd966 05bd5c5418d42008749c0b5a4c18617edac6c298 3378a0007efe72b9397423085f5ebb9063511c31
-     bfcd90ec324a8cccd9e0e60f272198eced368f90 e3641334595046c53a0b74fcff514d421df24a7c
-     3378a0007efe72b9397423085f5ebb9063511c31 05bd5c5418d42008749c0b5a4c18617edac6c298
-     e3641334595046c53a0b74fcff514d421df24a7c e08d392cefe0c838f79b08599d05204aa4669a49
-     05bd5c5418d42008749c0b5a4c18617edac6c298 f41a2d16aeca2d6a7e46ee97a9a38d37a399beac
-     e08d392cefe0c838f79b08599d05204aa4669a49 f01cd80509db0da851099cfbcd7e1419d2ee00f8 a80926dc729e92b93c380619d9945f3008ea1a66
-     f41a2d16aeca2d6a7e46ee97a9a38d37a399beac 6be87c408b658b4e52a66fb75576cd788b0cdaff 7fb5e71692e8ef8f426f5e7dd5d6261349819dc4
-     a80926dc729e92b93c380619d9945f3008ea1a66 f01cd80509db0da851099cfbcd7e1419d2ee00f8
-     7fb5e71692e8ef8f426f5e7dd5d6261349819dc4 6be87c408b658b4e52a66fb75576cd788b0cdaff
-     f01cd80509db0da851099cfbcd7e1419d2ee00f8 2c4a2346acecae0c58438b005b855f7f4ddc0fe5
-     6be87c408b658b4e52a66fb75576cd788b0cdaff cec4b08c761319fbb2bb3e5fa745e23d6df52507
-     2c4a2346acecae0c58438b005b855f7f4ddc0fe5 e8f305a90efac736e5cb9d387b1fa0785d7b283c 425226f417e25949a257c36f2bc52b06379fbc75
-     cec4b08c761319fbb2bb3e5fa745e23d6df52507 a138f2d338a3a1dd051fe7cb57455efd9a7b2f6f dd2bb75a603436af0dff8c49927f6dc591b6de9c
-     e8f305a90efac736e5cb9d387b1fa0785d7b283c e9b98680a4080592666b26378461f15b5cc6e1cb
-     a138f2d338a3a1dd051fe7cb57455efd9a7b2f6f 10b48a989ff5e67c7a2e40201355d65641dc37c0
-     e9b98680a4080592666b26378461f15b5cc6e1cb 17928cfde26849d33e0176d1a6436677fe35c7b0
-     10b48a989ff5e67c7a2e40201355d65641dc37c0 222ab08fbf60335a12c729d30eef7c6b36ad33bb
-     425226f417e25949a257c36f2bc52b06379fbc75 f11b817cc884552b854344758e99cc1e1eb4900e
-     dd2bb75a603436af0dff8c49927f6dc591b6de9c 3851a41d66514e2ddb192390f61a508f529ebb3e
-     f11b817cc884552b854344758e99cc1e1eb4900e 902d1b8d3aefaa9b17a38288a43e41ead1d012fb
-     3851a41d66514e2ddb192390f61a508f529ebb3e d190ddc4869e3c8b021cd80d48ed8f67970b0b8e
-     17928cfde26849d33e0176d1a6436677fe35c7b0 068b6d3db2e131dcf6d870e3b9f1763ed0b35827
-     222ab08fbf60335a12c729d30eef7c6b36ad33bb e5dafee33c4d1c45bf3c75362bf121a8067332c9
-     902d1b8d3aefaa9b17a38288a43e41ead1d012fb 7217f54900cc95659c3befd1eefb8fc1ff6ecc21
-     d190ddc4869e3c8b021cd80d48ed8f67970b0b8e 475c42c7c68e9a3be8a6240fc35d8bbd84dcf11d
-     7217f54900cc95659c3befd1eefb8fc1ff6ecc21 c547d4b93635a7effabda8358024c5b071cc4a1f
-     475c42c7c68e9a3be8a6240fc35d8bbd84dcf11d 88425544bccba960a50517d17d82cb6b435a463e
-     c547d4b93635a7effabda8358024c5b071cc4a1f 068b6d3db2e131dcf6d870e3b9f1763ed0b35827
-     88425544bccba960a50517d17d82cb6b435a463e e5dafee33c4d1c45bf3c75362bf121a8067332c9
-     068b6d3db2e131dcf6d870e3b9f1763ed0b35827 5a132773398ec766e64d0456942b99085daf930f
-     e5dafee33c4d1c45bf3c75362bf121a8067332c9 b97d474dfcfd92bb05980162fd0ec8424aff01d2
-     5a132773398ec766e64d0456942b99085daf930f acaf2699ebbd13d8e508df25a9e2a6b94bb9969e
-     b97d474dfcfd92bb05980162fd0ec8424aff01d2 8a16b0dff5c5748a21c7ad2c93e02f622432ab41
-     acaf2699ebbd13d8e508df25a9e2a6b94bb9969e c5bf760bdc65ca61131253517a5f55d639d6409d
-     8a16b0dff5c5748a21c7ad2c93e02f622432ab41 3dd79f8960f8c01c7fb87a39621e6358bf33f8d7
-     c5bf760bdc65ca61131253517a5f55d639d6409d f0a762974d189956754d322b4aefe233ff80533f
-     3dd79f8960f8c01c7fb87a39621e6358bf33f8d7 7aa3820504cdafd1a5576e7c8754529bb9231765
-     f0a762974d189956754d322b4aefe233ff80533f 80b666aaa4ceb49c181e237a8786dd09eaa272ca 971406b4cc51f75906fbb566c14b3fc286f6700c
-     7aa3820504cdafd1a5576e7c8754529bb9231765 c4f687578d0a0856d5b2f560dbd8ae73ea5ed1f6 9a0fcd999de824c7a9ed9e3479c78570e3fa4671
-     80b666aaa4ceb49c181e237a8786dd09eaa272ca ec5ae5f2abe42b43fba8c0afa88fa6d8ba44fbf1
-     c4f687578d0a0856d5b2f560dbd8ae73ea5ed1f6 c237157d4560876677ebec1841e53580da4e9236
-     971406b4cc51f75906fbb566c14b3fc286f6700c ec5ae5f2abe42b43fba8c0afa88fa6d8ba44fbf1
-     9a0fcd999de824c7a9ed9e3479c78570e3fa4671 c237157d4560876677ebec1841e53580da4e9236
-     ec5ae5f2abe42b43fba8c0afa88fa6d8ba44fbf1 10f5db2d038fcc4a339db675d0dd8fe8d9daad27
-     c237157d4560876677ebec1841e53580da4e9236 3491ed8201302295028aab8645897c73057307b8
-     10f5db2d038fcc4a339db675d0dd8fe8d9daad27 e55ef95daeaf58433aa03206a2cb19553120232d
-     3491ed8201302295028aab8645897c73057307b8 e19c0f83f0618c84698b8e1b5f248029060a5599
-     e55ef95daeaf58433aa03206a2cb19553120232d d0165ea32d03b550144c281d8bc084560cf48e21 6164a2e85bd79396d08e38d391698aacfb965e2c
-     e19c0f83f0618c84698b8e1b5f248029060a5599 7c4d2865dc0b70604e51077459bc06ead4fb80f2 d0ac056a17307e9c4d7d2a3300b89df08c545d6e
-     d0165ea32d03b550144c281d8bc084560cf48e21 e751e54acc9f20c99fef7c4d347626e3499e3af1
-     7c4d2865dc0b70604e51077459bc06ead4fb80f2 8411d2ce9fa908f561bcba4a4542def722141a95
-     6164a2e85bd79396d08e38d391698aacfb965e2c 11fade1d18ad28a29cf8c0c3a9d3c0766b72e235
-     d0ac056a17307e9c4d7d2a3300b89df08c545d6e f34766bf36057419693d9bbb7004b74fc00f28e8
-     11fade1d18ad28a29cf8c0c3a9d3c0766b72e235 7ab2407a9277150d13da7b02b668da17b3d2869c
-     f34766bf36057419693d9bbb7004b74fc00f28e8 b0b2adcc18073c706ae2dc8191f33aeecf2fba4f
-     7ab2407a9277150d13da7b02b668da17b3d2869c e751e54acc9f20c99fef7c4d347626e3499e3af1
-     b0b2adcc18073c706ae2dc8191f33aeecf2fba4f 8411d2ce9fa908f561bcba4a4542def722141a95
-     e751e54acc9f20c99fef7c4d347626e3499e3af1 2b6a60728b493b8beb54e08d7a91ca7851e0c803
-     8411d2ce9fa908f561bcba4a4542def722141a95 4a919859d55a55b94bd7db0072950b216cefb386
-     2b6a60728b493b8beb54e08d7a91ca7851e0c803 2aec89839c9fd296193db33e39f56cd01e44675c
-     4a919859d55a55b94bd7db0072950b216cefb386 2aec89839c9fd296193db33e39f56cd01e44675c
-     2aec89839c9fd296193db33e39f56cd01e44675c 81d16373d9f25a745e408b723617eeb269c94bc0
-     81d16373d9f25a745e408b723617eeb269c94bc0 6ec2fa9496f711feca2750aab12323411db460fc
-     6ec2fa9496f711feca2750aab12323411db460fc f3b1502ee8912758f597353aeaefa02dc3ab2d03
-     0c29fe93e1f5889daaf6de9b920ec80554b4ef5c f3b1502ee8912758f597353aeaefa02dc3ab2d03
-     f3b1502ee8912758f597353aeaefa02dc3ab2d03 e3904f57b101fcb5b2610b478cee3652dcc91be1
-     e3904f57b101fcb5b2610b478cee3652dcc91be1 d71059d959bcd856943a1c1b1aa5b37a22b73472
-     d71059d959bcd856943a1c1b1aa5b37a22b73472 b49ae047d7334c29730dbcd3c5ea506aff89a814
-     b49ae047d7334c29730dbcd3c5ea506aff89a814 6244a8cc96f34f455404051e91ca58fc580e540c
-     6244a8cc96f34f455404051e91ca58fc580e540c
-Run 'git status --porcelain --ignored' in D:\Sudha\Git\sw_display_controller
-     M  app_display_controller_demo/.cproject
-     M  app_display_controller_demo/.project
-      D app_display_spectrum_from_adc/.cproject
-      D app_display_spectrum_from_adc/.project
-      D app_display_spectrum_from_adc/.xproject
-      D app_display_spectrum_from_adc/Makefile
-      D app_display_spectrum_from_adc/README.rst
-      D app_display_spectrum_from_adc/XP-SKC-U16.xn
-      D app_display_spectrum_from_adc/doc_quickstart/Makefile
-      D app_display_spectrum_from_adc/doc_quickstart/images/hardware_setup.jpg
-      D app_display_spectrum_from_adc/doc_quickstart/quickstart.rst
-      D app_display_spectrum_from_adc/src/app_display_spectrum_from_adc.xc
-      D app_display_spectrum_from_adc/src/lcd_conf.h
-      D app_display_spectrum_from_adc/src/level_meter_conf.h
-      D app_display_spectrum_from_adc/src/sdram_conf.h
-      D app_display_spectrum_from_adc/test_data/audiocheck.net_sweep20-20klin.mp3
-     M  module_display_controller/.cproject
-     M  module_display_controller/.project
-     M  module_level_meter/.cproject
-     M  module_level_meter/.project
-      M xpd.xml
-     ?? run_xpd.log
-     err:warning: LF will be replaced by CRLF in app_display_controller_demo/.cproject.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in app_display_controller_demo/.project.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in module_display_controller/.cproject.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in module_display_controller/.project.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in module_level_meter/.cproject.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in module_level_meter/.project.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in app_display_controller_demo/.cproject.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in app_display_controller_demo/.project.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in module_display_controller/.cproject.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in module_display_controller/.project.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in module_level_meter/.cproject.
-     err:The file will have its original line endings in your working directory.
-     err:warning: LF will be replaced by CRLF in module_level_meter/.project.
-     err:The file will have its original line endings in your working directory.
-Run 'git update-index -q --refresh' in D:\Sudha\Git\sc_lcd
-Run 'git diff-index --name-only HEAD --' in D:\Sudha\Git\sc_lcd
-     app_touch_controller_lib_demo/.cproject
-     app_touch_controller_lib_demo/.project
-     module_lcd/.cproject
-     module_lcd/.project
-WARNING: sc_lcd has local modifications
-Run 'git update-index -q --refresh' in D:\Sudha\Git\sc_i2c
-Run 'git diff-index --name-only HEAD --' in D:\Sudha\Git\sc_i2c
-Run 'git update-index -q --refresh' in D:\Sudha\Git\sc_dsp_transforms
-Run 'git diff-index --name-only HEAD --' in D:\Sudha\Git\sc_dsp_transforms
-     module_fft_simple/.cproject
-     module_fft_simple/.project
-WARNING: sc_dsp_transforms has local modifications
-Run 'git update-index -q --refresh' in D:\Sudha\Git\sc_slicekit_support
-Run 'git diff-index --name-only HEAD --' in D:\Sudha\Git\sc_slicekit_support
-     module_slicekit_support/.cproject
-     module_slicekit_support/.project
-WARNING: sc_slicekit_support has local modifications
-Run 'git update-index -q --refresh' in D:\Sudha\Git\sc_sdram_burst
-Run 'git diff-index --name-only HEAD --' in D:\Sudha\Git\sc_sdram_burst
-     module_sdram/.cproject
-     module_sdram/.project
-WARNING: sc_sdram_burst has local modifications
-Run 'git update-index -q --refresh' in D:\Sudha\Git\sw_display_controller
-Run 'git diff-index --name-only HEAD --' in D:\Sudha\Git\sw_display_controller
-     app_display_controller_demo/.cproject
-     app_display_controller_demo/.project
-     app_display_spectrum_from_adc/.cproject
-     app_display_spectrum_from_adc/.project
-     app_display_spectrum_from_adc/.xproject
-     app_display_spectrum_from_adc/Makefile
-     app_display_spectrum_from_adc/README.rst
-     app_display_spectrum_from_adc/XP-SKC-U16.xn
-     app_display_spectrum_from_adc/doc_quickstart/Makefile
-     app_display_spectrum_from_adc/doc_quickstart/images/hardware_setup.jpg
-     app_display_spectrum_from_adc/doc_quickstart/quickstart.rst
-     app_display_spectrum_from_adc/src/app_display_spectrum_from_adc.xc
-     app_display_spectrum_from_adc/src/lcd_conf.h
-     app_display_spectrum_from_adc/src/level_meter_conf.h
-     app_display_spectrum_from_adc/src/sdram_conf.h
-     app_display_spectrum_from_adc/test_data/audiocheck.net_sweep20-20klin.mp3
-     module_display_controller/.cproject
-     module_display_controller/.project
-     module_level_meter/.cproject
-     module_level_meter/.project
-     xpd.xml
-WARNING: sw_display_controller has local modifications
-ERROR: Cannot make zip: uncommitted modifications
+     ?? sc_dsp_transforms_1.0.0beta0.zip
+     ?? sc_dsp_transforms_1.0.0rc2.zip
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sw_display_controller
+      M run_xpd.log
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Component <sw_display_controller:Level Meter Display> has dependencies: [module_display_controller (1.1.0)]
+Component <sw_display_controller:Display Controller Demo> has dependencies: [module_display_controller (1.1.0), module_i2c_master (2.2.1), module_lcd (1.1.2), module_sdram (1.1.0), module_slicekit_support (1.0.3), module_touch_controller_lib (1.1.2)]
+Component <sw_display_controller:Display Controller> has dependencies: [module_sdram (1.1.0), module_lcd (1.1.2)]
+Component <sw_display_controller:Display Spectrum Demo> has dependencies: [module_display_controller (1.1.0), module_fft_simple (1.0.0), module_level_meter, module_slicekit_support (1.0.3)]
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sw_final-demo
+     ../
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git remote show -n origin' in /scratch/dan/OSS/sw_final-demo
+     * remote origin
+       Fetch URL: git@github.com:xcore/sc_jpeg.git
+       Push  URL: git@github.com:xcore/sc_jpeg.git
+       HEAD branch: (not queried)
+       Remote branch: (status not queried)
+         master
+       Local branch configured for 'git pull':
+         master merges with remote master
+       Local ref configured for 'git push' (status not queried):
+         (matching) pushes to (matching)
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+WARNING: Cannot find CHANGELOG.rst in sw_final-demo
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sw_final-demo
+     ?? .DS_Store
+     ?? ._.DS_Store
+     ?? OPPO_Audio_FFT_LCD/
+     ?? app_epl/
+     ?? apps_board_test/
+     ?? apps_handbook_lean/
+     ?? apps_interview_questions/
+     ?? apps_reviews/
+     ?? arkanoid/
+     ?? canopen/
+     ?? customer_feasibility/
+     ?? doc_snippets/
+     ?? docs_apps/
+     ?? docs_kits/
+     ?? docs_tools/
+     ?? hw_slicekit_system/
+     ?? india/
+     ?? infr_docs/
+     ?? muartcomtest/
+     ?? project_tools/
+     ?? sc_can/
+     ?? sc_canopen/
+     ?? sc_class_d_amplifier/
+     ?? sc_dsp_transforms/
+     ?? sc_ethercat/
+     ?? sc_ethernet/
+     ?? sc_i2c/
+     ?? sc_i2s/
+     ?? sc_image_processing/
+     ?? sc_lcd/
+     ?? sc_lin/
+     ?? sc_modbus_rtu/
+     ?? sc_modbus_tcp/
+     ?? sc_multi_uart/
+     ?? sc_otp/
+     ?? sc_periph/
+     ?? sc_pwm/
+     ?? sc_sdram/
+     ?? sc_sdram_burst/
+     ?? sc_slicekit_support/
+     ?? sc_spdif/
+     ?? sc_spi/
+     ?? sc_sram/
+     ?? sc_uart/
+     ?? sc_usb/
+     ?? sc_usb_audio/
+     ?? sc_usb_device/
+     ?? sc_util/
+     ?? sc_website/
+     ?? sc_wifi/
+     ?? slicekit_spec/
+     ?? sw_6lowpan_zhaw/
+     ?? sw_audio_effects/
+     ?? sw_avb/
+     ?? sw_display_controller/
+     ?? sw_final-demo/
+     ?? sw_foc_motor_control/
+     ?? sw_fusion_interface/
+     ?? sw_gpio_examples/
+     ?? sw_initial_demo/
+     ?? sw_sony_pha2/
+     ?? sw_test_mfa/
+     ?? sw_usb_aud_l1_ios/
+     ?? sw_usb_aud_l2/
+     ?? sw_usb_audio/
+     ?? sw_xstream/
+     ?? swc_xud/
+     ?? testlog.txt
+     ?? testq/
+     ?? tmp/
+     ?? tool_xgh/
+     ?? tool_xpd/
+     ?? tools_training/
+     ?? tools_xsoftip_catalogue/
+     ?? verif_tests_chiptop/
+     ?? xcommon/
+     ?? xdoc/
+     ?? xmos_exam/
+     ?? xs1_chip_top/
+     ?? xs1_peripherals/
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse --show-cdup' in /scratch/dan/OSS/sw_final-demo
+     ../
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show master:xpd.xml' in /scratch/dan/OSS/sw_final-demo
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+     err:fatal: Path 'xpd.xml' does not exist in 'master'
+Run 'git remote show -n origin' in /scratch/dan/OSS/sw_final-demo
+     * remote origin
+       Fetch URL: git@github.com:xcore/sc_jpeg.git
+       Push  URL: git@github.com:xcore/sc_jpeg.git
+       HEAD branch: (not queried)
+       Remote branch: (status not queried)
+         master
+       Local branch configured for 'git pull':
+         master merges with remote master
+       Local ref configured for 'git push' (status not queried):
+         (matching) pushes to (matching)
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+WARNING: Cannot find CHANGELOG.rst in sw_final-demo
+Run 'git status --porcelain --ignored' in /scratch/dan/OSS/sw_final-demo
+     ?? .DS_Store
+     ?? ._.DS_Store
+     ?? OPPO_Audio_FFT_LCD/
+     ?? app_epl/
+     ?? apps_board_test/
+     ?? apps_handbook_lean/
+     ?? apps_interview_questions/
+     ?? apps_reviews/
+     ?? arkanoid/
+     ?? canopen/
+     ?? customer_feasibility/
+     ?? doc_snippets/
+     ?? docs_apps/
+     ?? docs_kits/
+     ?? docs_tools/
+     ?? hw_slicekit_system/
+     ?? india/
+     ?? infr_docs/
+     ?? muartcomtest/
+     ?? project_tools/
+     ?? sc_can/
+     ?? sc_canopen/
+     ?? sc_class_d_amplifier/
+     ?? sc_dsp_transforms/
+     ?? sc_ethercat/
+     ?? sc_ethernet/
+     ?? sc_i2c/
+     ?? sc_i2s/
+     ?? sc_image_processing/
+     ?? sc_lcd/
+     ?? sc_lin/
+     ?? sc_modbus_rtu/
+     ?? sc_modbus_tcp/
+     ?? sc_multi_uart/
+     ?? sc_otp/
+     ?? sc_periph/
+     ?? sc_pwm/
+     ?? sc_sdram/
+     ?? sc_sdram_burst/
+     ?? sc_slicekit_support/
+     ?? sc_spdif/
+     ?? sc_spi/
+     ?? sc_sram/
+     ?? sc_uart/
+     ?? sc_usb/
+     ?? sc_usb_audio/
+     ?? sc_usb_device/
+     ?? sc_util/
+     ?? sc_website/
+     ?? sc_wifi/
+     ?? slicekit_spec/
+     ?? sw_6lowpan_zhaw/
+     ?? sw_audio_effects/
+     ?? sw_avb/
+     ?? sw_display_controller/
+     ?? sw_final-demo/
+     ?? sw_foc_motor_control/
+     ?? sw_fusion_interface/
+     ?? sw_gpio_examples/
+     ?? sw_initial_demo/
+     ?? sw_sony_pha2/
+     ?? sw_test_mfa/
+     ?? sw_usb_aud_l1_ios/
+     ?? sw_usb_aud_l2/
+     ?? sw_usb_audio/
+     ?? sw_xstream/
+     ?? swc_xud/
+     ?? testlog.txt
+     ?? testq/
+     ?? tmp/
+     ?? tool_xgh/
+     ?? tool_xpd/
+     ?? tools_training/
+     ?? tools_xsoftip_catalogue/
+     ?? verif_tests_chiptop/
+     ?? xcommon/
+     ?? xdoc/
+     ?? xmos_exam/
+     ?? xs1_chip_top/
+     ?? xs1_peripherals/
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git remote show -n origin' in /scratch/dan/OSS/sw_final-demo
+     * remote origin
+       Fetch URL: git@github.com:xcore/sc_jpeg.git
+       Push  URL: git@github.com:xcore/sc_jpeg.git
+       HEAD branch: (not queried)
+       Remote branch: (status not queried)
+         master
+       Local branch configured for 'git pull':
+         master merges with remote master
+       Local ref configured for 'git push' (status not queried):
+         (matching) pushes to (matching)
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD' in /scratch/dan/OSS/sw_final-demo
+     49d78027138681623c0997b8b57c34a8da44dd38
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD~1' in /scratch/dan/OSS/sw_final-demo
+     b549147a85ee3fb7bc2084ab51432f17c7381a9d
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+sw_display_controller added sw_final-demo as dependency with uri: git@github.com:xcore/sc_jpeg.git
+Run 'git rev-parse HEAD~1' in /scratch/dan/OSS/sc_lcd
+     ac8fc37c2fa5aa3e5f1143927cee91b28543d151
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD' in /scratch/dan/OSS/sc_lcd
+     cc994baa391725020b3c6237b5bb2705e47d1e94
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show -s --pretty=%at f4e03fa27a9fcf827eb8afcc4830867474255475' in /scratch/dan/OSS/sc_lcd
+     1383146170
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD' in /scratch/dan/OSS/sc_lcd
+     cc994baa391725020b3c6237b5bb2705e47d1e94
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show -s --pretty=%at cc994baa391725020b3c6237b5bb2705e47d1e94' in /scratch/dan/OSS/sc_lcd
+     1384531494
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Dependency sc_lcd: moving from 1.1.1rc0 to 1.1.2rc0
+Run 'git rev-parse HEAD' in /scratch/dan/OSS/sc_lcd
+     cc994baa391725020b3c6237b5bb2705e47d1e94
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD~1' in /scratch/dan/OSS/sc_sdram_burst
+     433ac93c930c3e86ddef97f957cb1b4a5c2bd114
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD' in /scratch/dan/OSS/sc_sdram_burst
+     b8b1ed0df922799f4540e890dcfc083d6a5c416e
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD~1' in /scratch/dan/OSS/sc_i2c
+     ff404302aa1fbbb4a4bc9e472a22edf45c67991f
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD' in /scratch/dan/OSS/sc_i2c
+     d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show -s --pretty=%at 53349e8bd6493701b1ec462187b14c9e74bdc6bd' in /scratch/dan/OSS/sc_i2c
+     1378911062
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD' in /scratch/dan/OSS/sc_i2c
+     d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git show -s --pretty=%at d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0' in /scratch/dan/OSS/sc_i2c
+     1383574566
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Dependency sc_i2c: moving from 2.2.0rc0 to 2.2.1rc0
+Run 'git rev-parse HEAD' in /scratch/dan/OSS/sc_i2c
+     d8e7a39aa0671340d33cf7b40610e15b9bc7a8f0
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD~1' in /scratch/dan/OSS/sc_slicekit_support
+     2fc3fc597c9d9d2bbe7073d760078a299fd9b572
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD' in /scratch/dan/OSS/sc_slicekit_support
+     7920fc4235a96585274d73d25d275ea63b4cd285
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD~1' in /scratch/dan/OSS/sc_dsp_transforms
+     db356c45aeb389a6819da6415a174d8d1cc18e0e
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD' in /scratch/dan/OSS/sc_dsp_transforms
+     ef55e6b7f07e12d5963072e64dfb9702916eebfc
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD~1' in /scratch/dan/OSS/sw_final-demo
+     b549147a85ee3fb7bc2084ab51432f17c7381a9d
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD' in /scratch/dan/OSS/sw_final-demo
+     49d78027138681623c0997b8b57c34a8da44dd38
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD~1' in /scratch/dan/OSS/sw_final-demo
+     b549147a85ee3fb7bc2084ab51432f17c7381a9d
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD~1' in /scratch/dan/OSS/sw_final-demo
+     b549147a85ee3fb7bc2084ab51432f17c7381a9d
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD' in /scratch/dan/OSS/sw_final-demo
+     49d78027138681623c0997b8b57c34a8da44dd38
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+WARNING: Dependency 'sw_final-demo' is not on a specified version (found githash 49d78027138681623c0997b8b57c34a8da44dd38)
+WARNING: Dependency 'sw_final-demo' is not a published component
+Run 'git log origin/master..master' in /scratch/dan/OSS/sw_final-demo
+     commit 49d78027138681623c0997b8b57c34a8da44dd38
+     Author: dan <dan@xmos.com>
+     Date:   Fri Nov 8 17:05:03 2013 +0000
+     
+         first commit
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+WARNING: 49d78027138681623c0997b8b57c34a8da44dd38 of dependency sw_final-demo has not been pushed yet
+Run 'git rev-parse HEAD~1' in /scratch/dan/OSS/sc_i2c
+     ff404302aa1fbbb4a4bc9e472a22edf45c67991f
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git log origin/master..master' in /scratch/dan/OSS/sc_i2c
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD~1' in /scratch/dan/OSS/sc_slicekit_support
+     2fc3fc597c9d9d2bbe7073d760078a299fd9b572
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git log origin/master..master' in /scratch/dan/OSS/sc_slicekit_support
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD~1' in /scratch/dan/OSS/sc_lcd
+     ac8fc37c2fa5aa3e5f1143927cee91b28543d151
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git log origin/master..master' in /scratch/dan/OSS/sc_lcd
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD~1' in /scratch/dan/OSS/sc_sdram_burst
+     433ac93c930c3e86ddef97f957cb1b4a5c2bd114
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git log origin/master..master' in /scratch/dan/OSS/sc_sdram_burst
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git rev-parse HEAD~1' in /scratch/dan/OSS/sc_dsp_transforms
+     db356c45aeb389a6819da6415a174d8d1cc18e0e
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Run 'git log origin/master..master' in /scratch/dan/OSS/sc_dsp_transforms
+     err:git: /home/dan/XMOS/xSoftIPTools/1.0.16/xpd/libz.so.1: no version information available (required by git)
+Saving xpd.xml
