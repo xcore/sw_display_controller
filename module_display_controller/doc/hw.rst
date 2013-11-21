@@ -12,7 +12,7 @@ sliceKIT
 
 This module may be evaluated using the sliceKIT modular development platform, available from digikey. Required board SKUs are:
 
-   * XP-SKC-L2 (SliceKIT L2 Core Board) 
+   * XP-SKC-L2 (sliceKIT L2 Core Board) 
    * XA-SK-SCR480 plus XA-SK-XTAG2 (sliceKIT xTAG adaptor) 
 
 Demonstration applications

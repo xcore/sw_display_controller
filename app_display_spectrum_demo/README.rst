@@ -9,7 +9,7 @@ Display Spectrum Demo
 Description
 -----------
 
-This demonstration uses the U16 core board to create a level-meter kind of spectral display on an LCD for a simulated signal. This application demonstrates the real-time rendering and the display of spectrum by taking short-time fourier transform.
+This demonstration uses the L16 core board to create a level-meter kind of spectral display on an LCD for a simulated signal. This application demonstrates the real-time rendering and the display of spectrum by taking short-time fourier transform.
 The rendered image is stored in SDRAM.
 
 
