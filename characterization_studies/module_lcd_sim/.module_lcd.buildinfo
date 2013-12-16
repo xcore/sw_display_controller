@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allbuildresults>
+<buildresults component="module_lcd" packagename="xm-local-sc_lcd(1.1.2rc0)" packageversion="1.1.2rc0" toolsversion="latest">
+<buildresult>
+<configuration>
+<parameter id="lcd_part" value="K430WQAV4F"/>
+<parameter id="lcd_width" value="480"/>
+<parameter id="lcd_height" value="272"/>
+<parameter id="lcd_bpp" value="16"/>
+<parameter id="lcd_horizontal_front_porch" value="5"/>
+<parameter id="lcd_horizontal_back_porch" value="40"/>
+<parameter id="lcd_vertical_front_porch" value="5"/>
+<parameter id="lcd_vertical_back_porch" value="40"/>
+<parameter id="lcd_horizontal_pulse_width" value="1"/>
+<parameter id="lcd_vertical_pulse_width" value="1"/>
+<parameter id="lcd_freq_dividend" value="100"/>
+<parameter id="lcd_freq_divisor" value="12"/>
+</configuration>
+<resourceusage>
+<resourceusageitem id="cores" value="1"/>
+<resourceusageitem id="memory" value="0"/>
+<resourceusageitem id="codememory" value="1092"/>
+<resourceusageitem id="datamemory" value="176"/>
+<resourceusageitem id="ports1bit" value="4"/>
+<resourceusageitem id="ports4bit" value="0"/>
+<resourceusageitem id="ports8bit" value="0"/>
+<resourceusageitem id="ports16bit" value="1"/>
+<resourceusageitem id="ports32bit" value="0"/>
+<resourceusageitem id="clocks" value="0"/>
+<resourceusageitem id="chanends" value="1"/>
+<resourceusageitem id="timers" value="0"/>
+<resourceusageitem id="hwtimers" value="0"/>
+<resourceusageitem id="distributed_tasks" value="0"/>
+<resourceusageitem id="combined_tasks" value="0"/>
+</resourceusage>
+</buildresult>
+<buildresult>
+<configuration>
+<parameter id="lcd_part" value="AT043TN24V7"/>
+<parameter id="lcd_width" value="480"/>
+<parameter id="lcd_height" value="272"/>
+<parameter id="lcd_bpp" value="16"/>
+<parameter id="lcd_horizontal_front_porch" value="5"/>
+<parameter id="lcd_horizontal_back_porch" value="40"/>
+<parameter id="lcd_vertical_front_porch" value="5"/>
+<parameter id="lcd_vertical_back_porch" value="40"/>
+<parameter id="lcd_horizontal_pulse_width" value="1"/>
+<parameter id="lcd_vertical_pulse_width" value="1"/>
+<parameter id="lcd_freq_dividend" value="100"/>
+<parameter id="lcd_freq_divisor" value="12"/>
+</configuration>
+<resourceusage>
+<resourceusageitem id="cores" value="1"/>
+<resourceusageitem id="memory" value="0"/>
+<resourceusageitem id="codememory" value="772"/>
+<resourceusageitem id="datamemory" value="144"/>
+<resourceusageitem id="ports1bit" value="4"/>
+<resourceusageitem id="ports4bit" value="0"/>
+<resourceusageitem id="ports8bit" value="0"/>
+<resourceusageitem id="ports16bit" value="1"/>
+<resourceusageitem id="ports32bit" value="0"/>
+<resourceusageitem id="clocks" value="0"/>
+<resourceusageitem id="chanends" value="1"/>
+<resourceusageitem id="timers" value="0"/>
+<resourceusageitem id="hwtimers" value="0"/>
+<resourceusageitem id="distributed_tasks" value="0"/>
+<resourceusageitem id="combined_tasks" value="0"/>
+</resourceusage>
+</buildresult>
+</buildresults>
+</allbuildresults>

@@ -87,6 +87,7 @@
     <docdir>app_display_controller_demo/doc_quickstart</docdir>
     <docdir>app_display_spectrum_demo/doc_quickstart</docdir>
     <exclude_dir>app_display_spectrum_from_adc</exclude_dir>
+    <exclude_dir>characterization_studies</exclude_dir>
     <location>git@github.com:xcore/sw_display_controller.git</location>
     <name>sw_display_controller</name>
     <maintainer>andrewstanfordjason</maintainer>
