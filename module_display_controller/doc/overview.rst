@@ -41,3 +41,30 @@ Performance
 
 The achievable effective bandwidth varies according to the available xCORE MIPS. The maximum pixel clock supported is 25MHz.
 
+For a pixel clock of 10MHz and for the following porch timings,
+
++------------------------+----------------+
+| Porch                  | Pix clk cycles |
++========================+================+
+| Horizontal front porch | 10             |
++------------------------+----------------+
+| Horizontal back porch  | 50             |
++------------------------+----------------+
+| Vertical front porch   | 10             |
++------------------------+----------------+
+| Vertical back porch    | 20             |
++------------------------+----------------+
+
+the frame rates obtained for different LCD screen resolutions are listed below.
+
++------------------+-------------------+
+| LCD resolution   | Frames per second |
++==================+===================+
+| 480x272          | 48                |
++------------------+-------------------+
+| 640x480          | 28                |
++------------------+-------------------+
+| 800x480          | 23                |
++------------------+-------------------+
+| 800x600          | 18                |
++------------------+-------------------+
