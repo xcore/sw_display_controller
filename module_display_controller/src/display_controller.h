@@ -1,154 +1,104 @@
 #ifndef _display_controller_h_
 #define _display_controller_h_
 
-#include <stdint.h>
+#include "memory_address_allocator.h"
 
-/**
- * \brief Function to manage the LCd c_server and SDRAM server whilst maintaining image buffers.
- *
- * \param c_client The channel from the display_controller to the client application.
- * \param c_lcd The channel from the display_controller to the LCd c_server.
- * \param c_sdram The channel from the display_controller to the SDRAM server.
- */
-void display_controller(chanend c_client, chanend c_lcd, chanend c_sdram);
+typedef enum {
+  CMD_WRITE,
+  CMD_READ,
+  CMD_SET_FRAME
+} e_commands;
 
-/** \brief The function reads a line of pixel data from the SDRAM.
- *
- * \param c_server The channel from the client application to the display_controller.
- * \param line The image line number to be read.
- * \param image_no The image number whose line is to be read.
- * \param buffer[] The buffer which is to be filled with the read data.
- * \sa image_write_line
- * \sa image_write_line_p
- * \sa image_read_partial_line
- * \sa image_read_partial_line_p
- */
-void display_controller_image_read_line(chanend c_server, unsigned line, unsigned image_no,
-    unsigned buffer[]);
+typedef enum {
+    CMD_SUCCESS,
+    CMD_OUT_OF_RANGE,
+    CMD_MODIFY_CURRENT_FB
+} e_command_return_val;
 
-/** \brief The function reads a line of pixel data from the SDRAM.
- *
- * \param c_server The channel from the client application to the display_controller.
- * \param line The image line number to be read.
- * \param image_no The image number whose line is to be read.
- * \param buffer A pointer to the buffer which is to be filled with the read data.
- * \sa image_write_line
- * \sa image_write_line_p
- * \sa image_read_partial_line
- * \sa image_read_partial_line_p
- */
-void display_controller_image_read_line_p(chanend c_server, unsigned line, unsigned image_no,
-    intptr_t buffer);
+typedef struct {
+    e_commands type;
+    unsigned image_no;
 
-/** \brief The function writes a line of pixel data to the registered image in SDRAM.
- *
- * \param c_server The channel from the client application to the display_controller.
- * \param line The image line number to be written.
- * \param image_no The image number whose line is to be written.
- * \param buffer[] The buffer which is to be written to the image.
- * \sa image_read_line
- * \sa image_read_line_p
- *  \sa image_read_partial_line
- *  \sa image_read_partial_line_p
- */
-void display_controller_image_write_line(chanend c_server, unsigned line, unsigned image_no,
-    unsigned buffer[]);
+    unsigned line;
+    unsigned word_offset;
+    unsigned word_count;
+} s_command;
 
-/** \brief The function writes a line of pixel data to the registered image in SDRAM.
- *
- * \param c_server The channel from the client application to the display_controller.
- * \param line The image line number to be written.
- * \param image_no The image number whose line is to be written.
- * \param buffer A pointer to the buffer which is to be written to the image.
- * \sa image_read_line
- * \sa image_read_line_p
- *  \sa image_read_partial_line
- *  \sa image_read_partial_line_p
- */
-void display_controller_image_write_line_p(chanend c_server, unsigned line, unsigned image_no,
-    intptr_t buffer);
+//////////////////////////////// cmd buffering ////////////////////////////////////////
 
-/** \brief The function writes a partial line of pixel data to the registered image in SDRAM.
- *
- * \param c_server The channel from the client application to the display_controller.
- * \param line The image line number to be written.
- * \param image_no The image number whose line is to be written.
- * \param buffer[] The buffer which is to be written to the image.
- * \param line_offset The offset in pixels to begin the write of the image line from.
- * \param word_count The number of words to write to the image line.
- * \param buffer_offset The offset from the begining of the buffer to write from in words.
- * \sa image_read_line
- * \sa image_read_line_p
- * \sa image_write_line
- * \sa image_write_line_p
- */
-void display_controller_image_read_partial_line(chanend c_server, unsigned line, unsigned image_no,
-    unsigned buffer[], unsigned line_offset, unsigned word_count,
-    unsigned buffer_offset);
+interface app_to_cmd_buffer_i {
+    [[notification]] slave void ready();
+    [[guarded, clears_notification]] void push(s_command cmd, unsigned * movable p);
+};
 
-/** \brief The function writes a partial line of pixel data to the registered image in SDRAM.
- *
- * \param c_server The channel from the client application to the display_controller.
- * \param line The image line number to be written.
- * \param image_no The image number whose line is to be written.
- * \param buffer A pointer to the buffer which is to be written to the image.
- * \param line_offset The offset in pixels to begin the write of the image line from.
- * \param word_count The number of words to write to the image line.
- * \param buffer_offset The offset from the begining of the buffer to write from in words.
- * \sa image_read_line
- * \sa image_read_line_p
- * \sa image_write_line
- * \sa image_write_line_p
- */
-void display_controller_image_read_partial_line_p(chanend c_server, unsigned line,
-    unsigned image_no, intptr_t buffer, unsigned line_offset,
-    unsigned word_count, unsigned buffer_offset);
 
-/** \brief Registers an image with the display controller. Returns an image handle to refer to the image
- * from then on.
- *
- * \param server The channel from the client application to the display_controller.
- * \param img_width_words The width of the image in words.
- * \param img_height_lines The height of the image in lines(pixels).
- */
-unsigned display_controller_register_image(chanend c_server, unsigned img_width_words,
-    unsigned img_height_lines);
+interface cmd_buffer_to_dc_i {
+    [[notification]] slave void ready();
+    [[guarded, clears_notification]] {s_command, unsigned * movable} pop();
+};
 
-/** \brief Makes the display controller wait until the current SDRAM service has completed.
- *
- * \param c_server The channel from the client application to the display_controller.
- * \param buffer A pointer to the buffer which is to be written to the image.
- * \sa wait_until_idle
- */
-void display_controller_wait_until_idle_p(chanend c_server, intptr_t buffer);
+[[distributable]]
+void command_buffer(server interface app_to_cmd_buffer_i  tx,
+                    server interface cmd_buffer_to_dc_i rx);
 
-/** \brief Makes the display controller wait until the current SDRAM service has completed.
- *
- * \param server The channel from the client application to the display_controller.
- * \param buffer The buffer which is to be written to the image.
- * \sa wait_until_idle_p
- */
-void display_controller_wait_until_idle(chanend c_server, unsigned buffer[]);
+//////////////////////////////////response buffering //////////////////////////////////
 
-/** \brief Commits the image to the display controller to be displayed on the LCD screen when the
- * current image is completly displayed. The display controller contains a single next image number
- * buffer meaning that if the buffer is empty (the previously commited image is already on the LCD
- * screen) then the command will return immediatly. If the buffer is full then this function will
- * block until the current image is on the LCD screen and the buffer is ready for a new entry. This
- * behaviour ensures that frame commits will not overwrite.
- *
- * \param c_server The channel from the client application to the display_controller.
- * \param image_no The image handle of the image to be displayed as per the described behaviour.
- */
-void display_controller_frame_buffer_commit(chanend c_server, unsigned image_no);
 
-/** \brief Commits the image to the display controller to be displayed on the LCD screen and
- * initialises the display controller. This must only be called once at the begining of the
- * display controllers use.
- *
- * \param server The channel from the client application to the display_controller.
- * \param image_no The image handle of the image to be displayed as per the described behaviour.
- */
-void display_controller_frame_buffer_init(chanend c_server, unsigned image_no);
+interface dc_to_res_buf_i {
+    [[notification]] slave void ready();
+    [[guarded, clears_notification]] void push(unsigned * movable p, unsigned return_val);
+};
+
+interface res_buf_to_app_i {
+    [[notification]] slave void ready();
+    [[guarded, clears_notification]] {unsigned * movable, unsigned}  pop();
+};
+
+[[distributable]]
+void response_buffer(server interface dc_to_res_buf_i  tx,
+                    server interface res_buf_to_app_i rx);
+
+
+////////////////////////////////////////////////////////////////////////
+
+interface dc_vsync_interface_i {
+    [[notification]] slave void update();
+    [[guarded, clears_notification]] unsigned vsync();
+};
+
+////////////////////////////////////////////////////////////////////////
+
+void display_controller_read(
+        client interface app_to_cmd_buffer_i from_dc,
+        unsigned * movable buffer,
+        unsigned image_no,
+        unsigned line,
+        unsigned word_count,
+        unsigned word_offset);
+
+void display_controller_write(
+        client interface app_to_cmd_buffer_i from_dc,
+        unsigned * movable buffer,
+        unsigned image_no,
+        unsigned line,
+        unsigned word_count,
+        unsigned word_offset);
+
+void display_controller_frame_buffer_commit(
+        client interface app_to_cmd_buffer_i from_dc,
+        unsigned image_no);
+
+void display_controller(
+        client interface cmd_buffer_to_dc_i to_dc,
+        client interface dc_to_res_buf_i from_dc,
+        server interface dc_vsync_interface_i vsync,
+        static const unsigned n,
+        static const unsigned height,
+        static const unsigned width,
+        static const unsigned bytes_per_pixel,
+        client interface memory_address_allocator_i mem_alloc,
+        streaming chanend c_sdram_lcd,
+        streaming chanend c_sdram_client,
+        streaming chanend c_lcd);
 
 #endif

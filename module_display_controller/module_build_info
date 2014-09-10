@@ -11,4 +11,4 @@
 
 MODULE_XCC_XC_FLAGS = $(XCC_XC_FLAGS)
 
-DEPENDENT_MODULES = module_sdram module_lcd
+DEPENDENT_MODULES = module_sdram module_lcd lib_memory_address_allocator 

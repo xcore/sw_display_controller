@@ -1,279 +1,391 @@
-#include <assert.h>
-#include <print.h>
+#include "display_controller.h"
 #include "lcd.h"
 #include "sdram.h"
-#include "display_controller_internal.h"
+#include <stdio.h>
+
+#define MAX_WIDTH 400
+
+/*
+ * Notes
+ * - only support lcd size images
+ * - number of images is fixed at compile time by a param
+ * - no buffer_over run checks are performed on read/write operations
+ * - uses a double line buffer to the lcd
+ * - a client can lock out the low priority channel between the dc and sdram -> thus meaning that fb changes cannot happen. but the lcd will keep working
+ */
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+#pragma unsafe arrays
+void display_controller_read(
+        client interface app_to_cmd_buffer_i from_dc,
+        unsigned * movable buffer,
+        unsigned image_no,
+        unsigned line,
+        unsigned word_count,
+        unsigned word_offset) {
+    s_command c;
+    c.type = CMD_READ;
+    c.image_no = image_no;
+    c.line = line;
+    c.word_count = word_count;
+    c.word_offset = word_offset;
+    from_dc.push(c, move(buffer));
+}
+
+#pragma unsafe arrays
+void display_controller_write(
+        client interface app_to_cmd_buffer_i from_dc,
+        unsigned * movable buffer,
+        unsigned image_no,
+        unsigned line,
+        unsigned word_count,
+        unsigned word_offset) {
+    s_command c;
+    c.type = CMD_WRITE;
+    c.image_no = image_no;
+    c.line = line;
+    c.word_count = word_count;
+    c.word_offset = word_offset;
+    from_dc.push(c, move(buffer));
+}
+
+#pragma unsafe arrays
+void display_controller_frame_buffer_commit(
+        client interface app_to_cmd_buffer_i from_dc,
+        unsigned image_no) {
+    s_command c;
+    c.type = CMD_SET_FRAME;
+    c.image_no = image_no;
+    from_dc.push(c, null);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+#pragma unsafe arrays
+[[distributable]]
+void command_buffer(server interface app_to_cmd_buffer_i  a,
+        server interface cmd_buffer_to_dc_i b) {
+#if 1
+#define SIZE 1
+    unsigned head = 0;
+    unsigned fill = 0;
+    s_command cmd_buffer[SIZE];
+    unsigned * movable cmd_pointer_buffer[SIZE];
+
+    a.ready();
+    while(1){
+        select {
+            case a.push(s_command c, unsigned * movable p) : {
+
+                unsigned index = head % SIZE;
+                cmd_buffer[index] = c;
+                cmd_pointer_buffer[index] = move(p);
+                head++;
+                fill++;
+                b.ready();
+                if(fill < SIZE)
+                    a.ready();
+                break;
+            }
+            case b.pop() -> {s_command c, unsigned * movable p}: {
+                unsigned index = (head-fill) % SIZE;
+                p = move(cmd_pointer_buffer[index]);
+                c = cmd_buffer[index];
+                fill--;
+                if(fill)
+                    b.ready();
+                if(fill == (SIZE-1))
+                    a.ready();
+                break;
+            }
+        }
+    }
+#else
+    s_command cmd_buffer_entry;
+    unsigned * movable cmd_pointer_buffer_entry;
+    int occupied = 0;
+    a.ready();
+    while (1) {
+        select {
+            case !occupied => a.push(s_command c, unsigned * movable p):
+                cmd_pointer_buffer_entry = move(p);
+                cmd_buffer_entry = c;
+                b.ready();
+                occupied = 1;
+            break;
+            case occupied => rx.pop() -> {s_command c, unsigned * movable p}:
+                p = move(cmd_pointer_buffer_entry);
+                c = cmd_buffer_entry;
+                a.ready();
+                occupied = 0;
+            break;
+        }
+    }
+#endif
+}
+
+#pragma unsafe arrays
+[[distributable]]
+void response_buffer(server interface dc_to_res_buf_i  tx,
+        server interface res_buf_to_app_i rx) {
+    unsigned * movable entry;
+    unsigned return_val;
+    int occupied = 0;
+    tx.ready();
+    while (1) {
+        select {
+            case !occupied => tx.push(unsigned * movable p, unsigned r):
+                entry = move(p);
+                return_val = r;
+                rx.ready();
+                occupied = 1;
+            break;
+            case occupied => rx.pop() -> {unsigned * movable p, unsigned r}:
+                p = move(entry);
+                r = return_val;
+                tx.ready();
+                occupied = 0;
+            break;
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
 
 #define NONE (-1)
-#define LCD_BUFFER_DEPTH (4)
 
-struct image_properties {
-  //sdram location
-  unsigned bank;
+typedef struct  {
+  unsigned height;
+  unsigned words_per_line;
 
-  //image properties
-  unsigned line_width_words;
-  unsigned start_used_words;
-};
-
-struct state {
-  unsigned sdram_in_use;
-
-  unsigned lcd_buffer_pointers[LCD_BUFFER_DEPTH][LCD_ROW_WORDS];
-  unsigned head, tail;
+  unsigned index;
 
   unsigned current_fb_image_index;
   unsigned current_fb_image_line;
-  unsigned next_fb_image_index, next_next_fb_image_index;
+  unsigned next_fb_image_index;
+  unsigned sdram_cmd_buffer_fill;
 
-  unsigned registered_images;
-  struct image_properties IP[DISPLAY_CONTROLLER_MAX_IMAGES];
-  unsigned current_bank;
-  unsigned current_bank_used_words;
-};
+} dc_state ;
 
-//This allocates space for an image
-static unsigned register_image(unsigned img_width_words,
-    unsigned img_height_lines, struct state &s) {
-  unsigned words_required = img_height_lines * img_width_words;
+#pragma unsafe arrays
+static void client_command(
+        s_command &cmd,
+        unsigned * movable buffer_pointer,
+        streaming chanend c_sdram_client, s_sdram_state &sdram_state_client,
+        dc_state &s,
+        unsigned image_base_address[]
+) {
 
-  unsigned next_start_row = (s.current_bank_used_words + words_required)
-      / SDRAM_ROW_WORDS;
+    switch (cmd.type) {
 
-  if(s.registered_images == DISPLAY_CONTROLLER_MAX_IMAGES) {
-#if (DISPLAY_CONTROLLER_VERBOSE)
-    printstrln("Error: Maximum number of images exceeded in display controller");
-#endif
-    assert(0); //Out of image_properties space
-  }
+        case CMD_READ: {
+            unsigned address = image_base_address[cmd.image_no] + cmd.line*s.words_per_line + cmd.word_offset;
+            sdram_read(c_sdram_client, sdram_state_client, address, cmd.word_count, move(buffer_pointer));
+            s.sdram_cmd_buffer_fill++;
+            break;
+        }
 
-  if (next_start_row > SDRAM_ROW_COUNT) {
-    //if the image wont fix in the current bank then start the next
-    s.current_bank++;
-    s.current_bank_used_words = 0;
-    if (s.current_bank == SDRAM_BANK_COUNT) {
-#if (DISPLAY_CONTROLLER_VERBOSE)
-      printstrln("Error: Cannot allocate enough memory");
-#endif
-      assert(0); //Out of SDRAM
+        case CMD_WRITE:{
+            //reject if image_no is the current frame
+            unsigned address = image_base_address[cmd.image_no] + cmd.line*s.words_per_line + cmd.word_offset;
+            sdram_write(c_sdram_client, sdram_state_client, address, cmd.word_count, move(buffer_pointer));
+            s.sdram_cmd_buffer_fill++;
+
+
+            break;
+        }
+
+        case CMD_SET_FRAME: {
+            //if image_no is pending the save this request and dont allow any more
+
+            s.next_fb_image_index = cmd.image_no;
+            break;
+        }
+        default: {
+            __builtin_unreachable();
+            break;
+        }
     }
-  }
-
-  s.IP[s.registered_images].bank = s.current_bank;
-  s.IP[s.registered_images].line_width_words = img_width_words;
-  s.IP[s.registered_images].start_used_words = s.current_bank_used_words;
-
-  s.current_bank_used_words += words_required;
-
-  s.registered_images++;
-  return s.registered_images - 1;
+    return;
 }
 
-static inline void next_lcd_line(chanend c_client, chanend c_lcd,
-    chanend c_sdram, struct state &s) {
-  unsigned bank, start_row, start_col, word_count;
+#pragma unsafe arrays
+static void next_lcd_line(
+        streaming chanend c_lcd,
+        streaming chanend c_sdram_lcd,
+        s_sdram_state &sdram_state_lcd,
+        server interface dc_vsync_interface_i vsync,
+        dc_state &s,
+        unsigned * movable lcd_line_buffer_pointer[3],
+        unsigned image_base_address[]
+) {
+    sdram_complete(c_sdram_lcd, sdram_state_lcd, lcd_line_buffer_pointer[s.index]);
+    unsafe {
+        lcd_update(c_lcd, lcd_line_buffer_pointer[s.index]);
+    }
+    s.index = (s.index+1);
+    if(s.index == 3)
+        s.index = 0;
 
-  lcd_update(c_lcd, s.lcd_buffer_pointers[s.tail]);
-  s.tail = (s.tail + 1) % LCD_BUFFER_DEPTH;
+    s.current_fb_image_line++;
 
-  bank = s.IP[s.current_fb_image_index].bank;
-  start_row = (s.IP[s.current_fb_image_index].start_used_words +
-      s.current_fb_image_line * s.IP[s.current_fb_image_index].line_width_words)
-      / SDRAM_ROW_WORDS;
-  start_col = ((s.IP[s.current_fb_image_index].start_used_words +
-      s.current_fb_image_line * s.IP[s.current_fb_image_index].line_width_words) * 2)
-      % SDRAM_COL_COUNT;
-  word_count = s.IP[s.current_fb_image_index].line_width_words;
+    if (s.current_fb_image_line == s.height) {
+        vsync.update();
+        s.current_fb_image_line = 0;
+        if (s.next_fb_image_index != NONE) {
+            s.current_fb_image_index = s.next_fb_image_index;
+            s.next_fb_image_index = NONE;
+        }
+    }
+    unsigned next_line_address = (s.current_fb_image_line * s.words_per_line)
+                                + image_base_address[s.current_fb_image_index];
+    sdram_read (c_sdram_lcd, sdram_state_lcd, next_line_address, s.words_per_line,
+           move(lcd_line_buffer_pointer[s.index]));
 
-  s.current_fb_image_line++;
-  if (s.current_fb_image_line == LCD_HEIGHT) {
-    s.current_fb_image_line = 0;
-
-    if (s.next_fb_image_index != NONE) {
-      s.current_fb_image_index = s.next_fb_image_index;
-      if (s.next_next_fb_image_index != NONE) {
-        s.next_fb_image_index = s.next_next_fb_image_index;
-        s.next_next_fb_image_index = NONE;
-        c_client <: 0;
-      } else {
-        s.next_fb_image_index = NONE;
-      }
-  }
-}
-if(s.sdram_in_use) {
-  //TODO pass the correct buffer
-  sdram_wait_until_idle(c_sdram, s.lcd_buffer_pointers[s.head]);
-}
-
-sdram_buffer_read(c_sdram, bank, start_row, start_col, word_count, s.lcd_buffer_pointers[s.head]);
-s.sdram_in_use = 1;
-
-s.head = (s.head+1)%LCD_BUFFER_DEPTH;
 }
 
-static void client_command(char cmd, chanend c_client, chanend c_lcd,
-    chanend c_sdram, struct state &s) {
-  switch (cmd) {
-    case  CMD_WRITE_LINE: {
-      unsigned image_no, line, buffer_pointer;
-      unsigned bank, start_row, start_col, word_count;
-      slave {
-        c_client :> image_no;
-        c_client :> line;
-        c_client :> buffer_pointer;
-      }
-      bank = s.IP[image_no].bank;
-      start_row = (s.IP[image_no].start_used_words + line * s.IP[image_no].line_width_words) / SDRAM_ROW_WORDS;
-      start_col = ((s.IP[image_no].start_used_words + line * s.IP[image_no].line_width_words)*2) % SDRAM_COL_COUNT;
-      word_count = s.IP[image_no].line_width_words;
-      sdram_buffer_write_p(c_sdram, bank, start_row, start_col, word_count, buffer_pointer );
-      s.sdram_in_use = 1;
-      break;
-    }
-    case CMD_READ_LINE: {
-      unsigned image_no, line, buffer_pointer;
-      unsigned bank, start_row, start_col, word_count;
-      slave {
-        c_client :> image_no;
-        c_client :> line;
-        c_client :> buffer_pointer;
-      }
-      bank = s.IP[image_no].bank;
-      start_row = (s.IP[image_no].start_used_words + line * s.IP[image_no].line_width_words) / SDRAM_ROW_WORDS;
-      start_col = ((s.IP[image_no].start_used_words + line * s.IP[image_no].line_width_words)*2) % SDRAM_COL_COUNT;
-      word_count = s.IP[image_no].line_width_words;
-      sdram_buffer_read_p(c_sdram, bank, start_row, start_col, word_count, buffer_pointer);
-      s.sdram_in_use =1;
-      break;
-    }
-    case CMD_READ_PARTIAL_LINE: {
-      unsigned image_no, line, buffer_pointer, line_offset, word_count;
-      unsigned bank, start_row, start_col;
-      slave {
-        c_client :> image_no;
-        c_client :> line;
-        c_client :> buffer_pointer;
-        c_client :> line_offset;
-        c_client :> word_count;
-      }
-      bank = s.IP[image_no].bank;
-      start_row = (s.IP[image_no].start_used_words + line * s.IP[image_no].line_width_words + line_offset) / SDRAM_ROW_WORDS;
-      start_col = ((s.IP[image_no].start_used_words + line * s.IP[image_no].line_width_words + line_offset)*2) % SDRAM_COL_COUNT;
-      sdram_buffer_read_p(c_sdram, bank, start_row, start_col, word_count, buffer_pointer);
-      s.sdram_in_use =1;
-      break;
-    }
-    case CMD_SDRAM_WAIT_UNTIL_IDLE: {
-      break;
-    }
-    case CMD_SET_FRAME_BUFFER: {
-      unsigned image_index;
-      slave {
-        c_client :> image_index;
-      }
-#if (DISPLAY_CONTROLLER_VERBOSE)
-      if(image_index >= s.registered_images) {
-        printstr("Error: Frame buffer commit image(");
-	printint(image_index);
-        printstr(") is out of range(");
-	printint(s.registered_images);
-        printstrln(")");
-      }
-#endif
-      if(s.next_fb_image_index == NONE) {
-        s.next_fb_image_index = image_index;
-        c_client <: 0;
-      } else {
-        s.next_next_fb_image_index = image_index;
-      }
-      break;
-    }
-    case CMD_INIT_FRAME_BUFFER: {
-      unsigned image_index;
-      unsigned image_no, line, buffer_pointer;
-      unsigned bank, start_row, start_col, word_count;
-      slave {
-        c_client :> image_index;
-      }
-      assert(s.current_fb_image_index == NONE);
-#if (DISPLAY_CONTROLLER_VERBOSE)
-      if(s.current_fb_image_index != NONE)
-        printstrln("Error: Frame buffer commit before frame buffer init");
-#endif
-#if (DISPLAY_CONTROLLER_VERBOSE)
-      if(image_index >= s.registered_images) {
-        printstr("Error: Frame buffer commit image(");
-	printint(image_index);
-        printstr(") is out of range(");
-	printint(s.registered_images);
-        printstrln(")");
-      }
-#endif
-      s.current_fb_image_index = image_index;
-      s.next_fb_image_index = NONE;
-      s.next_next_fb_image_index = NONE;
-      s.head = 0;
-      s.tail = 0;
-      s.current_fb_image_line = 0;
-      while((s.head + s.tail) % LCD_BUFFER_DEPTH < 2) {
-        bank = s.IP[s.current_fb_image_index].bank;
-        start_row = (s.IP[s.current_fb_image_index].start_used_words + s.current_fb_image_line *
-            s.IP[s.current_fb_image_index].line_width_words) / SDRAM_ROW_WORDS;
-        start_col = ((s.IP[s.current_fb_image_index].start_used_words + s.current_fb_image_line *
-                s.IP[s.current_fb_image_index].line_width_words)*2) % SDRAM_COL_COUNT;
-        word_count = s.IP[s.current_fb_image_index].line_width_words;
+#pragma unsafe arrays
+void display_controller(
+        client interface cmd_buffer_to_dc_i to_dc,
+        client interface dc_to_res_buf_i from_dc,
+        server interface dc_vsync_interface_i vsync,
+        static const unsigned n,
+        static const unsigned height,
+        static const unsigned width,
+        static const unsigned bytes_per_pixel,
+        client interface memory_address_allocator_i mem_alloc,
+        streaming chanend c_sdram_lcd,
+        streaming chanend c_sdram_client,
+        streaming chanend c_lcd) {
 
-        s.current_fb_image_line++;
+    dc_state s;
+    unsigned image_base_address[n];
+    unsigned image_write_pending_count[n];
 
-        sdram_buffer_read(c_sdram, bank, start_row, start_col, word_count, s.lcd_buffer_pointers[s.head]);
-        sdram_wait_until_idle(c_sdram, s.lcd_buffer_pointers[s.head]);
-        assert(!s.sdram_in_use);
-        s.head = (s.head+1)%LCD_BUFFER_DEPTH;
-      }
-      lcd_init(c_lcd);
-      break;
-    }
-    case CMD_REGISTER_IMAGE: {
-      unsigned img_width_words, img_height_lines;
-      slave {
-        c_client :> img_width_words;
-        c_client :> img_height_lines;
-      }
-      c_client <: register_image(img_width_words, img_height_lines, s);
-      break;
-    }
-    default: {
-#if (XCC_VERSION_MAJOR >= 12)
-      __builtin_unreachable();
-#endif
-    break;
-    }
-  }
-  return;
-}
+    for(unsigned c=0;c<n;c++)
+        image_write_pending_count[c]=0;
 
-void display_controller(chanend c_client, chanend c_lcd, chanend c_sdram) {
-  struct state s;
-  s.sdram_in_use = 0;
-  s.registered_images = 0;
-  s.current_bank = 0;
-  s.current_bank_used_words = 0;
-  s.current_fb_image_index = NONE;
-  while (1) {
-#pragma ordered
-    select {
-      case lcd_req(c_lcd): {
-        next_lcd_line(c_client, c_lcd, c_sdram, s);
-        break;
-      }
-      case chkct(c_sdram, XS1_CT_END):{
-        s.sdram_in_use = 0;
-        break;
-      }
-      case (!s.sdram_in_use) => c_client :> char cmd: {
-        client_command(cmd, c_client, c_lcd, c_sdram, s);
-        break;
-      }
+    unsigned line_width_words = width * bytes_per_pixel / sizeof(unsigned);
+    s.words_per_line = line_width_words;
+    s.height = height;
+    s.next_fb_image_index = NONE;
+    unsigned lcd_line_buffer_0[MAX_WIDTH];
+    unsigned lcd_line_buffer_1[MAX_WIDTH];
+    unsigned lcd_line_buffer_2[MAX_WIDTH];
+
+    unsigned * movable lcd_line_buffer_pointer[3] = {lcd_line_buffer_0, lcd_line_buffer_1, lcd_line_buffer_2};
+
+    s_sdram_state sdram_state_lcd;
+    sdram_init_state(c_sdram_lcd, sdram_state_lcd);
+    s_sdram_state sdram_state_client;
+    sdram_init_state(c_sdram_client, sdram_state_client);
+
+    unsigned required_words = 0;
+
+    for(unsigned c = 0; c < n; c++){
+        unsigned w = line_width_words*height;
+        image_base_address[c] = required_words;
+        required_words += w;
     }
-  }
+
+    unsigned base_address;
+    if(mem_alloc.request(required_words*sizeof(unsigned), base_address)){
+        //TODO error
+        return;
+    }
+
+    for(unsigned c = 0; c < n; c++)
+        image_base_address[c] += base_address;
+
+    //Initialise the 0 frame buffer
+    for(unsigned w=0;w<line_width_words;w++)
+        lcd_line_buffer_pointer[0][w] = 0x0000000;
+
+    s.current_fb_image_index = 0;
+    for(unsigned l=0; l<height; l++){
+        unsigned address = image_base_address[0] + (l*s.words_per_line);
+        sdram_write(c_sdram_lcd, sdram_state_lcd, address, s.words_per_line,
+                move(lcd_line_buffer_pointer[0]));
+        sdram_complete(c_sdram_lcd, sdram_state_lcd, lcd_line_buffer_pointer[0]);
+    }
+
+    //now initialise the lcd
+    sdram_read (c_sdram_lcd, sdram_state_lcd, image_base_address[0],
+            s.words_per_line, move(lcd_line_buffer_pointer[0]));
+    sdram_complete(c_sdram_lcd, sdram_state_lcd, lcd_line_buffer_pointer[0]);
+
+    sdram_read (c_sdram_lcd, sdram_state_lcd, image_base_address[0] + s.words_per_line,
+            s.words_per_line, move(lcd_line_buffer_pointer[1]));
+    sdram_complete(c_sdram_lcd, sdram_state_lcd, lcd_line_buffer_pointer[1]);
+
+    sdram_read (c_sdram_lcd, sdram_state_lcd, image_base_address[0] + s.words_per_line,
+            s.words_per_line, move(lcd_line_buffer_pointer[2]));
+    unsafe {
+        lcd_init(c_lcd, lcd_line_buffer_pointer[0]);
+        lcd_update(c_lcd, lcd_line_buffer_pointer[1]);
+    }
+    s.index = 2;
+    s.current_fb_image_line = 2;
+    s.sdram_cmd_buffer_fill = 0;
+    // Used for the SDRAM accesses by the application
+
+    unsigned complete_counter = 0;
+    unsigned issued_counter = 0;
+
+    unsigned * movable  buffer_pointer;
+    while (1) {
+        #pragma ordered
+        select {
+            case lcd_req(c_lcd): {
+                next_lcd_line(c_lcd, c_sdram_lcd, sdram_state_lcd, vsync, s, lcd_line_buffer_pointer, image_base_address);
+                break;
+            }
+
+            case vsync.vsync() -> unsigned r:{
+                r = s.current_fb_image_index;
+                break;
+            }
+
+            case sdram_complete(c_sdram_client, sdram_state_client, buffer_pointer) : {
+                from_dc.push(move(buffer_pointer), CMD_SUCCESS);
+                s.sdram_cmd_buffer_fill--;
+                complete_counter++;
+                //if there was a pending set_frame on this write then apply it.
+
+                break;
+            }
+            case (s.sdram_cmd_buffer_fill < SDRAM_MAX_CMD_BUFFER) => to_dc.ready(): {
+                s_command cmd;
+                {cmd, buffer_pointer} = to_dc.pop();
+
+                //a set frame must not complete whilst there are any writes to its image_no issued to the sdram
+
+
+                //bounds checking on image number
+                if(cmd.type == CMD_SET_FRAME){
+                    if(cmd.image_no >= n){
+                        //out of bounds
+                        break;
+                    }
+                } else {
+                    if(cmd.image_no >= n){
+                        from_dc.push(move(buffer_pointer), CMD_OUT_OF_RANGE);
+                        break;
+                    }
+
+                    if(cmd.image_no == s.current_fb_image_index && cmd.type == CMD_WRITE){
+                        //trying to modify current fb
+                        from_dc.push(move(buffer_pointer), CMD_MODIFY_CURRENT_FB);
+                        break;
+                    }
+                    issued_counter++;
+                }
+                client_command(cmd, move(buffer_pointer),
+                        c_sdram_client, sdram_state_client, s, image_base_address);
+                break;
+            }
+
+        }
+    }
 }

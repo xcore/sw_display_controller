@@ -2,90 +2,104 @@
 #include "sdram.h"
 #include "lcd.h"
 #include "display_controller.h"
-#include "transitions.h"
-#include "loader.h"
-#include "touch_controller_lib.h"
-#include <print.h>
 
-on tile[0] : lcd_ports lcdports = {
-  XS1_PORT_1I, XS1_PORT_1L, XS1_PORT_16B, XS1_PORT_1J, XS1_PORT_1K, XS1_CLKBLK_1 };
-on tile[0] : sdram_ports sdramports = {
-  XS1_PORT_16A, XS1_PORT_1B, XS1_PORT_1G, XS1_PORT_1C, XS1_PORT_1F, XS1_CLKBLK_2 };
-on tile[0] : touch_controller_ports touchports = {
-		{XS1_PORT_1E, XS1_PORT_1H, 1000}, XS1_PORT_1D };
+#include "sdram_slicekit_support.h"
+#include "lcd_slicekit_support.h"
 
-/*
- * Plug XA-SK-SRC480 into the TRIANGLE slot.
- * Plug XA-SK-SDRAM into the STAR slot.
- * Ensure `XMOS LINK` is off. Build and run.
- */
 
-#define IMAGE_COUNT (6)
-char images[IMAGE_COUNT][15] = { "image_0.tga", "image_1.tga","image_2.tga",
-		"image_3.tga","image_4.tga","image_5.tga"};
+#define IMAGE_COUNT (8)
+static const unsigned short colour[IMAGE_COUNT] = {0, 0x07e0, 0x001f, 0x07ff,
+        0xffff, 0xffe0, 0xf800, 0xf81f};
 
-static void load_image(chanend c_c_server, chanend c_loader, unsigned image_no) {
-  unsigned buffer[LCD_ROW_WORDS];
-  for (unsigned line = 0; line < LCD_HEIGHT; line++){
-    for(unsigned i=0;i<LCD_ROW_WORDS*2;i++)
-      c_loader :> (buffer, short[])[i];
-    display_controller_image_write_line(c_c_server, line, image_no, buffer);
-    display_controller_wait_until_idle(c_c_server, buffer);
-  }
-}
+#include <stdio.h>
 
-void app(chanend c_server, chanend c_loader){
-  unsigned image[IMAGE_COUNT];
-  unsigned fb_index = 0, frame_buffer[2];
-  unsigned current_image=0;
+void load_image(client interface app_to_cmd_buffer_i to_dc, client interface res_buf_to_app_i from_dc,
+        unsigned image_handle, unsigned short c){
 
-  for(unsigned i=0;i<IMAGE_COUNT;i++){
-    image[i] = display_controller_register_image(c_server, LCD_ROW_WORDS, LCD_HEIGHT);
-    load_image(c_server, c_loader, image[i]);
-  }
+    unsigned buffer[LCD_ROW_WORDS];
+    unsigned * movable buffer_pointer = buffer;
 
-  frame_buffer[0] = display_controller_register_image(c_server, LCD_ROW_WORDS, LCD_HEIGHT);
-  frame_buffer[1] = display_controller_register_image(c_server, LCD_ROW_WORDS, LCD_HEIGHT);
-  display_controller_frame_buffer_init(c_server, image[0]);
-  touch_lib_init(touchports);
-  printstrln("****** Please touch any of the corners or the center of LCD screen ******");
-  printstrln("******              to see different transition effects            ******");
+    unsigned colour = c&0xffff;
+    colour = colour | (colour << 16);
 
-  while(1){
-    unsigned next_image = (current_image+1)%IMAGE_COUNT;
-    unsigned x,y;
-    touch_lib_touch_event(touchports);
-    touch_lib_get_touch_coords(touchports, x, y);
-    touch_lib_scale_coords(x, y);
+    for(unsigned w=0;w<LCD_ROW_WORDS;w++)
+        buffer_pointer[w] = colour;
 
-    if (x<LCD_WIDTH/3 && y<LCD_HEIGHT/3){
-    	fb_index = transition_slide(c_server, frame_buffer, image[current_image],
-    			image[next_image],LCD_ROW_WORDS, fb_index);
-    } else if (x>2*LCD_WIDTH/3 && y<LCD_HEIGHT/3){
-    	fb_index = transition_dither(c_server, frame_buffer, image[current_image],
-    			image[next_image], 256, fb_index);
-    } else if (x>2*LCD_WIDTH/3 && y>2*LCD_HEIGHT/3){
-    	fb_index = transition_wipe(c_server, frame_buffer, image[current_image],
-    			image[next_image], LCD_ROW_WORDS, fb_index);
-    } else if (x<LCD_WIDTH/3 && y>2*LCD_HEIGHT/3){
-    	fb_index = transition_roll(c_server, frame_buffer, image[current_image],
-    			image[next_image], LCD_ROW_WORDS, fb_index);
-    } else if (x>LCD_WIDTH/3 && x<2*LCD_WIDTH/3 && y>LCD_HEIGHT/3 && y<2*LCD_HEIGHT/3){
-    	fb_index = transition_alpha_blend(c_server, frame_buffer, image[current_image],
-    			image[next_image], 64, fb_index);
+    for(unsigned l = 0; l< LCD_HEIGHT;l++){
+        display_controller_write(to_dc, move(buffer_pointer), image_handle, l, LCD_ROW_WORDS, 0);
+        unsigned r;
+        {buffer_pointer, r} = from_dc.pop();
     }
-    current_image = next_image;
-  }
 }
+//Refresh rate: 36.15Hz
+//Avaliable read/write bandwidth: 56.35 frames per second
+unsigned short fade(unsigned i){
+    i=i&0xff;
+    //blue green red
+    if(i < 64){
+        return 0x001f + (i << 5);
+    } else if(i < 96){
+        return 0x07ff - (i);
+    } else if(i < 128){
+        return 0x07e0 + (i << (5+6));
+    } else if(i < 192){
+        return 0xffe0 - (i << (5));
+    } else if(i < 224){
+        return 0xf800 + (i);
+    } else {
+        return 0xf81f - (i << (5+6));
+    }
+}
+
+
+void app(client interface app_to_cmd_buffer_i to_dc, client interface res_buf_to_app_i from_dc,
+        client interface dc_vsync_interface_i vsync_interface){
+
+    unsigned current_image=0;
+    for(unsigned i=1;i<IMAGE_COUNT;i++)
+        load_image(to_dc, from_dc, i, colour[i]);
+
+    unsigned i=0;
+    display_controller_frame_buffer_commit(to_dc, current_image);
+    while(1){
+        unsigned next_image = (current_image+1)%IMAGE_COUNT;
+        vsync_interface.vsync();
+        load_image(to_dc, from_dc, next_image, fade(i));
+        i++;
+        display_controller_frame_buffer_commit(to_dc, next_image);
+        current_image = next_image;
+    }
+}
+
+on tile[LCD_A16_CIRCLE_TILE]: lcd_ports lcdports = LCD_A16_CIRCLE_PORTS(XS1_CLKBLK_1);
+on tile[SDRAM_A16_SQUARE_TILE]: sdram_ports sdramports = SDRAM_A16_SQUARE_PORTS(XS1_CLKBLK_2);
 
 int main() {
-  chan c_sdram, c_lcd, c_client, c_loader;
+  interface app_to_cmd_buffer_i     app_to_cmd_buffer;
+  interface cmd_buffer_to_dc_i      cmd_buffer_to_dc;
+
+  interface dc_to_res_buf_i         dc_to_res_buf;
+  interface res_buf_to_app_i        res_buf_to_app;
+
+  interface dc_vsync_interface_i    vsync_interface;
+
+  interface memory_address_allocator_i to_memory_alloc[1];
+
+  streaming chan c_sdram[2], c_lcd;
   par {
-	  on tile[0]:app(c_client, c_loader);
-	  on tile[0]:display_controller(c_client, c_lcd, c_sdram);
-	  on tile[0]:sdram_server(c_sdram, sdramports);
-	  on tile[0]:lcd_server(c_lcd, lcdports);
-	  on tile[1]:loader(c_loader, images, IMAGE_COUNT);
+      on tile[LCD_A16_CIRCLE_TILE]: [[distribute]] memory_address_allocator( 1, to_memory_alloc, 0, 1024*1024*8);
+
+      on tile[LCD_A16_CIRCLE_TILE]: [[distribute]] command_buffer(app_to_cmd_buffer, cmd_buffer_to_dc);
+      on tile[LCD_A16_CIRCLE_TILE]: display_controller(
+              cmd_buffer_to_dc, dc_to_res_buf, vsync_interface,
+              8, LCD_HEIGHT, LCD_WIDTH, 2,
+              to_memory_alloc[0], c_sdram[0], c_sdram[1], c_lcd);
+      on tile[LCD_A16_CIRCLE_TILE]: [[distribute]] response_buffer(dc_to_res_buf, res_buf_to_app);
+
+      on tile[LCD_A16_CIRCLE_TILE]: app(app_to_cmd_buffer, res_buf_to_app, vsync_interface);
+
+	  on tile[LCD_A16_CIRCLE_TILE]:lcd_server(c_lcd, lcdports);
+	  on tile[LCD_A16_CIRCLE_TILE]:sdram_server(c_sdram, 2, sdramports);
   }
   return 0;
 }
